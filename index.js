@@ -42,7 +42,7 @@ const {
 	lol
 } = require('./lib/config.json')
 
-fake = '𝗙𝗘𝗕𝗭𝗦𝗘𝗟𝗙\nStatus : Online'
+fake = '༺ HAN ༻\nStatus : Online'
 let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
 self = false
 blocked = []
@@ -807,14 +807,14 @@ break
          }
          vcard2 = 'BEGIN:VCARD\n'
          + 'VERSION:3.0\n'
-         + `FN:LordPebri\n`
+         + `FN:Han\n`
          + `ORG: Creator Bot ;\n`
-         + `TEL;type=CELL;type=VOICE;waid=6285849261085:6285849261085\n`
+         + `TEL;type=CELL;type=VOICE;waid=6285731855426:6285731855426\n`
          + 'END:VCARD'.trim()
          pebz.sendMessage(from, {displayName: `Creator Bot`, vcard: vcard2}, contact, 
          { quoted: fkontak, 
          })
-         reply('*_Jangan Lupa Subscrib_*\nhttps://youtube.com/c/FEBZABOTZ')
+         reply('*ga penting ga usah ngechat, dan gada sewa bot!*')
          break
           case 'bc':
          if (!isOwner) return reply('LU BUKAN OWNER GBLOK')
