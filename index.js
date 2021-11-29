@@ -407,9 +407,6 @@ ${p}• ${prefix}sticker <replyimg>${p}
 ${p}️• ${prefix}imgsearch <query>${p}
 ${p}• ${prefix}toimg <replysticker>${p}
 
-*𝗙𝗨𝗡*
-${p}• ${prefix}truth${p}
-${p}• ${prefix}dare${p}
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 » ᴛᴇʟғᴏɴ ʙᴏᴛ = ʙʟᴏᴄᴋ ᴘᴇʀᴍᴀᴍᴇɴ
