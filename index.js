@@ -96,7 +96,7 @@ pebz.on('group-participants-update', async (chat) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `*Hallo* @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*\nJangan rusuh ya\nJangan lupa intro @${num.split('@')[0]} 🗣\nBtw Admin Disini Gay Whehe😂🤭`
+				teks = `*Hallo* @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*\nJangan rusuh ya\nJangan lupa intro @${num.split('@')[0]}`
 				let buff = await getBuffer(ppimg)
 				pebz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				} else if (chat.action == 'remove') {
@@ -140,7 +140,7 @@ pebz.on('group-participants-update', async (chat) => {
 			const isCmd = body.startsWith(prefix)
            
             const botNumber = pebz.user.jid
-			const ownerNumber = ['6285849261085@s.whatsapp.net',`${OwnerNumber}@s.whatsapp.net`]
+			const ownerNumber = ['6285731855426@s.whatsapp.net',`${OwnerNumber}@s.whatsapp.net`]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			pushname = pebz.contacts[sender] != undefined ? pebz.contacts[sender].vname || pebz.contacts[sender].notify : undefined
@@ -279,11 +279,11 @@ console.log(e)
         
 	        mess = {
 				wait: 'tunggu sebentar...',
-				success: 'Sucess ✓“',
+				success: 'sukses ✓“',
 				notxt: 'textnya mana ?',
 				error: {
 					stick: 'gagal saat konvensi gambar ke sticker',
-					Iv: 'link nya mokd :v'
+					Iv: 'link nya mokad :v'
 				},
 				only: {
 					group: 'Khusus Grup!',
@@ -346,7 +346,7 @@ console.log(e)
         const buttonMessages = { locationMessage: { jpegThumbnail: gam1 }, contentText: text1, footerText: desc1, buttons: but, headerType: 6 }
         return pebz.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
         }
-const time2 = moment().tz("Asia/Makassar").format("HH:mm:ss");
+const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
     if (time2 < "24:59:00") {
       var ucapanWaktu = "GoodNight🌃";
     }
@@ -392,7 +392,7 @@ const time2 = moment().tz("Asia/Makassar").format("HH:mm:ss");
              uptime = process.uptime()            
 		     const hiya = await fetchJson('https://xinzbot-api.herokuapp.com/api/ucapan?apikey=XinzBot&timeZone=Asia/Jakarta', {method:'get'})
 		     var p = '```'
-		    const tod =`*_🍁SELFBOT FEBZ🧡_*		    
+		    const tod =`*_HanBotz_*		    
 ${p}👋${ucapanWaktu}kak ${pushname}${p}		    
 ${p}🔑Prefix : ${prefix}${p}
 ${p}⏳Runtime : ${kyun(uptime)}${p}`
@@ -417,14 +417,8 @@ ${p}🤖${prefix}simi <text>${p}
 *_ɪɴғᴏ ʙᴏᴛ_*
 » ᴛᴇʟғᴏɴ ʙᴏᴛ = ʙʟᴏᴄᴋ ᴘᴇʀᴍᴀᴍᴇɴ
 » ɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ , ʙɪᴊᴀᴋ
-*_ᴛʜᴀɴᴋs ᴛᴏ_*
-» ʟᴏʀᴅ ᴘᴇʙʀɪ
-» ᴍᴀsᴛᴀʜ ʜᴀɴᴢ
-» ᴍᴀsᴛᴀʜ ᴀᴋɪʀᴀ
-» ᴋᴀʜᴢ ʙᴏᴛ
-» ʜᴏsʜɪᴢᴏʀᴀ
 
-*_©ғᴇʙᴢsᴇʟғʙᴏᴛ_*
+*༺ HAN ༻*
 `           
            but = [
           { buttonId: `${prefix}owner1`, buttonText: { displayText: 'creator' }, type: 1 },
