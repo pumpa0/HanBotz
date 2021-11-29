@@ -432,8 +432,9 @@ txt = `
 - *Pulsa:* 085731855426
 - *Gopay:* 085807149213
 - *Dana:* 085731855426`
-tod2 ='
+tod2 =`
 Liat doang, donate kaga -_-
+`
 const pebz2 = {
             contextInfo: {
             participant: '0@s.whatsapp.net',
