@@ -392,12 +392,13 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
              uptime = process.uptime()            
 		     const hiya = await fetchJson('https://xinzbot-api.herokuapp.com/api/ucapan?apikey=XinzBot&timeZone=Asia/Jakarta', {method:'get'})
 		     var p = '```'
-		    const tod =`*_HanBotz_*		    
-${p}👋${ucapanWaktu}kak ${pushname}${p}		    
+		    const tod =`*_HanBotz_*	
+	    
+${p}👋${ucapanWaktu} ${pushname}${p}		    
 ${p}🔑Prefix : ${prefix}${p}
 ${p}⏳Runtime : ${kyun(uptime)}${p}`
 tod2 =`
-*_📋BOT MENU_*
+*𝗠𝗘𝗡𝗨*
 ${p}📚${prefix}nulis <text>${p}
 ${p}🍁${prefix}play <query>${p}
 ${p}🔎${prefix}wiki <query>${p}
@@ -405,14 +406,13 @@ ${p}🍂${prefix}quotesharian${p}
 ${p}📥️${prefix}tiktokdl <link>${p}
 ${p}🖼️${prefix}pinterest <query>${p}
 ${p}👻${prefix}sticker <replyimg>${p}
+${p}🛠️️${prefix}sticker2 <replyimg>${p}
 ${p}️💌${prefix}imgsearch <query>${p}
 ${p}🎴${prefix}toimg <replysticker>${p}
-${p}🛠️️${prefix}sticker2 <replyimg>${p}
 
-*_🎮FUNTIME_*
+*𝗙𝗨𝗡*
 ${p}🆚${prefix}truth${p}
 ${p}🆚${prefix}dare${p}
-${p}🤖${prefix}simi <text>${p}
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 » ᴛᴇʟғᴏɴ ʙᴏᴛ = ʙʟᴏᴄᴋ ᴘᴇʀᴍᴀᴍᴇɴ
