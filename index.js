@@ -42,7 +42,7 @@ const {
 	lol
 } = require('./lib/config.json')
 
-fake = '༺ HAN ༻\nStatus : Online'
+fake = '༺ HanBotz ༻\nStatus : Online'
 let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
 self = false
 blocked = []
@@ -392,37 +392,35 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
              uptime = process.uptime()            
 		     const hiya = await fetchJson('https://xinzbot-api.herokuapp.com/api/ucapan?apikey=XinzBot&timeZone=Asia/Jakarta', {method:'get'})
 		     var p = '```'
-		    const tod =`*_HanBotz_*	
+		    const tod =`*༺ HanBotz ༻*	
 	    
-${p}👋${ucapanWaktu} ${pushname}${p}		    
-${p}🔑Prefix : ${prefix}${p}
-${p}⏳Runtime : ${kyun(uptime)}${p}`
+${p}> ${ucapanWaktu} ${pushname}${p}		    
+${p}> Prefix : ${prefix}${p}
+${p}> Runtime : ${kyun(uptime)}${p}`
 tod2 =`
 *𝗠𝗘𝗡𝗨*
-${p}📚${prefix}nulis <text>${p}
-${p}🍁${prefix}play <query>${p}
-${p}🔎${prefix}wiki <query>${p}
-${p}🍂${prefix}quotesharian${p}
-${p}📥️${prefix}tiktokdl <link>${p}
-${p}🖼️${prefix}pinterest <query>${p}
-${p}👻${prefix}sticker <replyimg>${p}
-${p}🛠️️${prefix}sticker2 <replyimg>${p}
-${p}️💌${prefix}imgsearch <query>${p}
-${p}🎴${prefix}toimg <replysticker>${p}
+${p}• ${prefix}nulis <text>${p}
+${p}• ${prefix}play <query>${p}
+${p}• ${prefix}wiki <query>${p}
+${p}• ${prefix}quotesharian${p}
+${p}• ${prefix}tiktokdl <link>${p}
+${p}• ${prefix}pinterest <query>${p}
+${p}• ${prefix}sticker <replyimg>${p}
+${p}️• ${prefix}imgsearch <query>${p}
+${p}• ${prefix}toimg <replysticker>${p}
 
 *𝗙𝗨𝗡*
-${p}🆚${prefix}truth${p}
-${p}🆚${prefix}dare${p}
+${p}• ${prefix}truth${p}
+${p}• ${prefix}dare${p}
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 » ᴛᴇʟғᴏɴ ʙᴏᴛ = ʙʟᴏᴄᴋ ᴘᴇʀᴍᴀᴍᴇɴ
 » ɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ , ʙɪᴊᴀᴋ
 
-*༺ HAN ༻*
+*© HAN*
 `           
            but = [
           { buttonId: `${prefix}owner1`, buttonText: { displayText: 'creator' }, type: 1 },
-          { buttonId: `${prefix}ruls`, buttonText: { displayText: 'rulesbot' }, type: 1 }
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
@@ -614,10 +612,8 @@ result = `❒「  *Wiki*  」
 *BROWSER : ${pebz.browserDescription[1]}*
 *HOST : ${pebz.browserDescription[0]}*
 *VERSI : ${pebz.browserDescription[2]}*
-*HP : ${pebz.user.phone.device_manufacturer}*
 *WA : ${pebz.user.phone.wa_version}*
-*RAM : ${(process.memoryUsage().heapUsed / 111 / 1029 ).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1000 / 2000 )}MB*
-*OS : ${os_version} ANDROID*
+*OS : ${os_version}*
 *SPEED : ${ping.toFixed(4)} SECOND*
 *Runtime : ${kyun(uptime)}*
 ` 
@@ -852,7 +848,7 @@ break
 					break
           default: 
           if (isCmd) {
-                 reply(`Sorry bro, command *${prefix}${command}* gk ada di list *${prefix}help*`)
+                 reply(`Sorry bro, command *${prefix}${command}* ga ada di list *${prefix}help*`)
                     }
 					if (isGroup && budy != undefined) {
 				} else {
