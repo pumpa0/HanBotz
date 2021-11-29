@@ -402,8 +402,6 @@ tod2 =`
 ${p}• ${prefix}nulis <text>${p}
 ${p}• ${prefix}play <query>${p}
 ${p}• ${prefix}wiki <query>${p}
-${p}• ${prefix}quotesharian${p}
-${p}• ${prefix}tiktokdl <link>${p}
 ${p}• ${prefix}pinterest <query>${p}
 ${p}• ${prefix}sticker <replyimg>${p}
 ${p}️• ${prefix}imgsearch <query>${p}
