@@ -36,6 +36,9 @@ const welkom = JSON.parse(fs.readFileSync('./lib/group/welcome.json'))
 const yts = require('yt-search')
 const request = require('request')
 const pebz = new WAConnection()
+const _antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
+const _antivirtex = JSON.parse(fs.readFileSync('./database/antivirtex.json'))
+const nsfww = JSON.parse(fs.readFileSync('./database/nsfww.json'))
 const {
 	OwnerNumber,
 	prefix,
@@ -106,7 +109,7 @@ pebz.on('group-participants-update', async (chat) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `*Mau Tau Anak Kintill Gak? Ini👆* @${num.split('@')[0]}\n*fuck this human*`
+				teks = `*Sayonara * @${num.split('@')[0]}`
 				let buff = await getBuffer(ppimg)
 				pebz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -838,6 +841,16 @@ break
 	    pebz.sendMessage(from, optionshidetag, text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "393470602054-1351628616@g.us" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption":'༺ HAN ༻',"fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": gambar} }  } })
 					breakbreak
 					break
+     case 'antilink' :
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
+         but = [
+         { buttonId: '!antilinkon', buttonText: { displayText: 'On' }, type: 1 },
+         { buttonId: '!antilinkoff', buttonText: { displayText: 'Off' }, type: 1 }
+         ]
+         sendButton(from, "Silahkan pilih untuk antilink group", faketeks, but, mek)
+         break
      case 'antilinkon' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
