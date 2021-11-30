@@ -421,7 +421,7 @@ ${p}• ${prefix}demote <tag>${p}
 ${p}• ${prefix}promote <tag>${p}
 ${p}• ${prefix}setname <text>${p}
 ${p}• ${prefix}setdesc <text>${p}
-${p}• ${prefix}buka / tutup${p}
+${p}• ${prefix}open|close${p}
 
 𝗢𝗧𝗛𝗘𝗥
 ${p}• ${prefix}owner${p}
@@ -885,24 +885,24 @@ break
          fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
          reply(`\`\`\`Sukses menonaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
          break
-     case 'buka' :
-     case 'grup1' :
+     case 'open':
+     case 'grup1':
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          reply(`\`\`\`Sukses Membuka Group\`\`\` *${groupMetadata.subject}*`)
          pebz.groupSettingChange(from, GroupSettingChange.messageSend, false)
          break
-     case 'tutup' :
-     case 'grup0' :
+     case 'close':
+     case 'grup0':
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          reply(`\`\`\`Sukses Menutup Group\`\`\` *${groupMetadata.subject}*`)
          pebz.groupSettingChange(from, GroupSettingChange.messageSend, true)
          break
-     case 'linkgroup' :
-     case 'linkgrup' :
+     case 'linkgroup':
+     case 'linkgrup':
          if (!isGroup) return reply(mess.only.group)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          linkgc = await pebz.groupInviteCode(from)
