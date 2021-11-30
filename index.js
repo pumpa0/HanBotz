@@ -833,18 +833,18 @@ break
          teks += `@${_.split('@')[0]}\n`
          }
          mentions(teks, mentioned, true)
-         fdhl.groupRemove(from, mentioned)
+         febz.groupRemove(from, mentioned)
          } else {
          mentions(`Perintah di terima, mengeluarkan : @${mentioned[0].split('@')[0]}`, mentioned, true)
-         fdhl.groupRemove(from, mentioned)
+         febz.groupRemove(from, mentioned)
          }
 		break
                 case 'setname':
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-         fdhl.groupUpdateSubject(from, `${body.slice(9)}`)
-         fdhl.sendMessage(from, `\`\`\`✓Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
+         febz.groupUpdateSubject(from, `${body.slice(9)}`)
+         febz.sendMessage(from, `\`\`\`✓Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
                 break
 		case 'hidetag':
 		if (!isOwner && !isGroupAdmins) return reply(mess.only.ownerB)
