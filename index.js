@@ -571,22 +571,14 @@ result = `❒「  *Wiki*  」
         const trut =['Pernah suka sama siapa aja? berapa lama?','Kalau boleh atau kalau mau, di gc/luar gc siapa yang akan kamu jadikan sahabat?(boleh beda/sma jenis)','apa ketakutan terbesar kamu?','pernah suka sama orang dan merasa orang itu suka sama kamu juga?','Siapa nama mantan pacar teman mu yang pernah kamu sukai diam diam?','pernah gak nyuri uang nyokap atau bokap? Alesanya?','hal yang bikin seneng pas lu lagi sedih apa','pernah cinta bertepuk sebelah tangan? kalo pernah sama siapa? rasanya gimana brou?','pernah jadi selingkuhan orang?','hal yang paling ditakutin','siapa orang yang paling berpengaruh kepada kehidupanmu','hal membanggakan apa yang kamu dapatkan di tahun ini','siapa orang yang bisa membuatmu sange','siapa orang yang pernah buatmu sange','(bgi yg muslim) pernah ga solat seharian?','Siapa yang paling mendekati tipe pasangan idealmu di sini','suka mabar(main bareng)sama siapa?','pernah nolak orang? alasannya kenapa?','Sebutkan kejadian yang bikin kamu sakit hati yang masih di inget','pencapaian yang udah didapet apa aja ditahun ini?','kebiasaan terburuk lo pas di sekolah apa?']
 		const ttrth = trut[Math.floor(Math.random() * trut.length)]
 		truteh = await getBuffer(`https://www.linkpicture.com/q/20211130_010958.jpg`)
-	    but = [
-          { buttonId: `${prefix}truth`, buttonText: { displayText: 'ᴛʀᴜᴛʜ' }, type: 1 },
-          { buttonId: `${prefix}dare`, buttonText: { displayText: 'ᴅᴀʀᴇ' }, type: 1 }
-        ]
-        sendButLocation(from, ttrth, 'GAK JALANIN WAJIB DONATE',truteh, but, {quoted: mek})
+        sendButLocation(from, ttrth, 'GAK JALANIN WAJIB DONATE',truteh, {quoted: mek})
 	        	break
 		case 'dare':
 		if (!isGroup) return reply('KhususGrup')
 		const dare =['Kirim pesan ke mantan kamu dan bilang "aku masih suka sama kamu','telfon crush/pacar sekarang dan ss ke pemain','pap ke salah satu anggota grup','Bilang "KAMU CANTIK BANGET NGGAK BOHONG" ke cowo','ss recent call whatsapp','drop emot "😎??" setiap ngetik di gc/pc selama 1 hari','kirim voice note bilang can i call u baby?','drop kutipan lagu/quote, terus tag member yang cocok buat kutipan itu','pake foto sule sampe 3 hari','ketik pake bahasa daerah 24 jam','ganti nama menjadi "gue anak lucinta luna" selama 5 jam','chat ke kontak wa urutan sesuai %batre kamu, terus bilang ke dia "i lucky to hv you','prank chat mantan dan bilang " i love u, pgn balikan','record voice baca surah al-kautsar','bilang "i hv crush on you, mau jadi pacarku gak?" ke lawan jenis yang terakhir bgt kamu chat (serah di wa/tele), tunggu dia bales, kalo udah ss drop ke sini','sebutkan tipe pacar mu!','snap/post foto pacar/crush','teriak gajelas lalu kirim pake vn kesini','pap mukamu lalu kirim ke salah satu temanmu','kirim fotomu dengan caption, aku anak pungut','teriak pake kata kasar sambil vn trus kirim kesini','teriak " anjimm gabutt anjimmm " di depan rumah mu','ganti nama jadi " BOWO " selama 24 jam','Pura pura kerasukan, contoh : kerasukan maung, kerasukan belalang, kerasukan kulkas, dll']
 		const der = dare[Math.floor(Math.random() * dare.length)]
 		todz = await getBuffer(`https://www.linkpicture.com/q/20211130_010958.jpg`)
-	    but = [
-          { buttonId: `${prefix}truth`, buttonText: { displayText: 'ᴛʀᴜᴛʜ' }, type: 1 },
-          { buttonId: `${prefix}dare`, buttonText: { displayText: 'ᴅᴀʀᴇ' }, type: 1 }
-        ]
-        sendButLocation(from, der, 'GAK JALANIN WAJIB DONATE',todz, but, {quoted: mek})
+        sendButLocation(from, der, 'GAK JALANIN WAJIB DONATE',todz, {quoted: mek})
        	   break 
            case 'self':
            if (!isOwner) return reply(mess.only.ownerB)
@@ -991,6 +983,80 @@ break
          pebz.groupUpdateDescription(from, `${body.slice(9)}`)
          pebz.sendMessage(from, `\`\`\`Sukses Mengganti Deskripsi Group\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, { quoted: ftrol })
          break
+     case 'report':
+         const pesan = body.slice(8)
+         if (pesan.length > 300) return pras.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', text, { quoted: mek })
+         var nomor = mek.participant
+         const teks1 = `*[REPORT]*\nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}`
+         var options = {
+         text: teks1,
+         contextInfo: { mentionedJid: [nomor] },
+         }
+         pebz.sendMessage(`6285731855426@s.whatsapp.net`, options, text, { quoted: mek })
+         reply('Masalah Telah Di Laporkan Ke Owner BOT, Mohon Tunggu Untuk Proses Perbaikan')
+         break
+      case 'attp':
+         if (args.length == 0) return reply(`Example: ${prefix + command} Hai`)
+         buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
+         pebz.sendMessage(from, buffer, sticker, { quoted: mek })
+         break
+case 'batch':
+      if (args.length == 0) return reply(`Teks nya mana kak ${pushname}\nExample: ${prefix + command} tonikaku kawai`)
+      ini_txt = args.join(" ")
+      tod = await fetchJson(`https://hardianto-chan.herokuapp.com/api/anime/kusonime?search=${ini_txt}&apikey=hardianto`, {method: 'get'})
+      buffer = await getBuffer(tod.result.thumbs)
+      teks = q
+      peb = `*[ ANIME BATCH ]*
+      
+*Judul : ${tod.result.title}*
+*Episode : ${tod.result.total_episode}*
+*Rilis : ${tod.result.released_on}*
+*Genre : ${tod.result.genre}*
+*Durasi : ${tod.result.duration}*
+*Producer : ${tod.result.producer}*
+*Rating : ${tod.result.score}*
+*Dowload :* \n${tod.result.resolution}
+${tod.result.download_list}
+${tod.result.download_link}
+${tod.result.downloader}
+`
+pebz.sendMessage(from, buffer, image, {quoted: mek, caption: peb})
+//reply(`ANIME BATCH *${teks}*\n\n`+peb)
+break
+
+              case 'otaku':
+                    if (args.length == 0) return reply(`Example: ${prefix + command} Gotoubun No Hanayome`)
+                    query = args.join(" ")
+                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/otakudesusearch?apikey=ciko&query=${query}`)
+                    get_result = get_result.result
+                    ini_txt = `*Title :* ${get_result.title}\n`
+                    ini_txt += `*Japanese :* ${get_result.japanese}\n`
+                    ini_txt += `*Judul :* ${get_result.judul}\n`
+                    ini_txt += `*Type :* ${get_result.type}\n`
+                    ini_txt += `*Episode :* ${get_result.episodes}\n`
+                    ini_txt += `*Aired :* ${get_result.aired}\n`
+                    ini_txt += `*Producers :* ${get_result.producers}\n`
+                    ini_txt += `*Genre :* ${get_result.genres}\n`
+                    ini_txt += `*Duration :* ${get_result.duration}\n`
+                    ini_txt += `*Studios :* ${get_result.status}\n`
+                    ini_txt += `*Rating :* ${get_result.rating}\n`
+                    ini_txt += `*Credit :* ${get_result.credit}\n`
+                    get_link = get_result.link_dl
+                    for (var x in get_link) {
+                        ini_txt += `\n\n*${get_link[x].title}*\n`
+                        for (var y in get_link[x].link_dl) {
+                            ini_info = get_link[x].link_dl[y]
+                            ini_txt += `\n\`\`\`Reso : \`\`\`${ini_info.reso}\n`
+                            ini_txt += `\`\`\`Size : \`\`\`${ini_info.size}\n`
+                            ini_txt += `\`\`\`Link : \`\`\`\n`
+                            down_link = ini_info.link_dl
+                            for (var z in down_link) {
+                                ini_txt += `${z} - ${down_link[z]}\n`
+                            }
+                        }
+                    }
+                    reply(ini_txt)
+                    break	
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* ga ada di list *${prefix}help*`)
