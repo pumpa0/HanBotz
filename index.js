@@ -1000,63 +1000,76 @@ break
          buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
          pebz.sendMessage(from, buffer, sticker, { quoted: mek })
          break
-case 'batch':
-      if (args.length == 0) return reply(`Teks nya mana kak ${pushname}\nExample: ${prefix + command} tonikaku kawai`)
-      ini_txt = args.join(" ")
-      tod = await fetchJson(`https://hardianto-chan.herokuapp.com/api/anime/kusonime?search=${ini_txt}&apikey=hardianto`, {method: 'get'})
-      buffer = await getBuffer(tod.result.thumbs)
-      teks = q
-      peb = `*[ ANIME BATCH ]*
-      
-*Judul : ${tod.result.title}*
-*Episode : ${tod.result.total_episode}*
-*Rilis : ${tod.result.released_on}*
-*Genre : ${tod.result.genre}*
-*Durasi : ${tod.result.duration}*
-*Producer : ${tod.result.producer}*
-*Rating : ${tod.result.score}*
-*Dowload :* \n${tod.result.resolution}
-${tod.result.download_list}
-${tod.result.download_link}
-${tod.result.downloader}
-`
-pebz.sendMessage(from, buffer, image, {quoted: mek, caption: peb})
-//reply(`ANIME BATCH *${teks}*\n\n`+peb)
+//menu gabut gc
+//-- ganteng cek
+case 'gantengcek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}gantengcek hankun`)
+if (!isGroup) return reply(mess.only.group)
+  random = `${Math.floor(Math.random() * 100)}`
+  gan = q
+  cek = `Target : *${gan}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 
-              case 'otaku':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} Gotoubun No Hanayome`)
-                    query = args.join(" ")
-                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/otakudesusearch?apikey=ciko&query=${query}`)
-                    get_result = get_result.result
-                    ini_txt = `*Title :* ${get_result.title}\n`
-                    ini_txt += `*Japanese :* ${get_result.japanese}\n`
-                    ini_txt += `*Judul :* ${get_result.judul}\n`
-                    ini_txt += `*Type :* ${get_result.type}\n`
-                    ini_txt += `*Episode :* ${get_result.episodes}\n`
-                    ini_txt += `*Aired :* ${get_result.aired}\n`
-                    ini_txt += `*Producers :* ${get_result.producers}\n`
-                    ini_txt += `*Genre :* ${get_result.genres}\n`
-                    ini_txt += `*Duration :* ${get_result.duration}\n`
-                    ini_txt += `*Studios :* ${get_result.status}\n`
-                    ini_txt += `*Rating :* ${get_result.rating}\n`
-                    ini_txt += `*Credit :* ${get_result.credit}\n`
-                    get_link = get_result.link_dl
-                    for (var x in get_link) {
-                        ini_txt += `\n\n*${get_link[x].title}*\n`
-                        for (var y in get_link[x].link_dl) {
-                            ini_info = get_link[x].link_dl[y]
-                            ini_txt += `\n\`\`\`Reso : \`\`\`${ini_info.reso}\n`
-                            ini_txt += `\`\`\`Size : \`\`\`${ini_info.size}\n`
-                            ini_txt += `\`\`\`Link : \`\`\`\n`
-                            down_link = ini_info.link_dl
-                            for (var z in down_link) {
-                                ini_txt += `${z} - ${down_link[z]}\n`
-                            }
-                        }
-                    }
-                    reply(ini_txt)
-                    break	
+//--- cantik cek
+case 'cantikcek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}cantikcek hanburger`)
+if (!isGroup) return reply(mess.only.group)
+  random = `${Math.floor(Math.random() * 100)}`
+  can = q
+  cek = `Target : *${can}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+
+//--- apakah
+case 'apakah':
+if (!isGroup) return reply(mess.only.group)
+if (args.length < 1) return reply(`Contoh : ${prefix}apakah aku jelek`)
+apa = q
+naon = ["Iya","Tidak","Mungkin"]
+random = naon[Math.floor(Math.random() * (naon.length))]
+apakah = `Apakah *${apa}*
+Jawaban : ${random}`
+reply(apakah)
+break
+
+//--- rate
+case 'rate':
+if (!isGroup) return reply(mess.only.group)
+if (args.length < 1) return reply(`Contoh : ${prefix}rate akhlak`)
+rate = q
+random = `${Math.floor(Math.random() * 100)}`
+rating = `Rate ${rate}
+Persentase : ${random}%`
+reply(rating)
+break
+
+//--- bisakah
+case 'bisakah':
+if (!isGroup) return reply(mess.only.group)
+if (args.length < 1) return reply(`Contoh : ${prefix}bisakah han mendapatkan pacar`)
+bisa = q
+naon = ["Iya","Tidak","Mungkin"]
+random = naon[Math.floor(Math.random() * (naon.length))]
+bisakah = `Bisakah ${bisa}
+Jawaban : ${random}`
+reply(bisakah)
+break
+
+//--- kapankah
+case 'kapankah':
+if (!isGroup) return reply(mess.only.group)
+if (args.length < 1) return reply(`Contoh : ${prefix}kapankah han menikah`)
+kapan = q
+no = `${Math.floor(Math.random() * 100)}`
+naon = ["Jam lagi","Hari lagi","Minggu lagi","Bulan lagi","Tahun lagi"]
+random = naon[Math.floor(Math.random() * (naon.length))]
+kapan = `Kapankah ${kapan}
+Jawaban : ${no} ${random}`
+reply(kapan)
+break		
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* ga ada di list *${prefix}help*`)
