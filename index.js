@@ -43,7 +43,7 @@ const {
 } = require('./lib/config.json')
 
 fake = '༺ HanBotz ༻\nStatus : Online'
-let gambar = "" || fs.readFileSync('./media/gambar/biasa.jpg')
+let gambar = "" || fs.readFileSync('./media/gambar/han.png')
 self = false
 blocked = []
 
@@ -205,7 +205,7 @@ console.log(e)
 				(id == null || id == undefined || id == false) ? pebz.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : pebz.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
 			       const fakethumb = (teks, yes) => {
-            pebz.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./media/gambar/biasa.jpg'),quoted:mek,caption:yes})
+            pebz.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./media/gambar/han.png'),quoted:mek,caption:yes})
             } 
 			const sendWebp = async(from, url) => {
                 var names = Date.now() / 10000;
