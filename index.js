@@ -821,31 +821,6 @@ break
          reply('Suksess broadcast')
          }
 		break
-     case 'kick' :
-         if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
-         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
-         if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
-         mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-         if (mentioned.length > 1) {
-         teks = 'Perintah di terima, mengeluarkan :\n'
-         for (let _ of mentioned) {
-         teks += `@${_.split('@')[0]}\n`
-         }
-         mentions(teks, mentioned, true)
-         pebz.groupRemove(from, mentioned)
-         } else {
-         mentions(`Perintah di terima, mengeluarkan : @${mentioned[0].split('@')[0]}`, mentioned, true)
-         pebz.groupRemove(from, mentioned)
-         }
-		break
-                case 'setname':
-         if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
-         if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-         pebz.groupUpdateSubject(from, `${body.slice(9)}`)
-         pebz.sendMessage(from, `\`\`\`✓Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
-                break
 		case 'hidetag':
 		if (!isOwner && !isGroupAdmins) return reply(mess.only.ownerB)
     	var value = args.join(' ')
@@ -863,6 +838,127 @@ break
 	    pebz.sendMessage(from, optionshidetag, text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "393470602054-1351628616@g.us" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption":'༺ HAN ༻',"fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": gambar} }  } })
 					breakbreak
 					break
+     case 'antilinkon' :
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
+         if (isAntiLink) return reply('anti link sudah on')
+         _antilink.push(from)
+         fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
+         reply(`\`\`\`Sukses mengaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
+         break
+     case 'antilinkoff' :
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
+         if (!isAntiLink) return reply('anti link sudah off sebelumnya')
+         _antilink.splice(from, 1)
+         fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
+         reply(`\`\`\`Sukses menonaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
+         break
+     case 'groupbuka' :
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
+         reply(`\`\`\`Sukses Membuka Group\`\`\` *${groupMetadata.subject}*`)
+         pebz.groupSettingChange(from, GroupSettingChange.messageSend, false)
+         break
+     case 'grouptutup' :
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
+         reply(`\`\`\`Sukses Menutup Group\`\`\` *${groupMetadata.subject}*`)
+         pebz.groupSettingChange(from, GroupSettingChange.messageSend, true)
+         break
+     case 'linkgrup' :
+         if (!isGroup) return reply(mess.only.group)
+         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
+         linkgc = await pebz.groupInviteCode(from)
+         yeh = `https://chat.whatsapp.com/${linkgc}\n\nlink Group *${groupName}*`
+         pebz.sendMessage(from, yeh, text, { quoted: ftrol })
+         break
+     case 'promote' :
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
+         if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di jadi admin!')
+         mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+         if (mentioned.length > 1) {
+         teks = 'Perintah di terima, anda menjdi admin :\n'
+         for (let _ of mentioned) {
+         teks += `@${_.split('@')[0]}\n`
+         }
+         mentions(teks, mentioned, true)
+         pebz.groupMakeAdmin(from, mentioned)
+         } else {
+         mentions(`Perintah di terima, @${mentioned[0].split('@')[0]} Kamu Menjadi Admin Di Group *${groupMetadata.subject}*`, mentioned, true)
+         pebz.groupMakeAdmin(from, mentioned)
+         }
+         break
+     case 'demote' :
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
+         if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tidak jadi admin!')
+         mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+         if (mentioned.length > 1) {
+         teks = 'Perintah di terima, anda tidak menjadi admin :\n'
+         for (let _ of mentioned) {
+         teks += `@${_.split('@')[0]}\n`
+         }
+         mentions(teks, mentioned, true)
+         pebz.groupDemoteAdmin(from, mentioned)
+         } else {
+         mentions(`Perintah di terima, Menurunkan : @${mentioned[0].split('@')[0]} Menjadi Member`, mentioned, true)
+         pebz.groupDemoteAdmin(from, mentioned)
+         }
+         break
+     case 'add' :
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
+         if (args.length < 1) return reply('Yang mau di add siapa??')
+         if (args[0].startsWith('08')) return reply('Gunakan kode negara Gan')
+         try {
+         num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
+         pebz.groupAdd(from, [num])
+         } catch (e) {
+         console.log('Error :', e)
+         reply('Gagal menambahkan target, mungkin karena di private')
+         }
+         break
+              case 'kick' :
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
+         if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
+         mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+         if (mentioned.length > 1) {
+         teks = 'Perintah di terima, mengeluarkan :\n'
+         for (let _ of mentioned) {
+         teks += `@${_.split('@')[0]}\n`
+         }
+         mentions(teks, mentioned, true)
+         pebz.groupRemove(from, mentioned)
+         } else {
+         mentions(`Perintah di terima, mengeluarkan : @${mentioned[0].split('@')[0]}`, mentioned, true)
+         pebz.groupRemove(from, mentioned)
+         }
+         break
+     case 'setname':
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+         pebz.groupUpdateSubject(from, `${body.slice(9)}`)
+         pebz.sendMessage(from, `\`\`\`Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
+         break
+     case 'setdesc':
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+         pebz.groupUpdateDescription(from, `${body.slice(9)}`)
+         pebz.sendMessage(from, `\`\`\`Sukses Mengganti Deskripsi Group\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, { quoted: ftrol })
+         break
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* ga ada di list *${prefix}help*`)
