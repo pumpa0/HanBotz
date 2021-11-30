@@ -419,6 +419,8 @@ ${p}• ${prefix}add <nomer[62]>${p}
 ${p}• ${prefix}kick <tag>${p}
 ${p}• ${prefix}demote <tag>${p}
 ${p}• ${prefix}promote <tag>${p}
+${p}• ${prefix}setname <text>${p}
+${p}• ${prefix}setdesc <text>${p}
 ${p}• ${prefix}buka|tutup group <1|0>${p}
 
 
