@@ -399,9 +399,9 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
 		     const hiya = await fetchJson('https://xinzbot-api.herokuapp.com/api/ucapan?apikey=XinzBot&timeZone=Asia/Jakarta', {method:'get'})
 		     var p = '```'
 		    const tod =`      
-${p}> ${ucapanWaktu} ${pushname}${p}		    
-${p}> Prefix : ${prefix}${p}
-${p}> Runtime : ${kyun(uptime)}${p}`
+${p}> *Hallo ${pushname} ${ucapanWaktu}*${p}		    
+${p}> *Prefix :『 ${prefix} 』${p}
+${p}> *Runtime : ${kyun(uptime)}*${p}`
 tod2 =`
 *𝗠𝗘𝗡𝗨*
 ${p}• ${prefix}attp <text>${p}
