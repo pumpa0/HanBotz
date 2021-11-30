@@ -39,9 +39,6 @@ const pebz = new WAConnection()
 const _antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 const _antivirtex = JSON.parse(fs.readFileSync('./database/antivirtex.json'))
 const nsfww = JSON.parse(fs.readFileSync('./database/nsfww.json'))
-const isAntiVirtex = isGroup ? _antivirtex.includes(from) : false
-		const isAntiLink = isGroup ? _antilink.includes(from) : false
-	    const isNsfw = isGroup ? nsfww.includes(from) : false
 const {
 	OwnerNumber,
 	prefix,
@@ -160,6 +157,9 @@ pebz.on('group-participants-update', async (chat) => {
 			const isGroupAdmins = groupAdmins.includes(sender) || false
             const isWelcome = isGroup ? welkom.includes(from):false
 			const isOwner = ownerNumber.includes(sender)
+			const isAntiVirtex = isGroup ? _antivirtex.includes(from) : false
+		const isAntiLink = isGroup ? _antilink.includes(from) : false
+	    const isNsfw = isGroup ? nsfww.includes(from) : false
 
 const sendFile = async (medya, namefile, capti, tag, vn) => {
   baper = await getBuffer(medya)
