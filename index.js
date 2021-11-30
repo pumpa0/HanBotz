@@ -51,9 +51,9 @@ blocked = []
 pebz.ReconnectMode = 2
 pebz.logger.level = 'warn'
 pebz.version = [2, 2143, 8]
-pebz.browserDescription = ['febself', 'Safari', '3.0']
+pebz.browserDescription = ['Hanz', 'Safari', '3.0']
 console.log(start)
-console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','FEBSELF')
+console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','HANZ')
 pebz.on('qr', qr => {
 qrcode.generate(qr, { small : true })
 console.log(color(`[ BOT ] SCAN QR DI ATAS BRO`,'white'))
@@ -96,7 +96,7 @@ pebz.on('group-participants-update', async (chat) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `*Hallo* @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*\nJangan rusuh ya\nJangan lupa intro @${num.split('@')[0]}`
+				teks = `*Hallo* @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*`
 				let buff = await getBuffer(ppimg)
 				pebz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				} else if (chat.action == 'remove') {
@@ -106,7 +106,7 @@ pebz.on('group-participants-update', async (chat) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `*Mau Tau Anak Kintill Gak? Ini👆* @${num.split('@')[0]}\n*fuck this human*`
+				teks = `*Sayonara👋🏻* @${num.split('@')[0]}\n*fuck this human*`
 				let buff = await getBuffer(ppimg)
 				pebz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
