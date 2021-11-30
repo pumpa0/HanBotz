@@ -43,7 +43,7 @@ const {
 } = require('./lib/config.json')
 
 fake = '༺ HanBotz ༻\nStatus : Online'
-let gambar = "" || fs.readFileSync('./media/gambar/han.png')
+let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
 self = false
 blocked = []
 
@@ -53,7 +53,7 @@ pebz.logger.level = 'warn'
 pebz.version = [2, 2143, 8]
 pebz.browserDescription = ['Hanz', 'Safari', '3.0']
 console.log(start)
-console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','HANZ')
+console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','Hanz')
 pebz.on('qr', qr => {
 qrcode.generate(qr, { small : true })
 console.log(color(`[ BOT ] SCAN QR DI ATAS BRO`,'white'))
@@ -96,7 +96,7 @@ pebz.on('group-participants-update', async (chat) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `*Hallo* @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*`
+				teks = `*Hallo* @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*\nJangan rusuh ya\nJangan lupa intro @${num.split('@')[0]}`
 				let buff = await getBuffer(ppimg)
 				pebz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				} else if (chat.action == 'remove') {
@@ -106,7 +106,7 @@ pebz.on('group-participants-update', async (chat) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `*Sayonara👋🏻* @${num.split('@')[0]}\n*fuck this human*`
+				teks = `*Mau Tau Anak Kintill Gak? Ini👆* @${num.split('@')[0]}\n*fuck this human*`
 				let buff = await getBuffer(ppimg)
 				pebz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -205,7 +205,7 @@ console.log(e)
 				(id == null || id == undefined || id == false) ? pebz.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : pebz.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
 			       const fakethumb = (teks, yes) => {
-            pebz.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./media/gambar/han.png'),quoted:mek,caption:yes})
+            pebz.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./media/gambar/biasa.png'),quoted:mek,caption:yes})
             } 
 			const sendWebp = async(from, url) => {
                 var names = Date.now() / 10000;
