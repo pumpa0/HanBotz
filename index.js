@@ -39,6 +39,9 @@ const pebz = new WAConnection()
 const _antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 const _antivirtex = JSON.parse(fs.readFileSync('./database/antivirtex.json'))
 const nsfww = JSON.parse(fs.readFileSync('./database/nsfww.json'))
+const isAntiVirtex = isGroup ? _antivirtex.includes(from) : false
+		const isAntiLink = isGroup ? _antilink.includes(from) : false
+	    const isNsfw = isGroup ? nsfww.includes(from) : false
 const {
 	OwnerNumber,
 	prefix,
@@ -452,7 +455,7 @@ const pebz2 = {
            pebz.sendMessage(from, txt, MessageType.text, pebz2)
            break
            case 'imgsearch':
-            if(!q) return reply(`gambar apa?\n${prefix}chara nino`)
+            if(!q) return reply(`gambar apa?`)
             let im = await hx.chara(q)
             let acak = im[Math.floor(Math.random() * im.length)]
             let li = await getBuffer(acak)
@@ -855,7 +858,7 @@ break
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
-         if (isAntiLink) return reply('anti link sudah on')
+         if (!isAntiLink) return reply('anti link sudah on')
          _antilink.push(from)
          fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
          reply(`\`\`\`Sukses mengaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
@@ -888,7 +891,7 @@ break
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          linkgc = await pebz.groupInviteCode(from)
          yeh = `https://chat.whatsapp.com/${linkgc}\n\nlink Group *${groupName}*`
-         pebz.sendMessage(from, yeh, text, { quoted: ftrol })
+         pebz.sendMessage(from, yeh, text, { quoted: mek })
          break
      case 'promote' :
          if (!isGroup) return reply(mess.only.group)
