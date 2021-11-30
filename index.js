@@ -821,24 +821,23 @@ break
          reply('Suksess broadcast')
          }
 		break
-        case 'kick':
-					if (!isGroup) return reply(ind.groupo())
-					if (!isGroupAdmins) return reply(ind.admin())
-					if (!isBotGroupAdmins) return reply(ind.badmin())
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('  !')
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-					if (mentioned.length > 1) {
-						teks = ''
-						for (let _ of mentioned) {
-							teks += `*Asek jatah kick, otw kick*  :\n`
-							teks += `@_.split('@')[0]`
-						}
-						mentions(teks, mentioned, true)
-						client.groupRemove(from, mentioned)
-					} else {
-						mentions(`*Asek jatah kick, otw kick* @${mentioned[0].split('@')[0]} `, mentioned, true)
-						client.groupRemove(from, mentioned)
-					}
+     case 'kick' :
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
+         if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
+         mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+         if (mentioned.length > 1) {
+         teks = 'Perintah di terima, mengeluarkan :\n'
+         for (let _ of mentioned) {
+         teks += `@${_.split('@')[0]}\n`
+         }
+         mentions(teks, mentioned, true)
+         fdhl.groupRemove(from, mentioned)
+         } else {
+         mentions(`Perintah di terima, mengeluarkan : @${mentioned[0].split('@')[0]}`, mentioned, true)
+         fdhl.groupRemove(from, mentioned)
+         }
 		break
 		case 'hidetag':
 		if (!isOwner && !isGroupAdmins) return reply(mess.only.ownerB)
