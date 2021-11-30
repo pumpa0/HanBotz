@@ -839,6 +839,13 @@ break
          fdhl.groupRemove(from, mentioned)
          }
 		break
+                case 'setname':
+         if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+         fdhl.groupUpdateSubject(from, `${body.slice(9)}`)
+         fdhl.sendMessage(from, `\`\`\`✓Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
+                break
 		case 'hidetag':
 		if (!isOwner && !isGroupAdmins) return reply(mess.only.ownerB)
     	var value = args.join(' ')
