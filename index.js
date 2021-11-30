@@ -423,6 +423,10 @@ ${p}• ${prefix}setname <text>${p}
 ${p}• ${prefix}setdesc <text>${p}
 ${p}• ${prefix}buka|tutup group <1|0>${p}
 
+𝗢𝗧𝗛𝗘𝗥
+${p}• ${prefix}owner${p}
+${p}• ${prefix}donate${p}
+
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 » ᴛᴇʟғᴏɴ ʙᴏᴛ = ʙʟᴏᴄᴋ ᴘᴇʀᴍᴀᴍᴇɴ
@@ -431,14 +435,13 @@ ${p}• ${prefix}buka|tutup group <1|0>${p}
 *© HAN*
 `           
            but = [
-          { buttonId: `${prefix}owner1`, buttonText: { displayText: 'creator' }, type: 1 },
-          { buttonId: `${prefix}dnt`, buttonText: { displayText: 'donate' }, type: 1 }
+          { buttonId: `${prefix}owner`, buttonText: { displayText: 'HanBotz Beta' }, type: 1 }
                   ]
-        sendButLocation(from, tod, tod2, gambar)
+        sendButLocation(from, tod, tod2, gambar, but)
            break
            
            
-           case 'dnt':
+           case 'donate':
 txt = `
 *「 DONATE 」*
 
@@ -803,7 +806,7 @@ break
           );
         }
         break;
-           case 'owner1':
+           case 'owner':
          members_ids = []
          for (let mem of groupMembers) {
          members_ids.push(mem.jid)
