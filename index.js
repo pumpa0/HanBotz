@@ -445,7 +445,7 @@ ${p}• ${prefix}report <text>${p}
 *© HAN*
 `           
            but = [
-          { buttonId: `${prefix}owner`, buttonText: { displayText: '༺ HanBotz Beta ༻	' }, type: 1 }
+          { buttonId: `${prefix}owner`, buttonText: { displayText: '༺ HanBotz Beta ༻	' }, type: 0 }
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
