@@ -413,6 +413,14 @@ ${p}• ${prefix}sticker <replyimg>${p}
 ${p}️• ${prefix}imgsearch <query>${p}
 ${p}• ${prefix}toimg <replysticker>${p}
 
+*𝗚𝗥𝗢𝗨𝗣*
+${p}• ${prefix}link group${p}
+${p}• ${prefix}add <nomer[62]>${p}
+${p}• ${prefix}kick <tag>${p}
+${p}• ${prefix}demote <tag>${p}
+${p}• ${prefix}promote <tag>${p}
+${p}• ${prefix}buka|tutup group <1|0>${p}
+
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 » ᴛᴇʟғᴏɴ ʙᴏᴛ = ʙʟᴏᴄᴋ ᴘᴇʀᴍᴀᴍᴇɴ
