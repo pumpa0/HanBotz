@@ -99,7 +99,7 @@ pebz.on('group-participants-update', async (chat) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `*Hallo* @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*\nJangan rusuh ya\nJangan lupa intro @${num.split('@')[0]}`
+				teks = `*Hallo* @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*`
 				let buff = await getBuffer(ppimg)
 				pebz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				} else if (chat.action == 'remove') {
@@ -109,7 +109,7 @@ pebz.on('group-participants-update', async (chat) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `*Sayonara * @${num.split('@')[0]}`
+				teks = `*Sayonara* @${num.split('@')[0]}`
 				let buff = await getBuffer(ppimg)
 				pebz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -424,7 +424,7 @@ ${p}• ${prefix}toimg <replysticker>${p}
           { buttonId: `${prefix}owner1`, buttonText: { displayText: 'creator' }, type: 1 },
           { buttonId: `${prefix}dnt`, buttonText: { displayText: 'donate' }, type: 1 }
                   ]
-        sendButLocation(from, tod, tod2, gambar, but)
+        sendButLocation(from, tod, tod2, gambar)
            break
            
            
@@ -844,7 +844,7 @@ break
 	    pebz.sendMessage(from, optionshidetag, text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "393470602054-1351628616@g.us" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption":'༺ HAN ༻',"fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": gambar} }  } })
 					breakbreak
 					break
-     case 'antilink' :
+     case 'antilink betaaa' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
@@ -854,7 +854,7 @@ break
          ]
          sendButton(from, "Silahkan pilih untuk antilink group", faketeks, but, mek)
          break
-     case 'antilinkon' :
+     case 'antilink betaa' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
@@ -863,7 +863,7 @@ break
          fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
          reply(`\`\`\`Sukses mengaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
          break
-     case 'antilinkoff' :
+     case 'antilink beta' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
@@ -872,21 +872,24 @@ break
          fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
          reply(`\`\`\`Sukses menonaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
          break
-     case 'groupbuka' :
+     case 'group 1' :
+     case 'grup 1' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          reply(`\`\`\`Sukses Membuka Group\`\`\` *${groupMetadata.subject}*`)
          pebz.groupSettingChange(from, GroupSettingChange.messageSend, false)
          break
-     case 'grouptutup' :
+     case 'group 0' :
+     case 'grup 0' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          reply(`\`\`\`Sukses Menutup Group\`\`\` *${groupMetadata.subject}*`)
          pebz.groupSettingChange(from, GroupSettingChange.messageSend, true)
          break
-     case 'linkgrup' :
+     case 'link group' :
+     case 'link grup' :
          if (!isGroup) return reply(mess.only.group)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          linkgc = await pebz.groupInviteCode(from)
@@ -900,7 +903,7 @@ break
          if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di jadi admin!')
          mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
          if (mentioned.length > 1) {
-         teks = 'Perintah di terima, anda menjdi admin :\n'
+         teks = 'Perintah di terima, anda menjadi admin :\n'
          for (let _ of mentioned) {
          teks += `@${_.split('@')[0]}\n`
          }
@@ -934,7 +937,7 @@ break
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          if (args.length < 1) return reply('Yang mau di add siapa??')
-         if (args[0].startsWith('08')) return reply('Gunakan kode negara Gan')
+         if (args[0].startsWith('08')) return reply('Gunakan kode negara !')
          try {
          num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
          pebz.groupAdd(from, [num])
