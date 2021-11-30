@@ -398,20 +398,20 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
              uptime = process.uptime()            
 		     const hiya = await fetchJson('https://xinzbot-api.herokuapp.com/api/ucapan?apikey=XinzBot&timeZone=Asia/Jakarta', {method:'get'})
 		     var p = '```'
-		    const tod =`*༺ HanBotz ༻*	
-	    
+		    const tod =`      
 ${p}> ${ucapanWaktu} ${pushname}${p}		    
 ${p}> Prefix : ${prefix}${p}
 ${p}> Runtime : ${kyun(uptime)}${p}`
 tod2 =`
 *𝗠𝗘𝗡𝗨*
+${p}• ${prefix}attp <text>${p}
 ${p}• ${prefix}nulis <text>${p}
 ${p}• ${prefix}play <query>${p}
 ${p}• ${prefix}wiki <query>${p}
-${p}• ${prefix}pinterest <query>${p}
-${p}• ${prefix}sticker <replyimg>${p}
-${p}️• ${prefix}imgsearch <query>${p}
 ${p}• ${prefix}toimg <replysticker>${p}
+${p}• ${prefix}sticker <replyimg>${p}
+${p}• ${prefix}pinterest <query>${p}
+${p}️• ${prefix}imgsearch <query>${p}
 
 *𝗚𝗥𝗢𝗨𝗣*
 ${p}• ${prefix}linkgroup${p}
@@ -423,9 +423,19 @@ ${p}• ${prefix}setname <text>${p}
 ${p}• ${prefix}setdesc <text>${p}
 ${p}• ${prefix}open|close${p}
 
+*𝗚𝗔𝗕𝗨𝗧*
+${p}• ${prefix}rate <???>${p}
+${p}• ${prefix}apakah <text>${p}
+${p}• ${prefix}kapankah <text>${p}
+${p}• ${prefix}cantikcek <name>${p}
+${p}• ${prefix}gantengcek <name>${p}
+
+
 𝗢𝗧𝗛𝗘𝗥
 ${p}• ${prefix}owner${p}
 ${p}• ${prefix}donate${p}
+${p}• ${prefix}report <text>${p}
+
 
 
 *_ɪɴғᴏ ʙᴏᴛ_*
@@ -435,7 +445,7 @@ ${p}• ${prefix}donate${p}
 *© HAN*
 `           
            but = [
-          { buttonId: `${prefix}owner`, buttonText: { displayText: 'HanBotz Beta' }, type: 1 }
+          { buttonId: `${prefix}owner`, buttonText: { displayText: '༺ HanBotz Beta ༻	' }, type: 1 }
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
@@ -503,15 +513,10 @@ const pebz2 = {
            todzi = await getBuffer(`https://api.lolhuman.xyz/api/random/quotesimage?apikey=${lol}`)
            pebz.sendMessage(from, todzi, image, {quoted : mek })
            break
-           case 'simi':
-           case 'p':
-           case 'bot':
-           if (args.length == 0) return reply(`Hallo Kak ${pushname}`)
-           teksni = args.join(" ")
-           get_result = await fetchJson(`https://api.lolhuman.xyz/api/simi?apikey=${lol}&text=${teksni}`)
-           getresult = get_result.result
-             reply(getresult)         
-             break           
+case 'simi': 
+				anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${body.slice(3)}`)
+				reply(anu.result.success)
+				break
              case 'wiki':
             if (args.length < 1) return reply(' Yang Mau Di Cari Apa? ')
             teks = args.join(' ')
