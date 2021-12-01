@@ -854,7 +854,7 @@ break
 	    pebz.sendMessage(from, optionshidetag, text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "393470602054-1351628616@g.us" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption":'༺ HAN ༻',"fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": gambar} }  } })
 					breakbreak
 					break
-     case 'antilink betaaa' :
+     case 'antilinkbetaaa' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
@@ -864,7 +864,7 @@ break
          ]
          sendButton(from, "Silahkan pilih untuk antilink group", faketeks, but, mek)
          break
-     case 'antilink betaa' :
+     case 'antilinkbetaa' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
@@ -873,7 +873,7 @@ break
          fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
          reply(`\`\`\`Sukses mengaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
          break
-     case 'antilink beta' :
+     case 'antilinkbeta' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
@@ -1030,6 +1030,7 @@ break
 
 //--- apakah
 case 'apakah':
+case 'apa':
 if (!isGroup) return reply(mess.only.group)
 if (args.length < 1) return reply(`Contoh : ${prefix}apakah aku jelek`)
 apa = q
@@ -1065,6 +1066,7 @@ break
 
 //--- kapankah
 case 'kapankah':
+case 'kapan':
 if (!isGroup) return reply(mess.only.group)
 if (args.length < 1) return reply(`Contoh : ${prefix}kapankah han menikah`)
 kapan = q
