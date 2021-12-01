@@ -39,6 +39,11 @@ const pebz = new WAConnection()
 const _antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 const _antivirtex = JSON.parse(fs.readFileSync('./database/antivirtex.json'))
 const nsfww = JSON.parse(fs.readFileSync('./database/nsfww.json'))
+const level = require("./lib/level")
+let _leveling = JSON.parse(fs.readFileSync('./database/leveling.json'))
+let _level = JSON.parse(fs.readFileSync('./database/level.json'))
+const atm = require("./lib/atm");
+let _uang = JSON.parse(fs.readFileSync('./database/uang.json'))
 const {
 	OwnerNumber,
 	prefix,
@@ -530,7 +535,7 @@ case 'simi':
 result = `❒「  *Wiki*  」
 ├ *Judul :* ${resa[0].judul}
 └ *Wiki :* ${resa[0].wiki}`
-           sendFileFromUrl(resa[0].thumb, image, {quoted: mek, caption: result}).catch(e => {
+           sendFileFromUrl(resa[0].thumb, image, {quoted: fkontak, caption: result}).catch(e => {
            reply(result)
            })
         break
@@ -862,14 +867,14 @@ break
          reply('Suksess broadcast')
          } else {
          for (let _ of anu) {
-         sendMess(_.jid, `[ *BOT BROADCAST* ]\n\n${body.slice(4)}`)
+         sendMess(_.jid, `[ *HANBOTZ BROADCAST* ]\n\n${body.slice(4)}`)
          }
          reply('Suksess broadcast')
          }
 		break
 case 'tagall':
 if (!isGroup) return reply(mess.only.group)
-if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 members_id = []
 teks = (args.length > 1) ? args.join(' ').trim() : ''
@@ -881,7 +886,7 @@ members_id.push(mem.jid)
 mentions(teks, members_id, true)
 break
 		case 'hidetag':
-		if (!isOwner && !isGroupAdmins) return reply(mess.only.ownerB)
+		if (!isOwner && !isGroupAdmins && !isOwner) return reply(mess.only.ownerB)
     	var value = args.join(' ')
 		var group = await pebz.groupMetadata(from)
 		var member = group['participants']
@@ -899,7 +904,7 @@ break
 					break
      case 'antilinkbetaaa' :
          if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          but = [
          { buttonId: '!antilinkon', buttonText: { displayText: 'On' }, type: 1 },
@@ -909,7 +914,7 @@ break
          break
      case 'antilinkbetaa' :
          if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          if (!isAntiLink) return reply('anti link sudah on')
          _antilink.push(from)
@@ -918,7 +923,7 @@ break
          break
      case 'antilinkbeta' :
          if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          if (!isAntiLink) return reply('anti link sudah off sebelumnya')
          _antilink.splice(from, 1)
@@ -928,7 +933,7 @@ break
      case 'open':
      case 'grup1':
          if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          reply(`\`\`\`Sukses Membuka Group\`\`\` *${groupMetadata.subject}*`)
          pebz.groupSettingChange(from, GroupSettingChange.messageSend, false)
@@ -936,7 +941,7 @@ break
      case 'close':
      case 'grup0':
          if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          reply(`\`\`\`Sukses Menutup Group\`\`\` *${groupMetadata.subject}*`)
          pebz.groupSettingChange(from, GroupSettingChange.messageSend, true)
@@ -951,9 +956,9 @@ break
          break
      case 'promote' :
          if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
-         if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di jadi admin!')
+         if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di promote!')
          mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
          if (mentioned.length > 1) {
          teks = 'Perintah di terima, anda menjadi admin :\n'
@@ -969,9 +974,9 @@ break
          break
      case 'demote' :
          if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
-         if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tidak jadi admin!')
+         if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di demote!')
          mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
          if (mentioned.length > 1) {
          teks = 'Perintah di terima, anda tidak menjadi admin :\n'
@@ -987,7 +992,7 @@ break
          break
      case 'add' :
          if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          if (args.length < 1) return reply('Yang mau di add siapa??')
          if (args[0].startsWith('08')) return reply('Gunakan kode negara !')
@@ -1001,7 +1006,7 @@ break
          break
               case 'kick' :
          if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
          mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
@@ -1019,14 +1024,14 @@ break
          break
      case 'setname':
          if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply(mess.only.Badmin)
          pebz.groupUpdateSubject(from, `${body.slice(9)}`)
          pebz.sendMessage(from, `\`\`\`Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
          break
      case 'setdesc':
          if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins) return reply(mess.only.admin)
+         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply(mess.only.Badmin)
          pebz.groupUpdateDescription(from, `${body.slice(9)}`)
          pebz.sendMessage(from, `\`\`\`Sukses Mengganti Deskripsi Group\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, { quoted: ftrol })
@@ -1122,7 +1127,7 @@ reply(kapan)
 break
 case 'delete':
 if (!isGroup) return reply(mess.only.group)
-if (!isOwner && !isGroupAdmins) return reply(mess.only.ownerB)
+if (!isOwner && !isGroupAdmins && !isOwner) return reply(mess.only.ownerB)
 pebz.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 break
 case 'leave':
@@ -1136,9 +1141,91 @@ case 'leave':
 					pebz.sendMessage(from, 'Bye 🗿', text) // ur cods
 					}, 0)
 					break
+         const levelRole = level.getLevelingLevel(sender, _level)
+        var role = 'Warrior III'
+        if (levelRole <= 5) {
+            role = 'Warrior II'
+        } else if (levelRole <= 10) {
+            role = 'Warrior I'
+        } else if (levelRole <= 15) {
+            role = 'Elite III'
+        } else if (levelRole <= 20) {
+            role = 'Elite II'
+        } else if (levelRole <= 25) {
+            role = 'Elite I'
+        } else if (levelRole <= 30) {
+            role = 'Master III'
+        } else if (levelRole <= 35) {
+            role = 'Master II'
+        } else if (levelRole <= 40) {
+            role = 'Master I'
+        } else if (levelRole <= 45) {
+            role = 'GrandMaster III'
+        } else if (levelRole <= 50) {
+            role = 'GrandMaster II'
+        } else if (levelRole <= 55) {
+            role = 'GrandMaster I'
+        } else if (levelRole <= 60) {
+            role = 'Epic III'
+        } else if (levelRole <= 65) {
+            role = 'Epic II'
+        } else if (levelRole <= 70) {
+            role = 'Epic I'
+        } else if (levelRole <= 75) {
+            role = 'Legend III'
+        } else if (levelRole <= 80) {
+            role = 'Legend II'
+        } else if (levelRole <= 85) {
+            role = 'Legend I'
+        } else if (levelRole <= 90) {
+            role = 'Mythic'
+        } else if (levelRole <= 95) {
+            role = 'Mythical Glory'
+        } else if (levelRole >= 100) {
+            role = 'Immortal'
+        } 
+       // FUNCTION LEVELING
+       if (isGroup && !mek.key.fromMe && !level.isGained(sender)) {
+       try {
+       level.addCooldown(sender)
+       const checkATM = atm.checkATMuser(sender, _uang)
+       if (checkATM === undefined) atm.addATM(sender, _uang)
+       const uangsaku = Math.floor(Math.random() * (15 - 25 + 1) + 20)
+       atm.addKoinUser(sender, uangsaku, _uang)
+       const currentLevel = level.getLevelingLevel(sender, _level)
+       const amountXp = Math.floor(Math.random() * (15 - 25 + 1) + 20)
+       const requiredXp = 10 * Math.pow(currentLevel, 2) + 50 * currentLevel + 100
+       level.addLevelingXp(sender, amountXp, _level)
+       if (requiredXp <= level.getLevelingXp(sender, _level)) {
+       level.addLevelingLevel(sender, 1, _level)
+       const userLevel = level.getLevelingLevel(sender, _level)
+       const fetchXp = 10 * Math.pow(userLevel, 2) + 50 * userLevel + 100
+       reply(`*「 LEVEL UP 」*\n\n➸ *Nama :* ${pushname}\n➸ *Xp :* ${level.getLevelingXp(sender, _level)} / ${fetchXp}\n➸ *Level :* ${currentLevel} -> ${level.getLevelingLevel(sender, _level)} 🆙 \n➸ *Role*: *${role}*\n\nCongrats!! 🎉🎉`)
+} 
+       } catch (err) {
+       console.error(err)
+}
+}
+break
+//------------------< Level >-------------------
+      case 'level': 
+              if (!isGroup) return reply(mess.only.group)
+              let userLevel = level.getLevelingLevel(sender, _level)
+              let userXp = level.getLevelingXp(sender, _level)
+              let requiredXp = 10 * Math.pow(userLevel, 2) + 50 * userLevel + 100
+              let userRank = level.getUserRank(sender, _level)
+              try {
+              profilePic = await pebz.getProfilePicture(sender)
+              } catch {
+              profilePic = errorImg
+}
+              buffer = await getBuffer(`https://lolhuman.herokuapp.com/api/rank?apikey=${setting.lolkey}&img=${profilePic}&background=https://telegra.ph/file/443b6600636aed1d94acd.jpg&username=${encodeURI(pushname)}&level=${userLevel}&ranking=${Number(userRank)}&currxp=${userXp}&xpneed=${requiredXp}`)
+              teks = `*「 LEVEL 」*\n\n➸ *Nama :* ${pushname}\n➸ *Xp :* ${userXp} / ${requiredXp}\n➸ *Level :* ${userLevel}\n➸ *Role*: *${role}*\n\n*Note : Kumpulin Xp Jika Ingin Menaikkan Level*`
+              pebz.sendMessage(from, buffer, image, { caption: teks, quoted: mek})
+              break
           default: 
           if (isCmd) {
-                 reply(`Command *${prefix}${command}* ga ada di list *${prefix}help*`)
+                 reply(`Command *${prefix}${command}* tidak ada di list *${prefix}help*`)
                     }
 					if (isGroup && budy != undefined) {
 				} else {
