@@ -460,12 +460,6 @@ txt = `
 - *Dana:* 085731855426
 
 `
-
-           case 'donate':
-txt = `
-*「 RUNTIME 」*
-
-> Runtime : ${kyun(uptime)}${p}`
 const pebz2 = {
             contextInfo: {
             participant: '0@s.whatsapp.net',
@@ -543,22 +537,22 @@ result = `❒「  *Wiki*  」
         yta(yut.videos[0].url)             
         .then(async(res) => {
         const { thumb, title, filesizeF, filesize } = res
-        const capti = `𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗣𝗟𝗔𝗬🍁
+        const capti = `𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗣𝗟𝗔𝗬
 		     
-•💬 Judul : ${yut.all[0].title}
-•🎥 ID Video : ${yut.all[0].videoId}
-•⏰️ Diupload Pada : ${yut.all[0].ago}
-•👁️️ Views : ${yut.all[0].views}
-•▶️ Durasi : ${yut.all[0].timestamp}
-•📍 Channel : ${yut.all[0].author.name}
-•🔗 Link Channel : ${yut.all[0].author.url}`      
+• *Judul* : ${yut.all[0].title}
+• *ID Video* : ${yut.all[0].videoId}
+• *Diupload Pada* : ${yut.all[0].ago}
+• *Views* : ${yut.all[0].views}
+• *Durasi* : ${yut.all[0].timestamp}
+• *Channel* : ${yut.all[0].author.name}
+• *Link Channel* : ${yut.all[0].author.url}`      
         ya = await getBuffer(thumb)
         py =await pebz.prepareMessage(from, ya, image)
-        gbutsan = [{buttonId: `${prefix}buttonmusic ${yut.all[0].url}`, buttonText: {displayText: '🎵AUDIO'}, type: 1},{buttonId: `${prefix}buttonvideo ${yut.all[0].url}`, buttonText: {displayText: '🎥VIDEO'}, type: 1}]
+        gbutsan = [{buttonId: `${prefix}buttonmusic ${yut.all[0].url}`, buttonText: {displayText: 'AUDIO'}, type: 1},{buttonId: `${prefix}buttonvideo ${yut.all[0].url}`, buttonText: {displayText: 'VIDEO'}, type: 1}]
         gbuttonan = {
         imageMessage: py.message.imageMessage,
         contentText: capti,
-        footerText: 'Silahkan Pilih Jenis File Dibawah Ini☕',
+        footerText: 'Silahkan Pilih Jenis File Dibawah Ini',
         buttons: gbutsan,
         headerType: 4
 }
@@ -574,7 +568,7 @@ result = `❒「  *Wiki*  」
         if(!q) return reply('linknya?')            
         res = await ytv(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video```')})
-        sendMedia(from, `${res.dl_link}`,'Nih Kack')
+        sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                               
         case 'trut':
         case 'truth':
@@ -589,7 +583,7 @@ result = `❒「  *Wiki*  」
 		const dare =['Kirim pesan ke mantan kamu dan bilang "aku masih suka sama kamu','telfon crush/pacar sekarang dan ss ke pemain','pap ke salah satu anggota grup','Bilang "KAMU CANTIK BANGET NGGAK BOHONG" ke cowo','ss recent call whatsapp','drop emot "😎??" setiap ngetik di gc/pc selama 1 hari','kirim voice note bilang can i call u baby?','drop kutipan lagu/quote, terus tag member yang cocok buat kutipan itu','pake foto sule sampe 3 hari','ketik pake bahasa daerah 24 jam','ganti nama menjadi "gue anak lucinta luna" selama 5 jam','chat ke kontak wa urutan sesuai %batre kamu, terus bilang ke dia "i lucky to hv you','prank chat mantan dan bilang " i love u, pgn balikan','record voice baca surah al-kautsar','bilang "i hv crush on you, mau jadi pacarku gak?" ke lawan jenis yang terakhir bgt kamu chat (serah di wa/tele), tunggu dia bales, kalo udah ss drop ke sini','sebutkan tipe pacar mu!','snap/post foto pacar/crush','teriak gajelas lalu kirim pake vn kesini','pap mukamu lalu kirim ke salah satu temanmu','kirim fotomu dengan caption, aku anak pungut','teriak pake kata kasar sambil vn trus kirim kesini','teriak " anjimm gabutt anjimmm " di depan rumah mu','ganti nama jadi " BOWO " selama 24 jam','Pura pura kerasukan, contoh : kerasukan maung, kerasukan belalang, kerasukan kulkas, dll']
 		const der = dare[Math.floor(Math.random() * dare.length)]
 		todz = await getBuffer(`https://www.linkpicture.com/q/20211130_010958.jpg`)
-        pebz.sendMessage(from, der, 'GAK JALANIN WAJIB DONATE',todz, {quoted: mek})
+        pebz.sendMessage(from, der, 'GAK JALANIN WAJIB DONATE',todz)
        	   break 
            case 'self':
            if (!isOwner) return reply(mess.only.ownerB)
