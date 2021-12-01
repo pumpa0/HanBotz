@@ -691,7 +691,7 @@ reply('Gunakan foto!')
 }
 break  
           case 'toimg':
-			if (!isQuotedSticker) return reply('𝗥𝗲𝗽𝗹𝘆/𝘁𝗮𝗴 𝘀𝘁𝗶𝗰𝗸𝗲𝗿 !')
+			if (!isQuotedSticker) return reply('reply sticker !')
 			reply(mess.wait)
 			encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 			media = await pebz.downloadAndSaveMediaMessage(encmedia)
@@ -711,8 +711,8 @@ break
             encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 		    media = await pebz.downloadAndSaveMediaMessage(encmedia)
             anu = args.join(' ').split('|')
-            satu = anu[0] !== '' ? anu[0] : `SELF`
-            dua = typeof anu[1] !== 'undefined' ? anu[1] : `BOT`
+            satu = anu[0] !== '' ? anu[0] : `HAN`
+            dua = typeof anu[1] !== 'undefined' ? anu[1] : `085731855426`
             require('./lib/fetcherr.js').createExif(satu, dua)
 			require('./lib/fetcherr.js').modStick(media, pebz, mek, from)
 			break
@@ -729,6 +729,11 @@ break
                 .extendedTextMessage.contextInfo
             : mek;
           const media = await pebz.downloadAndSaveMediaMessage(encmedia);
+                      anu = args.join(' ').split('|')
+            satu = anu[0] !== '' ? anu[0] : `HAN`
+            dua = typeof anu[1] !== 'undefined' ? anu[1] : `085731855426`
+            require('./lib/fetcherr.js').createExif(satu, dua)
+			require('./lib/fetcherr.js').modStick(media, pebz, mek, from)
           ran = "666.webp";
           await ffmpeg(`./${media}`)
             .input(media)
