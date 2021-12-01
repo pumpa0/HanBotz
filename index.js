@@ -392,8 +392,8 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
             const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
             const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
            const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
-			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mPEBSELF\x1b[1;37m]', color(pushname), 'Menggunakan Fitur', color(command), 'args :', color(args.length))
-        	if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mPEBSELF\x1b[1;37m]', color(pushname), 'Memakai Fitur', color(command), 'DI Group', color(groupName), 'args :', color(args.length))        	        	
+			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mHANBOTZ\x1b[1;37m]', color(pushname), 'Menggunakan Fitur', color(command), 'args :', color(args.length))
+        	if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mHANBOTZ\x1b[1;37m]', color(pushname), 'Memakai Fitur', color(command), 'DI Group', color(groupName), 'args :', color(args.length))        	        	
             if (self === true && !isOwner && isCmd) return
           
            
@@ -1147,27 +1147,98 @@ case 'leave':
               awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, aaaah baunya rambut ${qq} wangyy aku mau nyiumin aroma wangynya ${qq} AAAAAAAAH ~ Rambutnya.... aaah rambutnya juga pengen aku elus-elus ~~ AAAAAH ${qq} keluar pertama kali di anime juga manis ❤️ ❤️ ❤️ banget AAAAAAAAH ${qq} AAAAA LUCCUUUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️apa ? ${qq} itu gak nyata ? Cuma HALU katamu ? nggak, ngak ngak ngak ngak NGAAAAAAAAK GUA GAK PERCAYA ITU DIA NYATA NGAAAAAAAAAAAAAAAAAK PEDULI BANGSAAAAAT !! GUA GAK PEDULI SAMA KENYATAAN POKOKNYA GAK PEDULI. ❤️ ❤️ ❤️ ${qq} gw ... ${qq} di laptop ngeliatin gw, ${qq} .. kamu percaya sama aku ? aaaaaaaaaaah syukur ${q} aku gak mau merelakan ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH GUA MASIH PUNYA ${qq} SENDIRI PUN NGGAK SAMA AAAAAAAAAAAAAAH`
               reply(awikwok)
               break
-      case 'join': 
-             if (!q) return reply('Linknya?')
-             if (!isOwner) return reply(mess.only.owner)
-             if (!isUrl(args[0]) && !args[0].includes('https://chat.whatsapp.com/')) return reply('Linknya Invalid Tod')
-             link = args[0].replace('https://chat.whatsapp.com/','')
-             fak = dha.query({ json: ['action', 'invite', link],
-             expect200: true })
-             reply('Berhasil Masuk Grup')
-             break
-      case 'shutdown':
-             if (!isOwner) return 
-             reply(`Bye...`)
-             await sleep(3000)
-             process.exit()
-             break
-      case 'start':
-             if (!isOwner) return 
-             reply(`OTEWE 😎`)
-             await sleep(3000)
-             process.exit()
-             break             
+//------------------< Sticker/Tools >-------------------
+
+       case 'dadu': // by CHIKAA CHANTEKKXXZZ
+              reply(mess.wait)
+              dadu()
+             .then(async (body) => {
+              dadugerak = body.split('\n')
+              dadugerakx = dadugerak[Math.floor(Math.random() * dadugerak.length)]
+              sendWebp(from, dadugerakx)
+})
+             .catch(async (err) => {
+              console.error(err)
+              reply('Error!')
+})
+              break              
+      case 'doge':
+              reply(mess.wait)
+              fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
+             .then(res => res.text())
+             .then(body => {
+              let tod = body.split("\n");
+              let pjr = tod[Math.floor(Math.random() * tod.length)];
+              sendWebp(from, pjr)
+}
+)
+              break
+       case 'patrick':
+              reply(mess.wait)
+              fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
+             .then(res => res.text())
+             .then(body => {
+              let tod = body.split("\n");
+              let pjr = tod[Math.floor(Math.random() * tod.length)];
+              sendWebp(from, pjr)
+}
+)
+              break
+       case 'gura':
+       case 'gawrgura':
+              reply(mess.wait)
+              fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
+             .then(res => res.text())
+             .then(body => {
+              let tod = body.split("\n");
+              let pjr = tod[Math.floor(Math.random() * tod.length)];
+              sendWebp(from, pjr)
+}
+)
+              break
+       case 'animestick':
+       case 'stickeranime':
+              reply(mess.wait)
+              fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestick')
+             .then(res => res.text())
+             .then(body => {
+              let todd = body.split("\n");
+              let pjrr = todd[Math.floor(Math.random() * todd.length)];
+              sendWebp(from, pjrr)
+}
+)
+              break
+       case 'telesticker': 
+       case 'telestiker':
+              if (!q) return reply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
+              reply(mess.wait)
+              ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=${setting.lolkey}&url=${args[0]}`)
+              ini_sticker = ini_url.result.sticker
+              reply('Sending '+ ini_sticker.length +' stickers...')
+              for (sticker_ in ini_sticker) {
+              ini_buffer = await getBuffer(ini_sticker[sticker_])
+              dha.sendMessage(from, ini_buffer, sticker, {})
+}
+              break
+       case 'semoji':
+       case 'emoji':
+              if (args.length == 0) return reply(`Example: ${prefix + command} ðŸ˜­`)
+              emoji = args[0]
+              try {
+              emoji = encodeURI(emoji[0])
+              } catch {
+              emoji = encodeURI(emoji)
+ }
+              ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/smoji/${emoji}?apikey=${setting.lolkey}`)
+              await dha.sendMessage(from, ini_buffer, sticker, { quoted: mek })
+              break
+case 'ttp':
+if (args.length < 1) return reply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
+woy = args.join(" ")
+reply('wait....')
+anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
+sendStickerUrl(from, anjay)
+break
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* tidak ada di list *${prefix}help*`)
