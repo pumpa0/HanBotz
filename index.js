@@ -1208,37 +1208,118 @@ case 'leave':
 }
 )
               break
-       case 'telesticker': 
-       case 'telestiker':
-              if (!q) return reply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
-              reply(mess.wait)
-              ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=${setting.lolkey}&url=${args[0]}`)
-              ini_sticker = ini_url.result.sticker
-              reply('Sending '+ ini_sticker.length +' stickers...')
-              for (sticker_ in ini_sticker) {
-              ini_buffer = await getBuffer(ini_sticker[sticker_])
-              dha.sendMessage(from, ini_buffer, sticker, {})
+         case 'gelud':
+               if (!isGroup) return reply(mess.only.group)
+               if (mek.message.extendedTextMessage.contextInfo.mentionedJid > 1) return reply('Hanya bisa dengan 1 orang')
+               if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) return
+               if (args.length === 0) return reply(`Tag Lawan Yang Ingin Diajak Bermain Game`)
+               if (fs.existsSync(`./media/${from}.json`)) return reply(`Sedang Ada Sesi, tidak dapat dijalankan secara bersamaan\nKetik *${prefix}delsesigelud*, untuk menghapus sesi`)
+					
+               gelutSkuy = setGelud(`${from}`)
+               gelutSkuy.status = false
+               gelutSkuy.Z = sender.replace("@s.whatsapp.net", "")
+               gelutSkuy.Y = args[0].replace("@", "");
+               fs.writeFileSync(`./media/${from}.json`, JSON.stringify(gelutSkuy, null, 2))
+               starGame = `👑 Memulai Game Baku Hantam 👊🏻
+
+• @${sender.replace("@s.whatsapp.net", "")} Menantang Bergelud
+[ ${args[0]} ] Ketik Y/N untuk menerima atau menolak permainan`
+
+               pebz.sendMessage(from, starGame, text, {quoted: mek, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
+               gameAdd(sender, glimit)
+               break
+        case 'delsesigelud':
+               if (!isGroup) return reply(mess.only.group)
+               if (fs.existsSync('./media/' + from + '.json')) {
+               fs.unlinkSync('./media/' + from + '.json')
+               reply('Berhasil Menghapus Sesi Gelud')
+               } else {
+               reply('Tidak ada sesi yang berlangsung')
+}
+               break
+        case 'delsesittt':
+        case 'resetgame':
+               if (!isGroup) return reply(mess.only.group)
+               if (!isTTT) return reply('Tidak Ada Permainan Di Grub Ini')
+               naa = ky_ttt.filter(toek => !toek.id.includes(from)) 
+               ky_ttt = naa 
+               reply('Sukses Mereset Game')
+               break
+        case 'tictactoe':
+        case 'ttt':
+              if (!isGroup) return reply(mess.only.group)
+              if (args.length < 1) return reply('Tag Lawan Anda! ')
+              if (isTTT) return reply('Sedang Ada Permainan Di Grub Ini, Harap Tunggu')
+              if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target Lawan!')
+              ment = mek.message.extendedTextMessage.contextInfo.mentionedJid
+              player1 = sender
+              player2 = ment[0]
+              angka = ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
+              id = from
+              gilir = player2
+              ky_ttt.push({player1,player2,id,angka,gilir})
+              pebz.sendMessage(from, 
+`*🎳 Memulai Game Tictactoe 🎲*
+
+[@${player2.split('@')[0]}] Menantang anda untuk menjadi lawan Game🔥
+Ketik Y/N untuk menerima atau menolak permainan
+
+Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contextInfo: {mentionedJid: [player2]}})
+              gameAdd(sender, glimit)
+              break
+       case 'slot':
+              const sotoy = ['🍊 : 🍒 : 🍐','🍒 : ?? : 🍊','?? : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍒 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : ?? : 🍇']
+              somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
+              somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
+              somtoyyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
+              if (somtoyy  == '🍌 : 🍌 : 🍌') {
+              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
+              } else if (somtoyy == '?? : 🍒 : 🍒') {
+              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
+              } else if (somtoyy == '🔔 : 🔔 : 🔔') {
+              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
+              } else if (somtoyy == '?? : 🍐 : 🍐') {
+              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
+              } else if (somtoyy == '🍇 : 🍇 : 🍇') {
+              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU WIN*  ]`)
+              } else {
+              reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU LOSE*  ]`)
 }
               break
-       case 'semoji':
-       case 'emoji':
-              if (args.length == 0) return reply(`Example: ${prefix + command} ðŸ˜­`)
-              emoji = args[0]
-              try {
-              emoji = encodeURI(emoji[0])
-              } catch {
-              emoji = encodeURI(emoji)
- }
-              ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/smoji/${emoji}?apikey=${setting.lolkey}`)
-              await dha.sendMessage(from, ini_buffer, sticker, { quoted: mek })
+       case 'suit': //nyolong dari zenz
+              if (!q) return reply(`Kirim perintah ${prefix}suit gunting / batu / kertas`)
+              const userspilih = q
+              if (!userspilih.match(/batu|gunting|kertas/)) return reply(`Pilih batu, kertas, gunting`)
+              var computer = Math.random();
+              if (computer < 0.34 ) {
+              computer = 'batu';
+              } else if( computer >= 0.34 && computer < 0.67) {
+              computer = 'gunting';
+              } else {
+              computer = 'kertas';
+}
+              if ( userspilih == computer ) {
+              reply(`Pertandingan Seri!`)
+              } else if ( userspilih == 'batu' ) {
+              if( computer == 'gunting' ) {
+              reply(`Kamu memilih Batu dan bot Gunting\nKamu menang!`)
+              } else {
+              reply(`Kamu memilih Batu dan bot memilih Kertas\nKamu kalah!`)
+}
+              } else if ( userspilih == 'gunting' ) {
+              if( computer == 'batu' ) {
+              reply(`Kamu memilih Gunting dan bot memilih Batu\nKamu kalah!`)
+              } else {
+              reply(`Kamu memilih Gunting dan bot Kertas\nKamu menang!`)
+}
+              } else if ( userspilih == 'kertas' ) {
+              if( computer == 'batu' ) {
+              reply(`Kamu memilih Kertas dan bot Batu\nKamu menang!`)
+              } else {
+              reply(`Kamu memilih Kertas dan bot memilih Gunting\nKamu kalah`)
+}
+}
               break
-case 'ttp':
-if (args.length < 1) return reply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
-woy = args.join(" ")
-reply('wait....')
-anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
-sendStickerUrl(from, anjay)
-break
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* tidak ada di list *${prefix}help*`)
