@@ -309,7 +309,7 @@ console.log(e)
            }
            }
         const fkontak = { 
-        key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `0@s.whatsapp.net` } : {}) }, message: { 'contactMessage': { 'displayName': `Hallo Kak ${pushname}\nNih kak nomer ownerku ^_^`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': gambar}}}                   		
+        key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `0@s.whatsapp.net` } : {}) }, message: { 'contactMessage': { 'displayName': `Hallo Kak ${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': gambar}}}                   		
         const sendButton = async (from, context, fortext, but, mek) => {
         buttonMessages = {
         contentText: context,
@@ -406,7 +406,6 @@ tod2 =`
 *𝗠𝗘𝗡𝗨*
 ${p}• ${prefix}attp <text>${p}
 ${p}• ${prefix}nulis <text>${p}
-${p}• ${prefix}play <query>${p}
 ${p}• ${prefix}wiki <query>${p}
 ${p}• ${prefix}toimg <replysticker>${p}
 ${p}• ${prefix}sticker <replyimg>${p}
@@ -429,6 +428,11 @@ ${p}• ${prefix}apakah <text>${p}
 ${p}• ${prefix}kapankah <text>${p}
 ${p}• ${prefix}cantikcek <name>${p}
 ${p}• ${prefix}gantengcek <name>${p}
+
+*𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗*
+${p}• ${prefix}play <query>${p}
+${p}• ${prefix}mp3 <link>${p}
+${p}• ${prefix}mp4 <link>${p}
 
 
 𝗢𝗧𝗛𝗘𝗥
@@ -526,12 +530,12 @@ case 'simi':
 result = `❒「  *Wiki*  」
 ├ *Judul :* ${resa[0].judul}
 └ *Wiki :* ${resa[0].wiki}`
-           sendFileFromUrl(resa[0].thumb, image, {quoted: fkontak, caption: result}).catch(e => {
+           sendFileFromUrl(resa[0].thumb, image, {quoted: mek, caption: result}).catch(e => {
            reply(result)
            })
         break
-        case 'play':
-        if (args.length < 1) return reply(`Kirim perintah *${prefix}play query`)
+        case 'mp4':
+        if (args.length < 1) return reply(`Kirim perintah *${prefix}mp4 <link>`)
         reply(mess.wait)
         let yut = await yts(q)
         yta(yut.videos[0].url)             
@@ -548,16 +552,43 @@ result = `❒「  *Wiki*  」
 • *Link Channel* : ${yut.all[0].author.url}`      
         ya = await getBuffer(thumb)
         py =await pebz.prepareMessage(from, ya, image)
-        gbutsan = [{buttonId: `${prefix}buttonmusic ${yut.all[0].url}`, buttonText: {displayText: 'AUDIO'}, type: 1},{buttonId: `${prefix}buttonvideo ${yut.all[0].url}`, buttonText: {displayText: 'VIDEO'}, type: 1}]
+        gbutsan = [{buttonId: `${prefix}buttonvideo ${yut.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1}]
         gbuttonan = {
         imageMessage: py.message.imageMessage,
         contentText: capti,
-        footerText: 'Silahkan Pilih Jenis File Dibawah Ini',
+        footerText: '© HAN',
         buttons: gbutsan,
         headerType: 4
 }
         await pebz.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
         break                
+                case 'mp3':
+        if (args.length < 1) return reply(`Kirim perintah *${prefix}mp3 <link>`)
+        reply(mess.wait)
+        let yut = await yts(q)
+        yta(yut.videos[0].url)             
+        .then(async(res) => {
+        const { thumb, title, filesizeF, filesize } = res
+        const capti = `𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗣𝗟𝗔𝗬
+		     
+• *Judul* : ${yut.all[0].title}
+• *ID Video* : ${yut.all[0].videoId}
+• *Diupload Pada* : ${yut.all[0].ago}
+• *Views* : ${yut.all[0].views}
+• *Durasi* : ${yut.all[0].timestamp}
+• *Channel* : ${yut.all[0].author.name}
+• *Link Channel* : ${yut.all[0].author.url}`      
+        ya = await getBuffer(thumb)
+        py =await pebz.prepareMessage(from, ya, image)
+        gbutsan = [{buttonId: `${prefix}buttonmusic ${yut.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1}]
+        gbuttonan = {
+        imageMessage: py.message.imageMessage,
+        contentText: capti,
+        footerText: '© HAN',
+        buttons: gbutsan,
+        headerType: 4
+}
+        await pebz.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
         case 'buttonmusic':
         if(!q) return reply('linknya?')              
         res = await yta(`${q}`).catch(e => {
