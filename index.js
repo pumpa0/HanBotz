@@ -1140,88 +1140,6 @@ case 'leave':
 					pebz.updatePresence(from, Presence.composing) 
 					pebz.sendMessage(from, 'Bye 🗿', text) // ur cods
 					}, 0)
-					break
-         const levelRole = level.getLevelingLevel(sender, _level)
-        var role = 'Warrior III'
-        if (levelRole <= 5) {
-            role = 'Warrior II'
-        } else if (levelRole <= 10) {
-            role = 'Warrior I'
-        } else if (levelRole <= 15) {
-            role = 'Elite III'
-        } else if (levelRole <= 20) {
-            role = 'Elite II'
-        } else if (levelRole <= 25) {
-            role = 'Elite I'
-        } else if (levelRole <= 30) {
-            role = 'Master III'
-        } else if (levelRole <= 35) {
-            role = 'Master II'
-        } else if (levelRole <= 40) {
-            role = 'Master I'
-        } else if (levelRole <= 45) {
-            role = 'GrandMaster III'
-        } else if (levelRole <= 50) {
-            role = 'GrandMaster II'
-        } else if (levelRole <= 55) {
-            role = 'GrandMaster I'
-        } else if (levelRole <= 60) {
-            role = 'Epic III'
-        } else if (levelRole <= 65) {
-            role = 'Epic II'
-        } else if (levelRole <= 70) {
-            role = 'Epic I'
-        } else if (levelRole <= 75) {
-            role = 'Legend III'
-        } else if (levelRole <= 80) {
-            role = 'Legend II'
-        } else if (levelRole <= 85) {
-            role = 'Legend I'
-        } else if (levelRole <= 90) {
-            role = 'Mythic'
-        } else if (levelRole <= 95) {
-            role = 'Mythical Glory'
-        } else if (levelRole >= 100) {
-            role = 'Immortal'
-        } 
-       // FUNCTION LEVELING
-       if (isGroup && !mek.key.fromMe && !level.isGained(sender)) {
-       try {
-       level.addCooldown(sender)
-       const checkATM = atm.checkATMuser(sender, _uang)
-       if (checkATM === undefined) atm.addATM(sender, _uang)
-       const uangsaku = Math.floor(Math.random() * (15 - 25 + 1) + 20)
-       atm.addKoinUser(sender, uangsaku, _uang)
-       const currentLevel = level.getLevelingLevel(sender, _level)
-       const amountXp = Math.floor(Math.random() * (15 - 25 + 1) + 20)
-       const requiredXp = 10 * Math.pow(currentLevel, 2) + 50 * currentLevel + 100
-       level.addLevelingXp(sender, amountXp, _level)
-       if (requiredXp <= level.getLevelingXp(sender, _level)) {
-       level.addLevelingLevel(sender, 1, _level)
-       const userLevel = level.getLevelingLevel(sender, _level)
-       const fetchXp = 10 * Math.pow(userLevel, 2) + 50 * userLevel + 100
-       reply(`*「 LEVEL UP 」*\n\n➸ *Nama :* ${pushname}\n➸ *Xp :* ${level.getLevelingXp(sender, _level)} / ${fetchXp}\n➸ *Level :* ${currentLevel} -> ${level.getLevelingLevel(sender, _level)} 🆙 \n➸ *Role*: *${role}*\n\nCongrats!! 🎉🎉`)
-} 
-       } catch (err) {
-       console.error(err)
-}
-}
-break
-//------------------< Level >-------------------
-      case 'level': 
-              if (!isGroup) return reply(mess.only.group)
-              let userLevel = level.getLevelingLevel(sender, _level)
-              let userXp = level.getLevelingXp(sender, _level)
-              let requiredXp = 10 * Math.pow(userLevel, 2) + 50 * userLevel + 100
-              let userRank = level.getUserRank(sender, _level)
-              try {
-              profilePic = await pebz.getProfilePicture(sender)
-              } catch {
-              profilePic = errorImg
-}
-              buffer = await getBuffer(`https://lolhuman.herokuapp.com/api/rank?apikey=${setting.lolkey}&img=${profilePic}&background=https://telegra.ph/file/443b6600636aed1d94acd.jpg&username=${encodeURI(pushname)}&level=${userLevel}&ranking=${Number(userRank)}&currxp=${userXp}&xpneed=${requiredXp}`)
-              teks = `*「 LEVEL 」*\n\n➸ *Nama :* ${pushname}\n➸ *Xp :* ${userXp} / ${requiredXp}\n➸ *Level :* ${userLevel}\n➸ *Role*: *${role}*\n\n*Note : Kumpulin Xp Jika Ingin Menaikkan Level*`
-              pebz.sendMessage(from, buffer, image, { caption: teks, quoted: mek})
               break
        case 'wangy':
               if (!q) return
@@ -1229,17 +1147,27 @@ break
               awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, aaaah baunya rambut ${qq} wangyy aku mau nyiumin aroma wangynya ${qq} AAAAAAAAH ~ Rambutnya.... aaah rambutnya juga pengen aku elus-elus ~~ AAAAAH ${qq} keluar pertama kali di anime juga manis ❤️ ❤️ ❤️ banget AAAAAAAAH ${qq} AAAAA LUCCUUUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️apa ? ${qq} itu gak nyata ? Cuma HALU katamu ? nggak, ngak ngak ngak ngak NGAAAAAAAAK GUA GAK PERCAYA ITU DIA NYATA NGAAAAAAAAAAAAAAAAAK PEDULI BANGSAAAAAT !! GUA GAK PEDULI SAMA KENYATAAN POKOKNYA GAK PEDULI. ❤️ ❤️ ❤️ ${qq} gw ... ${qq} di laptop ngeliatin gw, ${qq} .. kamu percaya sama aku ? aaaaaaaaaaah syukur ${q} aku gak mau merelakan ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH GUA MASIH PUNYA ${qq} SENDIRI PUN NGGAK SAMA AAAAAAAAAAAAAAH`
               reply(awikwok)
               break
-       case 'cekmati':
-              if (!q) return reply(mess.wrongFormat)
-              predea = await axios.get(`https://api.agify.io/?name=${q}`)
-              reply(`Nama : ${predea.data.name}\n*Mati Pada Umur :* ${predea.data.age} Tahun.\n\n_Cepet Cepet Tobat! Soalnya Mati ga ada yang tau_`)
-              break
-        case 'citacita':
-              const cita =['http://piyobot.000webhostapp.com/citacita1.mp3','http://piyobot.000webhostapp.com/citacita2.mp3','http://piyobot.000webhostapp.com/citacita3.mp3','http://piyobot.000webhostapp.com/citacita4.mp3','http://piyobot.000webhostapp.com/citacita5.mp3','http://piyobot.000webhostapp.com/citacita6.mp3','http://piyobot.000webhostapp.com/citacita7.mp3','http://piyobot.000webhostapp.com/citacita8.mp3','http://piyobot.000webhostapp.com/citacita9.mp3','http://piyobot.000webhostapp.com/citacita10.mp3','http://piyobot.000webhostapp.com/citacita11.mp3','http://piyobot.000webhostapp.com/citacita12.mp3','http://piyobot.000webhostapp.com/citacita13.mp3','http://piyobot.000webhostapp.com/citacita14.mp3','http://piyobot.000webhostapp.com/citacita15.mp3','http://piyobot.000webhostapp.com/citacita16.mp3','http://piyobot.000webhostapp.com/citacita17.mp3','http://piyobot.000webhostapp.com/citacita18.mp3','http://piyobot.000webhostapp.com/citacita19.mp3','http://piyobot.000webhostapp.com/citacita20.mp3','http://piyobot.000webhostapp.com/citacita21.mp3','http://piyobot.000webhostapp.com/citacita22.mp3','http://piyobot.000webhostapp.com/citacita23.mp3','http://piyobot.000webhostapp.com/citacita24.mp3','http://piyobot.000webhostapp.com/citacita25.mp3','http://piyobot.000webhostapp.com/citacita26.mp3','http://piyobot.000webhostapp.com/citacita27.mp3','http://piyobot.000webhostapp.com/citacita28.mp3','http://piyobot.000webhostapp.com/citacita29.mp3','http://piyobot.000webhostapp.com/citacita30.mp3','http://piyobot.000webhostapp.com/citacita31.mp3','http://piyobot.000webhostapp.com/citacita32.mp3','http://piyobot.000webhostapp.com/citacita33.mp3','http://piyobot.000webhostapp.com/citacita34.mp3','http://piyobot.000webhostapp.com/citacita35.mp3']
-              const cita3 = cita[Math.floor(Math.random() * cita.length)]
-              cita2 = await getBuffer(cita3)
-              dha.sendMessage(from, cita2, audio,{mimetype: 'audio/mp4', ptt:true, quoted: mek})
-              break
+      case 'join': 
+             if (!q) return reply('Linknya?')
+             if (!isOwner) return reply(mess.only.owner)
+             if (!isUrl(args[0]) && !args[0].includes('https://chat.whatsapp.com/')) return reply('Linknya Invalid Tod')
+             link = args[0].replace('https://chat.whatsapp.com/','')
+             fak = dha.query({ json: ['action', 'invite', link],
+             expect200: true })
+             reply('Berhasil Masuk Grup')
+             break
+      case 'shutdown':
+             if (!isOwner) return 
+             reply(`Bye...`)
+             await sleep(3000)
+             process.exit()
+             break
+      case 'start':
+             if (!isOwner) return 
+             reply(`OTEWE 😎`)
+             await sleep(3000)
+             process.exit()
+             break             
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* tidak ada di list *${prefix}help*`)
