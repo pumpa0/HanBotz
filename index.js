@@ -837,6 +837,19 @@ break
          reply('Suksess broadcast')
          }
 		break
+case 'tagall':
+if (!isGroup) return reply(mess.only.group)
+if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+members_id = []
+teks = (args.length > 1) ? args.join(' ').trim() : ''
+teks += '\n\n'
+for (let mem of groupMembers) {
+teks += `• @${mem.jid.split('@')[0]}\n`
+members_id.push(mem.jid)
+}
+mentions(teks, members_id, true)
+break
 		case 'hidetag':
 		if (!isOwner && !isGroupAdmins) return reply(mess.only.ownerB)
     	var value = args.join(' ')
@@ -1076,6 +1089,11 @@ random = naon[Math.floor(Math.random() * (naon.length))]
 kapan = `Kapankah ${kapan}
 Jawaban : ${no} ${random}`
 reply(kapan)
+break
+case 'delete':
+if (!isGroup) return reply(mess.only.group)
+if (!isOwner && !isGroupAdmins) return reply(mess.only.ownerB)
+pebz.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 break
           default: 
           if (isCmd) {
