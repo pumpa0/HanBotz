@@ -729,11 +729,6 @@ break
                 .extendedTextMessage.contextInfo
             : mek;
           const media = await pebz.downloadAndSaveMediaMessage(encmedia);
-                      anu = args.join(' ').split('|')
-            satu = anu[0] !== '' ? anu[0] : `HAN`
-            dua = typeof anu[1] !== 'undefined' ? anu[1] : `085731855426`
-            require('./lib/fetcherr.js').createExif(satu, dua)
-			require('./lib/fetcherr.js').modStick(media, pebz, mek, from)
           ran = "666.webp";
           await ffmpeg(`./${media}`)
             .input(media)
@@ -1082,6 +1077,80 @@ kapan = `Kapankah ${kapan}
 Jawaban : ${no} ${random}`
 reply(kapan)
 break		
+case 'h':
+if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+const media = await pebz.downloadAndSaveMediaMessage(encmedia, './database/media_user')
+ran = getRandom('.webp')
+await ffmpeg(`./${media}`)
+.input(media)
+.on('start', function (cmd) {
+console.log(`Started : ${cmd}`)
+})
+.on('error', function (err) {
+console.log(`Error : ${err}`)
+fs.unlinkSync(media)
+reply(mess.error.stick)
+})
+.on('end', function () {
+console.log('Finish')
+buffer = fs.readFileSync(ran)
+costum(buffer, sticker, Verived, `Jangan Lupa Subscribe ndyie Botz`)
+fs.unlinkSync(media)
+fs.unlinkSync(ran)
+})
+.addOutputOptions([`-vcodec`, `libwebp`, `-vf`, `scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+.toFormat('webp')
+.save(ran)
+} else if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
+const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+const media = await pebz.downloadAndSaveMediaMessage(encmedia, './database/media_user')
+ran = getRandom('.webp')
+reply(mess.wait)
+await ffmpeg(`./${media}`)
+.inputFormat(media.split('.')[1])
+.on('start', function (cmd) {
+console.log(`Started : ${cmd}`)
+})
+.on('error', function (err) {
+console.log(`Error : ${err}`)
+fs.unlinkSync(media)
+tipe = media.endsWith('.mp4') ? 'video' : 'gif'
+reply(`❌ Gagal, pada saat mengkonversi ${tipe} ke stiker. pastikan untuk video yang dikirim tidak lebih dari 9 detik`)
+})
+.on('end', function () {
+console.log('Finish')
+costum(fs.readFileSync(ran), sticker, Verived, `~ Nih Dah Jadi Gif Stikernya`)
+fs.unlinkSync(media)
+fs.unlinkSync(ran)
+})
+.addOutputOptions([`-vcodec`, `libwebp`, `-vf`, `scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+.toFormat('webp')
+.save(ran)
+} else if ((isMedia || isQuotedImage) && args[0] == 'nobg') {
+const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+const media = await pebz.downloadAndSaveMediaMessage(encmedia, './database/media_user')
+ranw = getRandom('.webp')
+ranp = getRandom('.png')
+reply(mess.wait)
+keyrmbg = 'bcAvZyjYAjKkp1cmK8ZgQvWH'
+await removeBackgroundFromImageFile({ path: media, apiKey: keyrmbg, size: 'auto', type: 'auto', ranp }).then(res => {
+fs.unlinkSync(media)
+let buffer = Buffer.from(res.base64img, 'base64')
+fs.writeFileSync(ranp, buffer, (err) => {
+if (err) return reply('Gagal, Terjadi kesalahan, silahkan coba beberapa saat lagi.')
+})
+exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
+fs.unlinkSync(ranp)
+if (err) return reply(mess.error.stick)
+pebz.sendMessage(from, fs.readFileSync(ranw), sticker, { quoted: ftrol })
+fs.unlinkSync(ranw)
+})
+})
+} else {
+reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim`)
+}
+break
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* ga ada di list *${prefix}help*`)
