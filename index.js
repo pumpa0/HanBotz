@@ -570,7 +570,7 @@ result = `❒「  *Wiki*  」
                 case 'mp3':
         if (args.length < 1) return reply(`Kirim perintah *${prefix}mp3 <link>`)
         reply(mess.wait)
-        let yut = await yts(q)
+        let yuta = await yts(q)
         yta(yut.videos[0].url)             
         .then(async(res) => {
         const { thumb, title, filesizeF, filesize } = res
@@ -585,7 +585,7 @@ result = `❒「  *Wiki*  」
 • *Link Channel* : ${yut.all[0].author.url}`      
         ya = await getBuffer(thumb)
         py =await pebz.prepareMessage(from, ya, image)
-        gbutsan = [{buttonId: `${prefix}buttonmusic ${yut.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1}]
+        gbutsan = [{buttonId: `${prefix}buttonmusic ${yuta.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1}]
         gbuttonan = {
         imageMessage: py.message.imageMessage,
         contentText: capti,
