@@ -862,7 +862,7 @@ break
          { buttonId: '!antilinkon', buttonText: { displayText: 'On' }, type: 1 },
          { buttonId: '!antilinkoff', buttonText: { displayText: 'Off' }, type: 1 }
          ]
-         sendButton(from, "Silahkan pilih untuk antilink group", faketeks, but, mek)
+         sendButton(from, "Silahkan pilih untuk antilink group", but, mek)
          break
      case 'antilinkbetaa' :
          if (!isGroup) return reply(mess.only.group)
