@@ -165,14 +165,6 @@ pebz.on('group-participants-update', async (chat) => {
 			const isAntiVirtex = isGroup ? _antivirtex.includes(from) : false
 		const isAntiLink = isGroup ? _antilink.includes(from) : false
 	    const isNsfw = isGroup ? nsfww.includes(from) : false
-    const isTTT = isGroup ? idttt.includes(from) : false
-	    isPlayer1 = isGroup ? players1.includes(sender) : false
-        isPlayer2 = isGroup ? players2.includes(sender) : false
-        const isPremium = premium.checkPremiumUser(sender, _premium)
-        const isSewa = _sewa.checkSewaGroup(from, sewa)
-        const isAfkOn = afk.checkAfkUser(sender, _afk)
-        const isLevelingOn = isGroup ? _leveling.includes(from) : false
-        const isMuted = isGroup ? mute.includes(from) : false
 
 const sendFile = async (medya, namefile, capti, tag, vn) => {
   baper = await getBuffer(medya)
