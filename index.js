@@ -1095,6 +1095,25 @@ if (!isGroup) return reply(mess.only.group)
 if (!isOwner && !isGroupAdmins) return reply(mess.only.ownerB)
 pebz.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 break
+case 'leave':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isOwner) return reply(mess.only.ownerB)
+					setTimeout( () => {
+					pebz.groupLeave (from) 
+					}, 2000)
+					setTimeout( () => {
+					pebz.updatePresence(from, Presence.composing) 
+					pebz.sendMessage(from, 'Bye 🗿', text) // ur cods
+					}, 0)
+					break
+case 'privateloli':
+					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=loli`, {method: 'get'})
+					reply(ind.wait())
+					var n = JSON.parse(JSON.stringify(anu));
+					var nimek =  n[Math.floor(Math.random() * n.length)];
+					pok = await getBuffer(nimek)
+					pebz.sendMessage(from, pok, image, { quoted: mek })
+					break
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* ga ada di list *${prefix}help*`)
