@@ -168,7 +168,6 @@ pebz.on('group-participants-update', async (chat) => {
     const isTTT = isGroup ? idttt.includes(from) : false
 	    isPlayer1 = isGroup ? players1.includes(sender) : false
         isPlayer2 = isGroup ? players2.includes(sender) : false
-        const isOwner = ownerNumber.includes(senderr)
         const isPremium = premium.checkPremiumUser(sender, _premium)
         const isSewa = _sewa.checkSewaGroup(from, sewa)
         const isAfkOn = afk.checkAfkUser(sender, _afk)
@@ -383,7 +382,7 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
       var ucapanWaktu = "GoodMoorning🌅";
     }
     if (time2 < "05:00:00") {
-      var ucapanWaktu = "GoodNight🌃";
+      var ucapanWaktu = "GoodNight??";
     }
     function kyun(seconds){
   function pad(s){
