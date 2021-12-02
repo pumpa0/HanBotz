@@ -532,7 +532,7 @@ ${p}• ${prefix}report <text>${p}
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
-           
+          
            case 'donate':
 txt = `
 *「 DONATE 」*
@@ -1324,7 +1324,7 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
               gameAdd(sender, glimit)
               break
        case 'slot':
-              const sotoy = ['🍊 : 🍒 : 🍐','🍒 : ?? : 🍊','?? : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍒 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : ?? : 🍇']
+              const sotoy = ['🍊 : ?? : 🍐','🍒 : ?? : 🍊','?? : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍒 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : ?? : 🍇']
               somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
@@ -1405,7 +1405,6 @@ case 'say':
       case 'info':
               groups = pebz.chats.array.filter(v => v.jid.endsWith('g.us'))
               privat = pebz.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
-              ram2 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
               uptime = process.uptime();
               timestampe = speednye();
               totalChat = await pebz.chats.all()
@@ -1417,7 +1416,7 @@ teks = `\`\`\`INFO BOT\`\`\`
 \`\`\`• Total Chats : ${totalChat.length}\`\`\`
 \`\`\`• Speed : ${latensie.toFixed(4)} _Second_\`\`\`
 \`\`\`• Active Time : ${kyun(uptime)}\`\`\`
-\`\`\`• Ram Usage : ${ram2}\`\`\`
+\`\`\`• Ram Usage : 1745MB/6025MB\`\`\`
 \`\`\`• Hostname : ${os.hostname()}\`\`\`
 \`\`\`• Uptime : ${runtime(process.uptime())}\`\`\`
 \`\`\`• Wa Version: ${pebz.user.phone.wa_version}\`\`\`
