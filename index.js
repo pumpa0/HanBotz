@@ -44,7 +44,6 @@ let _leveling = JSON.parse(fs.readFileSync('./database/leveling.json'))
 let _level = JSON.parse(fs.readFileSync('./database/level.json'))
 const atm = require("./lib/atm");
 let _uang = JSON.parse(fs.readFileSync('./database/uang.json'))
-const isAnti = isGroup ? _antilink.includes(from) : false
 const {
 	OwnerNumber,
 	prefix,
@@ -166,6 +165,7 @@ pebz.on('group-participants-update', async (chat) => {
 			const isAntiVirtex = isGroup ? _antivirtex.includes(from) : false
 		const isAntiLink = isGroup ? _antilink.includes(from) : false
 	    const isNsfw = isGroup ? nsfww.includes(from) : false
+        const isAnti = isGroup ? _antilink.includes(from) : false
 
 const sendFile = async (medya, namefile, capti, tag, vn) => {
   baper = await getBuffer(medya)
