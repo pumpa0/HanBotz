@@ -1426,7 +1426,7 @@ teks = `\`\`\`INFO BOT\`\`\`
              break  
                     case 'semoji':
        case 'emoji':
-              if (args.length == 0) return reply(`Example: ${prefix + command} 😏)
+              if (args.length == 0) return reply(`Example: ${prefix}semoji 😏`)
               emoji = args[0]
               try {
               emoji = encodeURI(emoji[0])
