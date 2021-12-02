@@ -542,7 +542,8 @@ tst = `
 - *Dana:* 085731855426
 
 `
-reply(tst)
+bilang = tst
+reply(bilang)
            break
            case 'donate':
 txt = `
