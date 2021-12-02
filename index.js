@@ -604,9 +604,9 @@ result = `❒「  *Wiki*  」
         break         
         case 'buttonvideo':
         if(!q) return reply('linknya?')            
-        res = await ytv(`${q}`).catch(e => {
+        rest = await ytv(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video```')})
-        sendMedia(from, `${res.dl_link}`,'```HanBotz```')
+        sendMedia(from, `${rest.dl_link}`,'```HanBotz```')
         break                               
                         case 'truth':
 				if (!isGroup) return reply(mess.only.group)
@@ -888,7 +888,8 @@ members_id.push(mem.jid)
 mentions(teks, members_id, true)
 break
 		case 'hidetag':
-		if (!isOwner && !isGroupAdmins && !isOwner) return reply(mess.only.ownerB)
+		if (!isOwner && !isGroupAdmins) return reply(mess.only.ownerB)
+		if (!isGroup) return reply(mess.only.group)
     	var value = args.join(' ')
 		var group = await pebz.groupMetadata(from)
 		var member = group['participants']
