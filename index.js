@@ -533,15 +533,9 @@ ${p}• ${prefix}report <text>${p}
         sendButLocation(from, tod, tod2, gambar, but)
            break
            
-           case 'donate2':
-tst = `
-*「 DONATE 」*
+case 'donate2':
+tst = *「 DONATE 」*\n\n - *Pulsa:* 085731855426\n - *Gopay:* 085807149213\n - *Dana:* 085731855426
 
-- *Pulsa:* 085731855426
-- *Gopay:* 085807149213
-- *Dana:* 085731855426
-
-`
 bilang = tst
 reply(bilang)
            break
@@ -1413,6 +1407,31 @@ case 'say':
                                         saying = teks
                                         reply(saying)
                                         break
+      case 'botstat':
+      case 'info':
+              groups = pebz.chats.array.filter(v => v.jid.endsWith('g.us'))
+              privat = pebz.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+              ram2 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
+              charger = `${charging ? 'lagi dicas' : 'ga dicas'}`
+              uptime = process.uptime();
+              timestampe = speednye();
+              totalChat = await pebz.chats.all()
+              latensie = speednye() - timestampe
+              total = math(`${groups.length}*${privat.length}`)
+teks = `\`\`\`INFO BOT\`\`\`
+\`\`\`• Group Chats : ${groups.length}\`\`\`
+\`\`\`• Private Chats : ${privat.length}\`\`\`
+\`\`\`• Total Chats : ${totalChat.length}\`\`\`
+\`\`\`• Speed : ${latensie.toFixed(4)} _Second_\`\`\`
+\`\`\`• Active Time : ${kyun(uptime)}\`\`\`
+\`\`\`• Ram Usage : ${ram2}\`\`\`
+\`\`\`• Hostname : ${os.hostname()}\`\`\`
+\`\`\`• Uptime : ${runtime(process.uptime())}\`\`\`
+\`\`\`• Wa Version: ${pebz.user.phone.wa_version}\`\`\`
+\`\`\`• Os Version: ${pebz.user.phone.os_version}\`\`\`
+\`\`\`• Os Build Number: ${pebz.user.phone.os_build_number}\`\`\``
+             reply(teks)
+             break  
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* tidak ada di list *${prefix}help*`)
