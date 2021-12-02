@@ -533,7 +533,17 @@ ${p}• ${prefix}report <text>${p}
         sendButLocation(from, tod, tod2, gambar, but)
            break
            
-           
+           case 'donate2':
+tst = `
+*「 DONATE 」*
+
+- *Pulsa:* 085731855426
+- *Gopay:* 085807149213
+- *Dana:* 085731855426
+
+`
+reply(tst)
+           break
            case 'donate':
 txt = `
 *「 DONATE 」*
@@ -603,7 +613,7 @@ const pebz2 = {
 		const ttrth = trut[Math.floor(Math.random() * trut.length)]
 		truteh = await getBuffer(`https://www.linkpicture.com/q/20211130_010958.jpg`)
 	    but = [
-          { buttonId: `${prefix}donate`, buttonText: { displayText: 'DONATE' }, type: 1 }
+          { buttonId: `${prefix}donate2`, buttonText: { displayText: 'DONATE' }, type: 1 }
         ]
         sendButLocation(from, ttrth, 'GK JALANIN WAJIB DONATE',truteh, but, {quoted: mek})
 	        	break
@@ -613,7 +623,7 @@ const pebz2 = {
 		const der = dare[Math.floor(Math.random() * dare.length)]
 		todz = await getBuffer(`https://www.linkpicture.com/q/20211130_010958.jpg`)
 	    but = [
-          { buttonId: `${prefix}donate`, buttonText: { displayText: 'DONATE' }, type: 1 }
+          { buttonId: `${prefix}donate2`, buttonText: { displayText: 'DONATE' }, type: 1 }
         ]
         sendButLocation(from, der, 'GK JALANIN WAJIB DONATE',todz, but, {quoted: mek})
        	   break
