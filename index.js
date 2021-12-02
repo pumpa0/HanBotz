@@ -450,8 +450,9 @@ ${p}• ${prefix}setname <text>${p}
 ${p}• ${prefix}setdesc <text>${p}
 ${p}• ${prefix}open|close${p}
 
-*𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗*
-${p}• ${prefix}play <query>${p}
+*𝗬𝗢𝗨𝗧𝗨𝗕𝗘*
+${p}• ${prefix}play <link>${p}
+${p}• ${prefix}ytsearch <query>${p}
 
 *𝗚𝗔𝗠𝗘*
 ${p}• ${prefix}suit${p}
