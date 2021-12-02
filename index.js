@@ -533,12 +533,6 @@ ${p}• ${prefix}report <text>${p}
         sendButLocation(from, tod, tod2, gambar, but)
            break
            
-case 'donate2':
-tst = *「 DONATE 」*\n\n - *Pulsa:* 085731855426\n - *Gopay:* 085807149213\n - *Dana:* 085731855426
-
-bilang = tst
-reply(bilang)
-           break
            case 'donate':
 txt = `
 *「 DONATE 」*
