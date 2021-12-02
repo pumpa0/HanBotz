@@ -1406,7 +1406,6 @@ case 'say':
               groups = pebz.chats.array.filter(v => v.jid.endsWith('g.us'))
               privat = pebz.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
               ram2 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
-              charger = `${charging ? 'lagi dicas' : 'ga dicas'}`
               uptime = process.uptime();
               timestampe = speednye();
               totalChat = await pebz.chats.all()
