@@ -441,6 +441,7 @@ ${p}️• ${prefix}imgsearch <query>${p}
 
 *𝗚𝗥𝗢𝗨𝗣*
 ${p}• ${prefix}linkgroup${p}
+${p}• ${prefix}antilink <on/off>${p}
 ${p}• ${prefix}add <nomer[62]>${p}
 ${p}• ${prefix}kick <tag>${p}
 ${p}• ${prefix}demote <tag>${p}
@@ -450,8 +451,7 @@ ${p}• ${prefix}setdesc <text>${p}
 ${p}• ${prefix}open|close${p}
 
 *𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗*
-${p}• ${prefix}ytmp3 <link>${p}
-${p}• ${prefix}ytmp4 <link>${p}
+${p}• ${prefix}play <query>${p}
 
 *𝗚𝗔𝗠𝗘*
 ${p}• ${prefix}suit${p}
@@ -546,10 +546,12 @@ const pebz2 = {
            todzi = await getBuffer(`https://api.lolhuman.xyz/api/random/quotesimage?apikey=${lol}`)
            pebz.sendMessage(from, todzi, image, {quoted : mek })
            break
-case 'simi': 
-				anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${body.slice(3)}`)
-				reply(anu.result.success)
-				break
+case 'simi':
+           if (args.length == 0) return reply(`Hallo Kak ${pushname}`)
+           get = await fetchJson(`https://api.simsimi.net/v2/?text=${q}&lc=en&cf=false`)
+           getresult = get.result
+             reply(getresult)         
+             break           
              case 'wiki':
             if (args.length < 1) return reply(' Yang Mau Di Cari Apa? ')
             teks = args.join(' ')
@@ -894,7 +896,6 @@ break
 case 'tagall':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
-if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 members_id = []
 teks = (args.length > 1) ? args.join(' ').trim() : ''
 teks += '\n\n'
@@ -921,34 +922,6 @@ break
 		}
 	    pebz.sendMessage(from, optionshidetag, text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "393470602054-1351628616@g.us" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption":'༺ HAN ༻',"fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": gambar} }  } })
 					breakbreak
-					break
-     case 'antilinkbetaaa' :
-         if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
-         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
-         but = [
-         { buttonId: '!antilinkon', buttonText: { displayText: 'On' }, type: 1 },
-         { buttonId: '!antilinkoff', buttonText: { displayText: 'Off' }, type: 1 }
-         ]
-         sendButton(from, "Silahkan pilih untuk antilink group", but, mek)
-         break
-     case 'antilinkbetaa' :
-         if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
-         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
-         if (!isAntiLink) return reply('anti link sudah on')
-         _antilink.push(from)
-         fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
-         reply(`\`\`\`Sukses mengaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
-         break
-     case 'antilinkbeta' :
-         if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
-         if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
-         if (!isAntiLink) return reply('anti link sudah off sebelumnya')
-         _antilink.splice(from, 1)
-         fs.writeFileSync('./database/antilink.json', JSON.stringify(_antilink))
-         reply(`\`\`\`Sukses menonaktifkan fitur anti link di group\`\`\` *${groupMetadata.subject}*`)
          break
      case 'open':
      case 'grup1':
