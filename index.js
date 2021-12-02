@@ -44,6 +44,7 @@ let _leveling = JSON.parse(fs.readFileSync('./database/leveling.json'))
 let _level = JSON.parse(fs.readFileSync('./database/level.json'))
 const atm = require("./lib/atm");
 let _uang = JSON.parse(fs.readFileSync('./database/uang.json'))
+const isAnti = isGroup ? _antilink.includes(from) : false
 const {
 	OwnerNumber,
 	prefix,
@@ -385,6 +386,27 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
   var seconds = Math.floor(seconds % 60);
   return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
 }			
+
+const linkwa = 'https://chat.whatsapp.com/'
+		if (budy.includes(`${linkwa}`)){
+		if (!isGroup) return
+		if (!isAnti) return
+        if (!isBotGroupAdmins) return reply('Untung Gue bukan admin, kalo iya gua kick lu')
+        linkgc = await pebz.groupInviteCode (from)
+        if (budy.includes(`${linkwa}${linkgc}`)) return reply('Untung Link group ini')
+		if (isGroupAdmins) return reply(`Hmm mantap min`)
+		pebz.updatePresence(from, Presence.composing)
+		var Kick = `${sender.split("@")[0]}@s.whatsapp.net`
+		setTimeout( () => {
+		reply('byee')
+		}, 1100)
+		setTimeout( () => {
+		pebz.groupRemove(from, [Kick]).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
+					}, 1000)
+		setTimeout( () => {
+		reply(`Antilink menyala & link Group Terdeteksi maaf *${pushname}* anda akan di kick`)
+		}, 0)
+	} 
 			colors = ['red','white','black','blue','yellow','green']
 	     	const isMedia = (type === 'imageMessage' || type === 'videoMessage')
             const isQuotedText = type === 'extendedTextMessage' && content.includes('textMessage')
@@ -541,73 +563,68 @@ result = `❒「  *Wiki*  」
            reply(result)
            })
         break
-        case 'ytmp4':
-        if (args.length < 1) return reply(`Kirim perintah *${prefix}mp4 <link>`)
+   	case 'play':
+        if (args.length < 1) return reply(`Kirim perintah *${prefix}play query`)
         reply(mess.wait)
         let yut = await yts(q)
-        ytv(yut.videos[0].url)             
+        yta(yut.videos[0].url)             
         .then(async(res) => {
         const { thumb, title, filesizeF, filesize } = res
         const capti = `𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗣𝗟𝗔𝗬
 		     
-• *Judul* : ${yut.all[0].title}
-• *ID Video* : ${yut.all[0].videoId}
-• *Diupload Pada* : ${yut.all[0].ago}
-• *Views* : ${yut.all[0].views}
-• *Durasi* : ${yut.all[0].timestamp}
-• *Channel* : ${yut.all[0].author.name}
-• *Link Channel* : ${yut.all[0].author.url}`      
+• *Judul :* ${yut.all[0].title}
+• *ID Video :* ${yut.all[0].videoId}
+• * Diupload Pada :* ${yut.all[0].ago}
+• *Views :* ${yut.all[0].views}
+• *Durasi :* ${yut.all[0].timestamp}
+• *Channel :* ${yut.all[0].author.name}
+• *Link Channel :* ${yut.all[0].author.url}`      
         ya = await getBuffer(thumb)
         py =await pebz.prepareMessage(from, ya, image)
-        gbutsan = [{buttonId: `${prefix}buttonvideo ${yut.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1}]
+        gbutsan = [{buttonId: `${prefix}ytmp3 ${yut.all[0].url}`, buttonText: {displayText: 'AUDIO'}, type: 1},{buttonId: `${prefix}ytmp4 ${yut.all[0].url}`, buttonText: {displayText: 'VIDEO'}, type: 1}]
         gbuttonan = {
         imageMessage: py.message.imageMessage,
         contentText: capti,
-        footerText: '© HAN',
+        footerText: 'Silahkan Pilih Jenis File Dibawah Ini!',
         buttons: gbutsan,
         headerType: 4
 }
         await pebz.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
         break                
-                case 'ytmp3':
-        if (args.length < 1) return reply(`Kirim perintah *${prefix}mp3 <link>`)
-        reply(mess.wait)
-        let yuta = await yts(q)
-        yta(yuta.videos[0].url)             
-        .then(async(res) => {
-        const { thumb, title, filesizeF, filesize } = res
-        const capti = `𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗣𝗟𝗔𝗬
-		     
-• *Judul* : ${yuta.all[0].title}
-• *ID Video* : ${yuta.all[0].videoId}
-• *Diupload Pada* : ${yuta.all[0].ago}
-• *Views* : ${yuta.all[0].views}
-• *Durasi* : ${yuta.all[0].timestamp}
-• *Channel* : ${yuta.all[0].author.name}
-• *Link Channel* : ${yuta.all[0].author.url}`      
-        ya = await getBuffer(thumb)
-        py =await pebz.prepareMessage(from, ya, image)
-        gbutsan = [{buttonId: `${prefix}buttonmusic ${yuta.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1}]
-        gbuttonan = {
-        imageMessage: py.message.imageMessage,
-        contentText: capti,
-        footerText: '© HAN',
-        buttons: gbutsan,
-        headerType: 4
-}
-        await pebz.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
-        case 'buttonmusic':
+        case 'ytmp3':
         if(!q) return reply('linknya?')              
         res = await yta(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Audio```')})
         sendMedia(from, `${res.dl_link}`,{quoted:mek})
         break         
-        case 'buttonvideo':
+        case 'ytmp4':
         if(!q) return reply('linknya?')            
-        rest = await ytv(`${q}`).catch(e => {
+        res = await ytv(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video```')})
-        sendMedia(from, `${rest.dl_link}`,'```HanBotz```')
-        break                               
+        sendMedia(from, `${res.dl_link}`,'```HanBotz```')
+        break                      
+        	case 'ytsearch':
+			if (args.length < 1) return reply('Tolong masukan query!')
+			var srch = args.join('');
+			try {
+        	var aramas = await yts(srch);
+   			} catch {
+        	return await pebz.sendMessage(from, 'Error!', MessageType.text, dload)
+    		}
+    		aramat = aramas.all 
+    		var tbuff = await getBuffer(aramat[0].image)
+    		var ytresult = '';
+    		ytresult += '「 *YOUTUBE SEARCH* 」'
+    		ytresult += '\n________________________\n\n'
+   			aramas.all.map((video) => {
+        	ytresult += '❏ Title: ' + video.title + '\n'
+            ytresult += '❏ Link: ' + video.url + '\n'
+            ytresult += '❏ Durasi: ' + video.timestamp + '\n'
+            ytresult += '❏ Upload: ' + video.ago + '\n________________________\n\n'
+    		});
+    		ytresult += '© HAN*'
+    		await fakethumb(tbuff,ytresult)
+			break
                         case 'truth':
 				if (!isGroup) return reply(mess.only.group)
 					const trut =['Pernah suka sama siapa aja? berapa lama?','Kalau boleh atau kalau mau, di gc/luar gc siapa yang akan kamu jadikan sahabat?(boleh beda/sma jenis)','apa ketakutan terbesar kamu?','pernah suka sama orang dan merasa orang itu suka sama kamu juga?','Siapa nama mantan pacar teman mu yang pernah kamu sukai diam diam?','pernah gak nyuri uang nyokap atau bokap? Alesanya?','hal yang bikin seneng pas lu lagi sedih apa','pernah cinta bertepuk sebelah tangan? kalo pernah sama siapa? rasanya gimana brou?','pernah jadi selingkuhan orang?','hal yang paling ditakutin','siapa orang yang paling berpengaruh kepada kehidupanmu','hal membanggakan apa yang kamu dapatkan di tahun ini','siapa orang yang bisa membuatmu sange','siapa orang yang pernah buatmu sange','(bgi yg muslim) pernah ga solat seharian?','Siapa yang paling mendekati tipe pasangan idealmu di sini','suka mabar(main bareng)sama siapa?','pernah nolak orang? alasannya kenapa?','Sebutkan kejadian yang bikin kamu sakit hati yang masih di inget','pencapaian yang udah didapet apa aja ditahun ini?','kebiasaan terburuk lo pas di sekolah apa?']
@@ -1323,6 +1340,24 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
 }
 }
               break
+case 'antilink':
+				if (!isGroup) return reply(group())
+					if (!isGroupAdmins && !isOwner) return reply(`pp`)
+					if (args.length < 1) return reply(`On untuk mengaktifkan & off untuk menonaktifkan`)
+					if ((args[0]) === 'on') {
+						if (isAnti) return reply('Antilink aktif')
+						_antilink.push(from)
+						fs.writeFileSync('./lib/antilink.json', JSON.stringify(_antilink))
+						reply(`Mengaktifkan fitur anti link di group *${groupMetadata.subject}*`)
+					} else if ((args[0]) === 'off') {
+						if (!isAnti) return reply('Antilink off')
+						_antilink.splice(from, 1)
+						fs.writeFileSync('./lib/antilink.json', JSON.stringify(_antilink))
+						reply(`Menonaktifkan fitur anti link di group *${groupMetadata.subject}*`)
+					} else {
+						reply('On untuk mengaktifkan & off untuk menonaktifkan')
+					}
+					break
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* tidak ada di list *${prefix}help*`)
