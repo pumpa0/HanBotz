@@ -573,18 +573,18 @@ result = `❒「  *Wiki*  」
         if (args.length < 1) return reply(`Kirim perintah *${prefix}mp3 <link>`)
         reply(mess.wait)
         let yuta = await yts(q)
-        yta(yut.videos[0].url)             
+        yta(yuta.videos[0].url)             
         .then(async(res) => {
         const { thumb, title, filesizeF, filesize } = res
         const capti = `𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗣𝗟𝗔𝗬
 		     
-• *Judul* : ${yut.all[0].title}
-• *ID Video* : ${yut.all[0].videoId}
-• *Diupload Pada* : ${yut.all[0].ago}
-• *Views* : ${yut.all[0].views}
-• *Durasi* : ${yut.all[0].timestamp}
-• *Channel* : ${yut.all[0].author.name}
-• *Link Channel* : ${yut.all[0].author.url}`      
+• *Judul* : ${yuta.all[0].title}
+• *ID Video* : ${yuta.all[0].videoId}
+• *Diupload Pada* : ${yuta.all[0].ago}
+• *Views* : ${yuta.all[0].views}
+• *Durasi* : ${yuta.all[0].timestamp}
+• *Channel* : ${yuta.all[0].author.name}
+• *Link Channel* : ${yuta.all[0].author.url}`      
         ya = await getBuffer(thumb)
         py =await pebz.prepareMessage(from, ya, image)
         gbutsan = [{buttonId: `${prefix}buttonmusic ${yuta.all[0].url}`, buttonText: {displayText: 'DOWNLOAD'}, type: 1}]
