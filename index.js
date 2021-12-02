@@ -645,7 +645,7 @@ result = `❒「  *Wiki*  」
 		     
 • *Judul :* ${yut.all[0].title}
 • *ID Video :* ${yut.all[0].videoId}
-• * Diupload Pada :* ${yut.all[0].ago}
+• *Diupload Pada :* ${yut.all[0].ago}
 • *Views :* ${yut.all[0].views}
 • *Durasi :* ${yut.all[0].timestamp}
 • *Channel :* ${yut.all[0].author.name}
@@ -1388,6 +1388,13 @@ case 'antilink':
 						reply('On untuk mengaktifkan & off untuk menonaktifkan')
 					}
 					break
+case 'say':
+                                        teks = body.slice(5)
+					
+                                        if (args.length < 1) return reply('teksnya mana kak?')
+                                        saying = teks
+                                        pebz.sendMessage(from, saying, text)
+                                        break
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* tidak ada di list *${prefix}help*`)
