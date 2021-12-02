@@ -545,7 +545,7 @@ result = `❒「  *Wiki*  」
         if (args.length < 1) return reply(`Kirim perintah *${prefix}mp4 <link>`)
         reply(mess.wait)
         let yut = await yts(q)
-        yta(yut.videos[0].url)             
+        ytv(yut.videos[0].url)             
         .then(async(res) => {
         const { thumb, title, filesizeF, filesize } = res
         const capti = `𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗣𝗟𝗔𝗬
