@@ -427,18 +427,20 @@ ${p}• ${prefix}setname <text>${p}
 ${p}• ${prefix}setdesc <text>${p}
 ${p}• ${prefix}open|close${p}
 
+*𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗*
+${p}• ${prefix}ytmp3 <link>${p}
+${p}• ${prefix}ytmp4 <link>${p}
+
+*𝗚𝗔𝗠𝗘*
+${p}• ${prefix}suit${p}
+${p}• ${prefix}slot${p}
+
 *𝗚𝗔𝗕𝗨𝗧*
 ${p}• ${prefix}rate <???>${p}
 ${p}• ${prefix}apakah <text>${p}
 ${p}• ${prefix}kapankah <text>${p}
 ${p}• ${prefix}cantikcek <name>${p}
 ${p}• ${prefix}gantengcek <name>${p}
-
-*𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗*
-${p}• ${prefix}play <query>${p}
-${p}• ${prefix}mp3 <link>${p}
-${p}• ${prefix}mp4 <link>${p}
-
 
 𝗢𝗧𝗛𝗘𝗥
 ${p}• ${prefix}owner${p}
@@ -539,7 +541,7 @@ result = `❒「  *Wiki*  」
            reply(result)
            })
         break
-        case 'mp4':
+        case 'ytmp4':
         if (args.length < 1) return reply(`Kirim perintah *${prefix}mp4 <link>`)
         reply(mess.wait)
         let yut = await yts(q)
@@ -567,7 +569,7 @@ result = `❒「  *Wiki*  」
 }
         await pebz.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
         break                
-                case 'mp3':
+                case 'ytmp3':
         if (args.length < 1) return reply(`Kirim perintah *${prefix}mp3 <link>`)
         reply(mess.wait)
         let yuta = await yts(q)
