@@ -1394,6 +1394,7 @@ case 'say':
                                         if (args.length < 1) return reply('teksnya mana kak?')
                                         saying = teks
                                         pebz.sendMessage(from, saying, text)
+                                        reply(saying)
                                         break
           default: 
           if (isCmd) {
