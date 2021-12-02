@@ -294,6 +294,7 @@ console.log(e)
 				success: 'sukses ✓“',
 				notxt: 'textnya mana ?',
 				sabar: 'mengirim file...',
+				tunggu: 'loading...',
 				error: {
 					stick: 'gagal saat konvensi gambar ke sticker',
 					Iv: 'link nya mokad :v'
@@ -424,6 +425,7 @@ const linkwa = 'https://chat.whatsapp.com/'
              case 'menu':
              case 'help':
              uptime = process.uptime()            
+             reply(mess.tunggu)
 		     const hiya = await fetchJson('https://xinzbot-api.herokuapp.com/api/ucapan?apikey=XinzBot&timeZone=Asia/Jakarta', {method:'get'})
 		     var p = '```'
 		    const tod =`      
