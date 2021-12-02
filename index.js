@@ -557,14 +557,14 @@ const pebz2 = {
      		break
     case 'runtime':
     case 'test':
-      if (!isOwner) return reply('KAU BUKAN OWNER 😾)
+      if (!isOwner) return reply('KAU BUKAN OWNER 😾')
             run = process.uptime() 
             teks = `${kyun(run)}`
             fakegroup(teks)
             break  
 	case 'speed':
 	case 'ping':
-	  if (!isOwner) return reply('KAU BUKAN OWNER 😾)
+	  if (!isOwner) return reply('KAU BUKAN OWNER 😾')
 			const timestamp = speed();
 			const latensi = speed() - timestamp
 			exec(`neofetch --stdout`, (error, stdout, stderr) => {
@@ -931,7 +931,7 @@ break
          reply('*ga penting ga usah ngechat, dan gada sewa bot!*')
          break
           case 'bc':
-         if (!isOwner) return reply('KAU BUKAN OWNER 😾)
+         if (!isOwner) return reply('KAU BUKAN OWNER 😾')
          if (args.length < 1) return reply('.......')
          anu = await pebz.chats.all()
          if (isMedia && !mek.message.videoMessage || isQuotedImage) {
