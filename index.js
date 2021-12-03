@@ -490,6 +490,7 @@ ${p}• ${prefix}pinterest <query>${p}
 ${p}️• ${prefix}imgsearch <query>${p}
 
 *𝗚𝗥𝗢𝗨𝗣*
+${p}• ${prefix}delete <reply>${p}
 ${p}• ${prefix}linkgroup${p}
 ${p}• ${prefix}antilink <on/off>${p}
 ${p}• ${prefix}add <nomer[62]>${p}
@@ -498,24 +499,37 @@ ${p}• ${prefix}demote <tag>${p}
 ${p}• ${prefix}promote <tag>${p}
 ${p}• ${prefix}setname <text>${p}
 ${p}• ${prefix}setdesc <text>${p}
+${p}• ${prefix}hidetag <text>${p}
+${p}• ${prefix}tagall <text>${p}
 ${p}• ${prefix}open|close${p}
 
 *𝗬𝗢𝗨𝗧𝗨𝗕𝗘*
-${p}• ${prefix}play <link>${p}
+${p}• ${prefix}play <link>  [maintenance]${p}
+${p}• ${prefix}ytmp3 <link>${p}
+${p}• ${prefix}ytmp4 <link>${p}
 ${p}• ${prefix}ytsearch <query>${p}
+
 
 *𝗚𝗔𝗠𝗘*
 ${p}• ${prefix}suit${p}
 ${p}• ${prefix}slot${p}
 
 *𝗚𝗔𝗕𝗨𝗧*
+${p}• ${prefix}say <text>${p}
 ${p}• ${prefix}rate <???>${p}
 ${p}• ${prefix}apakah <text>${p}
 ${p}• ${prefix}kapankah <text>${p}
 ${p}• ${prefix}cantikcek <name>${p}
 ${p}• ${prefix}gantengcek <name>${p}
 
+*𝗢𝗪𝗡𝗘𝗥*
+${p}• ${prefix}leave${p}
+${p}• ${prefix}status${p}
+${p}• ${prefix}runtime${p}
+${p}• ${prefix}self|public${p}
+
 𝗢𝗧𝗛𝗘𝗥
+${p}• ${prefix}tourl <reply>${p}
 ${p}• ${prefix}owner${p}
 ${p}• ${prefix}donate${p}
 ${p}• ${prefix}report <text>${p}
@@ -641,7 +655,7 @@ result = `❒「  *Wiki*  」
            reply(result)
            })
         break
-   	case 'play':
+   	case 'playrusak':
         if (args.length < 1) return reply(`Kirim perintah *${prefix}play query`)
         reply (mess.wait)
         let yut = await yts(q)
@@ -685,6 +699,7 @@ result = `❒「  *Wiki*  」
         break                      
         	case 'ytsearch':
 			if (args.length < 1) return reply('Tolong masukan query!')
+			reply(mess.wait)
 			var srch = args.join('');
 			try {
         	var aramas = await yts(srch);
@@ -728,6 +743,7 @@ result = `❒「  *Wiki*  」
            pebz.sendMessage(from, lat, MessageType.text, pebzk)
            break  
            case 'status': 
+           if (!isOwner) return reply(mess.only.ownerB)
            uptime = process.uptime()
            let pingnye = speednye();
            let ping = speednye() - pingnye 
@@ -1402,29 +1418,7 @@ case 'say':
                                         saying = teks
                                         reply(saying)
                                         break
-      case 'botstat':
-      case 'info':
-              groups = pebz.chats.array.filter(v => v.jid.endsWith('g.us'))
-              privat = pebz.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
-              uptime = process.uptime();
-              timestampe = speednye();
-              totalChat = await pebz.chats.all()
-              latensie = speednye() - timestampe
-              total = math(`${groups.length}*${privat.length}`)
-teks = `\`\`\`INFO BOT\`\`\`
-\`\`\`• Group Chats : ${groups.length}\`\`\`
-\`\`\`• Private Chats : ${privat.length}\`\`\`
-\`\`\`• Total Chats : ${totalChat.length}\`\`\`
-\`\`\`• Speed : ${latensie.toFixed(4)} _Second_\`\`\`
-\`\`\`• Active Time : ${kyun(uptime)}\`\`\`
-\`\`\`• Ram Usage : 1745MB/6025MB\`\`\`
-\`\`\`• Hostname : ${os.hostname()}\`\`\`
-\`\`\`• Uptime : ${runtime(process.uptime())}\`\`\`
-\`\`\`• Wa Version: ${pebz.user.phone.wa_version}\`\`\`
-\`\`\`• Os Version: ${pebz.user.phone.os_version}\`\`\`
-\`\`\`• Os Build Number: ${pebz.user.phone.os_build_number}\`\`\``
-             reply(teks)
-             break  
+
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* tidak ada di list *${prefix}help*`)
