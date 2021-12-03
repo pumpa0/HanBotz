@@ -342,6 +342,7 @@ console.log(e)
 				notxt: 'textnya mana ?',
 				sabar: 'mengirim file...',
 				tunggu: 'loading...',
+				yutub: 'untuk group sedang error, silahkan chat personal bot',
 				error: {
 					stick: 'gagal saat konvensi gambar ke sticker',
 					Iv: 'link nya mokad :v'
@@ -684,6 +685,7 @@ result = `❒「  *Wiki*  」
         await pebz.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
         break                
         case 'ytmp3':
+        if (isGroup) return reply(mess.yutub)
         if(!q) return reply('linknya?')             
         reply(mess.sabar)
         res = await yta(`${q}`).catch(e => {
@@ -691,6 +693,7 @@ result = `❒「  *Wiki*  」
         sendMedia(from, `${res.dl_link}`,{quoted:mek})
         break         
         case 'ytmp4':
+        if (isGroup) return reply(mess.yutub)
         if(!q) return reply('linknya?')            
         reply(mess.sabar)
         res = await ytv(`${q}`).catch(e => {
