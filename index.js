@@ -1425,18 +1425,6 @@ teks = `\`\`\`INFO BOT\`\`\`
 \`\`\`• Os Build Number: ${pebz.user.phone.os_build_number}\`\`\``
              reply(teks)
              break  
-                    case 'semoji':
-       case 'emoji':
-              if (args.length == 0) return reply(`Example: ${prefix}semoji 😏`)
-              emoji = args[0]
-              try {
-              emoji = encodeURI(emoji[0])
-              } catch {
-              emoji = encodeURI(emoji)
- }
-              ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/smoji/${emoji}?apikey=${setting.lolkey}`)
-              await pebz.sendMessage(from, ini_buffer, sticker, { quoted: mek })
-              break
           default: 
           if (isCmd) {
                  reply(`Command *${prefix}${command}* tidak ada di list *${prefix}help*`)
