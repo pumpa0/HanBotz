@@ -343,6 +343,7 @@ console.log(e)
 				sabar: 'mengirim file...',
 				tunggu: 'loading...',
 				yutub: 'untuk group sedang error, silahkan chat personal bot',
+				spamm: 'jika spam command akan di block!'
 				error: {
 					stick: 'gagal saat konvensi gambar ke sticker',
 					Iv: 'link nya mokad :v'
@@ -476,20 +477,11 @@ const linkwa = 'https://chat.whatsapp.com/'
              reply(mess.tunggu)
 		     const hiya = await fetchJson('https://xinzbot-api.herokuapp.com/api/ucapan?apikey=XinzBot&timeZone=Asia/Jakarta', {method:'get'})
 		     var p = '```'
-		    const tod =`      
+		    const tod =`         
 ${p}> ${ucapanWaktu} ${pushname}${p}		    
 ${p}> Prefix :『 ${prefix} 』${p}
 ${p}> Runtime : ${kyun(uptime)}${p}`
 tod2 =`
-*𝗠𝗘𝗡𝗨*
-${p}• ${prefix}attp <text>${p}
-${p}• ${prefix}nulis <text>${p}
-${p}• ${prefix}wiki <query>${p}
-${p}• ${prefix}toimg <replysticker>${p}
-${p}• ${prefix}sticker <replyimg>${p}
-${p}• ${prefix}pinterest <query>${p}
-${p}️• ${prefix}imgsearch <query>${p}
-
 *𝗚𝗥𝗢𝗨𝗣*
 ${p}• ${prefix}delete <reply>${p}
 ${p}• ${prefix}linkgroup${p}
@@ -510,6 +502,20 @@ ${p}• ${prefix}ytmp3 <link>${p}
 ${p}• ${prefix}ytmp4 <link>${p}
 ${p}• ${prefix}ytsearch <query>${p}
 
+*𝗦𝗧𝗜𝗖𝗞𝗘𝗥*
+${p}• ${prefix}attp <text>${p}
+${p}• ${prefix}sticker <reply>${p}
+${p}• ${prefix}stickergif <reply>${p}
+${p}• ${prefix}dogestick${p}
+${p}• ${prefix}gurastick${p}
+${p}• ${prefix}patrickstick${p}
+${p}• ${prefix}animestick${p}
+${p}• ${prefix}toimg <replysticker>${p}
+
+*𝗦𝗘𝗔𝗥𝗖𝗛*
+${p}• ${prefix}wiki <query>${p}
+${p}• ${prefix}pinterest <query>${p}
+${p}️• ${prefix}imgsearch <query>${p}
 
 *𝗚𝗔𝗠𝗘*
 ${p}• ${prefix}suit${p}
@@ -539,14 +545,13 @@ ${p}• ${prefix}report <text>${p}
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 » ᴛᴇʟғᴏɴ ʙᴏᴛ = ʙʟᴏᴄᴋ ᴘᴇʀᴍᴀᴍᴇɴ
-» ɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ , ʙɪᴊᴀᴋ
+» ɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ , ʙɪᴊᴀᴋ`
 
-*© HAN*
-`           
+tod3 =`bit.ly/HanBotz`
            but = [
           { buttonId: `${prefix}owner`, buttonText: { displayText: '༺ HanBotz Beta ༻	' }, type: 1 }
                   ]
-        sendButLocation(from, tod, tod2, gambar, but)
+        sendButLocation(from, tod, tod2, tod3, gambar, but)
            break
           
            case 'donate':
@@ -803,8 +808,8 @@ result = `❒「  *Wiki*  」
            let breh =`_SUCESSS_`
            pebz.sendMessage(from, breh, MessageType.text, pebzganskun)
            break
-           case 'nulis':
-           case 'write':
+           case 'nuliserror':
+           case 'writeerror':
            try {
            if (args.length < 1) return reply(mess.notxt)
            reply(mess.wait)
@@ -857,6 +862,8 @@ break
 			break
              case "sticker":
       case "stiker":
+      case "stickergif"
+      case "stikergif"
       case "sg":
       case "s":
         if (
@@ -1025,6 +1032,7 @@ break
      case 'linkgroup':
      case 'linkgrup':
          if (!isGroup) return reply(mess.only.group)
+         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          linkgc = await pebz.groupInviteCode(from)
          yeh = `https://chat.whatsapp.com/${linkgc}\n\nlink Group *${groupName}*`
@@ -1203,7 +1211,7 @@ reply(kapan)
 break
 case 'delete':
 if (!isGroup) return reply(mess.only.group)
-if (!isOwner && !isGroupAdmins && !isOwner) return reply(mess.only.ownerB)
+if (!isOwner && !isGroupAdmins) return reply(mess.only.admin)
 pebz.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 break
 case 'leave':
@@ -1238,8 +1246,8 @@ case 'leave':
               reply('Error!')
 })
               break              
-      case 'doge':
-              reply(mess.wait)
+      case 'dogestick':
+              reply(mess.spamm)
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
              .then(res => res.text())
              .then(body => {
@@ -1249,8 +1257,8 @@ case 'leave':
 }
 )
               break
-       case 'patrick':
-              reply(mess.wait)
+       case 'patrickstick':
+              reply(mess.spamm)
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
              .then(res => res.text())
              .then(body => {
@@ -1260,9 +1268,9 @@ case 'leave':
 }
 )
               break
-       case 'gura':
+       case 'gurastick':
        case 'gawrgura':
-              reply(mess.wait)
+              reply(mess.spamm)
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
              .then(res => res.text())
              .then(body => {
@@ -1274,7 +1282,7 @@ case 'leave':
               break
        case 'animestick':
        case 'stickeranime':
-              reply(mess.wait)
+              reply(mess.spamm)
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestick')
              .then(res => res.text())
              .then(body => {
