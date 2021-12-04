@@ -477,7 +477,7 @@ const linkwa = 'https://chat.whatsapp.com/'
              reply(mess.tunggu)
 		     const hiya = await fetchJson('https://xinzbot-api.herokuapp.com/api/ucapan?apikey=XinzBot&timeZone=Asia/Jakarta', {method:'get'})
 		     var p = '```'
-		    const tod =`         
+		    const tod =`
 ${p}> ${ucapanWaktu} ${pushname}${p}		    
 ${p}> Prefix :『 ${prefix} 』${p}
 ${p}> Runtime : ${kyun(uptime)}${p}`
@@ -549,7 +549,7 @@ ${p}• ${prefix}report <text>${p}
 
 • bit.ly/HanBotz`
            but = [
-          { buttonId: `${prefix}owner`, buttonText: { displayText: '༺ HanBotz ༻	' }, type: 1 }
+          { buttonId: `${prefix}owner`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
