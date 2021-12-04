@@ -546,7 +546,10 @@ ${p}• ${prefix}report <text>${p}
 » ᴛᴇʟғᴏɴ ʙᴏᴛ = ʙʟᴏᴄᴋ ᴘᴇʀᴍᴀᴍᴇɴ
 » ɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ , ʙɪᴊᴀᴋ
 
-bit.ly/HanBotz`
+*Website*
+• bit.ly/HanBotz
+*Official Group*
+• bit.ly/OfficialGroupHanBotz`
 
            but = [
           { buttonId: `${prefix}owner`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
