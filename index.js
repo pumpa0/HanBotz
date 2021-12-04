@@ -1434,55 +1434,29 @@ case 'say':
                                         break
 
                   
-                  if (budy.includes(`@6285731855426`)) {
+                  if (budy.includes(`@6285731855426`)){
 const rell = fs.readFileSync('./TagHan.webp');
-dha.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-
-                  }
+pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek}) }
                   
-                  if (budy.includes(`@Hanafi`)) {
+                  if (budy.includes(`@Hanafi`)){
 const rell = fs.readFileSync('./TagHan.webp');
-dha.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-
-                  }
+pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})}
                   
-                  if (budy.includes(`@༺ HAN ༻`)) {
+                  if (budy.includes(`@༺ HAN ༻`)){
 const rell = fs.readFileSync('./TagHan.webp');
-dha.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-
-                  }
+pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})}
 
 
-		if (budy.includes(`@HanBotz`)) {
-
-                  reply(`ya ada apa? silahkan ketik */menu*`)
-
-                  }
+		if (budy.includes(`@HanBotz`)){reply(`ya ada apa? silahkan ketik */menu*`)}
                   
-                  if (budy.includes(`@6285807149213`)) {
-
-                  reply(`ya ada apa? silahkan ketik */menu*`)
-
-                  }
+                  if (budy.includes(`@6285807149213`)){reply(`ya ada apa? silahkan ketik */menu*`)}
                   
-                  if (budy.includes(`HanBotz`)) {
-
-                  reply(`ya ada apa? silahkan ketik */menu*`)
-
-                  }
+                  if (budy.includes(`HanBotz`)){reply(`ya ada apa? silahkan ketik */menu*`)}
 
 
-		if (budy.includes(`Assalamualaikum`)) {
-
-                  reply(`Waalaikumsalam ${pushname}`)
-
-                  }
+		if (budy.includes(`Assalamualaikum`)){reply(`Waalaikumsalam ${pushname}`)}
                   
-                  if (budy.includes(`assalamualaikum`)) {
-
-                  reply(`waalaikumsalam ${pushname}`)
-
-                  }
+                  if (budy.includes(`assalamualaikum`)){reply(`waalaikumsalam ${pushname}`)}
 
           default: 
           if (isCmd) {
