@@ -343,7 +343,7 @@ console.log(e)
 				sabar: 'mengirim file...',
 				tunggu: 'loading...',
 				yutub: 'untuk group sedang error, silahkan chat personal bot',
-				spamm: 'jika spam command akan di block!'
+				spamm: 'jika spam command akan di block!',
 				error: {
 					stick: 'gagal saat konvensi gambar ke sticker',
 					Iv: 'link nya mokad :v'
@@ -545,13 +545,13 @@ ${p}• ${prefix}report <text>${p}
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 » ᴛᴇʟғᴏɴ ʙᴏᴛ = ʙʟᴏᴄᴋ ᴘᴇʀᴍᴀᴍᴇɴ
-» ɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ , ʙɪᴊᴀᴋ
+» ɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ , ʙɪᴊᴀᴋ`
 
-• bit.ly/HanBotz`
+tod3 = `bit.ly/HanBotz`
            but = [
           { buttonId: `${prefix}owner`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                   ]
-        sendButLocation(from, tod, tod2, gambar, but)
+        sendButLocation(from, tod, tod2, tod3, gambar, but)
            break
           
            case 'donate':
