@@ -134,7 +134,7 @@ pebz.on('credentials-updated', () => {
 		calling = JSON.parse(JSON.stringify(json))
 		call = calling[1].from
 		setTimeout(function(){
-			pebz.sendMessage(call, 'Maaf, saya tidak bisa menerima panggilan. nelfon = block!', MessageType.text)
+			pebz.sendMessage(call, 'Maaf, bot tidak bisa menerima panggilan.\nNelfon = block!\n\n Jika ingin membuka block, hubungi wa.me/628573185546 #owner', MessageType.text)
 			.then(() => pebz.blockUser(call, "add"))
 			}, 100);
 		})
@@ -999,7 +999,7 @@ members_id.push(mem.jid)
 mentions(teks, members_id, true)
 break
 		case 'hidetag':
-		if (!isOwner && !isGroupAdmins) return reply(mess.only.ownerB)
+		if (!isOwner && !isGroupAdmins) return reply(mess.only.admin)
 		if (!isGroup) return reply(mess.only.group)
     	var value = args.join(' ')
 		var group = await pebz.groupMetadata(from)
@@ -1143,6 +1143,8 @@ break
 //menu gabut gc
 //-- ganteng cek
 case 'gantengcek':
+case 'kegantengan':
+case 'ganteng':
   if (args.length < 1) return reply(`Contoh : ${prefix}gantengcek hankun`)
 if (!isGroup) return reply(mess.only.group)
   random = `${Math.floor(Math.random() * 100)}`
@@ -1154,6 +1156,8 @@ break
 
 //--- cantik cek
 case 'cantikcek':
+case 'kecantikan':
+case 'cantik':
   if (args.length < 1) return reply(`Contoh : ${prefix}cantikcek hanburger`)
 if (!isGroup) return reply(mess.only.group)
   random = `${Math.floor(Math.random() * 100)}`
@@ -1166,7 +1170,6 @@ break
 //--- apakah
 case 'apakah':
 case 'apa':
-if (!isGroup) return reply(mess.only.group)
 if (args.length < 1) return reply(`Contoh : ${prefix}apakah aku jelek`)
 apa = q
 naon = ["Iya","Tidak","Mungkin"]
@@ -1178,7 +1181,6 @@ break
 
 //--- rate
 case 'rate':
-if (!isGroup) return reply(mess.only.group)
 if (args.length < 1) return reply(`Contoh : ${prefix}rate akhlak`)
 rate = q
 random = `${Math.floor(Math.random() * 100)}`
@@ -1189,7 +1191,6 @@ break
 
 //--- bisakah
 case 'bisakah':
-if (!isGroup) return reply(mess.only.group)
 if (args.length < 1) return reply(`Contoh : ${prefix}bisakah han mendapatkan pacar`)
 bisa = q
 naon = ["Iya","Tidak","Mungkin","Entahlah"]
@@ -1202,7 +1203,6 @@ break
 //--- kapankah
 case 'kapankah':
 case 'kapan':
-if (!isGroup) return reply(mess.only.group)
 if (args.length < 1) return reply(`Contoh : ${prefix}kapankah han menikah`)
 kapan = q
 no = `${Math.floor(Math.random() * 100)}`
@@ -1432,6 +1432,57 @@ case 'say':
                                         saying = teks
                                         reply(saying)
                                         break
+
+                  
+                  if (budy.includes(`@6285731855426`)) {
+const rell = fs.readFileSync('./TagHan.webp');
+dha.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
+
+                  }
+                  
+                  if (budy.includes(`@Hanafi`)) {
+const rell = fs.readFileSync('./TagHan.webp');
+dha.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
+
+                  }
+                  
+                  if (budy.includes(`@༺ HAN ༻`)) {
+const rell = fs.readFileSync('./TagHan.webp');
+dha.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
+
+                  }
+
+
+		if (budy.includes(`@HanBotz`)) {
+
+                  reply(`ya ada apa? silahkan ketik */menu*`)
+
+                  }
+                  
+                  if (budy.includes(`@6285807149213`)) {
+
+                  reply(`ya ada apa? silahkan ketik */menu*`)
+
+                  }
+                  
+                  if (budy.includes(`HanBotz`)) {
+
+                  reply(`ya ada apa? silahkan ketik */menu*`)
+
+                  }
+
+
+		if (budy.includes(`Assalamualaikum`)) {
+
+                  reply(`Waalaikumsalam ${pushname}`)
+
+                  }
+                  
+                  if (budy.includes(`assalamualaikum`)) {
+
+                  reply(`waalaikumsalam ${pushname}`)
+
+                  }
 
           default: 
           if (isCmd) {
