@@ -349,7 +349,7 @@ console.log(e)
 					Iv: 'link nya mokad :v'
 				},
 				only: {
-					group: 'Khusus Grup!',
+					group: 'Khusus Grup!\n\nKamu tidak punya group? Join!\nhttps://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ',
 					ownerB: 'Khusus Owner Bot',
 					admin: 'Khusus Admin grup'
 				}
