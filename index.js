@@ -545,13 +545,13 @@ ${p}• ${prefix}report <text>${p}
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 » ᴛᴇʟғᴏɴ ʙᴏᴛ = ʙʟᴏᴄᴋ ᴘᴇʀᴍᴀᴍᴇɴ
-» ɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ , ʙɪᴊᴀᴋ`
+» ɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ , ʙɪᴊᴀᴋ
 
-tod3 =`bit.ly/HanBotz`
+• bit.ly/HanBotz`
            but = [
-          { buttonId: `${prefix}owner`, buttonText: { displayText: '༺ HanBotz Beta ༻	' }, type: 1 }
+          { buttonId: `${prefix}owner`, buttonText: { displayText: '༺ HanBotz ༻	' }, type: 1 }
                   ]
-        sendButLocation(from, tod, tod2, tod3, gambar, but)
+        sendButLocation(from, tod, tod2, gambar, but)
            break
           
            case 'donate':
