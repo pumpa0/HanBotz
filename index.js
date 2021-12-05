@@ -95,7 +95,7 @@ blocked = []
                             status: 1,
                             surface : 1,
                             message: `HanBotz`, 
-                            orderTitle: `༺ HAN ༻`,
+                            orderTitle: `༺ HanBotz ༻`,
                             thumbnail: fs.readFileSync('./media/gambar/biasa.png'),
                             sellerJid: '0@s.whatsapp.net' 
                           }
@@ -213,6 +213,7 @@ pebz.on('group-participants-update', async (chat) => {
 		const isAntiLink = isGroup ? _antilink.includes(from) : false
 	    const isNsfw = isGroup ? nsfww.includes(from) : false
         const isAnti = isGroup ? _antilink.includes(from) : false
+        const totalchat = await pebz.chats.all()
 
 const sendFile = async (medya, namefile, capti, tag, vn) => {
   baper = await getBuffer(medya)
@@ -1459,10 +1460,16 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})}
                   
                   if (budy.includes(`assalamualaikum`)){reply(`waalaikumsalam ${pushname}`)}
                   
-         // Auto Read
-        pebz.chatRead(from, "read")
-        //auto vn 
-        await pebz.updatePresence(from, Presence.recording)
+         break
+
+              case 'readall':
+              if (!isOwner) return reply(mess.only.ownerB)
+              totalchat.map( async ({ jid }) => {
+              await pebz.chatRead(jid)
+})
+              reply(`\`\`\`Berhasil membaca ${unread.length} Chat !\`\`\``)
+              console.log(totalchat.length)
+              break	
 
           default: 
           if (isCmd) {
