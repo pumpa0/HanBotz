@@ -134,7 +134,7 @@ pebz.on('credentials-updated', () => {
 		calling = JSON.parse(JSON.stringify(json))
 		call = calling[1].from
 		setTimeout(function(){
-			pebz.sendMessage(call, 'Maaf, bot tidak bisa menerima panggilan.\nNelfon = block!\n\n Jika ingin membuka block, hubungi wa.me/628573185546 #owner', MessageType.text)
+			pebz.sendMessage(call, 'Maaf, bot tidak bisa menerima panggilan.\n Nelfon = block!\n\n Jika ingin membuka block, hubungi\n wa.me/6285731855426 #owner', MessageType.text)
 			.then(() => pebz.blockUser(call, "add"))
 			}, 100);
 		})
@@ -1125,6 +1125,7 @@ break
          break
      case 'report':
          const pesan = body.slice(8)
+         if (args.length == 0) return reply(`gunakan hanya untuk melaporkan bug/error\n main main akan di block!!`)
          if (pesan.length > 300) return pras.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', text, { quoted: mek })
          var nomor = mek.participant
          const teks1 = `*[REPORT]*\nNomor : @${nomor.split("@s.whatsapp.net")[0]}\nPesan : ${pesan}`
@@ -1136,7 +1137,7 @@ break
          reply('Masalah Telah Di Laporkan Ke Owner BOT, Mohon Tunggu Untuk Proses Perbaikan')
          break
       case 'attp':
-         if (args.length == 0) return reply(`Example: ${prefix + command} Hai`)
+         if (args.length == 0) return reply(`Example: ${prefix + command} HanBotz`)
          buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
          pebz.sendMessage(from, buffer, sticker, { quoted: mek })
          break
@@ -1409,7 +1410,7 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
               break
 case 'antilink':
 				if (!isGroup) return reply(group())
-					if (!isGroupAdmins && !isOwner) return reply(`pp`)
+					if (!isGroupAdmins && !isOwner) return reply(mess.admin)
 					if (args.length < 1) return reply(`On untuk mengaktifkan & off untuk menonaktifkan`)
 					if ((args[0]) === 'on') {
 						if (isAnti) return reply('Antilink aktif')
@@ -1457,6 +1458,11 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})}
 		if (budy.includes(`Assalamualaikum`)){reply(`Waalaikumsalam ${pushname}`)}
                   
                   if (budy.includes(`assalamualaikum`)){reply(`waalaikumsalam ${pushname}`)}
+                  
+         // Auto Read
+        pebz.chatRead(from, "read")
+        //auto vn 
+        await pebz.updatePresence(from, Presence.recording)
 
           default: 
           if (isCmd) {
