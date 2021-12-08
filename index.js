@@ -446,17 +446,15 @@ const linkwa = 'https://chat.whatsapp.com/'
         if (!isBotGroupAdmins) return reply('Untung Gue bukan admin, kalo iya gua kick lu')
         linkgc = await pebz.groupInviteCode (from)
         if (budy.includes(`${linkwa}${linkgc}`)) return reply('Untung Link group ini')
-		if (isGroupAdmins) return reply(`Hmm mantap min`)
+        if (isOwner) return
+		if (isGroupAdmins) return reply(`Share Woyy!!`)
 		pebz.updatePresence(from, Presence.composing)
 		var Kick = `${sender.split("@")[0]}@s.whatsapp.net`
-		setTimeout( () => {
-		reply('byee')
-		}, 1100)
 		setTimeout( () => {
 		pebz.groupRemove(from, [Kick]).catch((e) => {console.log(`*ERROR:* ${e}`)}) 
 					}, 1000)
 		setTimeout( () => {
-		reply(`Antilink menyala & link Group Terdeteksi maaf *${pushname}* anda akan di kick`)
+		reply(`Link Group Terdeteksi maaf *${pushname}* anda akan di kick`)
 		}, 0)
 	} 
 			colors = ['red','white','black','blue','yellow','green']
@@ -1435,46 +1433,34 @@ case 'say':
                                         reply(saying)
                                         break
 
-                  
-                  if (budy.includes(`@6285731855426`)){
-const rell = fs.readFileSync('./TagHan.webp');
-pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek}) }
-                  
-                  if (budy.includes(`@Hanafi`)){
-const rell = fs.readFileSync('./TagHan.webp');
-pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})}
-                  
-                  if (budy.includes(`@༺ HAN ༻`)){
-const rell = fs.readFileSync('./TagHan.webp');
-pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})}
-
-
-		if (budy.includes(`@HanBotz`)){reply(`ya ada apa? silahkan ketik */menu*`)}
-                  
-                  if (budy.includes(`@6285807149213`)){reply(`ya ada apa? silahkan ketik */menu*`)}
-                  
-                  if (budy.includes(`HanBotz`)){reply(`ya ada apa? silahkan ketik */menu*`)}
-
-
-		if (budy.includes(`Assalamualaikum`)){reply(`Waalaikumsalam ${pushname}`)}
-                  
-                  if (budy.includes(`assalamualaikum`)){reply(`waalaikumsalam ${pushname}`)}
-                  
-         break
-
               case 'readall':
               if (!isOwner) return reply(mess.only.ownerB)
               totalchat.map( async ({ jid }) => {
-              await pebz.chatRead(jid)
-})
-              reply(`\`\`\`Berhasil membaca ${unread.length} Chat !\`\`\``)
+              await pebz.chatRead(jid)})
+              reply(`Berhasil membaca ${unread.length} Chat !`)
               console.log(totalchat.length)
               break	
 
           default: 
-          if (isCmd) {
-                 reply(`Command *${prefix}${command}* tidak ada di list *${prefix}help*`)
-                    }
+          if (budy.includes(`@6285731855426`)) {
+const baby = fs.readFileSync('.HanTag.webp');
+dha.sendMessage(from, baby, MessageType.sticker, {quoted: mek})
+
+                  }
+
+
+       if (budy.includes(`@Hanafi`)) {
+const rell = fs.readFileSync('.HanTag.webp');
+dha.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
+
+                  }
+
+
+		if (budy.includes(`HanBotz`)) {
+
+                  reply(`Ya? Silahkan Ketik /menu`)
+
+                  }
 					if (isGroup && budy != undefined) {
 				} else {
 						console.log(color('[SYSTEM]','yellow'), 'PERINTAH TAK DIKENAL DARI', color(sender.split('@')[0]))
