@@ -1456,7 +1456,7 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   }
 
 
-		if (budy.includes(`HanBotz`)) {
+		if (budy.includes(`@HanBotz`)) {
 
                   reply(`Ya? Silahkan Ketik /menu`)
 
