@@ -1443,14 +1443,14 @@ case 'say':
 
           default: 
           if (budy.includes(`@6285731855426`)) {
-const baby = fs.readFileSync('.TagHan.webp');
+const baby = fs.readFileSync('./TagHan.webp');
 dha.sendMessage(from, baby, MessageType.sticker, {quoted: mek})
 
                   }
 
 
        if (budy.includes(`@Hanafi`)) {
-const rell = fs.readFileSync('.TagHan.webp');
+const rell = fs.readFileSync('./TagHan.webp');
 dha.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
 
                   }
