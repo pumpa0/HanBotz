@@ -186,16 +186,13 @@ pebz.on('group-participants-update', async (chat) => {
 			const { text, extendedText, contact, contactsArray, groupInviteMessage, listMessage, buttonsMessage, location, liveLocation, image, video, sticker, document, audio, product, quotedMsg } = MessageType
 			
 			const time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
-			const wita = moment.tz("Asia/Makassar").format("HH:mm:ss")
-			const type = Object.keys(mek.message)[0]
-			const prefix = /^[°•π÷×¶∆£¢€¥®™=|~!#$%^&.?/\\©^z+*@,;]/.test(cmd) ? cmd.match(/^[°•π÷×¶∆£¢€¥®™=|~!#$%^&.?/\\©^z+*,;]/gi) : '/'          	    
+			const wita = moment.tz("Asia/Makassar").format("HH:mm:ss")	    
        
 			body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'videoMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'extendedTextMessage') && mek.message[type].text.startsWith(prefix) ? mek.message[type].text : (type == 'listResponseMessage') && mek.message[type].singleSelectReply.selectedRowId ? mek.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : ''
 			budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
 			const command = body.slice(1).trim().split(/ +/).shift().toLowerCase()
 			const args = body.trim().split(/ +/).slice(1)
 			const isCmd = body.startsWith(prefix)
-			const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
 
            
             const botNumber = pebz.user.jid
@@ -347,8 +344,8 @@ console.log(e)
 				notxt: 'textnya mana ?',
 				sabar: 'mengirim file...',
 				tunggu: 'loading...',
-				yutub: 'untuk group sedang error, silahkan chat personal bot',
-				spamm: 'jika spam command akan di block!',
+				yutub: 'khusus personal chat',
+				spamm: '*jika spam* command akan di block!',
 				error: {
 					stick: 'gagal saat konvensi gambar ke sticker',
 					Iv: 'link nya mokad :v'
@@ -499,7 +496,7 @@ ${p}• ${prefix}hidetag <text>${p}
 ${p}• ${prefix}tagall <text>${p}
 ${p}• ${prefix}open|close${p}
 
-*𝗬𝗢𝗨𝗧𝗨𝗕𝗘*
+*𝗬𝗢𝗨𝗧𝗨𝗕𝗘* ( personal chat)
 ${p}• ${prefix}play <link>  [maintenance]${p}
 ${p}• ${prefix}ytmp3 <link>${p}
 ${p}• ${prefix}ytmp4 <link>${p}
@@ -667,9 +664,10 @@ result = `❒「  *Wiki*  」
            reply(result)
            })
         break
-   	case 'playrusak':
+   	case 'play':
+        if (isGroup) return reply(mess.yutub)
         if (args.length < 1) return reply(`Kirim perintah *${prefix}play query`)
-        reply (mess.wait)
+        reply (mess.yutub)
         let yut = await yts(q)
         yta(yut.videos[0].url)             
         .then(async(res) => {
@@ -712,6 +710,7 @@ result = `❒「  *Wiki*  」
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         	case 'ytsearch':
+            if (isGroup) return reply(mess.yutub)
 			if (args.length < 1) return reply('Tolong masukan query!')
 			reply(mess.wait)
 			var srch = args.join('');
@@ -1144,6 +1143,10 @@ break
          buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
          pebz.sendMessage(from, buffer, sticker, { quoted: mek })
          break
+         case 'attp2':
+         if (args.length == 0) return reply(`Example: ${prefix + command} HanBotz`)
+         atetepe = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURIComponent(c)}`)
+					alpha.sendMessage(from, atetepe, sticker, { quoted: mek })
 //menu gabut gc
 //-- ganteng cek
 case 'gantengcek':
