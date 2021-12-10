@@ -497,8 +497,7 @@ ${p}• ${prefix}hidetag <text>${p}
 ${p}• ${prefix}tagall <text>${p}
 ${p}• ${prefix}open|close${p}
 
-*𝗬𝗢𝗨𝗧𝗨𝗕𝗘* ( personal chat)
-${p}• ${prefix}play <link>  [maintenance]${p}
+*𝗬𝗢𝗨𝗧𝗨𝗕𝗘*
 ${p}• ${prefix}ytmp3 <link>${p}
 ${p}• ${prefix}ytmp4 <link>${p}
 ${p}• ${prefix}ytsearch <query>${p}
@@ -665,8 +664,7 @@ result = `❒「  *Wiki*  」
            reply(result)
            })
         break
-   	case 'play':
-        if (isGroup) return reply(mess.yutub)
+   	case 'playyy':
         if (args.length < 1) return reply(`Kirim perintah *${prefix}play query`)
         reply (mess.yutub)
         let yut = await yts(q)
@@ -695,7 +693,6 @@ result = `❒「  *Wiki*  」
         await pebz.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
         break                
         case 'ytmp3':
-        if (isGroup) return reply(mess.yutub)
         if(!q) return reply('linknya?')             
         reply(mess.sabar)
         res = await yta(`${q}`).catch(e => {
@@ -703,7 +700,6 @@ result = `❒「  *Wiki*  」
         sendMedia(from, `${res.dl_link}`,{quoted:mek})
         break         
         case 'ytmp4':
-        if (isGroup) return reply(mess.yutub)
         if(!q) return reply('linknya?')            
         reply(mess.sabar)
         res = await ytv(`${q}`).catch(e => {
@@ -711,7 +707,6 @@ result = `❒「  *Wiki*  」
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         	case 'ytsearch':
-            if (isGroup) return reply(mess.yutub)
 			if (args.length < 1) return reply('Tolong masukan query!')
 			reply(mess.wait)
 			var srch = args.join('');
