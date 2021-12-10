@@ -47,7 +47,6 @@ let _uang = JSON.parse(fs.readFileSync('./database/uang.json'))
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
 const {
 	OwnerNumber,
-	prefix,
 	lol
 } = require('./lib/config.json')
 
