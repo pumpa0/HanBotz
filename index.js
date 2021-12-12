@@ -48,7 +48,6 @@ let setting = JSON.parse(fs.readFileSync('./setting.json'))
 const { uploadimg } = require('./lib/uploadimg')
 const { webp2mp4File } = require('./lib/webp2mp4')
 const { lirikLagu } = require('./lib/lirik.js')
-const ggs = require('google-it')
 const { herolist } = require('./lib/herolist.js')
 const { herodetails } = require('./lib/herodetail.js')
 const {
