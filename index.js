@@ -1488,7 +1488,6 @@ reply(lirik)
 })
 break
 case 'herolist':
-if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
 await herolist().then((ress) => {
 let listt = `*List hero untuk feature ${prefix}herodetail*\n\n`
 for (var i = 0; i < ress.hero.length; i++) {
@@ -1498,7 +1497,6 @@ reply(listt)
 })
 break
 case 'herodetail':
-if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
 res = await herodetails(body.slice(12))
 her = `*Hero Details ${body.slice(12)}*
 
@@ -1527,24 +1525,7 @@ her = `*Hero Details ${body.slice(12)}*
 *Story* : ${res.background_story}`
 reply(her)
 break
-				case 'google':
-case 'googlesearch':
-case 'ggs':
-if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
-if (args.length < 1) return reply('Yang mau di cari apaan?')
-teks = args.join(' ')
-sticWait(from)
-res = await ggs({'query' : `${teks}`})
-kant = ``
-for (let i of res) {
-kant += `*Judul* : ${i.title}
-*Link* : ${i.link}
-*Keterangan* : ${i.snippet}`
-}
-var akhir = kant.trim()
-reply(akhir)
-break
-
+			
           default: 
           
           if (isTTT && isPlayer2){
