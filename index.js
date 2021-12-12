@@ -1442,20 +1442,9 @@ case 'say':
               reply(`Berhasil membaca ${unread.length} Chat !`)
               console.log(totalchat.length)
               break	
-              case 'spam':
-				if (!isOwner && !mek.key.fromMe) return sticOwner(from)
-					if (!arg) return reply(`Penggunaan ${prefix}spam teks|jumlah`)
-				argzi = arg.split("|")
-				if (!argzi) return reply(`Penggunaan ${prefix}spam teks|jumlah`)
-				if (Number(argzi[1]) >= 50) return reply('Kebanyakan!')
-				if (isNaN(argzi[1])) return reply(`harus berupa angka`)
-				for (let i = 0; i < argzi[1]; i++){
-					pebz.sendMessage(from, argzi[0], MessageType.text)
-				}
-				break
 case 'tomp4':
 					if (!isQuotedSticker) return reply('Reply stiker nya')
-                                        sticWait(from)
+                                        reply(mess.sabar)
             if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
             ger = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
             owgi = await pebz.downloadAndSaveMediaMessage(ger)
@@ -1470,7 +1459,7 @@ case 'tomp4':
             case 'tomp3':
 					pebz.updatePresence(from, Presence.composing)
 					if (!isQuotedVideo) return reply('Reply Video Nya Kak')
-					sticWait(from)
+					reply(mess.sabar)
 					encmediad = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 					mediad = await pebz.downloadAndSaveMediaMessage(encmediad)
 					ran = getRandom('.mp4')
@@ -1484,7 +1473,6 @@ case 'tomp4':
 					break
 case 'lirik':
 if (args.length < 1) return reply('Judulnya?')
-sticWait(from)
 teks = body.slice(7)
 lirikLagu(teks).then((res) => {
 let lirik = `${res[0].result}`
