@@ -728,6 +728,12 @@ const pebz2 = {
            todzi = await getBuffer(`https://api.lolhuman.xyz/api/random/quotesimage?apikey=${lolkey}`)
            pebz.sendMessage(from, todzi, image, {quoted : mek })
            break
+case 'simi':
+           if (args.length == 0) return reply(`Hallo Kak ${pushname}`)
+           get = await fetchJson(`https://api-sv2.simsimi.net/v2/?text=hello&lc=en&cf=false`)
+           getresult = get.result
+             reply(getresult)         
+             break           
              case 'wiki':
             if (args.length < 1) return reply(' Yang Mau Di Cari Apa? ')
             teks = args.join(' ')
@@ -1376,7 +1382,7 @@ case 'leave':
 )
               break
        case 'slot':
-              const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : ?? : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : ??','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
+              const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : ?? : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
               somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
@@ -1650,10 +1656,6 @@ case 'bego':
         membr.push(goo.jid)
         mentions(teks, membr, true)
         break
-case 'simi': 
-				anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${body.slice(3)}`)
-				reply(anu.result.success)
-				break
 case 'simih':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
