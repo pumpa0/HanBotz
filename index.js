@@ -566,8 +566,8 @@ ${p}• ${prefix}report <text>${p}
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
-case 'simplemenu'
-case 'simpelmenu'
+case 'simplemenu':
+case 'simpelmenu':
 const simple2 =`
 *𝗚𝗥𝗢𝗨𝗣*
 • ${prefix}delete <reply>
