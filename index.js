@@ -175,6 +175,15 @@ pebz.on('group-participants-update', async (chat) => {
 		}
 	})
 		
+if (!settings.autoread) {
+pebz.chatRead(from)
+}
+if (!settings.autocomposing) {
+pebz.updatePresence(from, Presence.composing)
+}
+if (!settings.autorecording) {
+pebz.updatePresence(from, Presence.recording)
+}
 		
 		
 	    pebz.on('chat-update', async (mek) => {
@@ -1525,16 +1534,6 @@ her = `*Hero Details ${body.slice(12)}*
 *Story* : ${res.background_story}`
 reply(her)
 break
-
-if (!settings.autoread) {
-pebz.chatRead(from)
-}
-if (!settings.autocomposing) {
-pebz.updatePresence(from, Presence.composing)
-}
-if (!settings.autorecording) {
-pebz.updatePresence(from, Presence.recording)
-}
 			
           default: 
 
