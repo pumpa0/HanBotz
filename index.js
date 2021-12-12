@@ -175,9 +175,7 @@ pebz.on('group-participants-update', async (chat) => {
 		}
 	})
 		  
-		    if (budy.startsWith('/')) {
-			pebz.updatePresence(from, Presence.composing)
-             }
+		    
 		
 		
 	    pebz.on('chat-update', async (mek) => {
@@ -248,6 +246,9 @@ const sendFile = async (medya, namefile, capti, tag, vn) => {
   pebz.sendMessage(from, baper, document, {mimetype: kobe, quoted: tag, filename: namefile})
   }
 }
+  if (budy.startsWith('/')) {
+			pebz.updatePresence(from, Presence.composing)
+   }
 const sendFileFromUrl = async(link, type, options) => {
 hasil = await getBuffer(link)
 pebz.sendMessage(from, hasil, type, options).catch(e => {
