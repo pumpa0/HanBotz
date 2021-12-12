@@ -174,16 +174,16 @@ pebz.on('group-participants-update', async (chat) => {
 			console.log('Error : %s', color(e, 'red'))
 		}
 	})
-		
-if (!settings.autoread) {
+		  
+		    if {
 pebz.chatRead(from)
-}
-if (!settings.autocomposing) {
+            }
+           if {
 pebz.updatePresence(from, Presence.composing)
-}
-if (!settings.autorecording) {
+            }
+           if {
 pebz.updatePresence(from, Presence.recording)
-}
+            }
 		
 		
 	    pebz.on('chat-update', async (mek) => {
