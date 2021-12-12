@@ -1673,6 +1673,15 @@ case 'simih':
 						reply('1 untuk mengaktifkan & 0 untuk menonaktifkan')
 					}
 					break
+case 'tiktok':
+if (!c) return reply('Linknya?')
+var { TiktokDownloader } = require('./lib/tiktokdl')
+res = await TiktokDownloader(`${c}`).catch(e => {
+reply(gagal)
+})
+console.log(res)
+sendMediaURL(from, `${res.result.nowatermark}`)
+break
 			
           default: 
 
