@@ -61,6 +61,28 @@ fake = '༺ HanBotz ༻\nStatus : Online'
 let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
 self = false
 blocked = []
+//>>>>>>>>>>>>>[ STICKER ]<<<<<<<<<<<<<\\
+		const sticOwner = (hehe) => {
+			ano = fs.readFileSync('./media/sticker/owner.webp')
+			pebz.sendMessage(hehe, ano, sticker, { quoted: mek})
+		}
+		const sticNotAdmin = (hehe) => {
+			ano = fs.readFileSync('./media/sticker/notadmin.webp')
+			pebz.sendMessage(hehe, ano, sticker, { quoted: mek})
+		}
+		const sticAdmin = (hehe) => {
+			ano = fs.readFileSync('./media/sticker/admin.webp')
+			pebz.sendMessage(hehe, ano, sticker, { quoted: mek})
+		}
+		const sticWait = (hehe) => {
+			ano = fs.readFileSync('./media/sticker/wait.webp')
+			pebz.sendMessage(hehe, ano, sticker, { quoted: mek})
+		}
+		const sticOk = (hehe) => {
+			ano = fs.readFileSync('./media/sticker/ok.webp')
+			pebz.sendMessage(hehe, ano, sticker, { quoted: mek})
+		}
+//>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 
 //[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
 
@@ -619,7 +641,7 @@ const simple2 =`
 • ${prefix}cantikcek <name>
 • ${prefix}gantengcek <name>
 
-*??𝗪𝗡𝗘𝗥*
+*𝗢𝗪𝗡𝗘𝗥*
 • ${prefix}leave
 • ${prefix}status
 • ${prefix}runtime
@@ -1681,6 +1703,305 @@ reply(gagal)
 })
 console.log(res)
 sendMediaURL(from, `${res.result.nowatermark}`)
+break
+//>>>>>>>>>MAKER MENU<<<<<<<<<<<<<//
+case 'serti1':
+bo = args.join(" ")
+sendMediaURL(from, `https://hansxd.nasihosting.com/serti4/img.php?nama=${bo}`, `Nih Kak Hasilnya ^_^`)
+break
+case 'serti2':
+bo = args.join(" ")
+sendMediaURL(from, `https://hansxd.nasihosting.com/serti2/img.php?nama=${bo}`, `Nih Kak Hasilnya ^_^`)
+break
+case 'serti3':
+bo = args.join(" ")
+sendMediaURL(from, `https://hansxd.nasihosting.com/serti6/img.php?nama=${bo}`, `Nih Kak Hasilnya ^_^`)
+break
+case 'serti4':
+bo = args.join(" ")
+sendMediaURL(from, `https://hansxd.nasihosting.com/serti5/img.php?nama=${bo}`, `Nih Kak Hasilnya ^_^`)
+break
+
+//>>>>>>>> PEMBATAS >>>>>>>>>> //
+case 'tahta': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+tahta = args.join(" ")
+sticWait(from)
+tahta = await getBuffer(`https://api.zeks.me/api/hartatahta?text=${tahta}&apikey=apivinz`)
+pebz.sendMessage(from, tahta, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'snow': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+snow = args.join(" ")
+sticWait(from)
+snow = await getBuffer(`https://api.zeks.me/api/snowwrite?text1=HartaTahta&text2=${snow}&apikey=apivinz`)
+pebz.sendMessage(from, snow, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'pubg': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+pubg = args.join(" ")
+sticWait(from)
+pubg = await getBuffer(`https://api.zeks.me/api/pubglogo?text1=PUBG&text2=${pubg}&apikey=apivinz`)
+pebz.sendMessage(from, pubg, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'smoke': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+smoke = args.join(" ")
+sticWait(from)
+smoke = await getBuffer(`https://api.zeks.me/api/smoketext?text=${smoke}&apikey=apivinz`)
+pebz.sendMessage(from, smoke, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'bneon': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+bneon = args.join(" ")
+sticWait(from)
+bneon = await getBuffer(`https://api.zeks.me/api/bneon?apikey=apivinz&text=${bneon}`)
+pebz.sendMessage(from, bneon, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'matrix': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+matrix = args.join(" ")
+sticWait(from)
+matrix = await getBuffer(`https://api.zeks.me/api/matrix?apikey=apivinz&text=${matrix}`)
+pebz.sendMessage(from, matrix, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'gplay': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+gplay = args.join(" ")
+sticWait(from)
+gplay = await getBuffer(`https://api.zeks.me/api/gplaybutton?text=${gplay}&apikey=apivinz`)
+pebz.sendMessage(from, gplay, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'splay': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+splay = args.join(" ")
+sticWait(from)
+splay = await getBuffer(`https://api.zeks.me/api/splaybutton?text=${splay}&apikey=apivinz`)
+pebz.sendMessage(from, splay, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'text3d': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+text3d = args.join(" ")
+sticWait(from)
+text3d = await getBuffer(`https://api.zeks.me/api/text3dbox?apikey=apivinz&text=${text3d}`)
+pebz.sendMessage(from, text3d, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'tfire': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+tfire = args.join(" ")
+sticWait(from)
+tfire = await getBuffer(`https://api.zeks.me/api/tfire?text=${tfire}&apikey=apivinz`)
+pebz.sendMessage(from, tfire, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'lithg': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+lithg = args.join(" ")
+sticWait(from)
+lithg = await getBuffer(`https://api.zeks.me/api/lithgtext?text=${lithg}&apikey=apivinz`)
+pebz.sendMessage(from, lithg, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'wall': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+wall = args.join(" ")
+sticWait(from)
+wall = await getBuffer(`https://api.zeks.me/api/breakwall?apikey=apivinz&text=${wall}`)
+pebz.sendMessage(from, wall, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'dropair': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+dropair = args.join(" ")
+sticWait(from)
+dropair = await getBuffer(`https://api.zeks.me/api/dropwater?apikey=apivinz&text=${dropair}`)
+pebz.sendMessage(from, dropair, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'logocrs': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+logocrs = args.join(" ")
+sticWait(from)
+logocrs = await getBuffer(`https://api.zeks.me/api/crosslogo?text=${logocrs}&apikey=apivinz`)
+pebz.sendMessage(from, logocrs, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'flame': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+flame = args.join(" ")
+sticWait(from)
+flame = await getBuffer(`https://api.zeks.me/api/flametext?text=${flame}&apikey=apivinz`)
+pebz.sendMessage(from, flame, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'flower': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+flower = args.join(" ")
+sticWait(from)
+flower = await getBuffer(`https://api.zeks.me/api/flowertext?text=${flower}&apikey=apivinz`)
+pebz.sendMessage(from, flower, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'wolf': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+wolf = args.join(" ")
+sticWait(from)
+wolf = await getBuffer(`https://api.zeks.me/api/wolflogo?apikey=apivinz&text1=WOLF&text2=${wolf}`)
+pebz.sendMessage(from, wolf, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'nulis': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+catat = args.join(" ")
+sticWait(from)
+catat = await getBuffer(`https://api.zeks.me/api/nulis?text=${catat}&apikey=apivinz`)
+pebz.sendMessage(from, catat, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'ganz': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+matrix = args.join(" ")
+sticWait(from)
+ganz = await getBuffer(`https://api.zeks.me/api/gtext?text1=${matrix}&text2=GANZ&apikey=apivinz`)
+pebz.sendMessage(from, ganz, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'cans': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+matrix = args.join(" ")
+sticWait(from)
+cans = await getBuffer(`https://api.zeks.me/api/gtext?text1=${matrix}&text2=CANS&apikey=apivinz`)
+pebz.sendMessage(from, cans, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'naruto': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+naruto = args.join(" ")
+sticWait(from)
+naruto = await getBuffer(`https://api.zeks.me/api/naruto?text=${naruto}&apikey=apivinz`)
+pebz.sendMessage(from, naruto, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'logoff': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+matrix = args.join(" ")
+sticWait(from)
+logoff = await getBuffer(`https://api.zeks.me/api/epep?text=${matrix}&apikey=apivinz`)
+pebz.sendMessage(from, logoff, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'barcode': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+matrix = args.join(" ")
+sticWait(from)
+bccode = await getBuffer(`https://api.zeks.me/api/barcode?apikey=apivinz&text=${matrix}`)
+pebz.sendMessage(from, bccode, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'skytext':
+if (args.length < 1) return reply('*Teks nya mana?*') 
+sky = args.join(" ")
+sticWait(from)
+sky = await getBuffer(`https://api.zeks.me/api/skytext?text=${sky}&apikey=apivinz`)
+pebz.sendMessage(from, sky, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'cslogo': 
+if (args.length < 1) return reply('*Teks nya mana?*') 
+cslogo = args.join(" ")
+sticWait(from)
+cslogo = await getBuffer(`https://api.zeks.me/api/cslogo?text=${cslogo}&apikey=apivinz`)
+pebz.sendMessage(from, cslogo, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'style':
+if (args.length < 1) return reply('*Teks nya mana?*') 
+bo = args.join(" ")
+reply(mess.wait)
+var anu = await fetchJson(`https://api-yogipw.herokuapp.com/api/textpro/techstyle?text=${bo}`)
+sendMediaURL(from, anu.result.result, `Nih Kak Hasilnya ^_^`)
+       break
+case 'love':        
+            if (args.length == 0) return reply(`contoh: ${prefix + command} Alpha Botz`)
+            reply(mess.wait)
+            bo = args.join(" ")
+            bufff = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/lovemessage?apikey=${lolkey}&text=${bo}`)            
+            pebz.sendMessage(from, bufff, image, { thumbnail: tb, caption: `*nih kak*`, quoted: mek})
+            break
+//>>>>>>>>>PEMBATAS<<<<<<<<<<<<<//
+ case 'asupan':
+reply(mess.wait)
+sendMediaURL(from,`https://pebz.herokuapp.com/api/asupan?apikey=${valkey}`, `Ni Kak`)
+break
+case 'ass':
+var tes = await fetchJson(`https://api-yogipw.herokuapp.com/api/nsfw/ass`)
+sendMediaURL(from, tes.result, `Nih Kak Hasilnya ^_^`)
+break
+//>>>>>>>RANDOM MENU<<<<<<<<\\
+case 'nickff':
+sticWait(from)
+anu = await fetchJson(`https://api.zeks.me/api/nickepep?apikey=apivinz`)
+teks = anu.result
+reply(`${teks}`)
+break
+case 'quote':
+sticWait(from)
+anu = await fetchJson(`https://api.zeks.me/api/quote?apikey=apivinz`)
+teks = anu.result
+get = teks
+reply(`${teks.quotes}\n\nBy : ${teks.author}`)
+break
+case 'pantun':
+sticWait(from)
+anu = await fetchJson(`https://api.zeks.me/api/pantun?apikey=apivinz`)
+teks = anu.result
+get = teks
+reply(`${teks.pantun}`)
+break
+case 'darkjoke':
+sticWait(from)
+anu = await fetchJson(`https://api.zeks.me/api/darkjokes?apikey=apivinz`)
+get = anu
+sendMediaURL(from, get.result, image, { thumbnail: tb})
+break
+case 'meme':
+sticWait(from)
+anu = await fetchJson(`https://api.zeks.me/api/memeindo?apikey=apivinz`)
+get = anu
+sendMediaURL(from, get.result, image, { thumbnail: tb})
+break
+case 'estetik': 
+sticWait(from)
+bugg = await getBuffer(`https://api.zeks.me/api/estetikpic?apikey=apivinz`)
+pebz.sendMessage(from, bugg, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.jpg'), caption: 'Nih Bro Dah Jadi'})
+break
+case 'wallpaper': 
+sticWait(from)
+anu = await fetchJson(`https://restapibotz.herokuapp.com/api/random/wallpaper?apikey=Alphabot`)
+get = anu.result
+sendMediaURL(from, get.url, `*Nih Kak*`)
+break
+case 'jadwalsholat': 
+if (args.length < 1) return reply('*Daerah mana?*') 
+bo = args.join(" ")
+sticWait(from)
+anu = await fetchJson(`https://api.zeks.me/api/jadwalsholat?apikey=apivinz&daerah=${bo}`)
+get = anu.data
+ini_txt =`*Jadwal Sholat Ditemukan*
+*Daerah : ${args.join(" ")}*
+
+${get.string}`
+reply(ini_txt)
+break
+case 'quotesmuslim': 
+sticWait(from)
+anu = await fetchJson(`https://lex4you-api.herokuapp.com/api/randomquote/muslim?apikey=${alpkey}`)
+get = anu.result
+ini_txt =`*Quote Muslim*
+
+${get.text_id}`
+reply(ini_txt)
+break
+case 'jadwaltv':
+var z = '```'
+if (args.length < 1) return reply('Nama Tv?')
+bo = args.join(" ")
+anu = await fetchJson(`https://api.zeks.me/api/jadwaltv?channel=${bo}&apikey=apivinz`)
+teks = anu
+yoi =`${z}${teks.result}${z}`
+reply(yoi)
+break
+case 'resep': 
+if (args.length < 1) return reply('*Mau Resep Masak Apa?*') 
+bo = args.join(" ")
+sticWait(from)
+anu = await fetchJson(`https://api.zeks.me/api/resep-masak?apikey=apivinz&q=${bo}`)
+get = anu
+sendMediaURL(from, get.thumb, `${get.title}\n\n${get.bahan}\n\nCaranya:\n${get.cara}`)
 break
 			
           default: 
