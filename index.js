@@ -61,7 +61,7 @@ let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
 self = false
 blocked = []
 
-[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
+//[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
 
         const fakegroup = (teks) => {
             pebz.sendMessage(from, teks, text, {
@@ -1322,7 +1322,7 @@ case 'leave':
               reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU LOSE*  ]`)
 }
               break
-//━━━━━━━━━━━━━━━
+//━━━━━━━━━━━━━━━//
 ky_ttt = []
 tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
 idttt = []
@@ -1341,7 +1341,7 @@ idttt = []
         isPlayer2 = isGroup ? players2.includes(sender) : false
 
 
-//━━━━━━━━━━━━━━━
+//━━━━━━━━━━━━━━━//
 break
 case 'tictactoe':
 case 'ttt':
