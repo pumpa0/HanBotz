@@ -45,6 +45,12 @@ let _level = JSON.parse(fs.readFileSync('./database/level.json'))
 const atm = require("./lib/atm");
 let _uang = JSON.parse(fs.readFileSync('./database/uang.json'))
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
+const { uploadimg, upload } = require('./lib/uploadimg')
+const { webp2mp4File } = require('./lib/webp2mp4')
+const { lirikLagu } = require('./lib/lirik.js')
+const ggs = require('google-it')
+const { herolist } = require('./lib/herolist.js')
+const { herodetails } = require('./lib/herodetail.js')
 const {
 	OwnerNumber,
 	prefix,
@@ -56,6 +62,24 @@ let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
 self = false
 blocked = []
 
+//━━━━━━━━━━━━━━━
+idttt = []
+	    players1 = []
+	    players2 = []
+	    gilir = []
+	    for (let t of ky_ttt){
+	    idttt.push(t.id)
+	    players1.push(t.player1)
+	    players2.push(t.player2)
+	    gilir.push(t.gilir)
+	    }
+	
+	const isTTT = isGroup ? idttt.includes(from) : false
+	    isPlayer1 = isGroup ? players1.includes(sender) : false
+        isPlayer2 = isGroup ? players2.includes(sender) : false
+
+ky_ttt = []
+tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
 //━━━━━━━━━━━━━━━[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
 
         const fakegroup = (teks) => {
@@ -1142,7 +1166,7 @@ break
          case 'attp2':
          if (args.length == 0) return reply(`Example: ${prefix + command} HanBotz`)
          atetepe = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURIComponent(c)}`)
-					alpha.sendMessage(from, atetepe, sticker, { quoted: mek })
+					pebz.sendMessage(from, atetepe, sticker, { quoted: mek })
 //menu gabut gc
 //-- ganteng cek
 case 'gantengcek':
@@ -1298,65 +1322,6 @@ case 'leave':
 }
 )
               break
-         case 'gelud':
-               if (!isGroup) return reply(mess.only.group)
-               if (mek.message.extendedTextMessage.contextInfo.mentionedJid > 1) return reply('Hanya bisa dengan 1 orang')
-               if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) return
-               if (args.length === 0) return reply(`Tag Lawan Yang Ingin Diajak Bermain Game`)
-               if (fs.existsSync(`./media/${from}.json`)) return reply(`Sedang Ada Sesi, tidak dapat dijalankan secara bersamaan\nKetik *${prefix}delsesigelud*, untuk menghapus sesi`)
-					
-               gelutSkuy = setGelud(`${from}`)
-               gelutSkuy.status = false
-               gelutSkuy.Z = sender.replace("@s.whatsapp.net", "")
-               gelutSkuy.Y = args[0].replace("@", "");
-               fs.writeFileSync(`./media/${from}.json`, JSON.stringify(gelutSkuy, null, 2))
-               starGame = `👑 Memulai Game Baku Hantam 👊🏻
-
-• @${sender.replace("@s.whatsapp.net", "")} Menantang Bergelud
-[ ${args[0]} ] Ketik Y/N untuk menerima atau menolak permainan`
-
-               pebz.sendMessage(from, starGame, text, {quoted: mek, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
-               gameAdd(sender, glimit)
-               break
-        case 'delsesigelud':
-               if (!isGroup) return reply(mess.only.group)
-               if (fs.existsSync('./media/' + from + '.json')) {
-               fs.unlinkSync('./media/' + from + '.json')
-               reply('Berhasil Menghapus Sesi Gelud')
-               } else {
-               reply('Tidak ada sesi yang berlangsung')
-}
-               break
-        case 'delsesittt':
-        case 'resetgame':
-               if (!isGroup) return reply(mess.only.group)
-               if (!isTTT) return reply('Tidak Ada Permainan Di Grub Ini')
-               naa = ky_ttt.filter(toek => !toek.id.includes(from)) 
-               ky_ttt = naa 
-               reply('Sukses Mereset Game')
-               break
-        case 'tictactoe':
-        case 'ttt':
-              if (!isGroup) return reply(mess.only.group)
-              if (args.length < 1) return reply('Tag Lawan Anda! ')
-              if (isTTT) return reply('Sedang Ada Permainan Di Grub Ini, Harap Tunggu')
-              if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target Lawan!')
-              ment = mek.message.extendedTextMessage.contextInfo.mentionedJid
-              player1 = sender
-              player2 = ment[0]
-              angka = ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
-              id = from
-              gilir = player2
-              ky_ttt.push({player1,player2,id,angka,gilir})
-              pebz.sendMessage(from, 
-`*🎳 Memulai Game Tictactoe 🎲*
-
-[@${player2.split('@')[0]}] Menantang anda untuk menjadi lawan Game🔥
-Ketik Y/N untuk menerima atau menolak permainan
-
-Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contextInfo: {mentionedJid: [player2]}})
-              gameAdd(sender, glimit)
-              break
        case 'slot':
               const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍒 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
               somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
@@ -1376,6 +1341,34 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
               reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU LOSE*  ]`)
 }
               break
+case 'tictactoe':
+case 'ttt':
+if (!isGroup) return reply(mess.only.group)
+if (args.length < 1) return reply('Tag Lawan Anda! ')
+if (isTTT) return reply('Sedang Ada Permainan Di Grub Ini, Harap Tunggu')
+if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target Lawan!')
+ment = mek.message.extendedTextMessage.contextInfo.mentionedJid
+player1 = sender
+player2 = ment[0]
+angka = ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
+id = from
+gilir = player2
+ky_ttt.push({player1,player2,id,angka,gilir})
+pebz.sendMessage(from, `*🎳 Memulai Game Tictactoe 🎲*
+
+[@${player2.split('@')[0]}] Menantang anda untuk menjadi lawan Game🔥
+Ketik Y/N untuk menerima atau menolak permainan
+
+Ketik ${prefix}delttc , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contextInfo: {mentionedJid: [player2]}})
+break
+                case 'delttt':
+                case 'delttc':
+if (!isGroup) return reply(mess.only.group)
+if (!isTTT) return reply('Tidak Ada Permainan Di Grub Ini')
+naa = ky_ttt.filter(toek => !toek.id.includes(from)) 
+ky_ttt = naa 
+reply('Sukses')
+break
        case 'suit': //nyolong dari zenz
               if (!q) return reply(`Kirim perintah ${prefix}suit gunting / batu / kertas`)
               const userspilih = q
@@ -1443,8 +1436,282 @@ case 'say':
               reply(`Berhasil membaca ${unread.length} Chat !`)
               console.log(totalchat.length)
               break	
+              case 'spam':
+				if (!isOwner && !mek.key.fromMe) return sticOwner(from)
+					if (!arg) return reply(`Penggunaan ${prefix}spam teks|jumlah`)
+				argzi = arg.split("|")
+				if (!argzi) return reply(`Penggunaan ${prefix}spam teks|jumlah`)
+				if (Number(argzi[1]) >= 50) return reply('Kebanyakan!')
+				if (isNaN(argzi[1])) return reply(`harus berupa angka`)
+				for (let i = 0; i < argzi[1]; i++){
+					pebz.sendMessage(from, argzi[0], MessageType.text)
+				}
+				break
+case 'tomp4':
+					if (!isQuotedSticker) return reply('Reply stiker nya')
+                                        sticWait(from)
+            if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
+            ger = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+            owgi = await pebz.downloadAndSaveMediaMessage(ger)
+            webp2mp4File(owgi).then(res=>{
+            sendMediaURL(from,res.result)
+            })
+            }else {
+            reply('Reply Stickernya!')
+            }
+            fs.unlinkSync(owgi)
+            break
+            case 'tomp3':
+					pebz.updatePresence(from, Presence.composing)
+					if (!isQuotedVideo) return reply('Reply Video Nya Kak')
+					sticWait(from)
+					encmediad = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+					mediad = await pebz.downloadAndSaveMediaMessage(encmediad)
+					ran = getRandom('.mp4')
+					exec(`ffmpeg -i ${mediad} ${ran}`, (err) => {
+						fs.unlinkSync(mediad)
+						if (err) return reply(mess.error.api)
+						mhee = fs.readFileSync(ran)
+						pebz.sendMessage(from, mhee, audio, { mimetype: 'audio/mp4', duration: 359996400, quoted: mek })
+						fs.unlinkSync(ran)
+					})
+					break
+case 'lirik':
+if (args.length < 1) return reply('Judulnya?')
+sticWait(from)
+teks = body.slice(7)
+lirikLagu(teks).then((res) => {
+let lirik = `${res[0].result}`
+reply(lirik)
+})
+break
+case 'herolist':
+if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
+await herolist().then((ress) => {
+let listt = `*List hero untuk feature ${prefix}herodetail*\n\n`
+for (var i = 0; i < ress.hero.length; i++) {
+listt += '-  ' + ress.hero[i] + '\n'
+}
+reply(listt)
+})
+break
+case 'herodetail':
+if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
+res = await herodetails(body.slice(12))
+her = `*Hero Details ${body.slice(12)}*
+
+*Nama* : ${res.hero_name}
+*Role* : ${res.role}
+*Quotes* : ${res.entrance_quotes}
+*Fitur Hero* : ${res.hero_feature}
+*Spesial* : ${res.speciality}
+*Rekomendasi Lane* : ${res.laning_recommendation}
+*Harga* : ${res.price.battle_point} [Battle point] | ${res.price.diamond} [DM] | ${res.price.hero_fragment} [Fragment]
+*Rilis* : ${res.release_date}
+
+*Durability* : ${res.skill.durability}
+*Offence* : ${res.skill.offense}
+*Skill Effect* : ${res.skill_effects}
+*Difficulty* : ${res.skill.difficulty}
+ 
+*Movement Speed* : ${res.attributes.movement_speed}
+*Physical Attack* : ${res.attributes.physical_attack}
+*Magic Defense* : ${res.attributes.magic_defense}
+*Ability Crit Rate* : ${res.attributes.ability_crit_rate}
+*HP* : ${res.attributes.hp}
+*Mana* : ${res.attributes.mana}
+*Mana Regen* : ${res.attributes.mana_regen}
+
+*Story* : ${res.background_story}`
+reply(her)
+break
+				case 'google':
+case 'googlesearch':
+case 'ggs':
+if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
+if (args.length < 1) return reply('Yang mau di cari apaan?')
+teks = args.join(' ')
+sticWait(from)
+res = await ggs({'query' : `${teks}`})
+kant = ``
+for (let i of res) {
+kant += `*Judul* : ${i.title}
+*Link* : ${i.link}
+*Keterangan* : ${i.snippet}`
+}
+var akhir = kant.trim()
+reply(akhir)
+break
 
           default: 
+          
+          if (isTTT && isPlayer2){
+if (budy.startsWith('Y')){
+  tto = ky_ttt.filter(ghg => ghg.id.includes(from))
+  tty = tto[0]
+  angka = tto[0].angka
+  ucapan = `*🎳 Game Tictactoe 🎲*
+
+Player1 @${tty.player1.split('@')[0]}=❌
+Player2 @${tty.player2.split('@')[0]}=⭕
+
+${angka[1]}${angka[2]}${angka[3]}
+${angka[4]}${angka[5]}${angka[6]}
+${angka[7]}${angka[8]}${angka[9]}
+
+Giliran = @${tty.player1.split('@')[0]}`
+  pebz.sendMessage(from, ucapan, text, {quoted: mek, contextInfo:{mentionedJid: [tty.player1,tty.player2]}})
+  }
+if (budy.startsWith('N')){
+tto = ky_ttt.filter(ghg => ghg.id.includes(from))
+tty = tto[0]
+naa = ky_ttt.filter(toek => !toek.id.includes(from)) 
+ky_ttt = naa
+pebz.sendMessage(from, `Yahh @${tty.player2.split('@')[0]} Menolak:(`,text,{quoted:mek,contextInfo:{mentionedJid:[tty.player2]}})
+}
+}
+
+if (isTTT && isPlayer1){
+nuber = parseInt(budy)
+if (isNaN(nuber)) return
+if (nuber < 1 || nuber > 9) return reply('Masukan Angka Dengan Benar')
+main = ky_ttt.filter(hjh => hjh.id.includes(from)) 
+if (!tttawal.includes(main[0].angka[nuber])) return reply('Udah Di Isi, Isi Yang Lain Gan')
+if (main[0].gilir.includes(sender)) return reply('Tunggu Giliran Gan')
+s = '❌'
+main[0].angka[nuber] = s
+main[0].gilir = main[0].player1
+naa = ky_ttt.filter(hhg => !hhg.id.includes(from))
+ky_ttt = naa
+pop = main[0]
+ky_ttt.push(pop)
+tto = ky_ttt.filter(hgh => hgh.id.includes(from))
+tty = tto[0]
+angka = tto[0].angka
+ttt = `${angka[1]}${angka[2]}${angka[3]}\n${angka[4]}${angka[5]}${angka[6]}\n${angka[7]}${angka[8]}${angka[9]}`
+
+ucapmenang = () => {
+ucapan1 = `*🎳Result Game Tictactoe 🎲
+
+*Yeyyy Permainan Di Menangkan Oleh *@${tty.player1.split('@')[0]}*\n`
+ucapan2 = `*🎳Result Game Tictactoe 🎲*
+
+*Hasil Akhir:*
+
+${ttt}`
+pebz.sendMessage(from, ucapan1, text, {quoted:mek, contextInfo:{mentionedJid: [tty.player1]}})
+naa = ky_ttt.filter(hhg => !hhg.id.includes(from))
+return ky_ttt = naa
+}
+
+if (angka[1] == s && angka[2] == s && angka[3] == s) return ucapmenang()
+
+if (angka[1] == s && angka[4] == s && angka[7] == s) return ucapmenang()
+
+if (angka[1] == s && angka[5] == s && angka[9] == s) return ucapmenang()
+
+if (angka[2] == s && angka[5] == s && angka[8] == s) return ucapmenang()
+
+if (angka[4] == s && angka[5] == s && angka[6] == s) return ucapmenang()
+
+if (angka[7] == s && angka[8] == s && angka[9] == s) return ucapmenang()
+
+if (angka[3] == s && angka[5] == s && angka[7] == s) return ucapmenang()
+
+if (angka[3] == s && angka[6] == s && angka[9] == s) return ucapmenang()
+
+if (!ttt.includes('1️⃣') && !ttt.includes('2️⃣') && !ttt.includes('3️⃣') && ! ttt.includes('4️⃣') && !
+ttt.includes('5️⃣') && !
+ttt.includes('6️⃣') && ! ttt.includes('7️⃣') && ! ttt.includes('8️⃣') && ! ttt.includes('9️⃣')){
+ucapan1 = `*🎳 Result Game Tictactoe 🎲*
+
+*_Permainan Seri 🗿👌_*`
+ucapan2 = `*🎳 Result Game Tictactoe 🎲*
+
+*Hasil Akhir:*
+
+${ttt}`
+reply(ucapan1)
+naa = ky_ttt.filter(hhg => !hhg.id.includes(from))
+return ky_ttt = naa
+}
+ucapan = `*🎳 Game Tictactoe 🎲*
+
+Player2 @${tty.player2.split('@')[0]}=⭕
+Player1 @${tty.player1.split('@')[0]}=❌
+
+${ttt}
+
+Giliran = @${tty.player2.split('@')[0]}`
+ pebz.sendMessage(from, ucapan, text, {quoted: mek, contextInfo:{mentionedJid: [tty.player1,tty.player2]}})
+}
+if (isTTT && isPlayer2){
+nuber = parseInt(budy)
+if (isNaN(nuber)) return
+if (nuber < 1 || nuber > 9) return reply('Masukan Angka Dengan Benar')
+main = ky_ttt.filter(hjh => hjh.id.includes(from)) 
+if (!tttawal.includes(main[0].angka[nuber])) return reply('Udah Di Isi, Isi Yang Lain Gan')
+if (main[0].gilir.includes(sender)) return reply('Tunggu Giliran Gan')
+s = '⭕'
+main[0].angka[nuber] = s
+main[0].gilir = main[0].player2
+naa = ky_ttt.filter(hhg => !hhg.id.includes(from))
+ky_ttt = naa
+pop = main[0]
+ky_ttt.push(pop)
+tto = ky_ttt.filter(hgh => hgh.id.includes(from))
+tty = tto[0]
+angka = tto[0].angka
+ttt = `${angka[1]}${angka[2]}${angka[3]}\n${angka[4]}${angka[5]}${angka[6]}\n${angka[7]}${angka[8]}${angka[9]}`
+
+ucapmenang = () => {
+ucapan1 = `*?? Result Game Tictactoe 🎲*
+
+Yeyyy Permainan Di Menangkan Oleh *@${tty.player2.split('@')[0]}*\n`
+ucapan2 = `*🎳 Game Tictactoe 🎲*
+
+*Hasil Akhir:*
+
+${ttt}`
+pebz.sendMessage(from, ucapan1, text, {quoted:mek, contextInfo:{mentionedJid: [tty.player2]}})
+naa = ky_ttt.filter(hhg => !hhg.id.includes(from))
+return ky_ttt = naa
+}
+
+if (angka[1] == s && angka[2] == s && angka[3] == s) return ucapmenang()
+if (angka[1] == s && angka[4] == s && angka[7] == s) return ucapmenang()
+if (angka[1] == s && angka[5] == s && angka[9] == s) return ucapmenang()
+if (angka[2] == s && angka[5] == s && angka[8] == s) return ucapmenang()
+if (angka[4] == s && angka[5] == s && angka[6] == s) return ucapmenang()
+if (angka[7] == s && angka[8] == s && angka[9] == s) return ucapmenang()
+if (angka[3] == s && angka[5] == s && angka[7] == s) return ucapmenang()
+if (angka[3] == s && angka[6] == s && angka[9] == s) return ucapmenang()
+if (!ttt.includes('1️⃣') && !ttt.includes('2️⃣') && !ttt.includes('3️⃣') && ! ttt.includes('4️⃣') && !
+ttt.includes('5️⃣') && !
+ttt.includes('6️⃣') && ! ttt.includes('7️⃣') && ! ttt.includes('8️⃣') && ! ttt.includes('9️⃣')){
+ucapan1 = `*🎳Result Game Tictactoe 🎲*
+
+*_Permainan Seri🗿👌*`
+ucapan2 = `*🎳 Result Game Tictactoe 🎲*
+
+*Hasil Akhir:*
+
+${ttt}`
+reply(ucapan1)
+naa = ky_ttt.filter(hhg => !hhg.id.includes(from))
+return ky_ttt = naa
+}
+ucapan = `*🎳 Game Tictactoe 🎲*
+
+Player1 @${tty.player1.split('@')[0]}=⭕
+Player2 @${tty.player2.split('@')[0]}=❌
+
+${ttt}
+ 
+Giliran = @${tty.player1.split('@')[0]}`
+ pebz.sendMessage(from, ucapan, text, {quoted: mek, contextInfo:{mentionedJid: [tty.player1,tty.player2]}})
+ }
+
           if (budy.includes(`@6285731855426`)) {
 const baby = fs.readFileSync('./TagHan.webp');
 pebz.sendMessage(from, baby, MessageType.sticker, {quoted: mek})
