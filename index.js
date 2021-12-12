@@ -175,15 +175,9 @@ pebz.on('group-participants-update', async (chat) => {
 		}
 	})
 		  
-		    if {
-pebz.chatRead(from)
-            }
-           if {
-pebz.updatePresence(from, Presence.composing)
-            }
-           if {
-pebz.updatePresence(from, Presence.recording)
-            }
+		    if (budy.startsWith('/')) {
+			pebz.updatePresence(from, Presence.composing)
+             }
 		
 		
 	    pebz.on('chat-update', async (mek) => {
