@@ -22,7 +22,7 @@ const { y2mate } = require('./lib/y2mate');
 const { y2mateA, y2mateV } = require('./lib/y2mate.js')
 const { yta, ytv, igdl, upload, formatDate } = require('./lib/ytdl')
 const { wikiSearch } = require('./lib/wiki.js')
-const { wait, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./lib/function')
+const { wait, simih,  getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./lib/function')
 
 const fetch = require('node-fetch')
 const get = require('got')
@@ -45,6 +45,7 @@ let _level = JSON.parse(fs.readFileSync('./database/level.json'))
 const atm = require("./lib/atm");
 let _uang = JSON.parse(fs.readFileSync('./database/uang.json'))
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
+const samih = JSON.parse(fs.readFileSync('./database/simi.json'))
 const { uploadimg } = require('./lib/uploadimg')
 const { webp2mp4File } = require('./lib/webp2mp4')
 const { lirikLagu } = require('./lib/lirik.js')
@@ -222,6 +223,7 @@ pebz.on('group-participants-update', async (chat) => {
 	    const isNsfw = isGroup ? nsfww.includes(from) : false
         const isAnti = isGroup ? _antilink.includes(from) : false
         const totalchat = await pebz.chats.all()
+        const isSimi = isGroup ? samih.includes(from) : false
 
 const sendFile = async (medya, namefile, capti, tag, vn) => {
   baper = await getBuffer(medya)
@@ -617,7 +619,7 @@ const simple2 =`
 • ${prefix}cantikcek <name>
 • ${prefix}gantengcek <name>
 
-*𝗢𝗪𝗡𝗘𝗥*
+*??𝗪𝗡𝗘𝗥*
 • ${prefix}leave
 • ${prefix}status
 • ${prefix}runtime
@@ -1482,7 +1484,7 @@ break
 }
               break
 case 'antilink':
-				if (!isGroup) return reply(group())
+				if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins && !isOwner) return reply(mess.admin)
 					if (args.length < 1) return reply(`On untuk mengaktifkan & off untuk menonaktifkan`)
 					if ((args[0]) === 'on') {
@@ -1654,50 +1656,27 @@ case 'bego':
         membr.push(goo.jid)
         mentions(teks, membr, true)
         break
-        case 'tts':
-					  try{
-        if (args.length > 1) {
-        const gtts = require('./lib/gtts')(args[0])
-        if (args.length < 2) return pebz.sendMessage(from, 'Textnya mana gan?', text, {quoted: ftex})
-        ngab = budy.slice(7)
-        ranm = getRandom('.mp3')
-        rano = getRandom('.ogg')
-        ngab.length > 250
-        ? reply('Textnya kebanyakan')
-        : gtts.save(ranm, ngab, function() {
-            exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
-                fs.unlinkSync(ranm)
-                buff = fs.readFileSync(rano)
-                if (err) return reply('Gagal :(')
-                pebz.sendMessage(from, buff, audio, {quoted:mek,ptt:true})
-                fs.unlinkSync(rano)
-            })
-        })
-	} else if ( args.length === 1 ){
-		ngab = mek.message.extendedTextMessage.contextInfo.quotedMessage.conversation
-		const gtts = require('./lib/gtts')(args[0])
-        ranm = getRandom('.mp3')
-        rano = getRandom('.ogg')
-        gtts.save(ranm, ngab, function() {
-            exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
-                fs.unlinkSync(ranm)
-                buff = fs.readFileSync(rano)
-                if (err) return reply(mess.error.api)
-                pebz.sendMessage(from, buff, audio, {quoted:mek,ptt:true})
-                fs.unlinkSync(rano)
-            })
-        })
-	}
-} catch (e){
-	reply(mess.error.api)
-}
-break
-case 'simi':
-           if (args.length == 0) return reply(`Hallo Kak ${pushname}`)
-           get = await fetchJson(`https://api.simsimi.net/v2/?text=${q}&lc=en&cf=false`)
-           getresult = get.result
-             reply(getresult)         
-             break
+case 'simi': 
+				anu = await fetchJson(`https://simsumi.herokuapp.com/api?text=${body.slice(3)}`)
+				reply(anu.result.success)
+				break
+case 'simih':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('Mengaktifkan tekan 1, Menonaktif tekan 0')
+					if (Number(args[0]) === 1) {
+						if (isSimi) return reply('*Fitur simi sudah aktif sebelum nya*')
+						samih.push(from)
+						fs.writeFileSync('./database/simi.json', JSON.stringify(samih))
+						reply('Sukses mengaktifkan mode simi di group ini ✔️')
+					} else if (Number(args[0]) === 0) {
+						samih.splice(from, 1)
+						fs.writeFileSync('./database/simi.json', JSON.stringify(samih))
+						reply('Sukes menonaktifkan mode simi di group ini ✔️')
+					} else {
+						reply('1 untuk mengaktifkan & 0 untuk menonaktifkan')
+					}
+					break
 			
           default: 
 
