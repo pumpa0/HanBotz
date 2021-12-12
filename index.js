@@ -378,7 +378,7 @@ console.log(e)
            }
            }
         const fkontak = { 
-        key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `0@s.whatsapp.net` } : {}) }, message: { 'contactMessage': { 'displayName': `Hallo Kak ${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': gambar}}}                   		
+        key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `0@s.whatsapp.net` } : {}) }, message: { 'contactMessage': { 'displayName': `Hallo  ${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': gambar}}}                   		
         const sendButton = async (from, context, fortext, but, mek) => {
         buttonMessages = {
         contentText: context,
@@ -568,6 +568,7 @@ ${p}• ${prefix}report <text>${p}
            break
 case 'simplemenu':
 case 'simpelmenu':
+case 'smenu':
 const simple2 =`
 *𝗚𝗥𝗢𝗨𝗣*
 • ${prefix}delete <reply>
@@ -1379,7 +1380,7 @@ case 'leave':
 )
               break
        case 'slot':
-              const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍒 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
+              const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : ?? : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
               somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
@@ -1588,6 +1589,71 @@ her = `*Hero Details ${body.slice(12)}*
 *Story* : ${res.background_story}`
 reply(her)
 break
+case 'tutuptime':
+if (!isGroup) return reply(mess.only.group)
+if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isBotGroupAdmins) return reply("Bot Bukan Admin")
+if (args[1]=="detik") {var timer = args[0]+"000"
+} else if (args[1]=="menit") {var timer = args[0]+"0000"
+} else if (args[1]=="jam") {var timer = args[0]+"00000"
+} else {return reply("*pilih:*\ndetik\nmenit\njam\n\n*contoh*\n10 detik")}
+setTimeout( () => {
+var nomor = mek.participant
+alpha.groupSettingChange (from, GroupSettingChange.messageSend, true);
+}, timer)
+break
+case 'bukatime':
+if (!isGroup) return reply(mess.only.group)
+if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isBotGroupAdmins) return reply("Bot Bukan Admin")
+if (args[1]=="detik") {var timer = args[0]+"000"
+} else if (args[1]=="menit") {var timer = args[0]+"0000"
+} else if (args[1]=="jam") {var timer = args[0]+"00000"
+} else {return reply("*pilih:*\ndetik\nmenit\njam\n\n*contoh*\n10 detik")}
+setTimeout( () => {
+var nomor = mek.participant
+alpha.groupSettingChange (from, GroupSettingChange.messageSend, false);
+}, timer)
+break
+case 'tes':
+reply(`Oke Sudah Online`)
+break
+//FunMenu
+case 'bego':
+      case 'tolol':
+      case 'pinter':
+      case 'pintar':
+      case 'asu':
+      case 'bodoh':
+      case 'gay':
+      case 'lesby':
+      case 'bajingan':
+      case 'jancok':
+      case 'anjing':
+      case 'ngentod':
+      case 'ngentot':
+      case 'monyet':
+      case 'mastah':
+      case 'newbie':
+      case 'bangsat':
+      case 'bangke':
+      case 'sange':
+      case 'sangean':
+      case 'dakjal':
+      case 'horny':
+      case 'wibu':
+      case 'puki':
+      case 'pantek':
+      if (!isGroup) return reply(mess.only.group)
+        membr = []
+        const pff = groupMembers
+        const go = groupMembers
+        const goo = pff[Math.floor(Math.random() * pff.length)]
+        const oe = go[Math.floor(Math.random() * go.length)]
+        teks = `*Siapa Yang ${command}?*\n*Yaitu* @${goo.jid.split('@')[0]}`
+        membr.push(goo.jid)
+        mentions(teks, membr, true)
+        break
 			
           default: 
 
