@@ -522,6 +522,7 @@ ${p}• ${prefix}animestick${p}
 ${p}• ${prefix}toimg <replysticker>${p}
 
 *𝗦𝗘𝗔𝗥𝗖𝗛*
+${p}• ${prefix}lirik <query>${p}
 ${p}• ${prefix}wiki <query>${p}
 ${p}• ${prefix}pinterest <query>${p}
 ${p}️• ${prefix}imgsearch <query>${p}
@@ -565,6 +566,76 @@ ${p}• ${prefix}report <text>${p}
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
+case 'simplemenu'
+case 'simpelmenu'
+const simple2 =`
+*𝗚𝗥𝗢𝗨𝗣*
+• ${prefix}delete <reply>
+• ${prefix}linkgroup
+• ${prefix}antilink <on/off>
+• ${prefix}add <nomer[62]>
+• ${prefix}kick <tag>
+• ${prefix}demote <tag>
+• ${prefix}promote <tag>
+• ${prefix}setname <text>
+• ${prefix}setdesc <text>
+• ${prefix}hidetag <text>
+• ${prefix}tagall <text>
+• ${prefix}open|close
+
+*𝗬𝗢𝗨𝗧𝗨𝗕𝗘*
+• ${prefix}ytmp3 <link>
+• ${prefix}ytmp4 <link>
+• ${prefix}ytsearch <query>
+
+*𝗦𝗧𝗜𝗖𝗞𝗘𝗥*
+• ${prefix}attp <text>
+• ${prefix}sticker <reply>
+• ${prefix}stickergif <reply>
+• ${prefix}dogestick
+• ${prefix}gurastick
+• ${prefix}patrickstick
+• ${prefix}animestick
+• ${prefix}toimg <replysticker>
+
+*𝗦𝗘𝗔𝗥𝗖𝗛*
+• ${prefix}lirik  <query>
+• ${prefix}wiki <query>
+• ${prefix}pinterest <query>
+️• ${prefix}imgsearch <query>
+
+*𝗚𝗔𝗠𝗘*
+• ${prefix}suit
+• ${prefix}slot
+
+*𝗚𝗔𝗕𝗨𝗧*
+• ${prefix}say <text>
+• ${prefix}rate <???>
+• ${prefix}apakah <text>
+• ${prefix}kapankah <text>
+• ${prefix}cantikcek <name>
+• ${prefix}gantengcek <name>
+
+*𝗢𝗪𝗡𝗘𝗥*
+• ${prefix}leave
+• ${prefix}status
+• ${prefix}runtime
+• ${prefix}self|public
+
+𝗢𝗧𝗛𝗘𝗥
+• ${prefix}tourl <reply>
+• ${prefix}owner
+• ${prefix}donate
+• ${prefix}report <text>
+
+
+*Website*
+• bit.ly/HanBotz
+*Official Group*
+• bit.ly/OfficialGroupHanBotz`
+
+reply(simple2)
+break
           
            case 'donate':
 txt = `
