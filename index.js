@@ -62,6 +62,8 @@ self = false
 blocked = []
 
 //━━━━━━━━━━━━━━━
+ky_ttt = []
+tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
 idttt = []
 	    players1 = []
 	    players2 = []
@@ -77,8 +79,7 @@ idttt = []
 	    isPlayer1 = isGroup ? players1.includes(sender) : false
         isPlayer2 = isGroup ? players2.includes(sender) : false
 
-ky_ttt = []
-tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
+
 //━━━━━━━━━━━━━━━[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
 
         const fakegroup = (teks) => {
