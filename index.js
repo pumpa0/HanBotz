@@ -61,29 +61,7 @@ fake = '༺ HanBotz ༻\nStatus : Online'
 let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
 self = false
 blocked = []
-//>>>>>>>>>>>>>[ STICKER ]<<<<<<<<<<<<<\\
-		const sticOwner = (hehe) => {
-			ano = fs.readFileSync('./media/sticker/owner.webp')
-			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
-		}
-		const sticNotAdmin = (hehe) => {
-			ano = fs.readFileSync('./media/sticker/notadmin.webp')
-			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
-		}
-		const sticAdmin = (hehe) => {
-			ano = fs.readFileSync('./media/sticker/admin.webp')
-			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
-		}
-		const sticWait = (hehe) => {
-			ano = fs.readFileSync('./media/sticker/wait.webp')
-			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
-		}
-		const sticOk = (hehe) => {
-			ano = fs.readFileSync('./media/sticker/ok.webp')
-			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
-		}
-		
-//>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
+
 
 //[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
 
@@ -446,6 +424,29 @@ console.log(e)
         const buttonMessages = { locationMessage: { jpegThumbnail: gam1 }, contentText: text1, footerText: desc1, buttons: but, headerType: 6 }
         return pebz.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
         }
+        //>>>>>>>>>>>>>[ STICKER ]<<<<<<<<<<<<<\\
+		const sticOwner = (hehe) => {
+			ano = fs.readFileSync('./media/sticker/owner.webp')
+			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
+		}
+		const sticNotAdmin = (hehe) => {
+			ano = fs.readFileSync('./media/sticker/notadmin.webp')
+			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
+		}
+		const sticAdmin = (hehe) => {
+			ano = fs.readFileSync('./media/sticker/admin.webp')
+			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
+		}
+		const sticWait = (hehe) => {
+			ano = fs.readFileSync('./media/sticker/wait.webp')
+			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
+		}
+		const sticOk = (hehe) => {
+			ano = fs.readFileSync('./media/sticker/ok.webp')
+			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
+		}
+		
+//>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
     if (time2 < "24:59:00") {
       var ucapanWaktu = "GoodNight🌃";
