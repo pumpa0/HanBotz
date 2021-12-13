@@ -1184,7 +1184,7 @@ break
          break
      case 'add' :
          if (!isGroup) return reply(mess.only.group)
-         if (!isGroupAdmins && !isOwner) return reply(mess.only.admin)
+         if (!isGroupAdmins && !isOwner) return sticAdmin(from)
          if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
          if (args.length < 1) return reply('Yang mau di add siapa??')
          if (args[0].startsWith('08')) return reply('Gunakan kode negara !')
@@ -1643,12 +1643,6 @@ pebz.groupSettingChange (from, GroupSettingChange.messageSend, false);
 break
 case 'tes':
 reply(`Oke Sudah Online`)
-break
-case 'tes2':
-sticWait(from)
-break
-case 'tes3':
-reply(sticWait)
 break
 //FunMenu
 case 'bego':
