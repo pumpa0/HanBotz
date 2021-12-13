@@ -1544,6 +1544,13 @@ case 'say':
                                         saying = teks
                                         reply(saying)
                                         break
+case 'sayy':
+                                        teks = body.slice(5)
+					
+                                        if (args.length < 1) return reply('teksnya mana kak?')
+                                        saying = teks
+                                        pebz.sendMessage(from, saying, text)
+                                        break
 
               case 'readall':
               if (!isOwner) return sticOwner(from)
@@ -1552,35 +1559,6 @@ case 'say':
               reply(`Berhasil membaca ${unread.length} Chat !`)
               console.log(totalchat.length)
               break	
-case 'tomp4':
-					if (!isQuotedSticker) return reply('Reply stiker nya')
-                                        reply(mess.sabar)
-            if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
-            ger = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-            owgi = await pebz.downloadAndSaveMediaMessage(ger)
-            webp2mp4File(owgi).then(res=>{
-            sendMediaURL(from,res.result)
-            })
-            }else {
-            reply('Reply Stickernya!')
-            }
-            fs.unlinkSync(owgi)
-            break
-            case 'tomp3':
-					pebz.updatePresence(from, Presence.composing)
-					if (!isQuotedVideo) return reply('Reply Video Nya Kak')
-					reply(mess.sabar)
-					encmediad = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-					mediad = await pebz.downloadAndSaveMediaMessage(encmediad)
-					ran = getRandom('.mp4')
-					exec(`ffmpeg -i ${mediad} ${ran}`, (err) => {
-						fs.unlinkSync(mediad)
-						if (err) return reply(mess.error.api)
-						mhee = fs.readFileSync(ran)
-						pebz.sendMessage(from, mhee, audio, { mimetype: 'audio/mp4', duration: 359996400, quoted: mek })
-						fs.unlinkSync(ran)
-					})
-					break
 case 'lirik':
 if (args.length < 1) return reply('Judulnya?')
 teks = body.slice(7)
@@ -1589,7 +1567,7 @@ let lirik = `${res[0].result}`
 reply(lirik)
 })
 break
-case 'herolist':
+case 'herolistbeta':
 await herolist().then((ress) => {
 let listt = `*List hero untuk feature ${prefix}herodetail*\n\n`
 for (var i = 0; i < ress.hero.length; i++) {
@@ -1598,6 +1576,292 @@ listt += '-  ' + ress.hero[i] + '\n'
 reply(listt)
 })
 break
+case 'herolist':
+hero = `*List hero untuk feature /herodetail*
+͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
+-  Valentina
+-  Aamon
+-  Floryn
+-  Aulus
+-  Natan
+-  Phoveus
+-  Gloo
+-  Beatrix
+-  Paquito
+-  Hayabusa
+-  Lancelot
+-  Odette
+-  Kagura
+-  Minotaur
+-  Alpha
+-  Karina
+-  Bane
+-  Argus
+-  Phylax
+-  Yin
+-  Akai
+-  Hanabi
+-  Hayabusa
+-  Kagura
+-  Lancelot
+-  Odette
+-  Aamon
+-  Akai
+-  Aldous
+-  Alice
+-  Alpha
+-  Alucard
+-  Angela
+-  Argus
+-  Atlas
+-  Aurora
+-  Aulus
+-  Badang
+-  Balmond
+-  Bane
+-  Barats
+-  Baxia
+-  Belerick
+-  Benedetta
+-  Brody
+-  Bruno
+-  Carmilla
+-  Cecilion
+-  Chang'e
+-  Chou
+-  Claude
+-  Clint
+-  Cyclops
+-  Diggie
+-  Dyrroth
+-  Phylax
+-  Esmeralda
+-  Estes
+-  Eudora
+-  Fanny
+-  Faramis
+-  Floryn
+-  Franco
+-  Freya
+-  Gatotkaca
+-  Gloo
+-  Gord
+-  Granger
+-  Grock
+-  Guinevere
+-  Gusion
+-  Hanabi
+-  Hanzo
+-  Harith
+-  Harley
+-  Hayabusa
+-  Helcurt
+-  Hilda
+-  Hylos
+-  Irithel
+-  Jawhead
+-  Johnson
+-  Kadita
+-  Kagura
+-  Kaja
+-  Karina
+-  Karrie
+-  Khaleed
+-  Khufra
+-  Kimmy
+-  Lancelot
+-  Lapu-Lapu
+-  Layla
+-  Leomord
+-  Lesley
+-  Ling
+-  Lolita
+-  Lunox
+-  Luo_Yi
+-  Lylia
+-  Mathilda
+-  Martis
+-  Masha
+-  Minotaur
+-  Minsitthar
+-  Miya
+-  Moskov
+-  Nana
+-  Natan
+-  Natalia
+-  Odette
+-  Pharsa
+-  Phoveus
+-  Popol_and_Kupa
+-  Paquito
+-  Rafaela
+-  Roger
+-  Ruby
+-  Saber
+-  Selena
+-  Silvanna
+-  Sun
+-  Terizla
+-  Thamuz
+-  Tigreal
+-  Uranus
+-  Vale
+-  Valentina
+-  Valir
+-  Vexana
+-  Wanwan
+-  X.Borg
+-  Yin
+-  Yi_Sun-Shin
+-  Yu_Zhong
+-  Yve
+-  Zhask
+-  Zilong
+-  Akai
+-  Alice
+-  Atlas
+-  Barats
+-  Baxia
+-  Belerick
+-  Phylax
+-  Esmeralda
+-  Franco
+-  Gatotkaca
+-  Gloo
+-  Grock
+-  Hilda
+-  Hylos
+-  Johnson
+-  Khufra
+-  Lolita
+-  Minotaur
+-  Ruby
+-  Tigreal
+-  Uranus
+-  Aldous
+-  Alpha
+-  Alucard
+-  Argus
+-  Aulus
+-  Badang
+-  Balmond
+-  Bane
+-  Barats
+-  Chou
+-  Dyrroth
+-  Freya
+-  Gatotkaca
+-  Guinevere
+-  Hilda
+-  Jawhead
+-  Kaja
+-  Khaleed
+-  Lapu-Lapu
+-  Leomord
+-  Martis
+-  Masha
+-  Minsitthar
+-  Roger
+-  Phoveus
+-  Paquito
+-  Ruby
+-  Silvanna
+-  Sun
+-  Thamuz
+-  Terizla
+-  X.Borg
+-  Yin
+-  Yu_Zhong
+-  Zilong
+-  Aamon
+-  Alucard
+-  Benedetta
+-  Fanny
+-  Gusion
+-  Hanzo
+-  Harley
+-  Hayabusa
+-  Helcurt
+-  Kadita
+-  Karina
+-  Lancelot
+-  Lesley
+-  Ling
+-  Mathilda
+-  Natalia
+-  Saber
+-  Selena
+-  Yi_Sun-Shin
+-  Zilong
+-  Alice
+-  Aurora
+-  Bane
+-  Cecilion
+-  Chang'e
+-  Cyclops
+-  Esmeralda
+-  Eudora
+-  Faramis
+-  Gord
+-  Harith
+-  Harley
+-  Kadita
+-  Kagura
+-  Kimmy
+-  Lunox
+-  Luo_Yi
+-  Lylia
+-  Nana
+-  Odette
+-  Pharsa
+-  Selena
+-  Vale
+-  Valentina
+-  Valir
+-  Vexana
+-  Yve
+-  Zhask
+-  Beatrix
+-  Brody
+-  Bruno
+-  Claude
+-  Clint
+-  Phylax
+-  Granger
+-  Hanabi
+-  Irithel
+-  Karrie
+-  Kimmy
+-  Layla
+-  Lesley
+-  Miya
+-  Moskov
+-  Natan
+-  Popol_and_Kupa
+-  Roger
+-  Wanwan
+-  Yi_Sun-Shin
+-  Akai
+-  Angela
+-  Atlas
+-  Carmilla
+-  Diggie
+-  Estes
+-  Faramis
+-  Floryn
+-  Franco
+-  Kaja
+-  Khufra
+-  Lolita
+-  Mathilda
+-  Minotaur
+-  Nana
+-  Rafaela
+-  Tigreal`
+
+reply(hero)
+break
+
 case 'herodetail':
 res = await herodetails(body.slice(12))
 her = `*Hero Details ${body.slice(12)}*
