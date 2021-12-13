@@ -445,6 +445,10 @@ console.log(e)
 			ano = fs.readFileSync('./media/sticker/ok.webp')
 			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
 		}
+		const sticTok = (hehe) => {
+			ano = fs.readFileSync('./media/sticker/toxic.webp')
+			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
+		}
 		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
@@ -1784,6 +1788,71 @@ const rell = fs.readFileSync('./TagHan.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
 
                   }
+                 
+                    if (budy.includes(`ajg`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`asu`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`Ajg`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`Asu`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`anjg`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`Anjg`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`olol`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`antek`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`elaso`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`Babi`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`babi`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`ontol`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`kntl`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`kintil`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`emek`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`entod`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
 
 
 		if (budy.includes(`@HanBotz`)) {
