@@ -82,10 +82,7 @@ blocked = []
 			ano = fs.readFileSync('./media/sticker/ok.webp')
 			pebz.sendMessage(hehe, ano, sticker, { quoted: mek})
 		}
-		const baby = fs.readFileSync('./TagHan.webp');
-pebz.sendMessage(from, baby, MessageType.sticker, {quoted: mek})
-
-                  }
+		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 
 //[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
@@ -598,7 +595,7 @@ case 'simplemenu':
 case 'simpelmenu':
 case 'smenu':
 const simple2 =`
-*𝗚𝗥𝗢𝗨??*
+*𝗚𝗥𝗢𝗨𝗣*
 • ${prefix}delete <reply>
 • ${prefix}linkgroup
 • ${prefix}antilink <on/off>
