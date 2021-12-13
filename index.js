@@ -64,23 +64,23 @@ blocked = []
 //>>>>>>>>>>>>>[ STICKER ]<<<<<<<<<<<<<\\
 		const sticOwner = (hehe) => {
 			ano = fs.readFileSync('./media/sticker/owner.webp')
-			pebz.sendMessage(hehe, ano, sticker, { quoted: mek})
+			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
 		}
 		const sticNotAdmin = (hehe) => {
 			ano = fs.readFileSync('./media/sticker/notadmin.webp')
-			pebz.sendMessage(hehe, ano, sticker, { quoted: mek})
+			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
 		}
 		const sticAdmin = (hehe) => {
 			ano = fs.readFileSync('./media/sticker/admin.webp')
-			pebz.sendMessage(hehe, ano, sticker, { quoted: mek})
+			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
 		}
 		const sticWait = (hehe) => {
 			ano = fs.readFileSync('./media/sticker/wait.webp')
-			pebz.sendMessage(hehe, ano, sticker, { quoted: mek})
+			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
 		}
 		const sticOk = (hehe) => {
 			ano = fs.readFileSync('./media/sticker/ok.webp')
-			pebz.sendMessage(hehe, ano, sticker, { quoted: mek})
+			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
 		}
 		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
@@ -1648,6 +1648,7 @@ sticWait(from)
 break
 case 'tes3':
 reply(sticWait)
+break
 //FunMenu
 case 'bego':
       case 'tolol':
