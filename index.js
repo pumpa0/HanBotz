@@ -1320,11 +1320,19 @@ case 'kapan':
 if (args.length < 1) return reply(`Contoh : ${prefix}kapankah han menikah`)
 kapan = q
 no = `${Math.floor(Math.random() * 100)}`
-naon = ["Jam lagi","Hari lagi","Minggu lagi","Bulan lagi","Tahun lagi"]
+naon = ["Jam lagi","Hari lagi","Minggu lagi","Bulan lagi","Tahun lagi","Abad lagi"]
 random = naon[Math.floor(Math.random() * (naon.length))]
 kapan = `Kapankah ${kapan}
 Jawaban : ${no} ${random}`
 reply(kapan)
+break
+case 'nolepcek':
+case 'nolep':
+if (args.length < 1) return reply(`Contoh : ${prefix}nolep han`)
+nolep = q
+random = `${Math.floor(Math.random() * 100)}`
+rating = `Kenolepan ${nolep} : ${random}%`
+reply(rating)
 break
 case 'delete':
 if (!isGroup) return reply(mess.only.group)
@@ -1684,107 +1692,28 @@ case 'bego':
         membr.push(goo.jid)
         mentions(teks, membr, true)
         break
-case 'simih':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return sticAdmin(from)
-					if (args.length < 1) return reply('Mengaktifkan tekan 1, Menonaktif tekan 0')
-					if (Number(args[0]) === 1) {
-						if (isSimi) return reply('*Fitur simi sudah aktif sebelum nya*')
-						samih.push(from)
-						fs.writeFileSync('./database/simi.json', JSON.stringify(samih))
-						reply('Sukses mengaktifkan mode simi di group ini ✔️')
-					} else if (Number(args[0]) === 0) {
-						samih.splice(from, 1)
-						fs.writeFileSync('./database/simi.json', JSON.stringify(samih))
-						reply('Sukes menonaktifkan mode simi di group ini ✔️')
-					} else {
-						reply('1 untuk mengaktifkan & 0 untuk menonaktifkan')
-					}
-					break
-case 'tiktok':
-if (!c) return reply('Linknya?')
-var { TiktokDownloader } = require('./lib/tiktokdl')
-res = await TiktokDownloader(`${c}`).catch(e => {
-reply(gagal)
-})
-console.log(res)
-sendMediaURL(from, `${res.result.nowatermark}`)
-break
-case "inspect":
-        try {
-          if (!isUrl(args[0]) && !args[0].includes("whatsapp.com"))
-            return reply(mess.Iv);
-          if (!q) return reply("enter the link wa");
-          cos = args[0];
-          var net = cos.split("https://chat.whatsapp.com/")[1];
-          if (!net) return reply("make sure its the link https://whatsapp.com/");
-          jids = [];
-          let {
-            id,
-            owner,
-            subject,
-            subjectOwner,
-            desc,
-            descId,
-            participants,
-            size,
-            descOwner,
-            descTime,
-            creation,
-          } = await pebz.query({
-            json: ["query", "invite", net],
-            expect200: true,
-          });
-          let par = `*Id* : ${id}
-${owner ? `*Owner* : @${owner.split("@")[0]}` : "*Owner* : -"}
-*Name Gc* : ${subject}
-*Gc created Date* : ${formatDate(creation * 1000)}
-*Number of Members* : ${size}
-${desc ? `*Desc* : ${desc}` : "*Desc* : there is not any"}
-*Id desc* : ${descId}
-${
-  descOwner
-    ? `*Desc modified by* : @${descOwner.split("@")[0]}`
-    : "*Desc modified by* : -"
-}\n*Date* : ${
-            descTime ? `${formatDate(descTime * 1000)}` : "-"
-          }\n\n*Saved contacts*\n`;
-          for (let y of participants) {
-            par += `> @${y.id.split("@")[0]}\n*Admin* : ${
-              y.isAdmin ? "Yes" : "tidak"
-            }\n`;
-            jids.push(`${y.id.replace(/@c.us/g, "@s.whatsapp.net")}`);
-          }
-          jids.push(
-            `${owner ? `${owner.replace(/@c.us/g, "@s.whatsapp.net")}` : "-"}`
-          );
-          jids.push(
-            `${
-              descOwner
-                ? `${descOwner.replace(/@c.us/g, "@s.whatsapp.net")}`
-                : "-"
-            }`
-          );
-          pebz.sendMessage(from, par, text, {
-            quoted: mek,
-            contextInfo: { mentionedJid: jids },
-          });
-        } catch {
-          reply("Link error");
-        }
-        break
 			
           default: 
 
           if (budy.includes(`@6285731855426`)) {
-const baby = fs.readFileSync('./TagHan.webp');
+const baby = fs.readFileSync('./media/sticker/Taggg.webp');
 pebz.sendMessage(from, baby, MessageType.sticker, {quoted: mek})
 
                   }
 
 
        if (budy.includes(`@Hanafi`)) {
-const rell = fs.readFileSync('./TagHan.webp');
+const rell = fs.readFileSync('./media/sticker/Taggg.webp');
+pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
+
+                  }
+                  if (budy.includes(`@HanBotz`)) {
+const rell = fs.readFileSync('./media/sticker/TagBot.webp');
+pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
+
+                  }
+                  if (budy.includes(`@6285807149213`)) {
+const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
 
                   }
@@ -1881,10 +1810,14 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     const F3 = fs.readFileSync('./media/sticker/ok.webp')
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
                     }
+                    if (budy.includes(`erima kasih`)){  
+                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
 
 
 		             if (body.startsWith(`${prefix}${command}`)) {                    
-                    anu1 = `Sorry, But Feature *${prefix}${command}* Cannot be found in *${prefix}menu*`
+                    anu1 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
                     pebz.sendMessage(from, anu1, text, {quoted: mek})
                     }
                   
