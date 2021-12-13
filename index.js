@@ -1853,11 +1853,40 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     const F3 = fs.readFileSync('./media/sticker/toxic.webp')
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
                     }
+                    if (budy.includes(`akasih`)){  
+                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`hanks`)){  
+                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`Tq`)){  
+                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`tq`)){  
+                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`hank you`)){  
+                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`thx`)){  
+                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`Thx`)){  
+                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
 
 
-		if (budy.includes(`@HanBotz`)) {
-                  reply(`Ya? Silahkan Ketik /menu`)
-                  }
+		             if (body.startsWith(`${prefix}${command}`)) {                    
+                    anu1 = `Sorry, But Feature *${prefix}${command}* Cannot be found in *${prefix}menu*`
+                    pebz.sendMessage(from, anu1, text, {quoted: mek})
+                    }
                   
                   
 					if (isGroup && budy != undefined) {
