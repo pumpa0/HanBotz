@@ -1630,7 +1630,7 @@ pebz.groupSettingChange (from, GroupSettingChange.messageSend, true);
 break
 case 'bukatime':
 if (!isGroup) return reply(mess.only.group)
-if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isGroupAdmins) return sticAdmin(from)
 if (!isBotGroupAdmins) return reply("Bot Bukan Admin")
 if (args[1]=="detik") {var timer = args[0]+"000"
 } else if (args[1]=="menit") {var timer = args[0]+"0000"
