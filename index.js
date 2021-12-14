@@ -20,7 +20,7 @@ const { exec } = require('child_process')
 const { fetchJson, color, bgcolor } = require('./lib/fetcher')
 const { y2mate } = require('./lib/y2mate');
 const { y2mateA, y2mateV } = require('./lib/y2mate.js')
-const { yta, ytv, igdl, upload, formatDate } = require('./lib/ytdl')
+const { yta, ytv, ytv480, ytv720, igdl, upload, formatDate } = require('./lib/ytdl')
 const { wikiSearch } = require('./lib/wiki.js')
 const { wait, simih,  getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./lib/function')
 
@@ -822,6 +822,20 @@ result = `❒「  *Wiki*  」
         reply(mess.sabar)
         res = await ytv(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video```')})
+        sendMedia(from, `${res.dl_link}`,'```HanBotz```')
+        break                      
+        case 'ytmp4-480':
+        if(!q) return reply('linknya?')            
+        reply(mess.sabar)
+        res = await ytv480(`${q}`).catch(e => {
+        reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
+        sendMedia(from, `${res.dl_link}`,'```HanBotz```')
+        break                      
+        case 'ytmp4-720':
+        if(!q) return reply('linknya?')            
+        reply(mess.sabar)
+        res = await ytv720(`${q}`).catch(e => {
+        reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         	case 'ytsearch':
