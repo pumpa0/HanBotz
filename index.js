@@ -59,6 +59,7 @@ const {
 
 fake = '༺ HanBotz ༻\nStatus : Online'
 let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
+readGc = true
 self = false
 blocked = []
 
@@ -1909,6 +1910,12 @@ case 'bego':
         membr.push(goo.jid)
         mentions(teks, membr, true)
         break
+// Auto Read Group 
+var ampun = await pebz.chats.array.filter(v => v.jid.endsWith('g.us'))
+ampun.map( async ({ jid }) => {
+if (readGc === true) return
+await pebz.chatRead(jid)
+})
 			
           default: 
 
