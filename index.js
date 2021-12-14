@@ -254,6 +254,9 @@ const sendFile = async (medya, namefile, capti, tag, vn) => {
   if (budy.startsWith('/')) {
 			pebz.updatePresence(from, Presence.composing)
    }
+   if (budy.startsWith('/')) {
+			pebz.chatRead(jid)
+   }
 const sendFileFromUrl = async(link, type, options) => {
 hasil = await getBuffer(link)
 pebz.sendMessage(from, hasil, type, options).catch(e => {
