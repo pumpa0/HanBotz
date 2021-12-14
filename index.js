@@ -1954,9 +1954,9 @@ case 'bego':
         mentions(teks, membr, true)
         break
 case 'lirik super idol':
-idol = Super Idol😎的笑容都没你的甜八月正午的阳光都没你耀眼热爱 105 °C的你滴滴清纯的蒸馏水你不知你有多可爱跌倒后会傻笑着再站起你从来都不轻言失败对梦想的执着一直不曾改很安心 当你对我说不怕有我在放着让我来勇敢追自己的梦想那坚定的模样
+sidol = Super Idol😎的笑容都没你的甜八月正午的阳光都没你耀眼热爱 105 °C的你滴滴清纯的蒸馏水你不知你有多可爱跌倒后会傻笑着再站起你从来都不轻言失败对梦想的执着一直不曾改很安心 当你对我说不怕有我在放着让我来勇敢追自己的梦想那坚定的模样
 
-reply(idol)
+reply(sidol)
         break
 			
           default: 
