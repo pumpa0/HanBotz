@@ -1969,7 +1969,7 @@ case "tomp4":
             ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
                 .extendedTextMessage.contextInfo
             : mek;
-          owgi = await penz.downloadAndSaveMediaMessage(ger);
+          owgi = await pebz.downloadAndSaveMediaMessage(ger);
           webp2mp4File(owgi).then((res) => {
             sendMediaURL(from, res.result, "Done");
           });
