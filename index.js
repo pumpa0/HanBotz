@@ -709,14 +709,14 @@ const pebz2 = {
             await pebz.sendMessage(from,di,image,{quoted: mek})
             break
     case 'runtime':
-      if (!isOwner) return reply('KAU BUKAN OWNER 😾')
+      if (!isOwner) return sticOwner(from)
             run = process.uptime() 
             teks = `${kyun(run)}`
             reply(teks)
             break  
 	    case 'speed':
 	    case 'ping':
-      if (!isOwner) return reply('KAU BUKAN OWNER 😾')
+      if (!isOwner) return sticOwner(from)
             teks = `*SPEED : ${ping.toFixed(4)} SECOND*`
             reply(teks)
 		break
@@ -923,7 +923,7 @@ result = `❒「  *Wiki*  」
            case 'nuliserror':
            case 'writeerror':
            try {
-           if (args.length < 1) return reply(mess.notxt)
+           if (args.length < 1) return reply('text nya?')
            sticWait(from)
            bo = args.join(' ')
            api = await getBuffer(`https://api.zeks.xyz/api/nulis?text=${bo}&apikey=apivinz`)
@@ -954,9 +954,9 @@ break
 			ran = getRandom('.png')
 			exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 			fs.unlinkSync(media)
-			if (err) return reply('Yah gagal, coba ulangi ^_^')
+			if (err) return reply('Yah gagal, coba ulangi ^_^\n_Note: untuk sticker to video, belum ada :)_')
 			buffer = fs.readFileSync(ran)
-			fakethumb(buffer,'Kek Gini Bukan?')
+			fakethumb(buffer,'```HanBotz```')
 			fs.unlinkSync(ran)
 			})
 			break
@@ -967,7 +967,7 @@ break
             encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 		    media = await pebz.downloadAndSaveMediaMessage(encmedia)
             anu = args.join(' ').split('|')
-            satu = anu[0] !== '' ? anu[0] : `HAN`
+            satu = anu[0] !== '' ? anu[0] : `Han`
             dua = typeof anu[1] !== 'undefined' ? anu[1] : `085731855426`
             require('./lib/fetcherr.js').createExif(satu, dua)
 			require('./lib/fetcherr.js').modStick(media, pebz, mek, from)
@@ -1075,11 +1075,11 @@ break
          pebz.sendMessage(from, {displayName: `Creator Bot`, vcard: vcard2}, contact, 
          { quoted: fkontak, 
          })
-         reply('*ga penting ga usah ngechat, dan gada sewa bot!*')
+         reply('*ga penting ga usah ngechat*')
          break
           case 'bc':
-         if (!isOwner) return reply('KAU BUKAN OWNER 😾')
-         if (args.length < 1) return reply('.......')
+         if (!isOwner) return sticOwner(from)
+         if (args.length < 1) return reply('apa woy')
          anu = await pebz.chats.all()
          if (isMedia && !mek.message.videoMessage || isQuotedImage) {
          const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
@@ -1122,7 +1122,7 @@ break
 		contextInfo: { mentionedJid: mem },
 		quoted: mek
 		}
-	    pebz.sendMessage(from, optionshidetag, text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "393470602054-1351628616@g.us" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption":'༺ HAN ༻',"fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": gambar} }  } })
+	    pebz.sendMessage(from, optionshidetag, text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "393470602054-1351628616@g.us" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption":'༺ HanBotz ༻',"fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": gambar} }  } })
 					breakbreak
          break
      case 'open':
@@ -1418,7 +1418,7 @@ case 'leave':
 )
               break
        case 'slot':
-              const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : ?? : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
+              const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍌 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
               somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
@@ -1436,55 +1436,7 @@ case 'leave':
               reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU LOSE*  ]`)
 }
               break
-//━━━━━━━━━━━━━━━//
-ky_ttt = []
-tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
-idttt = []
-	    players1 = []
-	    players2 = []
-	    gilir = []
-	    for (let t of ky_ttt){
-	    idttt.push(t.id)
-	    players1.push(t.player1)
-	    players2.push(t.player2)
-	    gilir.push(t.gilir)
-	    }
-	
-	const isTTT = isGroup ? idttt.includes(from) : false
-	    isPlayer1 = isGroup ? players1.includes(sender) : false
-        isPlayer2 = isGroup ? players2.includes(sender) : false
 
-
-//━━━━━━━━━━━━━━━//
-break
-case 'tictactoe':
-case 'ttt':
-if (!isGroup) return reply(mess.only.group)
-if (args.length < 1) return reply('Tag Lawan Anda! ')
-if (isTTT) return reply('Sedang Ada Permainan Di Grub Ini, Harap Tunggu')
-if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target Lawan!')
-ment = mek.message.extendedTextMessage.contextInfo.mentionedJid
-player1 = sender
-player2 = ment[0]
-angka = ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
-id = from
-gilir = player2
-ky_ttt.push({player1,player2,id,angka,gilir})
-pebz.sendMessage(from, `*🎳 Memulai Game Tictactoe 🎲*
-
-[@${player2.split('@')[0]}] Menantang anda untuk menjadi lawan Game🔥
-Ketik Y/N untuk menerima atau menolak permainan
-
-Ketik ${prefix}delttc , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contextInfo: {mentionedJid: [player2]}})
-break
-                case 'delttt':
-                case 'delttc':
-if (!isGroup) return reply(mess.only.group)
-if (!isTTT) return reply('Tidak Ada Permainan Di Grub Ini')
-naa = ky_ttt.filter(toek => !toek.id.includes(from)) 
-ky_ttt = naa 
-reply('Sukses')
-break
        case 'suit': //nyolong dari zenz
               if (!q) return reply(`Kirim perintah ${prefix}suit gunting / batu / kertas`)
               const userspilih = q
@@ -1521,7 +1473,7 @@ break
               break
 case 'antilink':
 				if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins && !isOwner) return reply(mess.admin)
+					if (!isGroupAdmins && !isOwner) return sticAdmin(from)
 					if (args.length < 1) return reply(`On untuk mengaktifkan & off untuk menonaktifkan`)
 					if ((args[0]) === 'on') {
 						if (isAnti) return reply('Antilink aktif')
@@ -1893,8 +1845,8 @@ reply(her)
 break
 case 'tutuptime':
 if (!isGroup) return reply(mess.only.group)
-if (!isGroupAdmins) return sticAdmin(from)
-if (!isBotGroupAdmins) return reply("Bot Bukan Admin")
+if (!isGroupAdmins && !isOwner) return sticAdmin(from)
+if (!isBotGroupAdmins) return sticNotAdmin(from)
 if (args[1]=="detik") {var timer = args[0]+"000"
 } else if (args[1]=="menit") {var timer = args[0]+"0000"
 } else if (args[1]=="jam") {var timer = args[0]+"00000"
@@ -1906,8 +1858,8 @@ pebz.groupSettingChange (from, GroupSettingChange.messageSend, true);
 break
 case 'bukatime':
 if (!isGroup) return reply(mess.only.group)
-if (!isGroupAdmins) return sticAdmin(from)
-if (!isBotGroupAdmins) return reply("Bot Bukan Admin")
+if (!isGroupAdmins && !isOwner) return sticAdmin(from)
+if (!isBotGroupAdmins) return sticNotAdmin(from)
 if (args[1]=="detik") {var timer = args[0]+"000"
 } else if (args[1]=="menit") {var timer = args[0]+"0000"
 } else if (args[1]=="jam") {var timer = args[0]+"00000"
@@ -1962,31 +1914,21 @@ case 'bego':
           if (budy.includes(`@6285731855426`)) {
 const baby = fs.readFileSync('./media/sticker/Taggg.webp');
 pebz.sendMessage(from, baby, MessageType.sticker, {quoted: mek})
-
                   }
-
-
        if (budy.includes(`@Hanafi`)) {
 const rell = fs.readFileSync('./media/sticker/Taggg.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-
                   }
                   if (budy.includes(`@HanBotz`)) {
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-
                   }
                   if (budy.includes(`@6285807149213`)) {
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-
                   }
                  
                     if (budy.includes(`ajg`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`asu`)){  
                     const F3 = fs.readFileSync('./media/sticker/toxic.webp')
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
                     }
@@ -2006,7 +1948,11 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     const F3 = fs.readFileSync('./media/sticker/toxic.webp')
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
                     }
-                    if (budy.includes(`olol`)){  
+                    if (budy.includes(`tolol`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`Tolol`)){  
                     const F3 = fs.readFileSync('./media/sticker/toxic.webp')
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
                     }
@@ -2043,6 +1989,22 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
                     }
                     if (budy.includes(`entod`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`Goblok`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`goblok`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`gblk`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`Gblk`)){  
                     const F3 = fs.readFileSync('./media/sticker/toxic.webp')
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
                     }
