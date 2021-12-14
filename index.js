@@ -59,7 +59,8 @@ const {
 
 fake = '༺ HanBotz ༻\nStatus : Online'
 let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
-readGc = true
+let wlcm = "" || fs.readFileSync('./media/gambar/welcome.png')
+let gdby = "" || fs.readFileSync('./media/gambar/goodbye.png')
 self = false
 blocked = []
 
@@ -157,7 +158,7 @@ pebz.on('group-participants-update', async (chat) => {
 				try {
 					ppimg = await pebz.getProfilePicture(`${chat.participants[0].split('@')[0]}@c.us`)
 				} catch {
-					ppimg = 'https://i.postimg.cc/YqGk2T4S/20211214-225446.jpg'
+					ppimg = wlcm
 				}
 				teks = `*Hallo* @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*`
 				let buff = await getBuffer(ppimg)
@@ -167,7 +168,7 @@ pebz.on('group-participants-update', async (chat) => {
 				try {
 					ppimg = await pebz.getProfilePicture(`${num.split('@')[0]}@c.us`)
 				} catch {
-					ppimg = 'https://i.postimg.cc/PqLF1kjL/20211214-225750.jpg'
+					ppimg = gdby
 				}
 				teks = `*Sayonara* @${num.split('@')[0]}`
 				let buff = await getBuffer(ppimg)
