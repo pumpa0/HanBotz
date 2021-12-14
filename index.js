@@ -157,7 +157,7 @@ pebz.on('group-participants-update', async (chat) => {
 				try {
 					ppimg = await pebz.getProfilePicture(`${chat.participants[0].split('@')[0]}@c.us`)
 				} catch {
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+					ppimg = 'https://i.postimg.cc/YqGk2T4S/20211214-225446.jpg'
 				}
 				teks = `*Hallo* @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*`
 				let buff = await getBuffer(ppimg)
@@ -167,7 +167,7 @@ pebz.on('group-participants-update', async (chat) => {
 				try {
 					ppimg = await pebz.getProfilePicture(`${num.split('@')[0]}@c.us`)
 				} catch {
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+					ppimg = 'https://i.postimg.cc/PqLF1kjL/20211214-225750.jpg'
 				}
 				teks = `*Sayonara* @${num.split('@')[0]}`
 				let buff = await getBuffer(ppimg)
@@ -1953,31 +1953,11 @@ case 'bego':
         membr.push(goo.jid)
         mentions(teks, membr, true)
         break
-// Auto Read Group 
-var ampun = await pebz.chats.array.filter(v => v.jid.endsWith('g.us'))
-ampun.map( async ({ jid }) => {
-if (readGc === true) return
-await pebz.chatRead(jid)
-})
-break
-case "tomp4":
-        if (
-          ((isMedia && !mek.message.videoMessage) || isQuotedSticker) &&
-          args.length == 0
-        ) {
-          ger = isQuotedSticker
-            ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
-                .extendedTextMessage.contextInfo
-            : mek;
-          owgi = await pebz.downloadAndSaveMediaMessage(ger);
-          webp2mp4File(owgi).then((res) => {
-            sendMediaURL(from, res.result, "Done");
-          });
-        } else {
-          replyfakelink("reply stiker");
-        }
-        fs.unlinkSync(owgi);
-        break;
+case 'lirik super idol'
+idol = Super Idol😎的笑容都没你的甜八月正午的阳光都没你耀眼热爱 105 °C的你滴滴清纯的蒸馏水你不知你有多可爱跌倒后会傻笑着再站起你从来都不轻言失败对梦想的执着一直不曾改很安心 当你对我说不怕有我在放着让我来勇敢追自己的梦想那坚定的模样
+
+reply(idol)
+        break
 			
           default: 
 
@@ -2009,7 +1989,15 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   }
-                 
+                    
+                    if (budy.includes(`anjing`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`Anjing`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
                     if (budy.includes(`ajg`)){  
                     const F3 = fs.readFileSync('./media/sticker/toxic.webp')
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
