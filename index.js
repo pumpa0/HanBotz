@@ -1959,6 +1959,25 @@ ampun.map( async ({ jid }) => {
 if (readGc === true) return
 await pebz.chatRead(jid)
 })
+break
+case "tomp4":
+        if (
+          ((isMedia && !mek.message.videoMessage) || isQuotedSticker) &&
+          args.length == 0
+        ) {
+          ger = isQuotedSticker
+            ? JSON.parse(JSON.stringify(mek).replace("quotedM", "m")).message
+                .extendedTextMessage.contextInfo
+            : mek;
+          owgi = await penz.downloadAndSaveMediaMessage(ger);
+          webp2mp4File(owgi).then((res) => {
+            sendMediaURL(from, res.result, "Done");
+          });
+        } else {
+          replyfakelink("reply stiker");
+        }
+        fs.unlinkSync(owgi);
+        break;
 			
           default: 
 
