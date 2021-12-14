@@ -785,7 +785,6 @@ result = `❒「  *Wiki*  」
         break
    	case 'playyy':
         if (args.length < 1) return reply(`Kirim perintah *${prefix}play query`)
-        reply (mess.yutub)
         let yut = await yts(q)
         yta(yut.videos[0].url)             
         .then(async(res) => {
@@ -845,7 +844,7 @@ result = `❒「  *Wiki*  」
             ytresult += '❏ Durasi: ' + video.timestamp + '\n'
             ytresult += '❏ Upload: ' + video.ago + '\n________________________\n\n'
     		});
-    		ytresult += '© HAN*'
+    		ytresult += '*© HanBotz*'
     		await fakethumb(tbuff,ytresult)
 					break
            case 'self':
@@ -1035,7 +1034,6 @@ break
             : mek;
           const media = await pebz.downloadAndSaveMediaMessage(encmedia);
           ran = "999.webp";
-          sticWait(from);
           await ffmpeg(`./${media}`)
             .inputFormat(media.split(".")[1])
             .on("start", function (cmd) {
@@ -1083,7 +1081,6 @@ break
          pebz.sendMessage(from, {displayName: `Creator Bot`, vcard: vcard2}, contact, 
          { quoted: fkontak, 
          })
-         reply('*ga penting ga usah ngechat*')
          break
           case 'bc':
          if (!isOwner) return sticOwner(from)
@@ -1314,9 +1311,9 @@ break
 
 //--- bisakah
 case 'bisakah':
-if (args.length < 1) return reply(`Contoh : ${prefix}bisakah han mendapatkan pacar`)
+if (args.length < 1) return reply(`Contoh : ${prefix}bisakah aku mendapatkan pacar`)
 bisa = q
-naon = ["Iya","Tidak","Mungkin","Entahlah"]
+naon = ["Iya","Tidak","Mungkin","Entahlah","mustahil"]
 random = naon[Math.floor(Math.random() * (naon.length))]
 bisakah = `Bisakah ${bisa}
 Jawaban : ${random}`
@@ -1853,9 +1850,11 @@ her = `*Hero Details ${body.slice(12)}*
 reply(her)
 break
 case 'tutuptime':
+case 'closetime':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !isOwner) return sticAdmin(from)
 if (!isBotGroupAdmins) return sticNotAdmin(from)
+stickOk(from)
 if (args[1]=="detik") {var timer = args[0]+"000"
 } else if (args[1]=="menit") {var timer = args[0]+"0000"
 } else if (args[1]=="jam") {var timer = args[0]+"00000"
@@ -1866,9 +1865,11 @@ pebz.groupSettingChange (from, GroupSettingChange.messageSend, true);
 }, timer)
 break
 case 'bukatime':
+case 'opentime':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !isOwner) return sticAdmin(from)
 if (!isBotGroupAdmins) return sticNotAdmin(from)
+sticOk(from)
 if (args[1]=="detik") {var timer = args[0]+"000"
 } else if (args[1]=="menit") {var timer = args[0]+"0000"
 } else if (args[1]=="jam") {var timer = args[0]+"00000"
@@ -2031,7 +2032,19 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     const F3 = fs.readFileSync('./media/sticker/toxic.webp')
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
                     }
+                    if (budy.includes(`cok`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`Cok`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
                     if (budy.includes(`akasih`)){  
+                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`akasi`)){  
                     const F3 = fs.readFileSync('./media/sticker/ok.webp')
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
                     }
