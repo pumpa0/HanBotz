@@ -158,7 +158,7 @@ pebz.on('group-participants-update', async (chat) => {
 				try {
 					ppimg = await pebz.getProfilePicture(`${chat.participants[0].split('@')[0]}@c.us`)
 				} catch {
-					ppimg = wlcm
+					ppimg = 'https://i.ibb.co/Rj1k2zV/welcome.png'
 				}
 				teks = `*Hallo* @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*`
 				let buff = await getBuffer(ppimg)
@@ -168,7 +168,7 @@ pebz.on('group-participants-update', async (chat) => {
 				try {
 					ppimg = await pebz.getProfilePicture(`${num.split('@')[0]}@c.us`)
 				} catch {
-					ppimg = gdby
+					ppimg = 'https://i.ibb.co/ZYLJz2T/goodbye.png'
 				}
 				teks = `*Sayonara* @${num.split('@')[0]}`
 				let buff = await getBuffer(ppimg)
