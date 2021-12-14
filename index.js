@@ -482,11 +482,11 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
   return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
 }			
               
-			var ampun = await pebz.chats.array.filter(v => v.jid.endsWith('g.us'))
+  var ampun = await penz.chats.array.filter(v => v.jid.endsWith('g.us'))
 ampun.map( async ({ jid }) => {
 if (budy.startsWith('/')) return
 await pebz.chatRead(jid)
-}
+})
 
 const linkwa = 'https://chat.whatsapp.com/'
 		if (budy.includes(`${linkwa}`)){
