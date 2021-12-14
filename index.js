@@ -20,7 +20,7 @@ const { exec } = require('child_process')
 const { fetchJson, color, bgcolor } = require('./lib/fetcher')
 const { y2mate } = require('./lib/y2mate');
 const { y2mateA, y2mateV } = require('./lib/y2mate.js')
-const { yta, ytv, ytv480, ytv720, igdl, upload, formatDate } = require('./lib/ytdl')
+const { yta, ytv, ytv144, ytv240, ytv480, ytv720, ytv1080, igdl, upload, formatDate } = require('./lib/ytdl')
 const { wikiSearch } = require('./lib/wiki.js')
 const { wait, simih,  getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./lib/function')
 
@@ -824,6 +824,20 @@ result = `❒「  *Wiki*  」
         reply('```[ ! ] Error Saat Mengirim Video```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
+        case 'ytmp4-144':
+        if(!q) return reply('linknya?')            
+        reply(mess.sabar)
+        res = await ytv144(`${q}`).catch(e => {
+        reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
+        sendMedia(from, `${res.dl_link}`,'```HanBotz```')
+        break                      
+        case 'ytmp4-240':
+        if(!q) return reply('linknya?')            
+        reply(mess.sabar)
+        res = await ytv240(`${q}`).catch(e => {
+        reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
+        sendMedia(from, `${res.dl_link}`,'```HanBotz```')
+        break                      
         case 'ytmp4-480':
         if(!q) return reply('linknya?')            
         reply(mess.sabar)
@@ -835,6 +849,13 @@ result = `❒「  *Wiki*  」
         if(!q) return reply('linknya?')            
         reply(mess.sabar)
         res = await ytv720(`${q}`).catch(e => {
+        reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
+        sendMedia(from, `${res.dl_link}`,'```HanBotz```')
+        break                      
+        case 'ytmp4-1080':
+        if(!q) return reply('linknya?')            
+        reply(mess.sabar)
+        res = await ytv1080(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
@@ -1954,6 +1975,18 @@ const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   }
                   if (budy.includes(`@6285807149213`)) {
+const rell = fs.readFileSync('./media/sticker/TagBot.webp');
+pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
+                  }
+                  if (budy.includes(`HanBot`)) {
+const rell = fs.readFileSync('./media/sticker/TagBot.webp');
+pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
+                  }
+                  if (budy.includes(`hanbot`)) {
+const rell = fs.readFileSync('./media/sticker/TagBot.webp');
+pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
+                  }
+                  if (budy.includes(`HANBOT`)) {
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   }
