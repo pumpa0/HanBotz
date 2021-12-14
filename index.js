@@ -481,10 +481,12 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
   var seconds = Math.floor(seconds % 60);
   return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
 }			
-if (budy.startsWith('/')) {
-			totalchat.map( async ({ jid }) => {
-              await pebz.chatRead(jid)})
-              }
+              
+			var ampun = await pebz.chats.array.filter(v => v.jid.endsWith('g.us'))
+ampun.map( async ({ jid }) => {
+if (budy.startsWith('/')) return
+await pebz.chatRead(jid)
+}
 
 const linkwa = 'https://chat.whatsapp.com/'
 		if (budy.includes(`${linkwa}`)){
@@ -1260,6 +1262,7 @@ break
          if (args.length == 0) return reply(`Example: ${prefix + command} HanBotz`)
          atetepe = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURIComponent(c)}`)
 					pebz.sendMessage(from, atetepe, sticker, { quoted: mek })
+					break
 //menu gabut gc
 //-- ganteng cek
 case 'gantengcek':
