@@ -254,9 +254,6 @@ const sendFile = async (medya, namefile, capti, tag, vn) => {
   if (budy.startsWith('/')) {
 			pebz.updatePresence(from, Presence.composing)
    }
-   if (budy.startsWith('/')) {
-			pebz.chatRead(jid)
-   }
 const sendFileFromUrl = async(link, type, options) => {
 hasil = await getBuffer(link)
 pebz.sendMessage(from, hasil, type, options).catch(e => {
@@ -484,6 +481,10 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
   var seconds = Math.floor(seconds % 60);
   return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
 }			
+if (budy.startsWith('/')) {
+			totalchat.map( async ({ jid }) => {
+              await pebz.chatRead(jid)})
+              }
 
 const linkwa = 'https://chat.whatsapp.com/'
 		if (budy.includes(`${linkwa}`)){
