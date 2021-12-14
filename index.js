@@ -213,6 +213,7 @@ pebz.on('group-participants-update', async (chat) => {
 			const groupName = isGroup ? groupMetadata.subject : ''
 			const groupId = isGroup ? groupMetadata.jid : ''
 			const q = args.join(' ')
+			const c = args.join(' ')
 			const groupMembers = isGroup ? groupMetadata.participants : ''
 			const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
 			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
