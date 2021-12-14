@@ -2008,6 +2008,14 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     const F3 = fs.readFileSync('./media/sticker/toxic.webp')
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
                     }
+                    if (budy.includes(`gentod`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
+                    if (budy.includes(`gentot`)){  
+                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
+                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
+                    }
                     if (budy.includes(`akasih`)){  
                     const F3 = fs.readFileSync('./media/sticker/ok.webp')
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
