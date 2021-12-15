@@ -537,8 +537,7 @@ const linkwa = 'https://chat.whatsapp.com/'
 		    const tod =`
 ${p}> ${ucapanWaktu} ${pushname}${p}		    
 ${p}> Prefix :『 ${prefix} 』${p}
-${p}> Runtime : ${kyun(uptime)}${p}
-${p}> Speed : ${ping.toFixed(4)} Second ${p}`
+${p}> Runtime : ${kyun(uptime)}${p}`
 tod2 =`
 *𝗚𝗥𝗢𝗨𝗣*
 ${p}• ${prefix}delete <reply>${p}
@@ -586,7 +585,7 @@ ${p}• ${prefix}herodetail <name>${p}
 ${p}• ${prefix}suit${p}
 ${p}• ${prefix}slot${p}
 
-*𝗚𝗔𝗕𝗨𝗧*
+*𝗚𝗔𝗕??𝗧*
 ${p}• ${prefix}say <text>${p}
 ${p}• ${prefix}sayy <text>${p}
 ${p}• ${prefix}rate <???>${p}
