@@ -367,7 +367,7 @@ console.log(e)
 					Iv: 'link nya mokad :v'
 				},
 				only: {
-					group: 'Khusus Grup!\n\nKamu tidak punya group? Join!\nhttps://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ',
+					group: 'Khusus Grup!\n\n*Free use Bot*\nhttps://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ',
 					ownerB: 'Khusus Owner Bot',
 					admin: 'Khusus Admin grup'
 				}
@@ -813,49 +813,49 @@ result = `❒「  *Wiki*  」
         break                
         case 'ytmp3':
         if(!q) return reply('linknya?')             
-        reply(mess.sabar)
+        reply('mengirim file... *${yut.all[0].title}*')
         res = await yta(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Audio```')})
         sendMedia(from, `${res.dl_link}`,{quoted:mek})
         break         
         case 'ytmp4':
         if(!q) return reply('linknya?')            
-        reply(mess.sabar)
+        reply('mengirim file... *${yut.all[0].title}*')
         res = await ytv(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-144':
         if(!q) return reply('linknya?')            
-        reply(mess.sabar)
+        reply('mengirim file... *${yut.all[0].title}*')
         res = await ytv144(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-240':
         if(!q) return reply('linknya?')            
-        reply(mess.sabar)
+        reply('mengirim file... *${yut.all[0].title}*')
         res = await ytv240(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-480':
         if(!q) return reply('linknya?')            
-        reply(mess.sabar)
+        reply('mengirim file... *${yut.all[0].title}*')
         res = await ytv480(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-720':
         if(!q) return reply('linknya?')            
-        reply(mess.sabar)
+        reply('mengirim file... *${yut.all[0].title}*')
         res = await ytv720(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-1080':
         if(!q) return reply('linknya?')            
-        reply(mess.sabar)
+        reply('mengirim file... *${yut.all[0].title}*')
         res = await ytv1080(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
