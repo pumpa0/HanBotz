@@ -115,7 +115,7 @@ blocked = []
 pebz.ReconnectMode = 2
 pebz.logger.level = 'warn'
 pebz.version = [2, 2143, 8]
-pebz.browserDescription = ['Hanz', 'Safari', '4.0']
+pebz.browserDescription = ['Nasa', 'Safari', '4.0']
 console.log(start)
 console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','Hanz')
 pebz.on('qr', qr => {
@@ -501,7 +501,7 @@ const linkwa = 'https://chat.whatsapp.com/'
         linkgc = await pebz.groupInviteCode (from)
         if (budy.includes(`${linkwa}${linkgc}`)) return reply('Untung Link group ini')
         if (isOwner) return
-		if (isGroupAdmins) return reply(`Share Woyy!!`)
+		if (isGroupAdmins) return
 		pebz.updatePresence(from, Presence.composing)
 		var Kick = `${sender.split("@")[0]}@s.whatsapp.net`
 		setTimeout( () => {
@@ -545,9 +545,9 @@ ${p}• Runtime : ${kyun(uptime)}${p}
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 • *Name : ${pebz.user.name}*
-• *Host: ${pebz.browserDescription[0]}*
-• *Browser : ${pebz.browserDescription[1]}*
 • *Version : ${pebz.browserDescription[2]}*
+• *Hosting : ${pebz.browserDescription[0]}*
+• *Browser : ${pebz.browserDescription[1]}*
 • *WhatsApp : ${pebz.user.phone.wa_version}*
 • *Private Chat : ${privat.length}*
 • *Group Chat : ${groups.length}*
@@ -610,8 +610,6 @@ ${p}• ${prefix}gantengcek <name>${p}
 
 *𝗢𝗪𝗡𝗘𝗥*
 ${p}• ${prefix}leave${p}
-${p}• ${prefix}status${p}
-${p}• ${prefix}runtime${p}
 ${p}• ${prefix}self|public${p}
 
 𝗢𝗧𝗛𝗘𝗥
@@ -631,9 +629,7 @@ ${p}• ${prefix}report <text>${p}
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
-case 'sapa':
-sticKaget(from)
-break
+
 case 'simplemenu':
 case 'simpelmenu':
 case 'smenu':
@@ -1444,7 +1440,6 @@ case 'leave':
 })
               break              
       case 'dogestick':
-              reply(mess.spamm)
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
              .then(res => res.text())
              .then(body => {
@@ -1455,7 +1450,6 @@ case 'leave':
 )
               break
        case 'patrickstick':
-              reply(mess.spamm)
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
              .then(res => res.text())
              .then(body => {
@@ -1467,7 +1461,6 @@ case 'leave':
               break
        case 'gurastick':
        case 'gawrgura':
-              reply(mess.spamm)
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
              .then(res => res.text())
              .then(body => {
@@ -1479,7 +1472,6 @@ case 'leave':
               break
        case 'animestick':
        case 'stickeranime':
-              reply(mess.spamm)
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestick')
              .then(res => res.text())
              .then(body => {
@@ -2015,10 +2007,7 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   }
-                  if (budy.includes(`༺ HanBotz ༻`)) {
-const baby = fs.readFileSync('./media/sticker/kaget.webp');
-pebz.sendMessage(from, baby, MessageType.sticker, {quoted: mek})
-                  }
+                  
                     
                     if (budy.includes(`anjing`)){  
                     const F3 = fs.readFileSync('./media/sticker/toxic.webp')
