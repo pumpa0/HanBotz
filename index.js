@@ -461,6 +461,13 @@ console.log(e)
 		}
 		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
+const oxo1 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']
+            const oxo2 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']  
+            const oxo3 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']
+            const oxo11 = oxo1[Math.floor(Math.random() * (oxo1.length))]
+            const oxo22 = oxo2[Math.floor(Math.random() * (oxo2.length))]
+            const oxo33 = oxo3[Math.floor(Math.random() * (oxo3.length))]
+//>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
     if (time2 < "24:59:00") {
       var ucapanWaktu = "GoodNight🌃";
@@ -1979,12 +1986,6 @@ case 'bego':
         membr.push(goo.jid)
         mentions(teks, membr, true)
         break
-			const oxo1 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']
-            const oxo2 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']  
-            const oxo3 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']
-            const oxo11 = oxo1[Math.floor(Math.random() * (oxo1.length))]
-            const oxo22 = oxo2[Math.floor(Math.random() * (oxo2.length))]
-            const oxo33 = oxo3[Math.floor(Math.random() * (oxo3.length))]
 
 case 'oxo':                    
                     oxz1 = `[ ${oxo11} ]\n`
