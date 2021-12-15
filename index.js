@@ -2149,8 +2149,16 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     const F3 = fs.readFileSync('./media/sticker/ok.webp')
                     pebz.sendMessage(from, F3, sticker, {quoted: mek})
                     }
+                    
+                    
+                    if (non){
+		    var prefax = /^[°zZ#$@*+,.?=''():√%!¢£¥€π¤ΠΦ_&><`™©®Δ^βα¦|/\\©^]/.test(cmd) ? cmd.match(/^[°zZ#$@*+,.?=''():√%¢£¥€π¤ΠΦ_&><!`™©®Δ^βα¦|/\\©^]/gi) : '/'
+        } 
 
-
+                     if (body.startsWith(`${prefax}${command}`)) {                    
+                    anu2 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
+                    pebz.sendMessage(from, anu2, text, {quoted: mek})
+                    }
 		             if (body.startsWith(`${prefix}${command}`)) {                    
                     anu1 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
                     pebz.sendMessage(from, anu1, text, {quoted: mek})
