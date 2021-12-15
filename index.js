@@ -520,9 +520,7 @@ const linkwa = 'https://chat.whatsapp.com/'
                 var groups = pebz.chats.array.filter(v => v.jid.endsWith('g.us'))
 				var privat = pebz.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
 					uptime = process.uptime();
-					const timestampu = speed();
 					const totalChat = await pebz.chats.all()
-					const latensi = speed() - timestampu 
                     let pingnye = speednye();
                     let ping = speednye() - pingnye 
 	        	
@@ -540,7 +538,7 @@ const linkwa = 'https://chat.whatsapp.com/'
 ${p}> ${ucapanWaktu} ${pushname}${p}		    
 ${p}> Prefix :『 ${prefix} 』${p}
 ${p}> Runtime : ${kyun(uptime)}${p}
-${p}> Speed : ${ping.toFixed(4)} Second`
+${p}> Speed : ${ping.toFixed(4)} Second ${p}`
 tod2 =`
 *𝗚𝗥𝗢𝗨𝗣*
 ${p}• ${prefix}delete <reply>${p}
