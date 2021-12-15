@@ -819,10 +819,11 @@ result = `❒「  *Wiki*  」
         sendMedia(from, `${res.dl_link}`,{quoted:mek})
         break         
         case 'ytmp4':
+        case 'ytmp4-360':
         if(!q) return reply('linknya?')            
         reply('mengirim file...')
         res = await ytv(`${q}`).catch(e => {
-        reply('```[ ! ] Error Saat Mengirim Video```')})
+        reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-144':
