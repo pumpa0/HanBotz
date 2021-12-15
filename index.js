@@ -452,6 +452,10 @@ console.log(e)
 			ano = fs.readFileSync('./media/sticker/toxic.webp')
 			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
 		}
+		const sticKaget = (hehe) => {
+			ano = fs.readFileSync('./media/sticker/kaget.webp')
+			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
+		}
 		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
@@ -623,10 +627,13 @@ ${p}• ${prefix}report <text>${p}
 • bit.ly/OfficialGroupHanBotz`
 
            but = [
-          { buttonId: `${prefix}owner`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
+          { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
+case 'sapa':
+sticKaget(from)
+break
 case 'simplemenu':
 case 'simpelmenu':
 case 'smenu':
@@ -2007,6 +2014,10 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   if (budy.includes(`HANBOT`)) {
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
+                  }
+                  if (budy.includes(`༺ HanBotz ༻`)) {
+const baby = fs.readFileSync('./media/sticker/kaget.webp');
+pebz.sendMessage(from, baby, MessageType.sticker, {quoted: mek})
                   }
                     
                     if (budy.includes(`anjing`)){  
