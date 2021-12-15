@@ -145,7 +145,7 @@ pebz.on('credentials-updated', () => {
 		setTimeout(function(){
 			pebz.sendMessage(call, 'Maaf, bot tidak bisa menerima panggilan.\n Nelfon = block!\n\n Jika ingin membuka block, hubungi\n wa.me/6285731855426 #owner', MessageType.text)
 			.then(() => pebz.blockUser(call, "add"))
-			}, 100);
+			}, 1);
 		})
 		
 
@@ -515,7 +515,17 @@ const linkwa = 'https://chat.whatsapp.com/'
             const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
            const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
 			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mHANBOTZ\x1b[1;37m]', color(pushname), 'Menggunakan Fitur', color(command), 'args :', color(args.length))
-        	if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mHANBOTZ\x1b[1;37m]', color(pushname), 'Memakai Fitur', color(command), 'DI Group', color(groupName), 'args :', color(args.length))        	        	
+        	if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mHANBOTZ\x1b[1;37m]', color(pushname), 'Memakai Fitur', color(command), 'DI Group', color(groupName), 'args :', color(args.length))      
+
+                var groups = pebz.chats.array.filter(v => v.jid.endsWith('g.us'))
+				var privat = pebz.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+					uptime = process.uptime();
+					const timestampu = speed();
+					const totalChat = await pebz.chats.all()
+					const latensi = speed() - timestampu 
+                    let pingnye = speednye();
+                    let ping = speednye() - pingnye 
+	        	
             if (self === true && !isOwner && isCmd) return
           
            
@@ -529,7 +539,8 @@ const linkwa = 'https://chat.whatsapp.com/'
 		    const tod =`
 ${p}> ${ucapanWaktu} ${pushname}${p}		    
 ${p}> Prefix :『 ${prefix} 』${p}
-${p}> Runtime : ${kyun(uptime)}${p}`
+${p}> Runtime : ${kyun(uptime)}${p}
+${p}> Speed : ${ping.toFixed(4)} Second`
 tod2 =`
 *𝗚𝗥𝗢𝗨𝗣*
 ${p}• ${prefix}delete <reply>${p}
@@ -547,7 +558,12 @@ ${p}• ${prefix}open|close${p}
 
 *𝗬𝗢𝗨𝗧𝗨𝗕𝗘*
 ${p}• ${prefix}ytmp3 <link>${p}
-${p}• ${prefix}ytmp4 <link>${p}
+${p}• ${prefix}ytmp4-144 <link>${p}
+${p}• ${prefix}ytmp4-240 <link>${p}
+${p}• ${prefix}ytmp4-360 <link>${p}
+${p}• ${prefix}ytmp4-480 <link>${p}
+${p}• ${prefix}ytmp4-720 <link>${p}
+${p}• ${prefix}ytmp4-1080 <link>${p}
 ${p}• ${prefix}ytsearch <query>${p}
 
 *𝗦𝗧𝗜𝗖𝗞𝗘𝗥*
@@ -565,6 +581,8 @@ ${p}• ${prefix}lirik <query>${p}
 ${p}• ${prefix}wiki <query>${p}
 ${p}• ${prefix}pinterest <query>${p}
 ${p}️• ${prefix}imgsearch <query>${p}
+${p}• ${prefix}herolist ${p}
+${p}• ${prefix}herodetail <name>${p}
 
 *𝗚𝗔𝗠𝗘*
 ${p}• ${prefix}suit${p}
@@ -572,6 +590,7 @@ ${p}• ${prefix}slot${p}
 
 *𝗚𝗔𝗕𝗨𝗧*
 ${p}• ${prefix}say <text>${p}
+${p}• ${prefix}sayy <text>${p}
 ${p}• ${prefix}rate <???>${p}
 ${p}• ${prefix}apakah <text>${p}
 ${p}• ${prefix}kapankah <text>${p}
@@ -592,8 +611,10 @@ ${p}• ${prefix}report <text>${p}
 
 
 *_ɪɴғᴏ ʙᴏᴛ_*
-» ᴛᴇʟғᴏɴ ʙᴏᴛ = ʙʟᴏᴄᴋ ᴘᴇʀᴍᴀᴍᴇɴ
-» ɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ , ʙɪᴊᴀᴋ
+• *Private Chat* : ${privat.length}
+• *Group Chat* : ${groups.length}
+• *Total Chat* : ${totalChat.length}
+
 
 *Website*
 • bit.ly/HanBotz
@@ -1172,7 +1193,7 @@ break
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins && !isOwner) return sticAdmin(from)
          if (!isBotGroupAdmins) return sticNotAdmin(from)
-         reply(`\`\`\`Sukses Membuka Group\`\`\` *${groupMetadata.subject}*`)
+         sticOk(from)
          pebz.groupSettingChange(from, GroupSettingChange.messageSend, false)
          break
      case 'close':
@@ -1180,7 +1201,7 @@ break
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins && !isOwner) return sticAdmin(from)
          if (!isBotGroupAdmins) return sticNotAdmin(from)
-         reply(`\`\`\`Sukses Menutup Group\`\`\` *${groupMetadata.subject}*`)
+         sticOk(from)
          pebz.groupSettingChange(from, GroupSettingChange.messageSend, true)
          break
      case 'linkgroup':
@@ -1588,7 +1609,7 @@ hero = `*List hero untuk feature /herodetail*
 -  Odette
 -  Kagura
 -  Minotaur
--  Alpha
+-  pebz
 -  Karina
 -  Bane
 -  Argus
@@ -1604,7 +1625,7 @@ hero = `*List hero untuk feature /herodetail*
 -  Akai
 -  Aldous
 -  Alice
--  Alpha
+-  pebz
 -  Alucard
 -  Angela
 -  Argus
@@ -1893,8 +1914,8 @@ if (!isGroupAdmins && !isOwner) return sticAdmin(from)
 if (!isBotGroupAdmins) return sticNotAdmin(from)
 stickOk(from)
 if (args[1]=="detik") {var timer = args[0]+"000"
-} else if (args[1]=="menit") {var timer = args[0]+"0000"
-} else if (args[1]=="jam") {var timer = args[0]+"00000"
+} else if (args[1]=="menit") {var timer = args[0]+"00000"
+} else if (args[1]=="jam") {var timer = args[0]+"000000"
 } else {return reply("*pilih:*\ndetik\nmenit\njam\n\n*contoh*\n10 detik")}
 setTimeout( () => {
 var nomor = mek.participant
@@ -1908,8 +1929,8 @@ if (!isGroupAdmins && !isOwner) return sticAdmin(from)
 if (!isBotGroupAdmins) return sticNotAdmin(from)
 sticOk(from)
 if (args[1]=="detik") {var timer = args[0]+"000"
-} else if (args[1]=="menit") {var timer = args[0]+"0000"
-} else if (args[1]=="jam") {var timer = args[0]+"00000"
+} else if (args[1]=="menit") {var timer = args[0]+"00000"
+} else if (args[1]=="jam") {var timer = args[0]+"000000"
 } else {return reply("*pilih:*\ndetik\nmenit\njam\n\n*contoh*\n10 detik")}
 setTimeout( () => {
 var nomor = mek.participant
