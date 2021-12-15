@@ -53,7 +53,6 @@ const { herolist } = require('./lib/herolist.js')
 const { herodetails } = require('./lib/herodetail.js')
 const {
 	OwnerNumber,
-	prefix,
 	lol
 } = require('./lib/config.json')
 
@@ -183,15 +182,7 @@ pebz.on('group-participants-update', async (chat) => {
 		    
 		
 		
-	    pebz.on('chat-update', async (mek) => {
-		try {
-			if (!mek.hasNewMessage) return
-            mek = mek.messages.all()[0]
-			if (!mek.message) return
-			if (mek.key && mek.key.remoteJid == 'status@broadcast') return
-			if (mek.key.fromMe) return
-			global.blocked
-			global.prefix
+	    
 			const content = JSON.stringify(mek.message)
 			const from = mek.key.remoteJid
 			const type = Object.keys(mek.message)[0]
@@ -201,9 +192,24 @@ pebz.on('group-participants-update', async (chat) => {
 			const wita = moment.tz("Asia/Makassar").format("HH:mm:ss")	    
             
             const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : (type == 'stickerMessage') && (getCmd(mek.message.stickerMessage.fileSha256.toString('hex')) !== null && getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) !== undefined) ? getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) : "".slice(1).trim().split(/ +/).shift().toLowerCase()
+            
+            if (non){
+		    var prefix = /^[°zZ#$@*+,.?=''():√%!¢£¥€π¤ΠΦ_&><`™©®Δ^βα¦|/\\©^]/.test(cmd) ? cmd.match(/^[°zZ#$@*+,.?=''():√%¢£¥€π¤ΠΦ_&><!`™©®Δ^βα¦|/\\©^]/gi) : '/'
+        } 
 
 			body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'videoMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'extendedTextMessage') && mek.message[type].text.startsWith(prefix) ? mek.message[type].text : (type == 'listResponseMessage') && mek.message[type].singleSelectReply.selectedRowId ? mek.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : ''
 			budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
+			
+			pebz.on('chat-update', async (mek) => {
+		try {
+			if (!mek.hasNewMessage) return
+            mek = mek.messages.all()[0]
+			if (!mek.message) return
+			if (mek.key && mek.key.remoteJid == 'status@broadcast') return
+			if (mek.key.fromMe) return
+			global.blocked
+			global.prefix
+        
 			const command = body.slice(1).trim().split(/ +/).shift().toLowerCase()
 			const args = body.trim().split(/ +/).slice(1)
 			const isCmd = body.startsWith(prefix)
@@ -2154,9 +2160,7 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     }
                     
                     
-                    if (non){
-		    var prefax = /^[°zZ#$@*+,.?=''():√%!¢£¥€π¤ΠΦ_&><`™©®Δ^βα¦|/\\©^]/.test(cmd) ? cmd.match(/^[°zZ#$@*+,.?=''():√%¢£¥€π¤ΠΦ_&><!`™©®Δ^βα¦|/\\©^]/gi) : '/'
-        } 
+                    
 
                      if (body.startsWith(`${prefax}${command}`)) {                    
                     anu2 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
