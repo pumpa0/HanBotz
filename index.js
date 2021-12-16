@@ -2111,7 +2111,7 @@ case 'bego':
         const go = groupMembers
         const goo = pff[Math.floor(Math.random() * pff.length)]
         const oe = go[Math.floor(Math.random() * go.length)]
-        teks = `*Siapa Yang ${command}?*\n*Yaitu* @${goo.jid.split('@')[0]}`
+        teks = `*Siapa Yang ${command}?*\nYaitu @${goo.jid.split('@')[0]}`
         membr.push(goo.jid)
         mentions(teks, membr, true)
         break
@@ -2323,5 +2323,6 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                            
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
+			reply(error)
 		}
 	})
