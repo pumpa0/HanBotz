@@ -2162,7 +2162,7 @@ case 'cerpen':
                    break                  
                    case 'samehadaku':  
                    
-                   reply(pebzchan)
+                   
                    F = body.slice(12)
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/samehadaku?q=${F}`)
                    anu2 = await getBuffer(anu.thumb)
@@ -2174,7 +2174,7 @@ case 'cerpen':
       case 'neon1':  
                    
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
-                   reply(pebzchan)
+                   
                    F = body.slice(7)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/neon_light?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
@@ -2182,7 +2182,7 @@ case 'cerpen':
        case 'text3d':  
                    
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
-                   reply(pebzchan)
+                   
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
@@ -2190,7 +2190,7 @@ case 'cerpen':
        case 'galaxy':  
                    
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
-                   reply(pebzchan)
+                   
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/galaxywp?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
@@ -2198,7 +2198,7 @@ case 'cerpen':
       case 'gaming':  
                    
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
-                   reply(pebzchan)
+                   
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/gaming?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
@@ -2206,7 +2206,7 @@ case 'cerpen':
       case 'colors':  
                    
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
-                   reply(pebzchan)
+                   
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/watercolor?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
@@ -2214,7 +2214,7 @@ case 'cerpen':
 case 'jadwalsholat':  
                    
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} makassar*`)  
-                   reply(naylachan)
+                   
                    F = body.slice(14)
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/jadwalshalat?daerah=${F}`)                   
                    anu1 = `➻ *IMSYAK* : ${anu.Imsyak}\n`
