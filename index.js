@@ -2142,6 +2142,24 @@ case 'ffserti':
 					zhain = await getBuffer(`https://onlydevcity.xyz/FFSerti/img.php?nama=${ct}`)
 					pebz.sendMessage(from, zhain, image, {caption: 'NIH KACK', quoted: mek})
 					break
+case 'artinama':  
+                    
+                    if (args.length < 1) return reply('MASUKKAN NAMA')
+                    F = body.slice(10)
+                    anu = await fetchJson(`https://videfikri.com/api/primbon/artinama/?nama=${F}`)
+                    anu1 = `➻ *ARTI* : ${anu.result.arti}\n`
+                    anu1 += `➻ *ULASAN* : ${anu.result.desk}\n`
+                    reply(anu1)
+                    break
+case 'cerpen':  
+                   
+                   anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/cerpen`)                   
+                   anu1 = `➻ *JUDUL* : ${anu.result.title}\n`
+                   anu1 += `➻ *PENGARANG* : ${anu.result.pengarang}\n` 
+                   anu1 += `➻ *KATEGORI* : ${anu.result.kategori}\n`
+                   anu1 += `➻ *CERPEN* : ${anu.result.cerpen}\n`
+                   reply(anu1)
+                   break                  
           default: 
 
           if (budy.includes(`@6285731855426`)) {
