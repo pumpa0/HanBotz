@@ -2160,6 +2160,78 @@ case 'cerpen':
                    anu1 += `➻ *CERPEN* : ${anu.result.cerpen}\n`
                    reply(anu1)
                    break                  
+                   case 'samehadaku':  
+                   
+                   reply(pebzchan)
+                   F = body.slice(12)
+                   anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/samehadaku?q=${F}`)
+                   anu2 = await getBuffer(anu.thumb)
+                   anu1 = `➻ *JUDUL* : ${anu.title}\n`
+                   anu1 += `➻ *LINK* : ${anu.link}\n`
+                   anu1 += `➻ *DESK* : ${anu.desc}\n`
+                   pebz.sendMessage(from, anu2, image, {caption: anu1, quoted: mek })
+                   break
+      case 'neon1':  
+                   
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
+                   reply(pebzchan)
+                   F = body.slice(7)				    
+                   anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/neon_light?text=${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
+                   break  
+       case 'text3d':  
+                   
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
+                   reply(pebzchan)
+                   F = body.slice(8)				    
+                   anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
+                   break                   
+       case 'galaxy':  
+                   
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
+                   reply(pebzchan)
+                   F = body.slice(8)				    
+                   anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/galaxywp?text=${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
+                   break
+      case 'gaming':  
+                   
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
+                   reply(pebzchan)
+                   F = body.slice(8)				    
+                   anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/gaming?text=${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
+                   break
+      case 'colors':  
+                   
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
+                   reply(pebzchan)
+                   F = body.slice(8)				    
+                   anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/watercolor?text=${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
+                   break
+case 'jadwalsholat':  
+                   
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} makassar*`)  
+                   reply(naylachan)
+                   F = body.slice(14)
+                   anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/jadwalshalat?daerah=${F}`)                   
+                   anu1 = `➻ *IMSYAK* : ${anu.Imsyak}\n`
+                   anu1 += `➻ *SUBUH* : ${anu.Subuh}\n`
+                   anu1 += `➻ *DHUHA* : ${anu.Dhuha}\n`
+                   anu1 += `➻ *DZUHUR* : ${anu.Dzuhur}\n`
+                   anu1 += `➻ *ASHAR* : ${anu.Ashar}\n`
+                   anu1 += `➻ *MAGRHRIB* : ${anu.Maghrib}\n`
+                   anu1 += `➻ *ISYA* : ${anu.Isya}\n` 
+                   reply(anu1)
+                   break
+       case 'pantun':  
+                   
+                   anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/random_pantun`)
+                   anu1 = `➻ *PANTUN* : ${anu.result}\n` 
+                   reply(anu1)
+                   break 
           default: 
 
           if (budy.includes(`@6285731855426`)) {
