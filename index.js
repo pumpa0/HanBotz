@@ -548,18 +548,18 @@ const linkwa = 'https://chat.whatsapp.com/'
 		     var p = '```'
 		    const tod =`
 ${p}• ${ucapanWaktu} ${pushname}${p}		    
-${p}• Prefix :『 ${prefix} 』${p}
-${p}• Runtime : ${kyun(uptime)}${p}
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 • *Name : ${pebz.user.name}*
+• *Prefix :*『 ${prefix} 』
 • *Version : ${pebz.browserDescription[2]}*
 • *Hosting : ${pebz.browserDescription[0]}*
 • *Browser : ${pebz.browserDescription[1]}*
 • *WhatsApp : ${pebz.user.phone.wa_version}*
 • *Private Chat : ${privat.length}*
 • *Group Chat : ${groups.length}*
-• *Total Chat : ${totalChat.length}*`
+• *Total Chat : ${totalChat.length}*
+• *Runtime : ${kyun(uptime)}*`
 tod2 =`͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
 *𝗚𝗥𝗢𝗨𝗣*
 ${p}• ${prefix}delete <reply>${p}
@@ -600,22 +600,50 @@ ${p}• ${prefix}lirik <query>${p}
 ${p}• ${prefix}wiki <query>${p}
 ${p}• ${prefix}pinterest <query>${p}
 ${p}️• ${prefix}imgsearch <query>${p}
+
+*𝗚𝗔𝗠𝗘*
+${p}• ${prefix}suit${p}
+${p}• ${prefix}slot${p}
 ${p}• ${prefix}herolist ${p}
 ${p}• ${prefix}herodetail <name>${p}
 
-*𝗚𝗔𝗠𝗘*
-${p}• ${prefix}oxo${p}
-${p}• ${prefix}suit${p}
-${p}• ${prefix}slot${p}
+*𝗖𝗛𝗘𝗖𝗞𝗘𝗥*
+${p}• ${prefix}cantikcek <name>${p}
+${p}• ${prefix}gantengcek <name>${p}
+${p}• ${prefix}jelekcek <name>${p}
+${p}• ${prefix}begocek <name>${p}
+${p}• ${prefix}nolepcek <name>${p}
+${p}• ${prefix}jagocek <name>${p}
+${p}• ${prefix}jahatcek <name>${p}
+${p}• ${prefix}pintarcek <name>${p}
+${p}• ${prefix}bebancek <name>${p}
+${p}• ${prefix}haramcek <name>${p}
+${p}• ${prefix}pakboycek <name>${p}
+${p}• ${prefix}pakgirlcek <name>${p}
 
-*𝗚𝗔𝗕𝗨𝗧*
+*𝗧𝗔𝗚*
+${p}• ${prefix}gay ${p}
+${p}• ${prefix}lesby ${p}
+${p}• ${prefix}cantik ${p}
+${p}• ${prefix}ganteng ${p}
+${p}• ${prefix}jelek ${p}
+${p}• ${prefix}bego ${p}
+${p}• ${prefix}nolep ${p}
+${p}• ${prefix}jago ${p}
+${p}• ${prefix}jahat ${p}
+${p}• ${prefix}pintar ${p}
+${p}• ${prefix}beban ${p}
+${p}• ${prefix}baik ${p}
+${p}• ${prefix}haram ${p}
+${p}• ${prefix}pakboy ${p}
+${p}• ${prefix}pakgirl ${p}
+
+*𝗥𝗔𝗡𝗗𝗢𝗠*
 ${p}• ${prefix}say <text>${p}
 ${p}• ${prefix}sayy <text>${p}
 ${p}• ${prefix}rate <???>${p}
 ${p}• ${prefix}apakah <text>${p}
 ${p}• ${prefix}kapankah <text>${p}
-${p}• ${prefix}cantikcek <name>${p}
-${p}• ${prefix}gantengcek <name>${p}
 
 𝗢𝗧𝗛𝗘𝗥
 ${p}• ${prefix}tourl <reply>${p}
@@ -1325,12 +1353,10 @@ break
 //-- ganteng cek
 case 'gantengcek':
 case 'kegantengan':
-case 'ganteng':
   if (args.length < 1) return reply(`Contoh : ${prefix}gantengcek hankun`)
-if (!isGroup) return reply(mess.only.group)
   random = `${Math.floor(Math.random() * 100)}`
   gan = q
-  cek = `Kegantengan : *${gan}*
+  cek = `Ke*ganteng*an : *${gan}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1338,12 +1364,10 @@ break
 //--- cantik cek
 case 'cantikcek':
 case 'kecantikan':
-case 'cantik':
   if (args.length < 1) return reply(`Contoh : ${prefix}cantikcek hanburger`)
-if (!isGroup) return reply(mess.only.group)
   random = `${Math.floor(Math.random() * 100)}`
   can = q
-  cek = `Kecantikan : *${can}*
+  cek = `Ke*cantik*an : *${can}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1394,127 +1418,114 @@ Jawaban : ${no} ${random}`
 reply(kapan)
 break
 case 'nolepcek':
-case 'nolep':
-if (args.length < 1) return reply(`Contoh : ${prefix}nolep han`)
-nolep = q
-random = `${Math.floor(Math.random() * 100)}`
-rating = `Kenolepan ${nolep} : ${random}%`
-reply(rating)
+  if (args.length < 1) return reply(`Contoh : ${prefix}nolepcek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  lep = q
+  cek = `Ke*nolep*an : *${lep}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
 break
-case 'gantengcek':                      	  
-                    teng = q
-                    N = `KE *GANTENGAN* ${teng}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 😎`
-                    reply(N)
-                    break 
-      case 'cantikcek':                      	  
-                    
-                    N = `KE *CANTIKAN* ${teng}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}% 😁*`
-                    reply(N)
-                    break
-       case 'jelekcek':  
-                    jel = q
-                    N = `KE *J3L3K4N* ${jel}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 🤢`
-                    reply(N)
-                    break 
-      case 'goblokcek':                      	  
-                    gob = q
-                    N = `KE *GOBLOKAN* ${gob}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 🤣`
-                    reply(N)
-                    break 
-      case 'begocek':                      	  
-                    beg = q
-                    N = `KE *BEGO* ${beg}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 😂`
-                    reply(N)
-                    break 
-      case 'pintercek':                      	  
-                     pint = q
-                    N = `KE *PINTARAN* ${pint}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 😗`
-                    reply(N)
-                    break 
-     case 'jagocek':                      	  
-                     jag = q
-                    N = `KE *JAGOAN* ${jag}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 💪`
-                    reply(N)
-                    break 
-     case 'nolepcek':                      	  
-                     lep = q
-                    N = `KE *NOLEPAN* ${lep}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 🧐`
-                    reply(N)
-                    break 
-     case 'babicek':                      	  
-                     babic = q
-                    N = `KE *BABIAN* ${babic}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 🤪`
-                    reply(N)
-                    break 
-     case 'bebancek':                      	  
-                    
-                    N = `KE *BEBANAN* ${teng}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 🤬`
-                    reply(N)
-                    break 
-      case 'baikcek':                      	  
-                     
-                    N = `KE *BAIKAN* ${teng}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 😇`
-                    reply(N)
-                    break 
-      case 'jahatcek':                      	  
-                     
-                    N = `KE *JAHATAN* ${teng}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 😈`
-                    reply(N)
-                    break 
-      case 'anjingcek':                      	  
-                     
-                    N = `KE *ANJINGAN* ${teng}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 👀`
-                    reply(N)
-                    break                      
-      case 'haramcek':                      	  
-                    
-                    N = `KE *HARAMAN* ${teng}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 🥴`
-                    reply(N)
-                    break  
-      case 'kontolcek':                      	  
-                     
-                    N = `KE *KOMTOLAN* ${teng}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 🙂`
-                    reply(N)
-                    break 
-       case 'pakboycek':                      	  
-                     
-                    N = `KE *PAKBOYZ* ${teng}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 😏`
-                    reply(N)
-                    break 
-       case 'pakgirlcek':                      	  
-                    	
-                    N = `KE *PAKGILR* ${teng}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 😏`
-                    reply(N)
-                    break             
-       case 'sangecek':                      	  
-                    
-                    N = `JIWA *SANGE* ${teng}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 🤤`
-                    reply(N)
-                    break
-       case 'bapercek':                      	  
-                    
-                    N = `JIWA *BEPERAN* ${teng}\n`
-                    N += `ADALAH : *${nayla3}${nayla4}%* 😘`
-                    reply(N)
-                    break                   
+case 'jelekcek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}jelekcek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  elek = q
+  cek = `Ke*jelek*an : *${elek}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+case 'begocek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}begocek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  beg = q
+  cek = `Ke*bego*an : *${beg}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+case 'pintercek':
+case 'pintarcek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}pintarcek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  pntr = q
+  cek = `Ke*pintar*an : *${pntr}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+case 'jagocek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}jagocek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  goan = q
+  cek = `Ke*jago*an : *${goan}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+case 'bebancek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}bebancek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  bban = q
+  cek = `Ke*beban*an : *${bban}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+case 'baikcek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}baikcek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  god = q
+  cek = `Ke*baik*an : *${god}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+case 'jahatcek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}jahatcek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  evil = q
+  cek = `Ke*jahat*an : *${evil}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+case 'haramcek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}begocek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  harm = q
+  cek = `Ke*haram*an : *${harm}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+case 'pakboycek':
+case 'fakboycek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}pakboycek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  fakb = q
+  cek = `Ke*fakboy*an: *${fakb}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+case 'pakgirlcek':
+case 'fakgirlcek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}pakgirlcek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  fakg = q
+  cek = `Ke*fakgirl*an: *${fakg}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+case 'bapercek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}bapercek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  lov = q
+  cek = `Ke*baper*an : *${lov}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+case 'sangecek':
+case 'sagnecek':
+  if (args.length < 1) return reply(`Contoh : ${prefix}sangecek hanbotz`)
+  random = `${Math.floor(Math.random() * 100)}`
+  horn = q
+  cek = `Ke*sange*an : *${horn}*
+Persentase : ${random}%`
+pebz.sendMessage(from, cek, text, {quoted: mek})
+break
+
 case 'delete':
 if (!isGroup) return reply(mess.only.group)
 if (!isOwner && !isGroupAdmins) return sticAdmin(from)
@@ -2079,6 +2090,17 @@ case 'bego':
       case 'wibu':
       case 'puki':
       case 'pantek':
+      case 'pakboy':
+      case 'pakgirl':
+      case 'beban':
+      case 'jago':
+      case 'ganteng':
+      case 'cantik':
+      case 'nolep':
+      case 'haram':
+      case 'jahat':
+      case 'baik':
+      case 'jelek':
       if (!isGroup) return reply(mess.only.group)
         membr = []
         const pff = groupMembers
