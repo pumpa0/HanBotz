@@ -115,7 +115,7 @@ blocked = []
 pebz.ReconnectMode = 2
 pebz.logger.level = 'warn'
 pebz.version = [2, 2143, 8]
-pebz.browserDescription = ['Nasa', 'Safari', '4.0']
+pebz.browserDescription = ['Nasa', 'Safari', '4.1']
 console.log(start)
 console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','Hanz')
 pebz.on('qr', qr => {
@@ -637,6 +637,8 @@ ${p}• ${prefix}baik ${p}
 ${p}• ${prefix}haram ${p}
 ${p}• ${prefix}pakboy ${p}
 ${p}• ${prefix}pakgirl ${p}
+${p}• ${prefix}pacaran ${p}
+
 
 *𝗥𝗔𝗡𝗗𝗢𝗠*
 ${p}• ${prefix}say <text>${p}
@@ -2120,7 +2122,7 @@ case 'pacaran':
         const fo = groupMembers
         const foo = gfh[Math.floor(Math.random() * gfh.length)]
         const io = fo[Math.floor(Math.random() * fo.length)]
-        teks = `*Yang Lagi Pacaran*\n*Yaitu* @${foo.jid.split('@')[0]} ❤️ @${io.jid.split('@')[0]}`
+        teks = `*Yang Lagi Pacaran*\n @${foo.jid.split('@')[0]} ❤️ @${io.jid.split('@')[0]}`
         membr.push(foo.jid)
         membr.push(io.jid)
         mentions(teks, membr, true)
