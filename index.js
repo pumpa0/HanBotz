@@ -2232,6 +2232,32 @@ case 'jadwalsholat':
                    anu1 = `➻ *PANTUN* : ${anu.result}\n` 
                    reply(anu1)
                    break 
+                   case 'tebakgambar':  
+                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/tebakgambar`)
+                    anu1 = await getBuffer(anu.result.soal)
+                    anu2 = `➻ *JAWABAN* : ${anu.result.jawaban}`
+                    setTimeout( () => {
+                    pebz.sendMessage(from, anu1, image,{caption: 'Answer... Time 60 Seconds', quoted: mek})
+                    }, 1)
+                    setTimeout( () => {
+                    costum('50 More Seconds', text, tescuk, cr)
+                    }, 10000)                                                                                                                                   
+                    setTimeout( () => {
+                    costum('40 More Seconds', text, tescuk, cr)
+                    }, 20000)    
+                    setTimeout( () => {
+                    costum('30 More Seconds', text, tescuk, cr)
+                    }, 30000)    
+                    setTimeout( () => {
+                    costum('20 More Seconds', text, tescuk, cr)
+                    }, 40000)                                       
+                    setTimeout( () => {
+                    costum('10 More Seconds', text, tescuk, cr)
+                    }, 50000)                                                                                                                                                     
+                    setTimeout( () => {
+                    pebz.sendMessage(from, anu2, text,{quoted: mek})                   
+                    }, 60000)                                                                          
+                    break                      
           default: 
 
           if (budy.includes(`@6285731855426`)) {
