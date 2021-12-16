@@ -2102,6 +2102,7 @@ case 'bego':
       case 'jahat':
       case 'baik':
       case 'jelek':
+      case 'baper':
       if (!isGroup) return reply(mess.only.group)
         membr = []
         const pff = groupMembers
@@ -2119,7 +2120,7 @@ case 'pacaran':
         const fo = groupMembers
         const foo = gfh[Math.floor(Math.random() * gfh.length)]
         const io = fo[Math.floor(Math.random() * fo.length)]
-        teks = `*Yang Lagi Pacaran*\n*Yaitu* @${foo.jid.split('@')[0]} ❤️ @${foo.jid.split('@')[0]}`
+        teks = `*Yang Lagi Pacaran*\n*Yaitu* @${foo.jid.split('@')[0]} ❤️ @${io.jid.split('@')[0]}`
         membr.push(foo.jid)
         mentions(teks, membr, true)
         break
