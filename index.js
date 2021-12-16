@@ -2128,12 +2128,13 @@ case 'pacaran':
         mentions(teks, membr, true)
         break
 
-case 'oxo':                    
-                    oxz1 = `[ ${oxo11} ]\n`
-                    oxz1 += `[ ${oxo22} ]\n`
-                    oxz1 += `[ ${oxo33} ]\n`
-                    reply(oxz1)
-                    break
+case 'tololserti':
+				    if (args.length < 1) return reply(`[❗] Example :\n${prefix}${command} HanBotz`)
+				    F = body.slice(12)
+				    sticWait(from)
+				    to = await getBuffer(`https://evilblackteam.nasiwebhost.com/serti1/img.php?nama=${F}`)
+				    nayla.sendMessage(from, to, image, {caption: 'OK it`s done', quoted:mek})
+				    break
           default: 
 
           if (budy.includes(`@6285731855426`)) {
