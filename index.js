@@ -2122,6 +2122,7 @@ case 'pacaran':
         const io = fo[Math.floor(Math.random() * fo.length)]
         teks = `*Yang Lagi Pacaran*\n*Yaitu* @${foo.jid.split('@')[0]} ❤️ @${io.jid.split('@')[0]}`
         membr.push(foo.jid)
+        membr.push(io.jid)
         mentions(teks, membr, true)
         break
 
