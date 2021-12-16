@@ -2133,8 +2133,15 @@ case 'tololserti':
 				    F = body.slice(12)
 				    sticWait(from)
 				    to = await getBuffer(`https://evilblackteam.nasiwebhost.com/serti1/img.php?nama=${F}`)
-				    nayla.sendMessage(from, to, image, {caption: 'OK it`s done', quoted:mek})
+				    pebz.sendMessage(from, to, image, {caption: 'OK it`s done', quoted: mek})
 				    break
+case 'ffserti':  
+					if (args.length < 1) return reply(`[❗] Example :\n${prefix}${command} whatsapp`)
+					sticWait(from)
+					ct = body.slice(9)
+					zhain = await getBuffer(`https://onlydevcity.xyz/FFSerti/img.php?nama=${ct}`)
+					pebz.sendMessage(from, zhain, image, {caption: 'NIH KACK', quoted: mek})
+					break
           default: 
 
           if (budy.includes(`@6285731855426`)) {
