@@ -485,7 +485,7 @@ const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
       var ucapanWaktu = "GoodMoorning🌅";
     }
     if (time2 < "05:00:00") {
-      var ucapanWaktu = "GoodNight??";
+      var ucapanWaktu = "GoodNight🌠";
     }
     function kyun(seconds){
   function pad(s){
@@ -606,6 +606,7 @@ ${p}• ${prefix}herolist ${p}
 ${p}• ${prefix}herodetail <name>${p}
 
 *𝗚𝗔𝗠𝗘*
+${p}• ${prefix}oxo${p}
 ${p}• ${prefix}suit${p}
 ${p}• ${prefix}slot${p}
 
@@ -617,10 +618,6 @@ ${p}• ${prefix}apakah <text>${p}
 ${p}• ${prefix}kapankah <text>${p}
 ${p}• ${prefix}cantikcek <name>${p}
 ${p}• ${prefix}gantengcek <name>${p}
-
-*𝗢𝗪𝗡𝗘𝗥*
-${p}• ${prefix}leave${p}
-${p}• ${prefix}self|public${p}
 
 𝗢𝗧𝗛𝗘𝗥
 ${p}• ${prefix}tourl <reply>${p}
@@ -690,12 +687,6 @@ const simple2 =`
 • ${prefix}kapankah <text>
 • ${prefix}cantikcek <name>
 • ${prefix}gantengcek <name>
-
-*𝗢𝗪𝗡𝗘𝗥*
-• ${prefix}leave
-• ${prefix}status
-• ${prefix}runtime
-• ${prefix}self|public
 
 𝗢𝗧𝗛𝗘𝗥
 • ${prefix}tourl <reply>
@@ -787,7 +778,7 @@ const pebz2 = {
 	        	break
 		case 'dare':
 		if (!isGroup) return reply('KhususGrup')
-		const dare =['Kirim pesan ke mantan kamu dan bilang "aku masih suka sama kamu','telfon crush/pacar sekarang dan ss ke pemain','pap ke salah satu anggota grup','Bilang "KAMU CANTIK BANGET NGGAK BOHONG" ke cowo','ss recent call whatsapp','drop emot "😎??" setiap ngetik di gc/pc selama 1 hari','kirim voice note bilang can i call u baby?','drop kutipan lagu/quote, terus tag member yang cocok buat kutipan itu','pake foto sule sampe 3 hari','ketik pake bahasa daerah 24 jam','ganti nama menjadi "gue anak lucinta luna" selama 5 jam','chat ke kontak wa urutan sesuai %batre kamu, terus bilang ke dia "i lucky to hv you','prank chat mantan dan bilang " i love u, pgn balikan','record voice baca surah al-kautsar','bilang "i hv crush on you, mau jadi pacarku gak?" ke lawan jenis yang terakhir bgt kamu chat (serah di wa/tele), tunggu dia bales, kalo udah ss drop ke sini','sebutkan tipe pacar mu!','snap/post foto pacar/crush','teriak gajelas lalu kirim pake vn kesini','pap mukamu lalu kirim ke salah satu temanmu','kirim fotomu dengan caption, aku anak pungut','teriak pake kata kasar sambil vn trus kirim kesini','teriak " anjimm gabutt anjimmm " di depan rumah mu','ganti nama jadi " BOWO " selama 24 jam','Pura pura kerasukan, contoh : kerasukan maung, kerasukan belalang, kerasukan kulkas, dll']
+		const dare =['Kirim pesan ke mantan kamu dan bilang "aku masih suka sama kamu','telfon crush/pacar sekarang dan ss ke pemain','pap ke salah satu anggota grup','Bilang "${teng} CANTIK BANGET NGGAK BOHONG" ke cowo','ss recent call whatsapp','drop emot "😎??" setiap ngetik di gc/pc selama 1 hari','kirim voice note bilang can i call u baby?','drop kutipan lagu/quote, terus tag member yang cocok buat kutipan itu','pake foto sule sampe 3 hari','ketik pake bahasa daerah 24 jam','ganti nama menjadi "gue anak lucinta luna" selama 5 jam','chat ke kontak wa urutan sesuai %batre kamu, terus bilang ke dia "i lucky to hv you','prank chat mantan dan bilang " i love u, pgn balikan','record voice baca surah al-kautsar','bilang "i hv crush on you, mau jadi pacarku gak?" ke lawan jenis yang terakhir bgt kamu chat (serah di wa/tele), tunggu dia bales, kalo udah ss drop ke sini','sebutkan tipe pacar mu!','snap/post foto pacar/crush','teriak gajelas lalu kirim pake vn kesini','pap mukamu lalu kirim ke salah satu temanmu','kirim fotomu dengan caption, aku anak pungut','teriak pake kata kasar sambil vn trus kirim kesini','teriak " anjimm gabutt anjimmm " di depan rumah mu','ganti nama jadi " BOWO " selama 24 jam','Pura pura kerasukan, contoh : kerasukan maung, kerasukan belalang, kerasukan kulkas, dll']
 		const der = dare[Math.floor(Math.random() * dare.length)]
 		todz = await getBuffer(`https://www.linkpicture.com/q/20211130_010958.jpg`)
 	    but = [
@@ -1412,6 +1403,120 @@ random = `${Math.floor(Math.random() * 100)}`
 rating = `Kenolepan ${nolep} : ${random}%`
 reply(rating)
 break
+case 'gantengcek':                      	  
+                    teng = q
+                    N = `KE *GANTENGAN* ${teng}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 😎`
+                    reply(N)
+                    break 
+      case 'cantikcek':                      	  
+                    
+                    N = `KE *CANTIKAN* ${teng}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}% 😁*`
+                    reply(N)
+                    break
+       case 'jelekcek':  
+                    jel = q
+                    N = `KE *J3L3K4N* ${jel}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 🤢`
+                    reply(N)
+                    break 
+      case 'goblokcek':                      	  
+                    gob = q
+                    N = `KE *GOBLOKAN* ${gob}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 🤣`
+                    reply(N)
+                    break 
+      case 'begocek':                      	  
+                    beg = q
+                    N = `KE *BEGO* ${beg}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 😂`
+                    reply(N)
+                    break 
+      case 'pintercek':                      	  
+                     pint = q
+                    N = `KE *PINTARAN* ${pint}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 😗`
+                    reply(N)
+                    break 
+     case 'jagocek':                      	  
+                     jag = q
+                    N = `KE *JAGOAN* ${jag}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 💪`
+                    reply(N)
+                    break 
+     case 'nolepcek':                      	  
+                     lep = q
+                    N = `KE *NOLEPAN* ${lep}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 🧐`
+                    reply(N)
+                    break 
+     case 'babicek':                      	  
+                     babic = q
+                    N = `KE *BABIAN* ${babic}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 🤪`
+                    reply(N)
+                    break 
+     case 'bebancek':                      	  
+                    
+                    N = `KE *BEBANAN* ${teng}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 🤬`
+                    reply(N)
+                    break 
+      case 'baikcek':                      	  
+                     
+                    N = `KE *BAIKAN* ${teng}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 😇`
+                    reply(N)
+                    break 
+      case 'jahatcek':                      	  
+                     
+                    N = `KE *JAHATAN* ${teng}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 😈`
+                    reply(N)
+                    break 
+      case 'anjingcek':                      	  
+                     
+                    N = `KE *ANJINGAN* ${teng}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 👀`
+                    reply(N)
+                    break                      
+      case 'haramcek':                      	  
+                    
+                    N = `KE *HARAMAN* ${teng}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 🥴`
+                    reply(N)
+                    break  
+      case 'kontolcek':                      	  
+                     
+                    N = `KE *KOMTOLAN* ${teng}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 🙂`
+                    reply(N)
+                    break 
+       case 'pakboycek':                      	  
+                     
+                    N = `KE *PAKBOYZ* ${teng}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 😏`
+                    reply(N)
+                    break 
+       case 'pakgirlcek':                      	  
+                    	
+                    N = `KE *PAKGILR* ${teng}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 😏`
+                    reply(N)
+                    break             
+       case 'sangecek':                      	  
+                    
+                    N = `JIWA *SANGE* ${teng}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 🤤`
+                    reply(N)
+                    break
+       case 'bapercek':                      	  
+                    
+                    N = `JIWA *BEPERAN* ${teng}\n`
+                    N += `ADALAH : *${nayla3}${nayla4}%* 😘`
+                    reply(N)
+                    break                   
 case 'delete':
 if (!isGroup) return reply(mess.only.group)
 if (!isOwner && !isGroupAdmins) return sticAdmin(from)
