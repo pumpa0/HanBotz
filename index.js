@@ -547,7 +547,7 @@ const linkwa = 'https://chat.whatsapp.com/'
 		     const hiya = await fetchJson('https://xinzbot-api.herokuapp.com/api/ucapan?apikey=XinzBot&timeZone=Asia/Jakarta', {method:'get'})
 		     var p = '```'
 		    const tod =`
-${p}• ${ucapanWaktu} ${pushname}${p}		    
+${p}${ucapanWaktu} ${pushname}${p}		    
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 • *Name : ${pebz.user.name}*
@@ -644,6 +644,7 @@ ${p}• ${prefix}sayy <text>${p}
 ${p}• ${prefix}rate <???>${p}
 ${p}• ${prefix}apakah <text>${p}
 ${p}• ${prefix}kapankah <text>${p}
+${p}• ${prefix}wangy <name> ${p}
 
 𝗢𝗧𝗛𝗘𝗥
 ${p}• ${prefix}tourl <reply>${p}
@@ -1356,7 +1357,7 @@ case 'kegantengan':
   if (args.length < 1) return reply(`Contoh : ${prefix}gantengcek hankun`)
   random = `${Math.floor(Math.random() * 100)}`
   gan = q
-  cek = `Ke*ganteng*an : *${gan}*
+  cek = `Ke *ganteng* an : *${gan}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1367,7 +1368,7 @@ case 'kecantikan':
   if (args.length < 1) return reply(`Contoh : ${prefix}cantikcek hanburger`)
   random = `${Math.floor(Math.random() * 100)}`
   can = q
-  cek = `Ke*cantik*an : *${can}*
+  cek = `Ke *cantik* an : *${can}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1421,7 +1422,7 @@ case 'nolepcek':
   if (args.length < 1) return reply(`Contoh : ${prefix}nolepcek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   lep = q
-  cek = `Ke*nolep*an : *${lep}*
+  cek = `Ke *nolep* an : *${lep}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1429,7 +1430,7 @@ case 'jelekcek':
   if (args.length < 1) return reply(`Contoh : ${prefix}jelekcek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   elek = q
-  cek = `Ke*jelek*an : *${elek}*
+  cek = `Ke *jelek* an : *${elek}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1437,7 +1438,7 @@ case 'begocek':
   if (args.length < 1) return reply(`Contoh : ${prefix}begocek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   beg = q
-  cek = `Ke*bego*an : *${beg}*
+  cek = `Ke *bego* an : *${beg}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1446,7 +1447,7 @@ case 'pintarcek':
   if (args.length < 1) return reply(`Contoh : ${prefix}pintarcek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   pntr = q
-  cek = `Ke*pintar*an : *${pntr}*
+  cek = `Ke *pintar* an : *${pntr}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1454,7 +1455,7 @@ case 'jagocek':
   if (args.length < 1) return reply(`Contoh : ${prefix}jagocek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   goan = q
-  cek = `Ke*jago*an : *${goan}*
+  cek = `Ke *jago* an : *${goan}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1462,7 +1463,7 @@ case 'bebancek':
   if (args.length < 1) return reply(`Contoh : ${prefix}bebancek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   bban = q
-  cek = `Ke*beban*an : *${bban}*
+  cek = `Ke *beban* an : *${bban}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1470,7 +1471,7 @@ case 'baikcek':
   if (args.length < 1) return reply(`Contoh : ${prefix}baikcek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   god = q
-  cek = `Ke*baik*an : *${god}*
+  cek = `Ke *baik* an : *${god}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1478,7 +1479,7 @@ case 'jahatcek':
   if (args.length < 1) return reply(`Contoh : ${prefix}jahatcek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   evil = q
-  cek = `Ke*jahat*an : *${evil}*
+  cek = `Ke *jahat* an : *${evil}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1486,7 +1487,7 @@ case 'haramcek':
   if (args.length < 1) return reply(`Contoh : ${prefix}begocek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   harm = q
-  cek = `Ke*haram*an : *${harm}*
+  cek = `Ke *haram* an : *${harm}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1495,7 +1496,7 @@ case 'fakboycek':
   if (args.length < 1) return reply(`Contoh : ${prefix}pakboycek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   fakb = q
-  cek = `Ke*fakboy*an: *${fakb}*
+  cek = `Ke *fakboy* an : *${fakb}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1504,7 +1505,7 @@ case 'fakgirlcek':
   if (args.length < 1) return reply(`Contoh : ${prefix}pakgirlcek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   fakg = q
-  cek = `Ke*fakgirl*an: *${fakg}*
+  cek = `Ke *fakgirl* an : *${fakg}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1512,7 +1513,7 @@ case 'bapercek':
   if (args.length < 1) return reply(`Contoh : ${prefix}bapercek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   lov = q
-  cek = `Ke*baper*an : *${lov}*
+  cek = `Ke *baper* an : *${lov}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -1521,7 +1522,7 @@ case 'sagnecek':
   if (args.length < 1) return reply(`Contoh : ${prefix}sangecek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   horn = q
-  cek = `Ke*sange*an : *${horn}*
+  cek = `Ke *sange* an : *${horn}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
@@ -2109,6 +2110,17 @@ case 'bego':
         const oe = go[Math.floor(Math.random() * go.length)]
         teks = `*Siapa Yang ${command}?*\n*Yaitu* @${goo.jid.split('@')[0]}`
         membr.push(goo.jid)
+        mentions(teks, membr, true)
+        break
+case 'pacaran':
+      if (!isGroup) return reply(mess.only.group)
+        membr = []
+        const gfh = groupMembers
+        const fo = groupMembers
+        const foo = gfh[Math.floor(Math.random() * gfh.length)]
+        const io = fo[Math.floor(Math.random() * fo.length)]
+        teks = `*Yang Lagi Pacaran*\n*Yaitu* @${foo.jid.split('@')[0]} ❤️ @${foo.jid.split('@')[0]}`
+        membr.push(foo.jid)
         mentions(teks, membr, true)
         break
 
