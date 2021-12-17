@@ -823,9 +823,6 @@ const pebz2 = {
            } 
            pebz.sendMessage(from, txt, MessageType.text, pebz2)
            break 
-           case 'limit':
-           reply(`*Limit Penggunaan : 10 / day*`)
-           break
            case 'imgsearch':
             if(!q) return reply(`gambar apa?`)
             let im = await hx.chara(q)
@@ -2294,17 +2291,17 @@ case 'meme':
 					anu = await fetchJson(`https://api.zeks.me/api/tebakgambar?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`, {method: 'get'})
 					bufferkkk = await getBuffer(anu.result.soal)
 					setTimeout( () => {
-					pebz.sendMessage(from, '*тЮ╕ Jawaban :* '+anu.result.jawaban, text, {quoted: mek }) // ur cods
+					pebz.sendMessage(from, '*Jawaban :* '+anu.result.jawaban, text, {quoted: mek }) // ur cods
+					}, 60000) // 1000 = 1s,
+					setTimeout( () => {
+					pebz.sendMessage(from, '_10 Detik lagi_', text) // ur cods
+					}, 50000) // 1000 = 1s,
+					setTimeout( () => {
+					pebz.sendMessage(from, '_30 Detik lagi_', text) // ur cods
 					}, 30000) // 1000 = 1s,
 					setTimeout( () => {
-					pebz.sendMessage(from, '_10 Detik lagiтАж_', text) // ur cods
-					}, 20000) // 1000 = 1s,
-					setTimeout( () => {
-					pebz.sendMessage(from, '_20 Detik lagi_тАж', text) // ur cods
+					pebz.sendMessage(from, '_50 Detik lagi_', text) // ur cods
 					}, 10000) // 1000 = 1s,
-					setTimeout( () => {
-					pebz.sendMessage(from, '_30 Detik lagi_тАж', text) // ur cods
-					}, 2500) // 1000 = 1s,
 					setTimeout( () => {
 					pebz.sendMessage(from, bufferkkk, image, { caption: '_Jelaskan Apa Maksud Gambar Ini_', quoted: mek }) // ur cods
 					}, 0) // 1000 = 1s,
