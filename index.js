@@ -2303,8 +2303,7 @@ case 'jadwalsholat':
                    reply(anu1)
                    break
        case 'pantun':  
-                   if (isLimit(sender)) return
-			        await limitAdd(sender)
+                   
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/random_pantun`)
                    anu1 = `➻ *PANTUN* : ${anu.result}\n` 
                    reply(anu1)
@@ -2343,6 +2342,10 @@ case 'playstore':
                    break       
                    case 'ceklimit':
                    reply (`Limit : ${limitawal} / Day`)
+                   break
+                   case 'limit':                     
+				    checkLimit(sender)
+					break 
           default: 
 
           if (budy.includes(`@6285731855426`)) {
