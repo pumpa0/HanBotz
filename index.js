@@ -162,7 +162,17 @@ pebz.on('group-participants-update', async (chat) => {
 				} catch {
 					ppimg = 'https://i.ibb.co/Rj1k2zV/welcome.png'
 				}
-				teks = `*Hallo* @${num.split('@')[0]}\nSelamat datang di group *${mdata.subject}*`
+				teks = `𝙃𝘼𝙇𝙇𝙊 *@${num.split('@')[0]}*
+𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙂𝙍𝙐𝙋 *${mdata.subject}*
+
+𝙅𝘼𝙉𝙂𝘼𝙉 𝙇𝙐𝙋𝘼 𝙄𝙉𝙏𝙍𝙊 :
+
+• *ɴᴀᴍᴀ :*
+• *ᴜᴍᴜʀ :*
+• *ɢᴇɴᴅᴇʀ :*
+• *ᴀꜱᴀʟ ᴋᴏᴛᴀ :*
+
+𝙎𝙀𝙈𝙊𝙂𝘼 𝘽𝙀𝙏𝘼𝙃 𝙔𝘼 𝘿𝙄 𝙂𝙍𝙐𝙋 𝙄𝙉𝙄`
 				let buff = await getBuffer(ppimg)
 				pebz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				} else if (chat.action == 'remove') {
@@ -172,7 +182,7 @@ pebz.on('group-participants-update', async (chat) => {
 				} catch {
 					ppimg = 'https://i.ibb.co/ZYLJz2T/goodbye.png'
 				}
-				teks = `*Sayonara* @${num.split('@')[0]}`
+				teks = `𝙎𝘼𝙔𝙊𝙉𝘼𝙍𝘼 *@${num.split('@')[0]}*`
 				let buff = await getBuffer(ppimg)
 				pebz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -2247,15 +2257,6 @@ case 'cerpen':
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/gaming?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
-case 'hartah':
-                   if (isLimit(sender)) return
-			        await limitAdd(sender)
-                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
-                   
-                   F = body.slice(8)				    
-                   anu = await getBuffer(`https://api.zeks.me/api/hartatahta?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text=${F}`)
-                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-                   break
       case 'colors':  
                    if (isLimit(sender)) return
 			        await limitAdd(sender)
@@ -2307,7 +2308,67 @@ case 'meme':
 					}, 0) // 1000 = 1s,
 					
 					break  
+                       /*TEXT MAKER*/
+                case 'qrencode':
+                case 'barcode':
+                case 'bneon':
+                case 'matrix':
+                case 'breakwall':
+                case 'gneon':
+                case 'dropwater':
+                case 'tfire':
+                case 'sandw':
+                case 'epep':
+                case 'gplaybutton':
+                case 'splaybutton':
+                case 'text3dbox':
+                case 'logobp':
+                case 'leavest':
+                case 'thundertext':
+                case 'tlight':
+                case 'naruto':
+                case 'crosslogo':
+                case 'cslogo':
+                case 'crismes':
+                case 'flametext':
+                case 'glowtext':
+                case 'smoketext':
+                case 'flowertext':
+                case 'lithgtext':
                    
+                   if (isLimit(sender)) return
+			        await limitAdd(sender)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
+                   F = body.slice(8)				    
+                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text=${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+                   break
+break
+                case 'wolflogo':
+                case 'logoaveng':
+                case 'phlogo':
+                case 'marvellogo':
+                case 'gtext':
+                case 'pubglogo':
+                case 'snowwrite':
+                case 'watercolour':
+                    if (isLimit(sender)) return
+			       await limitAdd(sender)	
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
+                   var F = body.slice(9)
+				   var F1 = F.split("&")[0];
+				   var F2 = F.split("&")[1]; 
+                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text1=${F1}&text2=${F2}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+					break
+case 'artinama':
+                    if (isLimit(sender)) return
+			       await limitAdd(sender)	
+                    if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}artinama [ nama ]*\nContoh : ${data.prefix}artinama Han`)
+                    res = await axios.get(`https://api.zeks.me/api/artinama?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&nama=${data.body}`)
+                    if(res.data.status == false) data.reply(res.data.message)
+                    data.reply(res.data.result)
+                    break
                    
           default: 
 
