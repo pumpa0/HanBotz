@@ -2362,7 +2362,7 @@ break
                     if (isLimit(sender)) return
 			       await limitAdd(sender)	
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
-                   var F = body.slice(10)
+                   var F = body
 				   var F1 = F.split("&")[0];
 				   var F2 = F.split("&")[1]; 
                    anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text1=${F1}&text2=${F2}`)
@@ -2384,7 +2384,7 @@ case 'artinama':
                     if (args.length < 1) return reply('MASUKKAN MIMPI MU')
                     F = body.slice(11)
                     anu = await fetchJson(`https://api.zeks.me/api/artimimpi?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&q=${F}`)
-                    anu1 = `➻ *ARTI* : ${anu.result.array}\n`
+                    anu1 = `➻ *ARTI* : ${anu.result.string}\n`
                     reply(anu1)
                     break
 
