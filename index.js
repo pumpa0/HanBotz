@@ -2298,7 +2298,7 @@ case 'meme':
                    reply(anu1)
                    break 
                    case 'time':
-                   reply(`${runt}`)
+                   reply(`${runt(process.uptime())}`)
                    break
                    
                    
