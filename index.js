@@ -2222,7 +2222,7 @@ case 'hartah':
                    break
 case 'darkjoke':  
                    
-                   anu = await getBuffer(`https://api.zeks.me/api/darkjokes?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`)
+                   anu = await fetchJson(`https://api.zeks.me/api/darkjokes?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`)
                    anu1 = await getBuffer(anu.result)
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
                    break
