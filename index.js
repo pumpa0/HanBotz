@@ -2309,7 +2309,6 @@ case 'meme':
                 case 'dropwater':
                 case 'tfire':
                 case 'sandw':
-                case 'epep':
                 case 'gplaybutton':
                 case 'splaybutton':
                 case 'text3dbox':
@@ -2334,15 +2333,24 @@ case 'meme':
                    anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
+                   case 'epep':
+                   if (isOwner) return
+                   if (isLimit(sender)) return
+			        await limitAdd(sender)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
+                   F = body.slice(8)				    
+                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text=..${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+                   break
 break
                 case 'wolflogo':
                 case 'logoaveng':
-                case 'phlogo':
                 case 'marvellogo':
                 case 'gtext':
                 case 'pubglogo':
                 case 'snowwrite':
                 case 'watercolour':
+                    if (isOwner) return
                     if (isLimit(sender)) return
 			       await limitAdd(sender)	
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
@@ -2352,14 +2360,39 @@ break
                    anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					break
-case 'artinama':
+                    case 'phlogo':
+                    if (isOwner) return
                     if (isLimit(sender)) return
 			       await limitAdd(sender)	
-                    if(data.body == "") return data.reply(`Kirim perintah *${data.prefix}artinama [ nama ]*\nContoh : ${data.prefix}artinama Han`)
-                    res = await axios.get(`https://api.zeks.me/api/artinama?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&nama=${data.body}`)
-                    if(res.data.status == false) data.reply(res.data.message)
-                    data.reply(res.data.result)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
+                   var F = body.slice(9)
+				   var F1 = F.split("&")[0];
+				   var F2 = F.split("&")[1]; 
+                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text1=.${F1}&text2=${F2}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+					break
+case 'artinama':  
+                    if (isOwner) return
+			        if (isLimit(sender)) return
+			        await limitAdd(sender)
+                    if (args.length < 1) return reply('MASUKKAN NAMA')
+                    F = body.slice(10)
+                    anu = await fetchJson(`https://api.zeks.me/api/artinama?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&nama=${F}`)
+                    anu1 = `➻ *ARTI* : ${anu.result}\n`
+                    
+                    reply(anu1)
                     break
+       case 'artimimpi':  
+                    if (isOwner) return
+			        if (isLimit(sender)) return
+			        await limitAdd(sender)
+                    if (args.length < 1) return reply('MASUKKAN MIMPI MU')
+                    F = body.slice(11)
+                    anu = await fetchJson(`https://api.zeks.me/api/artimimpi?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&q=${F}`)
+                    anu1 = `➻ *ARTI* : ${anu.result.string}\n`
+                    reply(anu1)
+                    break
+
                    
           default: 
 
