@@ -2195,15 +2195,6 @@ case 'pacaran':
         mentions(teks, membr, true)
         break
 
-case 'artinama':  
-                    
-                    if (args.length < 1) return reply('MASUKKAN NAMA')
-                    F = body.slice(10)
-                    anu = await fetchJson(`https://videfikri.com/api/primbon/artinama/?nama=${F}`)
-                    anu1 = `➻ *ARTI* : ${anu.result.arti}\n`
-                    anu1 += `➻ *ULASAN* : ${anu.result.desk}\n`
-                    reply(anu1)
-                    break
 case 'cerpen':  
                    
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/cerpen`)                   
