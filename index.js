@@ -2329,7 +2329,7 @@ case 'meme':
                    if (isLimit(sender)) return
 			        await limitAdd(sender)
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
-                   F = body.slice(10)		    
+                   F = body.slice(8)		    
                    anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
@@ -2337,7 +2337,7 @@ case 'meme':
                    if (isLimit(sender)) return
 			        await limitAdd(sender)
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
-                   F = body.slice(10)				    
+                   F = body.slice(8)				    
                    anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
@@ -2352,7 +2352,7 @@ break
                     if (isLimit(sender)) return
 			       await limitAdd(sender)	
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
-                   var F = body.slice(10)
+                   var F = body.slice(8)
 				   var F1 = F.split("&")[0];
 				   var F2 = F.split("&")[1]; 
                    anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text1=${F1}&text2=${F2}`)
@@ -2362,7 +2362,7 @@ break
                     if (isLimit(sender)) return
 			       await limitAdd(sender)	
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
-                   var F = body
+                   var F = body.slice(8)
 				   var F1 = F.split("&")[0];
 				   var F2 = F.split("&")[1]; 
                    anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text1=${F1}&text2=${F2}`)
