@@ -2242,8 +2242,8 @@ case 'jadwalsholat':
                    reply(anu1)
                    break 
                    case 'tebakgambar':  
-                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/tebakgambar`)
-                    anu1 = await getBuffer(anu.result.soal )
+                    anu = await fetchJson(`https://api.zeks.me/api/tebakgambar?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`)
+                    anu1 = await getBuffer(anu.result.soal)
                     anu2 = `➻ *JAWABAN* : ${anu.result.jawaban}`
                     setTimeout( () => {
                     pebz.sendMessage(from, anu1, image,{caption: 'Answer... Time 60 Seconds', quoted: mek})
