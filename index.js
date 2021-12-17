@@ -589,10 +589,10 @@ const linkwa = 'https://chat.whatsapp.com/'
   var h = Math.floor((seconds % (3600 * 24)) / 3600);
   var m = Math.floor((seconds % 3600) / 60);
   var s = Math.floor(seconds % 60);
-  var dDisplay = d > 0 ? d + (d == 1 ? " day, " : " Day, ") : "";
-  var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " Hour, ") : "";
-  var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " Minute, ") : "";
-  var sDisplay = s > 0 ? s + (s == 1 ? " second" : " Second") : "";
+  var dDisplay = d > 0 ? d + (d == 1 ? " d, " : " D, ") : "";
+  var hDisplay = h > 0 ? h + (h == 1 ? " h, " : " H, ") : "";
+  var mDisplay = m > 0 ? m + (m == 1 ? " m, " : " M, ") : "";
+  var sDisplay = s > 0 ? s + (s == 1 ? " s" : " S") : "";
   return dDisplay + hDisplay + mDisplay + sDisplay;
 };
 
@@ -1770,6 +1770,7 @@ reply(lirik)
 })
 break
 case 'herolistbeta':
+if (args.length < 1) return reply('Heronya?')
 await herolist().then((ress) => {
 let listt = `*List hero untuk feature ${prefix}herodetail*\n\n`
 for (var i = 0; i < ress.hero.length; i++) {
@@ -2245,19 +2246,17 @@ case 'cerpen':
                    if (isLimit(sender)) return
 			        await limitAdd(sender)
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
-                   
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/gaming?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
-case 'hartatahta':  
 case 'hartah':
                    if (isLimit(sender)) return
 			        await limitAdd(sender)
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    
                    F = body.slice(8)				    
-                   anu = await getBuffer(`https://api.zeks.me/api/hartatahta?apikey=apivinz&text=${F}`)
+                   anu = await getBuffer(`https://api.zeks.me/api/hartatahta?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
       case 'colors':  
@@ -2289,6 +2288,28 @@ case 'meme':
                    anu1 = `➻ *PANTUN* : ${anu.result}\n` 
                    reply(anu1)
                    break 
+                   case 'tebakgambar':
+					if (isLimit(sender)) return
+                    await limitAdd(sender) 
+					anu = await fetchJson(`https://api.zeks.me/api/tebakgambar?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`, {method: 'get'})
+					bufferkkk = await getBuffer(anu.result.soal)
+					setTimeout( () => {
+					pebz.sendMessage(from, '*тЮ╕ Jawaban :* '+anu.result.jawaban, text, {quoted: mek }) // ur cods
+					}, 30000) // 1000 = 1s,
+					setTimeout( () => {
+					pebz.sendMessage(from, '_10 Detik lagiтАж_', text) // ur cods
+					}, 20000) // 1000 = 1s,
+					setTimeout( () => {
+					pebz.sendMessage(from, '_20 Detik lagi_тАж', text) // ur cods
+					}, 10000) // 1000 = 1s,
+					setTimeout( () => {
+					pebz.sendMessage(from, '_30 Detik lagi_тАж', text) // ur cods
+					}, 2500) // 1000 = 1s,
+					setTimeout( () => {
+					pebz.sendMessage(from, bufferkkk, image, { caption: '_Jelaskan Apa Maksud Gambar Ini_', quoted: mek }) // ur cods
+					}, 0) // 1000 = 1s,
+					
+					break  
                    
                    
           default: 
