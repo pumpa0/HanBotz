@@ -2220,6 +2220,11 @@ case 'hartah':
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/watercolor?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
+case 'darkjoke':  
+                   
+                   anu = await getBuffer(`https://api.zeks.me/api/darkjokes?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+                   break
 case 'jadwalsholat':  
                    
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} makassar*`)  
