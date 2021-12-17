@@ -2177,7 +2177,7 @@ case 'cerpen':
                    
                    F = body.slice(7)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/neon_light?text=${F}`)
-                   pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break  
        case 'text3d':  
                    
@@ -2185,7 +2185,7 @@ case 'cerpen':
                    
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${F}`)
-                   pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break                   
        case 'galaxy':  
                    
@@ -2193,7 +2193,7 @@ case 'cerpen':
                    
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/galaxywp?text=${F}`)
-                   pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
       case 'gaming':  
                    
@@ -2201,7 +2201,16 @@ case 'cerpen':
                    
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/gaming?text=${F}`)
-                   pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+                   break
+case 'hartatahta':  
+case 'hartah':
+                   
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
+                   
+                   F = body.slice(8)				    
+                   anu = await getBuffer(`https://api.zeks.me/api/hartatahta?apikey=apivinz&text=${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
       case 'colors':  
                    
@@ -2209,7 +2218,7 @@ case 'cerpen':
                    
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/watercolor?text=${F}`)
-                   pebz.sendMessage(from, anu, image, {caption: `OK it's done`, quoted: mek})
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
 case 'jadwalsholat':  
                    
@@ -2234,7 +2243,7 @@ case 'jadwalsholat':
                    break 
                    case 'tebakgambar':  
                     anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/tebakgambar`)
-                    anu1 = await getBuffer(anu.result.soal)
+                    anu1 = await getBuffer(anu.result.soal )
                     anu2 = `➻ *JAWABAN* : ${anu.result.jawaban}`
                     setTimeout( () => {
                     pebz.sendMessage(from, anu1, image,{caption: 'Answer... Time 60 Seconds', quoted: mek})
@@ -2257,7 +2266,13 @@ case 'jadwalsholat':
                     setTimeout( () => {
                     pebz.sendMessage(from, anu2, text,{quoted: mek})                   
                     }, 60000)                                                                          
-                    break                      
+                    break                
+case 'playstore':  
+                   
+                   anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/random_pantun`)
+                   anu1 = `➻ *PANTUN* : ${anu.result}\n` 
+                   reply(anu1)
+                   break       
           default: 
 
           if (budy.includes(`@6285731855426`)) {
