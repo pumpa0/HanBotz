@@ -2291,16 +2291,16 @@ case 'meme':
 					anu = await fetchJson(`https://api.zeks.me/api/tebakgambar?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`, {method: 'get'})
 					bufferkkk = await getBuffer(anu.result.soal)
 					setTimeout( () => {
-					pebz.sendMessage(from, '*Jawaban :* '+anu.result.jawaban, text, {quoted: mek }) // ur cods
+					reply('*Jawaban :* '+anu.result.jawaban) // ur cods
 					}, 60000) // 1000 = 1s,
 					setTimeout( () => {
-					pebz.sendMessage(from, '_10 Detik lagi_', text) // ur cods
+					reply('_10 Detik lagi_') // ur cods
 					}, 50000) // 1000 = 1s,
 					setTimeout( () => {
-					pebz.sendMessage(from, '_30 Detik lagi_', text) // ur cods
+					reply('_30 Detik lagi_') // ur cods
 					}, 30000) // 1000 = 1s,
 					setTimeout( () => {
-					pebz.sendMessage(from, '_50 Detik lagi_', text) // ur cods
+					reply( '_50 Detik lagi_') // ur cods
 					}, 10000) // 1000 = 1s,
 					setTimeout( () => {
 					pebz.sendMessage(from, bufferkkk, image, { caption: '_Jelaskan Apa Maksud Gambar Ini_', quoted: mek }) // ur cods
