@@ -46,6 +46,7 @@ const atm = require("./lib/atm");
 let _uang = JSON.parse(fs.readFileSync('./database/uang.json'))
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
 const samih = JSON.parse(fs.readFileSync('./database/simi.json'))
+const _limit = JSON.parse(fs.readFileSync('./lib/limit.json'))
 const { uploadimg } = require('./lib/uploadimg')
 const { webp2mp4File } = require('./lib/webp2mp4')
 const { lirikLagu } = require('./lib/lirik.js')
@@ -63,6 +64,7 @@ let wlcm = "" || fs.readFileSync('./media/gambar/welcome.png')
 let gdby = "" || fs.readFileSync('./media/gambar/goodbye.png')
 self = false
 blocked = []
+limitawal = 2
 
 
 //[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
@@ -352,6 +354,59 @@ console.log(e)
                 });
                 });
                 }			
+                const xxx = '```'  
+            const limitAdd = (sender) => {
+            let position = false
+            Object.keys(_limit).forEach((i) => {
+            if (_limit[i].id == sender) {
+            position = i
+            }
+            })
+            if (position !== false) {
+            _limit[position].limit += 1
+            fs.writeFileSync('./lib/limit.json', JSON.stringify(_limit))
+            }
+            }
+            const checkLimit = (sender) => {
+          	let found = false
+            for (let lmt of _limit) {
+            if (lmt.id === sender) {
+            let limitCounts = limitawal - lmt.limit
+            if (limitCounts <= 0) return pebz.sendMessage(from,`BATAS PENGGUNAN ANDA (LIMIT) TELAH HABIS`, text,{ quoted: mek})
+            pebz.sendMessage(from, `SISA LIMIT ANDA : *${limitCounts}*`, text, { quoted : mek})
+            found = true
+            }
+            }
+            if (found === false) {
+            let obj = { id: sender, limit: 0 }
+            _limit.push(obj)
+            fs.writeFileSync('./lib/limit.json', JSON.stringify(_limit))
+            pebz.sendMessage(from, `SISA LIMIT ANDA : *${limitCounts}*`, text, { quoted : mek})
+            }
+         	}         	          
+            const isLimit = (sender) =>{ 
+	        let position = false
+            for (let i of _limit) {
+            if (i.id === sender) {
+          	let limits = i.limit
+            if (limits >= limitawal ) {
+         	position = true
+            pebz.sendMessage(from, `MAAF *${pushname}* BATAS PENGGUNAAN (LIMIT) HARI INI TELAH HABIS.`, text, {quoted: mek})
+            return true
+            } else {
+          	_limit
+            position = true
+            return false
+            }
+            }
+            }
+            if (position === false) {
+           	const obj = { id: sender, limit: 0 }
+            _limit.push(obj)
+            fs.writeFileSync('./lib/limit.json',JSON.stringify(_limit))
+            return false
+            }
+            }
 
 
         
@@ -2226,6 +2281,12 @@ case 'darkjoke':
                    anu1 = await getBuffer(anu.result)
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
                    break
+case 'meme':  
+                   
+                   anu = await fetchJson(`https://api.zeks.me/api/memeindo?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`)
+                   anu1 = await getBuffer(anu.result)
+                   pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
+                   break
 case 'jadwalsholat':  
                    
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} makassar*`)  
@@ -2242,7 +2303,8 @@ case 'jadwalsholat':
                    reply(anu1)
                    break
        case 'pantun':  
-                   
+                   if (isLimit(sender)) return
+			        await limitAdd(sender)
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/random_pantun`)
                    anu1 = `➻ *PANTUN* : ${anu.result}\n` 
                    reply(anu1)
@@ -2279,6 +2341,8 @@ case 'playstore':
                    anu1 = `➻ *PANTUN* : ${anu.result}\n` 
                    reply(anu1)
                    break       
+                   case 'ceklimit':
+                   reply (`Limit : ${limitawal} / Day`)
           default: 
 
           if (budy.includes(`@6285731855426`)) {
