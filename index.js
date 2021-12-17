@@ -2334,12 +2334,11 @@ case 'meme':
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
                    case 'epep':
-                   if (isOwner) return
                    if (isLimit(sender)) return
 			        await limitAdd(sender)
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    F = body.slice(8)				    
-                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text=..${F}`)
+                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text=ss ${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
 break
@@ -2350,7 +2349,6 @@ break
                 case 'pubglogo':
                 case 'snowwrite':
                 case 'watercolour':
-                    if (isOwner) return
                     if (isLimit(sender)) return
 			       await limitAdd(sender)	
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
@@ -2361,18 +2359,16 @@ break
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					break
                     case 'phlogo':
-                    if (isOwner) return
                     if (isLimit(sender)) return
 			       await limitAdd(sender)	
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
                    var F = body.slice(9)
 				   var F1 = F.split("&")[0];
 				   var F2 = F.split("&")[1]; 
-                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text1=.${F1}&text2=${F2}`)
+                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text1=s ${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					break
 case 'artinama':  
-                    if (isOwner) return
 			        if (isLimit(sender)) return
 			        await limitAdd(sender)
                     if (args.length < 1) return reply('MASUKKAN NAMA')
@@ -2383,7 +2379,6 @@ case 'artinama':
                     reply(anu1)
                     break
        case 'artimimpi':  
-                    if (isOwner) return
 			        if (isLimit(sender)) return
 			        await limitAdd(sender)
                     if (args.length < 1) return reply('MASUKKAN MIMPI MU')
