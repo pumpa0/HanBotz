@@ -64,7 +64,7 @@ let wlcm = "" || fs.readFileSync('./media/gambar/welcome.png')
 let gdby = "" || fs.readFileSync('./media/gambar/goodbye.png')
 self = false
 blocked = []
-limitawal = 2
+limitawal = 10
 
 
 //[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
@@ -583,6 +583,18 @@ const linkwa = 'https://chat.whatsapp.com/'
            const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
 			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mHANBOTZ\x1b[1;37m]', color(pushname), 'Menggunakan Fitur', color(command), 'args :', color(args.length))
         	if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mHANBOTZ\x1b[1;37m]', color(pushname), 'Memakai Fitur', color(command), 'DI Group', color(groupName), 'args :', color(args.length))      
+        const runt = function (seconds) {
+  seconds = Number(seconds);
+  var d = Math.floor(seconds / (3600 * 24));
+  var h = Math.floor((seconds % (3600 * 24)) / 3600);
+  var m = Math.floor((seconds % 3600) / 60);
+  var s = Math.floor(seconds % 60);
+  var dDisplay = d > 0 ? d + (d == 1 ? " day, " : " Day, ") : "";
+  var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " Hour, ") : "";
+  var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " Minute, ") : "";
+  var sDisplay = s > 0 ? s + (s == 1 ? " second" : " Second") : "";
+  return dDisplay + hDisplay + mDisplay + sDisplay;
+};
 
                 var groups = pebz.chats.array.filter(v => v.jid.endsWith('g.us'))
 				var privat = pebz.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
@@ -2183,20 +2195,6 @@ case 'pacaran':
         mentions(teks, membr, true)
         break
 
-case 'tololserti':
-				    if (args.length < 1) return reply(`[❗] Example :\n${prefix}${command} HanBotz`)
-				    F = body.slice(12)
-				    sticWait(from)
-				    to = await getBuffer(`https://evilblackteam.nasiwebhost.com/serti1/img.php?nama=${F}`)
-				    pebz.sendMessage(from, to, image, {caption: 'OK it`s done', quoted: mek})
-				    break
-case 'ffserti':  
-					if (args.length < 1) return reply(`[❗] Example :\n${prefix}${command} whatsapp`)
-					sticWait(from)
-					ct = body.slice(9)
-					zhain = await getBuffer(`https://onlydevcity.xyz/FFSerti/img.php?nama=${ct}`)
-					pebz.sendMessage(from, zhain, image, {caption: 'NIH KACK', quoted: mek})
-					break
 case 'artinama':  
                     
                     if (args.length < 1) return reply('MASUKKAN NAMA')
@@ -2215,9 +2213,7 @@ case 'cerpen':
                    anu1 += `➻ *CERPEN* : ${anu.result.cerpen}\n`
                    reply(anu1)
                    break                  
-                   case 'samehadaku':  
-                   
-                   
+                   case 'samehadaku':             
                    F = body.slice(12)
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/samehadaku?q=${F}`)
                    anu2 = await getBuffer(anu.thumb)
@@ -2227,32 +2223,36 @@ case 'cerpen':
                    pebz.sendMessage(from, anu2, image, {caption: anu1, quoted: mek })
                    break
       case 'neon1':  
-                   
-                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
+                   if (isLimit(sender)) return
+			        await limitAdd(sender)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    
                    F = body.slice(7)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/neon_light?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break  
        case 'text3d':  
-                   
-                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
+                   if (isLimit(sender)) return
+			        await limitAdd(sender)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break                   
        case 'galaxy':  
-                   
-                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
+                   if (isLimit(sender)) return
+			        await limitAdd(sender)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/galaxywp?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
       case 'gaming':  
-                   
-                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
+                   if (isLimit(sender)) return
+			        await limitAdd(sender)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/gaming?text=${F}`)
@@ -2260,47 +2260,36 @@ case 'cerpen':
                    break
 case 'hartatahta':  
 case 'hartah':
-                   
-                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
+                   if (isLimit(sender)) return
+			        await limitAdd(sender)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://api.zeks.me/api/hartatahta?apikey=apivinz&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
       case 'colors':  
-                   
-                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} bot whatsapp*`)
+                   if (isLimit(sender)) return
+			        await limitAdd(sender)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/watercolor?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
 case 'darkjoke':  
-                   
+                   if (isLimit(sender)) return
+			        await limitAdd(sender)
                    anu = await fetchJson(`https://api.zeks.me/api/darkjokes?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`)
                    anu1 = await getBuffer(anu.result)
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
                    break
 case 'meme':  
-                   
+                   if (isLimit(sender)) return
+			        await limitAdd(sender)
                    anu = await fetchJson(`https://api.zeks.me/api/memeindo?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`)
                    anu1 = await getBuffer(anu.result)
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
-                   break
-case 'jadwalsholat':  
-                   
-                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} makassar*`)  
-                   
-                   F = body.slice(14)
-                   anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/jadwalshalat?daerah=${F}`)                   
-                   anu1 = `➻ *IMSYAK* : ${anu.Imsyak}\n`
-                   anu1 += `➻ *SUBUH* : ${anu.Subuh}\n`
-                   anu1 += `➻ *DHUHA* : ${anu.Dhuha}\n`
-                   anu1 += `➻ *DZUHUR* : ${anu.Dzuhur}\n`
-                   anu1 += `➻ *ASHAR* : ${anu.Ashar}\n`
-                   anu1 += `➻ *MAGRHRIB* : ${anu.Maghrib}\n`
-                   anu1 += `➻ *ISYA* : ${anu.Isya}\n` 
-                   reply(anu1)
                    break
        case 'pantun':  
                    
@@ -2308,44 +2297,11 @@ case 'jadwalsholat':
                    anu1 = `➻ *PANTUN* : ${anu.result}\n` 
                    reply(anu1)
                    break 
-                   case 'tebakgambar':  
-                    anu = await fetchJson(`https://api.zeks.me/api/tebakgambar?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`)
-                    anu1 = await getBuffer(anu.result.soal)
-                    anu2 = `➻ *JAWABAN* : ${anu.result.jawaban}`
-                    setTimeout( () => {
-                    pebz.sendMessage(from, anu1, image,{caption: 'Answer... Time 60 Seconds', quoted: mek})
-                    }, 1)
-                    setTimeout( () => {
-                    costum('50 More Seconds', text, tescuk, cr)
-                    }, 10000)                                                                                                                                   
-                    setTimeout( () => {
-                    costum('40 More Seconds', text, tescuk, cr)
-                    }, 20000)    
-                    setTimeout( () => {
-                    costum('30 More Seconds', text, tescuk, cr)
-                    }, 30000)    
-                    setTimeout( () => {
-                    costum('20 More Seconds', text, tescuk, cr)
-                    }, 40000)                                       
-                    setTimeout( () => {
-                    costum('10 More Seconds', text, tescuk, cr)
-                    }, 50000)                                                                                                                                                     
-                    setTimeout( () => {
-                    pebz.sendMessage(from, anu2, text,{quoted: mek})                   
-                    }, 60000)                                                                          
-                    break                
-case 'playstore':  
-                   
-                   anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/random_pantun`)
-                   anu1 = `➻ *PANTUN* : ${anu.result}\n` 
-                   reply(anu1)
-                   break       
-                   case 'ceklimit':
-                   reply (`Limit : ${limitawal} / Day`)
+                   case 'time':
+                   reply(runt)
                    break
-                   case 'limit':                     
-				    checkLimit(sender)
-					break 
+                   
+                   
           default: 
 
           if (budy.includes(`@6285731855426`)) {
