@@ -841,7 +841,7 @@ const pebz2 = {
             await pebz.sendMessage(from,di,image,{quoted: mek})
             break
     case 'runtime':
-            reply(`${runt(process.uptime())}`
+            reply(`${runt(process.uptime())}`)
             break  
     case 'tourl':
             if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedVideo ) && args.length == 0) {
