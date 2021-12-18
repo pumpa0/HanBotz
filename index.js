@@ -924,7 +924,7 @@ ${p}• ${prefix}apakah <text>${p}
 ${p}• ${prefix}kapankah <text>${p}
 ${p}• ${prefix}wangy <name> ${p}
 
-𝗢𝗧𝗛𝗘𝗥
+*𝗢𝗧𝗛𝗘𝗥*
 ${p}• ${prefix}tourl <reply>${p}
 ${p}• ${prefix}owner${p}
 ${p}• ${prefix}donate${p}
