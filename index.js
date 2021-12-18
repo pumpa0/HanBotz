@@ -65,6 +65,8 @@ let gdby = "" || fs.readFileSync('./media/gambar/goodbye.png')
 self = false
 blocked = []
 limitawal = 10
+zeks = https://api.zeks.me
+apibotz = HanBotzWa
 
 
 //[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
@@ -2261,14 +2263,14 @@ case 'cerpen':
 case 'darkjoke':  
                    if (isLimit(sender)) return
 			        await limitAdd(sender)
-                   anu = await fetchJson(`https://api.zeks.me/api/darkjokes?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`)
+                   anu = await fetchJson(`https://api.zeks.me/api/darkjokes?apikey=HanBotzWa`)
                    anu1 = await getBuffer(anu.result)
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
                    break
 case 'meme':  
                    if (isLimit(sender)) return
 			        await limitAdd(sender)
-                   anu = await fetchJson(`https://api.zeks.me/api/memeindo?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`)
+                   anu = await fetchJson(`https://api.zeks.me/api/memeindo?apikey=HanBotzWa`)
                    anu1 = await getBuffer(anu.result)
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
                    break
@@ -2281,7 +2283,7 @@ case 'meme':
                    case 'tebakgambar':
 					if (isLimit(sender)) return
                     await limitAdd(sender) 
-					anu = await fetchJson(`https://api.zeks.me/api/tebakgambar?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE`, {method: 'get'})
+					anu = await fetchJson(`https://api.zeks.me/api/tebakgambar?apikey=HanBotzWa`, {method: 'get'})
 					bufferkkk = await getBuffer(anu.result.soal)
 					setTimeout( () => {
 					reply('*Jawaban :* '+anu.result.jawaban) // ur cods
@@ -2331,15 +2333,15 @@ case 'meme':
 			        await limitAdd(sender)
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    F = body.slice(8)		    
-                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text=${F}`)
+                   anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
                    case 'epep':
                    if (isLimit(sender)) return
 			        await limitAdd(sender)
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
-                   F = body.slice(8)				    
-                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text=${F}`)
+                   F = body.slice(6)				    
+                   anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
 break
@@ -2356,7 +2358,7 @@ break
                    var F = body.slice(8)
 				   var F1 = F.split("&")[0];
 				   var F2 = F.split("&")[1]; 
-                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text1=${F1}&text2=${F2}`)
+                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=HanBotzWa&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					break
                     case 'phlogo':
@@ -2366,7 +2368,7 @@ break
                    var F = body.slice(8)
 				   var F1 = F.split("&")[0];
 				   var F2 = F.split("&")[1]; 
-                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&text1=${F1}&text2=${F2}`)
+                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=HanBotzWa&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					break
 case 'artinama':  
@@ -2374,7 +2376,7 @@ case 'artinama':
 			        await limitAdd(sender)
                     if (args.length < 1) return reply('MASUKKAN NAMA')
                     F = body.slice(10)
-                    anu = await fetchJson(`https://api.zeks.me/api/artinama?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&nama=${F}`)
+                    anu = await fetchJson(`https://api.zeks.me/api/artinama?apikey=HanBotzWa&nama=${F}`)
                     anu1 = `➻ *ARTI* : ${anu.result}\n`
                     
                     reply(anu1)
@@ -2384,7 +2386,7 @@ case 'artinama':
 			        await limitAdd(sender)
                     if (args.length < 1) return reply('MASUKKAN MIMPI MU')
                     F = body.slice(11)
-                    anu = await fetchJson(`https://api.zeks.me/api/artimimpi?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&q=${F}`)
+                    anu = await fetchJson(`https://api.zeks.me/api/artimimpi?apikey=HanBotzWa&q=${F}`)
                     anu1 = `➻ *ARTI* : ${anu.result.string}\n`
                     reply(anu1)
                     break
@@ -2393,10 +2395,11 @@ case 'kbbi':
 			       await limitAdd(sender)	
                    if (args.length < 1) return reply('Enter Query')
                    F = body.slice(6)
-                   anu2 = await fetchJson(`https://api.zeks.me/api/kbbi?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&q=${F}`)                      
+                   anu2 = await fetchJson(`https://api.zeks.me/api/kbbi?apikey=HanBotzWa&q=${F}`)                      
                    anu1 = `➻ *HASIL* : ${anu2.result}\n`                   
                    reply(anu1)
                    break
+
 
                    
           default: 
