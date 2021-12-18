@@ -67,6 +67,82 @@ blocked = []
 limitawal = 10
 zeks = "https://api.zeks.me"
 apibotz = "HanBotzWa"
+HardiApi = 'hardianto'
+
+//=====================================//
+
+const { audios } = require('./lib/audio.js')
+audio1 = fs.readFileSync('./media/audio3/nyz1.m4a')
+audio2 = fs.readFileSync('./media/audio3/nyz2.m4a')
+audio3 = fs.readFileSync('./media/audio3/nyz3.m4a')
+audio4 = fs.readFileSync('./media/audio3/nyz4.m4a')
+audio5 = fs.readFileSync('./media/audio3/nyz5.m4a')
+audio6 = fs.readFileSync('./media/audio3/nyz6.m4a')
+audio7 = fs.readFileSync('./media/audio3/nyz7.m4a')
+audio8 = fs.readFileSync('./media/audio3/nyz8.m4a')
+audio9 = fs.readFileSync('./media/audio3/nyz9.m4a')
+audio10 = fs.readFileSync('./media/audio3/nyz10.m4a')
+audio11 = fs.readFileSync('./media/audio3/nyz11.m4a')
+audio12 = fs.readFileSync('./media/audio3/nyz12.m4a')
+audio13 = fs.readFileSync('./media/audio3/nyz13.m4a')
+audio14 = fs.readFileSync('./media/audio3/nyz14.m4a')
+audio15 = fs.readFileSync('./media/audio3/nyz15.m4a')
+audio16 = fs.readFileSync('./media/audio3/nyz16.m4a')
+audio17 = fs.readFileSync('./media/audio3/nyz17.m4a')
+audio18 = fs.readFileSync('./media/audio3/nyz18.m4a')
+audio19 = fs.readFileSync('./media/audio3/nyz19.m4a')
+audio20 = fs.readFileSync('./media/audio3/nyz20.m4a')
+audio22 = fs.readFileSync('./media/audio3/nyz22.m4a')
+audio23 = fs.readFileSync('./media/audio3/nyz23.m4a')
+audio24 = fs.readFileSync('./media/audio3/nyz24.m4a')
+audio25 = fs.readFileSync('./media/audio3/nyz25.m4a')
+audio26 = fs.readFileSync('./media/audio3/nyz26.m4a')
+audio27 = fs.readFileSync('./media/audio3/nyz27.m4a')
+audio28 = fs.readFileSync('./media/audio3/nyz28.m4a')
+audio29 = fs.readFileSync('./media/audio3/nyz29.m4a')
+audio30 = fs.readFileSync('./media/audio3/nyz30.m4a')
+audio31 = fs.readFileSync('./media/audio3/nyz31.m4a')
+audio32 = fs.readFileSync('./media/audio3/nyz32.m4a')
+audio33 = fs.readFileSync('./media/audio3/nyz33.m4a')
+audio34 = fs.readFileSync('./media/audio3/nyz34.m4a')
+audio35 = fs.readFileSync('./media/audio3/nyz35.m4a')
+sound1 = fs.readFileSync('./media/sound2/sound1.mp3')
+sound2 = fs.readFileSync('./media/sound2/sound2.mp3')
+sound3 = fs.readFileSync('./media/sound2/sound3.mp3')
+sound4 = fs.readFileSync('./media/sound2/sound4.mp3')
+sound5 = fs.readFileSync('./media/sound2/sound5.mp3')
+sound6 = fs.readFileSync('./media/sound2/sound6.mp3')
+sound7 = fs.readFileSync('./media/sound2/sound7.mp3')
+sound8 = fs.readFileSync('./media/sound2/sound8.mp3')
+sound9 = fs.readFileSync('./media/sound2/sound9.mp3')
+sound10 = fs.readFileSync('./media/sound2/sound10.mp3')
+sound11 = fs.readFileSync('./media/sound2/sound11.mp3')
+sound12 = fs.readFileSync('./media/sound2/sound12.mp3')
+sound13 = fs.readFileSync('./media/sound2/sound13.mp3')
+sound14 = fs.readFileSync('./media/sound2/sound14.mp3')
+sound15 = fs.readFileSync('./media/sound2/sound15.mp3')
+sound16 = fs.readFileSync('./media/sound2/sound16.mp3')
+sound17 = fs.readFileSync('./media/sound2/sound17.mp3')
+sound18 = fs.readFileSync('./media/sound2/sound18.mp3')
+sound19 = fs.readFileSync('./media/sound2/sound19.mp3')
+sound20 = fs.readFileSync('./media/sound2/sound20.mp3')
+sound22 = fs.readFileSync('./media/sound2/sound22.mp3')
+sound23 = fs.readFileSync('./media/sound2/sound23.mp3')
+sound24 = fs.readFileSync('./media/sound2/sound24.mp3')
+sound25 = fs.readFileSync('./media/sound2/sound25.mp3')
+sound26 = fs.readFileSync('./media/sound2/sound1.mp3')
+sound27 = fs.readFileSync('./media/sound2/sound2.mp3')
+sound28 = fs.readFileSync('./media/sound2/sound3.mp3')
+sound29 = fs.readFileSync('./media/sound2/sound4.mp3')
+sound30 = fs.readFileSync('./media/sound2/sound5.mp3')
+sound31 = fs.readFileSync('./media/sound2/sound6.mp3')
+sound32 = fs.readFileSync('./media/sound2/sound7.mp3')
+sound33 = fs.readFileSync('./media/sound2/sound8.mp3')
+sound34 = fs.readFileSync('./media/sound2/sound9.mp3')
+sound35 = fs.readFileSync('./media/sound2/sound10.mp3')
+sound36 = fs.readFileSync('./media/sound2/sound11.mp3')
+
+//=====================================/
 
 
 //[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
@@ -2263,14 +2339,14 @@ case 'cerpen':
 case 'darkjoke':  
                    if (isLimit(sender)) return
 			        await limitAdd(sender)
-                   anu = await fetchJson(`https://api.zeks.me/api/darkjokes?apikey=HanBotzWa`)
+                   anu = await fetchJson(`${zeks}/api/darkjokes?apikey=${apibotz}`)
                    anu1 = await getBuffer(anu.result)
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
                    break
 case 'meme':  
                    if (isLimit(sender)) return
 			        await limitAdd(sender)
-                   anu = await fetchJson(`https://api.zeks.me/api/memeindo?apikey=HanBotzWa`)
+                   anu = await fetchJson(`${zeks}/api/memeindo?apikey=${apibotz}`)
                    anu1 = await getBuffer(anu.result)
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
                    break
@@ -2283,7 +2359,7 @@ case 'meme':
                    case 'tebakgambar':
 					if (isLimit(sender)) return
                     await limitAdd(sender) 
-					anu = await fetchJson(`https://api.zeks.me/api/tebakgambar?apikey=HanBotzWa`, {method: 'get'})
+					anu = await fetchJson(`${zeks}/api/tebakgambar?apikey=${apibotz}`, {method: 'get'})
 					bufferkkk = await getBuffer(anu.result.soal)
 					setTimeout( () => {
 					reply('*Jawaban :* '+anu.result.jawaban) // ur cods
@@ -2358,7 +2434,7 @@ break
                    var F = body.slice(8)
 				   var F1 = F.split("&")[0];
 				   var F2 = F.split("&")[1]; 
-                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=HanBotzWa&text1=${F1}&text2=${F2}`)
+                   anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					break
                     case 'phlogo':
@@ -2368,7 +2444,7 @@ break
                    var F = body.slice(8)
 				   var F1 = F.split("&")[0];
 				   var F2 = F.split("&")[1]; 
-                   anu = await getBuffer(`https://api.zeks.me/api/${command}?apikey=HanBotzWa&text1=${F1}&text2=${F2}`)
+                   anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					break
 case 'artinama':  
@@ -2376,7 +2452,7 @@ case 'artinama':
 			        await limitAdd(sender)
                     if (args.length < 1) return reply('MASUKKAN NAMA')
                     F = body.slice(10)
-                    anu = await fetchJson(`https://api.zeks.me/api/artinama?apikey=HanBotzWa&nama=${F}`)
+                    anu = await fetchJson(`${zeks}/api/artinama?apikey=${apibotz}&nama=${F}`)
                     anu1 = `➻ *ARTI* : ${anu.result}\n`
                     
                     reply(anu1)
@@ -2386,7 +2462,7 @@ case 'artinama':
 			        await limitAdd(sender)
                     if (args.length < 1) return reply('MASUKKAN MIMPI MU')
                     F = body.slice(11)
-                    anu = await fetchJson(`https://api.zeks.me/api/artimimpi?apikey=HanBotzWa&q=${F}`)
+                    anu = await fetchJson(`${zeks}/api/artimimpi?apikey=${apibotz}&q=${F}`)
                     anu1 = `➻ *ARTI* : ${anu.result.string}\n`
                     reply(anu1)
                     break
@@ -2395,10 +2471,278 @@ case 'kbbi':
 			       await limitAdd(sender)	
                    if (args.length < 1) return reply('Enter Query')
                    F = body.slice(6)
-                   anu2 = await fetchJson(`https://api.zeks.me/api/kbbi?apikey=HanBotzWa&q=${F}`)                      
+                   anu2 = await fetchJson(`${zeks}/api/kbbi?apikey=${apibotz}&q=${F}`)                      
                    anu1 = `➻ *HASIL* : ${anu2.result}\n`                   
                    reply(anu1)
                    break
+//=====================================/
+
+case 'audio1':
+            sendVn(audio1)
+            break   
+            case 'audio2':
+            sendVn(audio2)
+            break       
+            case 'audio3':
+            sendVn(audio3)
+            break       
+            case 'audio4':
+            sendVn(audio4)
+            break       
+            case 'audio5':
+            sendVn(audio5)
+            break       
+            case 'audio6':
+            sendVn(audio6)
+            break       
+            case 'audio7':
+            sendVn(audio7)
+            break       
+            case 'audio8':
+            sendVn(audio8)
+            break       
+            case 'audio9':
+            sendVn(audio9)
+            break       
+            case 'audio10':
+            sendVn(audio10)
+            break       
+            case 'audio11':
+            sendVn(audio11)
+            break       
+            case 'audio12':
+            sendVn(audio12)
+            break       
+            case 'audio13':
+            sendVn(audio13)
+            break       
+            case 'audio14':
+            sendVn(audio14)
+            break       
+            case 'audio15':
+            sendVn(audio15)
+            break       
+            case 'audio16':
+            sendVn(audio16)
+            break       
+            case 'audio17':
+            sendVn(audio17)
+            break       
+            case 'audio18':
+            sendVn(audio18)
+            break       
+            case 'audio19':
+            sendVn(audio19)
+            break  
+            case 'audio20':
+            sendAudio(audio20)
+            break 
+            case 'audio21':
+            sendVn(audio21)
+            break   
+            case 'audio22':
+            sendVn(audio22)
+            break   
+            case 'audio23':
+            sendVn(audio23)
+            break   
+            case 'audio24':
+            sendVn(audio24)
+            break   
+            case 'audio25':
+            sendVn(audio25)
+            break   
+            case 'audio26':
+            sendVn(audio26)
+            break   
+            case 'audio27':
+            sendVn(audio27)
+            break   
+            case 'audio28':
+            sendVn(audio28)
+            break   
+            case 'audio29':
+            sendVn(audio29)
+            break   
+            case 'audio30':
+            sendVn(audio30)
+            break   
+            case 'audio31':
+            sendVn(audio31)
+            break   
+            case 'audio32':
+            sendVn(audio32)
+            break   
+            case 'audio33':
+            sendVn(audio33)
+            break   
+            case 'audio34':
+            sendVn(audio34)
+            break   
+            case 'audio35':
+            sendVn(audio35)
+            break
+             case 'sound1':
+            sendVn(sound1)
+            break   
+            case 'sound2':
+            sendVn(sound2)
+            break       
+            case 'sound3':
+            sendVn(sound3)
+            break       
+            case 'sound4':
+            sendVn(sound4)
+            break       
+            case 'sound5':
+            sendVn(sound5)
+            break       
+            case 'sound6':
+            sendVn(sound6)
+            break       
+            case 'sound7':
+            sendVn(sound7)
+            break       
+            case 'sound8':
+            sendVn(sound8)
+            break       
+            case 'sound9':
+            sendVn(sound9)
+            break       
+            case 'sound10':
+            sendVn(sound10)
+            break       
+            case 'sound11':
+            sendVn(sound11)
+            break       
+            case 'sound12':
+            sendVn(sound12)
+            break       
+            case 'sound13':
+            sendVn(sound13)
+            break       
+            case 'sound14':
+            sendVn(sound14)
+            break       
+            case 'sound15':
+            sendVn(sound15)
+            break       
+            case 'sound16':
+            sendVn(sound16)
+            break       
+            case 'sound17':
+            sendVn(sound17)
+            break       
+            case 'sound18':
+            sendVn(sound18)
+            break       
+            case 'sound19':
+            sendVn(sound19)
+            break  
+            case 'sound20':
+            sendVn(sound20)
+            break 
+            case 'sound21':
+            sendVn(sound21)
+            break   
+            case 'sound22':
+            sendVn(sound22)
+            break   
+            case 'sound23':
+            sendVn(sound23)
+            break   
+            case 'sound24':
+            sendVn(sound24)
+            break   
+            case 'sound25':
+            sendVn(sound25)
+            break                	  	
+            case 'sound26':
+            sendVn(sound26)
+            break   
+            case 'sound27':
+            sendVn(sound27)
+            break       
+            case 'sound28':
+            sendVn(sound28)
+            break       
+            case 'sound29':
+            sendVn(sound29)
+            break       
+            case 'sound30':
+            sendVn(sound30)
+            break       
+            case 'sound32':
+            sendVn(sound31)
+            break       
+            case 'sound32':
+            sendVn(sound32)
+            break       
+            case 'sound33':
+            sendVn(sound33)
+            break       
+            case 'sound34':
+            sendVn(sound34)
+            break       
+            case 'sound35':
+            sendVn(sound35)
+            break       
+            case 'sound36':
+            sendVn(sound36)
+            break 
+            case 'audiomenu':
+		    pebz.sendMessage(from, audios(prefix), text, {quoted: troli, contextInfo: { forwardingScore: 508, isForwarded: true}})
+            break
+
+//=====================================//
+
+case 'smeme': case 'stickmeme': case 'sm': {
+           var top = q.split('|')[0] ? q.split('|')[0] : ''
+           var bottom = q.split('|')[1] ? q.split('|')[1] : ''
+           var imgbb = require('imgbb-uploader')
+           if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+           ger = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+           owgi = await  pebz.downloadAndSaveMediaMessage(ger)
+           anu = await imgbb("f0b190d67308d34811fab9c56fe8aba7", owgi)
+           tekks = `${anu.display_url}`
+           ranp = getRandom('.gif')
+           rano = getRandom('.webp')
+           anu1 = `https://api.memegen.link/images/custom/${top}/${bottom}.png?background=${tekks}`
+           sendStickerFromUrl(from, `${anu1}`)
+           } else {
+           reply('Gunakan foto!')
+           } 
+           }
+           break      
+      case 'textstic':
+            if (args.length == 0) return reply(`Example: ${prefix + command} pebz`)
+            buffer = await getBuffer(`https://hardianto.xyz/api/ttpcustom?text=${q}&color=black&apikey=${HardiApi}`)
+            pebz.sendMessage(from, buffer, sticker, { quoted: troli })
+            break
+case 'potomeme': case 'pmeme':
+           if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
+           if (!q.includes('|')) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
+           try {
+           if (!isQuotedImage && !isQuotedSticker) return reply(`REPLY GAMBAR ATAU STICKER!!`)
+           reply(mess.wait)
+           var teks1 = q.split('|')[0] ? q.split('|')[0] : ''
+           var teks2 = q.split('|')[1] ? q.split('|')[1] : ''
+           var imgbb = require('imgbb-uploader')
+           var enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+           var media = await pebz.downloadAndSaveMediaMessage(enmedia)
+           var njay = await imgbb('520bd6f6209077d1777c2a4f20c509c2', media)
+           var resu = await getBuffer(`https://api.memegen.link/images/custom/${teks1}/${teks2}.png?background=${njay.display_url}`)
+           pebz.sendMessage(from, resu, image, {quoted: troli})
+           fs.unlinkSync(media)
+           } catch (e) {
+           return reply(`${e}`)
+           console.log(e)
+           }
+           break   
+
+//=====================================//
+
+
 
 
                    
@@ -2417,18 +2761,6 @@ const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   }
                   if (budy.includes(`@6285807149213`)) {
-const rell = fs.readFileSync('./media/sticker/TagBot.webp');
-pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-                  }
-                  if (budy.includes(`HanBot`)) {
-const rell = fs.readFileSync('./media/sticker/TagBot.webp');
-pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-                  }
-                  if (budy.includes(`hanbot`)) {
-const rell = fs.readFileSync('./media/sticker/TagBot.webp');
-pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-                  }
-                  if (budy.includes(`HANBOT`)) {
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   }
