@@ -68,6 +68,8 @@ limitawal = 20
 zeks = "https://api.zeks.me"
 apibotz = "HanBotzWa"
 HardiApi = 'hardianto'
+webs = "bit.ly/HanBotz"
+offgrup = "bit.ly/OfficialGroupHanBotz"
 
 //=====================================//
 
@@ -799,79 +801,78 @@ ${p}• ${prefix}colors  ${p}
 
 *𝗔𝗨𝗗𝗜𝗢*
 ${p}• ${prefix}audio1${p}
-${p}• ${prefix}audio2${p}
+    ${p}• ${prefix}audio2${p}
 ${p}• ${prefix}audio3${p}
-${p}• ${prefix}audio4${p}
+    ${p}• ${prefix}audio4${p}
 ${p}• ${prefix}audio5${p}
-${p}• ${prefix}audio6${p}
+    ${p}• ${prefix}audio6${p}
 ${p}• ${prefix}audio7${p}
-${p}• ${prefix}audio8${p}
+    ${p}• ${prefix}audio8${p}
 ${p}• ${prefix}audio9${p}
-${p}• ${prefix}audio10${p}
+    ${p}• ${prefix}audio10${p}
 ${p}• ${prefix}audio11${p}
-${p}• ${prefix}audio12${p}
+    ${p}• ${prefix}audio12${p}
 ${p}• ${prefix}audio13${p}
-${p}• ${prefix}audio14${p}
+    ${p}• ${prefix}audio14${p}
 ${p}• ${prefix}audio15${p}
-${p}• ${prefix}audio16${p}
+    ${p}• ${prefix}audio16${p}
 ${p}• ${prefix}audio17${p}
-${p}• ${prefix}audio18${p}
+    ${p}• ${prefix}audio18${p}
 ${p}• ${prefix}audio19${p}
-${p}• ${prefix}audio20${p}
+    ${p}• ${prefix}audio20${p}
 ${p}• ${prefix}audio21${p}
-${p}• ${prefix}audio22${p}
+    ${p}• ${prefix}audio22${p}
 ${p}• ${prefix}audio23${p}
-${p}• ${prefix}audio24${p}
+    ${p}• ${prefix}audio24${p}
 ${p}• ${prefix}audio25${p}
-${p}• ${prefix}audio26${p}
+    ${p}• ${prefix}audio26${p}
 ${p}• ${prefix}audio27${p}
-${p}• ${prefix}audio28${p}
+    ${p}• ${prefix}audio28${p}
 ${p}• ${prefix}audio29${p}
-${p}• ${prefix}audio30${p}
+    ${p}• ${prefix}audio30${p}
 ${p}• ${prefix}audio31${p}
-${p}• ${prefix}audio32${p}
+    ${p}• ${prefix}audio32${p}
 ${p}• ${prefix}audio33${p}
-${p}• ${prefix}audio34${p}
+    ${p}• ${prefix}audio34${p}
 ${p}• ${prefix}audio35${p}
-${p}• ${prefix}audio36${p}
 
 *𝗦𝗢𝗨𝗡𝗗*
 ${p}• ${prefix}sound1${p}
-${p}• ${prefix}sound2${p}
+    ${p}• ${prefix}sound2${p}
 ${p}• ${prefix}sound3${p}
-${p}• ${prefix}sound4${p}
+    ${p}• ${prefix}sound4${p}
 ${p}• ${prefix}sound5${p}
-${p}• ${prefix}sound6${p}
+    ${p}• ${prefix}sound6${p}
 ${p}• ${prefix}sound7${p}
-${p}• ${prefix}sound8${p}
+    ${p}• ${prefix}sound8${p}
 ${p}• ${prefix}sound9${p}
-${p}• ${prefix}sound10${p}
+    ${p}• ${prefix}sound10${p}
 ${p}• ${prefix}sound11${p}
-${p}• ${prefix}sound12${p}
+    ${p}• ${prefix}sound12${p}
 ${p}• ${prefix}sound13${p}
-${p}• ${prefix}sound14${p}
+    ${p}• ${prefix}sound14${p}
 ${p}• ${prefix}sound15${p}
-${p}• ${prefix}sound16${p}
+    ${p}• ${prefix}sound16${p}
 ${p}• ${prefix}sound17${p}
-${p}• ${prefix}sound18${p}
+    ${p}• ${prefix}sound18${p}
 ${p}• ${prefix}sound19${p}
-${p}• ${prefix}sound20${p}
+    ${p}• ${prefix}sound20${p}
 ${p}• ${prefix}sound21${p}
-${p}• ${prefix}sound22${p}
+    ${p}• ${prefix}sound22${p}
 ${p}• ${prefix}sound23${p}
-${p}• ${prefix}sound24${p}
+    ${p}• ${prefix}sound24${p}
 ${p}• ${prefix}sound25${p}
-${p}• ${prefix}sound26${p}
+    ${p}• ${prefix}sound26${p}
 ${p}• ${prefix}sound27${p}
-${p}• ${prefix}sound28${p}
+    ${p}• ${prefix}sound28${p}
 ${p}• ${prefix}sound29${p}
-${p}• ${prefix}sound30${p}
+    ${p}• ${prefix}sound30${p}
 ${p}• ${prefix}sound31${p}
-${p}• ${prefix}sound32${p}
+    ${p}• ${prefix}sound32${p}
 ${p}• ${prefix}sound33${p}
-${p}• ${prefix}sound34${p}
+    ${p}• ${prefix}sound34${p}
 ${p}• ${prefix}sound35${p}
-${p}• ${prefix}sound36${p}
+    ${p}• ${prefix}sound36${p}
 
 *𝗖𝗛𝗘𝗖𝗞𝗘𝗥*
 ${p}• ${prefix}cantikcek <name>${p}
@@ -932,9 +933,9 @@ ${p}• ${prefix}report <text>${p}
 
 
 *Website*
-• bit.ly/HanBotz
+• ${webs}
 *Official Group*
-• bit.ly/OfficialGroupHanBotz`
+• ${offgrup}`
 
            but = [
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
