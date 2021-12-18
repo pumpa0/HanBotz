@@ -2204,6 +2204,7 @@ case 'cerpen':
                    anu1 += `➻ *CERPEN* : ${anu.result.cerpen}\n`
                    reply(anu1)
                    break                  
+                   
                    case 'samehadaku':             
                    F = body.slice(12)
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/samehadaku?q=${F}`)
@@ -2387,6 +2388,15 @@ case 'artinama':
                     anu1 = `➻ *ARTI* : ${anu.result.string}\n`
                     reply(anu1)
                     break
+case 'kbbi':  
+			       if (isLimit(sender)) return
+			       await limitAdd(sender)	
+                   if (args.length < 1) return reply('Enter Query')
+                   F = body.slice(6)
+                   anu2 = await fetchJson(`https://api.zeks.me/api/kbbi?apikey=ubtieIG43bZfHt3RSYMtLlU4MIE&q=${F}`)                      
+                   anu1 = `➻ *HASIL* : ${anu2.result}\n`                   
+                   reply(anu1)
+                   break
 
                    
           default: 
