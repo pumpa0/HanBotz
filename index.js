@@ -65,8 +65,8 @@ let gdby = "" || fs.readFileSync('./media/gambar/goodbye.png')
 self = false
 blocked = []
 limitawal = 10
-zeks = https://api.zeks.me
-apibotz = HanBotzWa
+zeks = "https://api.zeks.me"
+apibotz = "HanBotzWa"
 
 
 //[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
