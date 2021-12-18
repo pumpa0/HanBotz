@@ -64,7 +64,7 @@ let wlcm = "" || fs.readFileSync('./media/gambar/welcome.png')
 let gdby = "" || fs.readFileSync('./media/gambar/goodbye.png')
 self = false
 blocked = []
-limitawal = 10
+limitawal = 20
 zeks = "https://api.zeks.me"
 apibotz = "HanBotzWa"
 HardiApi = 'hardianto'
@@ -195,7 +195,7 @@ sound36 = fs.readFileSync('./media/sound2/sound11.mp3')
 pebz.ReconnectMode = 2
 pebz.logger.level = 'warn'
 pebz.version = [2, 2143, 8]
-pebz.browserDescription = ['Nasa', 'Safari', '4.1']
+pebz.browserDescription = ['Nasa', 'Safari', '4.5']
 console.log(start)
 console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','Hanz')
 pebz.on('qr', qr => {
@@ -742,6 +742,7 @@ ${p}• ${prefix}ytsearch <query>${p}
 
 *𝗦𝗧𝗜𝗖𝗞𝗘𝗥*
 ${p}• ${prefix}attp <text>${p}
+${p}• ${prefix}textstic <text>${p}
 ${p}• ${prefix}sticker <reply>${p}
 ${p}• ${prefix}stickergif <reply>${p}
 ${p}• ${prefix}dogestick${p}
@@ -751,16 +752,125 @@ ${p}• ${prefix}animestick${p}
 ${p}• ${prefix}toimg <replysticker>${p}
 
 *𝗦𝗘𝗔𝗥𝗖𝗛*
+${p}• ${prefix}pantun${p}
 ${p}• ${prefix}lirik <query>${p}
 ${p}• ${prefix}wiki <query>${p}
+${p}• ${prefix}cerpen <query>${p}
 ${p}• ${prefix}pinterest <query>${p}
 ${p}️• ${prefix}imgsearch <query>${p}
+${p}• ${prefix}samehadaku <query>${p}
 
-*𝗚𝗔𝗠𝗘*
-${p}• ${prefix}suit${p}
-${p}• ${prefix}slot${p}
-${p}• ${prefix}herolist ${p}
-${p}• ${prefix}herodetail <name>${p}
+*𝗠𝗔𝗞𝗘𝗥*
+${p}• ${prefix}phlogo
+${p}• ${prefix}wolflogo
+${p}• ${prefix}pubglogo
+${p}• ${prefix}logoaveng
+${p}• ${prefix}marvellogo
+${p}• ${prefix}watercolour
+${p}• ${prefix}qrencode
+${p}• ${prefix}barcode
+${p}• ${prefix}bneon
+${p}• ${prefix}matrix
+${p}• ${prefix}breakwall
+${p}• ${prefix}gneon
+${p}• ${prefix}dropwater
+${p}• ${prefix}tfire
+${p}• ${prefix}sandw
+${p}• ${prefix}gplaybutton
+${p}• ${prefix}splaybutton
+${p}• ${prefix}text3dbox
+${p}• ${prefix}logobp
+${p}• ${prefix}leavest
+${p}• ${prefix}thundertext
+${p}• ${prefix}tlight
+${p}• ${prefix}naruto
+${p}• ${prefix}crosslogo
+${p}• ${prefix}cslogo
+${p}• ${prefix}crismes
+${p}• ${prefix}flametext
+${p}• ${prefix}glowtext
+${p}• ${prefix}smoketext
+${p}• ${prefix}flowertext
+${p}• ${prefix}lithgtext
+${p}• ${prefix}galaxy  
+${p}• ${prefix}text3d  
+${p}• ${prefix}neon1  
+${p}• ${prefix}colors  
+
+*𝗔𝗨𝗗𝗜𝗢*
+${p}• ${prefix}audio1
+${p}• ${prefix}audio2
+${p}• ${prefix}audio3
+${p}• ${prefix}audio4
+${p}• ${prefix}audio5
+${p}• ${prefix}audio6
+${p}• ${prefix}audio7
+${p}• ${prefix}audio8
+${p}• ${prefix}audio9
+${p}• ${prefix}audio10
+${p}• ${prefix}audio11
+${p}• ${prefix}audio12
+${p}• ${prefix}audio13
+${p}• ${prefix}audio14
+${p}• ${prefix}audio15
+${p}• ${prefix}audio16
+${p}• ${prefix}audio17
+${p}• ${prefix}audio18
+${p}• ${prefix}audio19
+${p}• ${prefix}audio20
+${p}• ${prefix}audio21
+${p}• ${prefix}audio22
+${p}• ${prefix}audio23
+${p}• ${prefix}audio24
+${p}• ${prefix}audio25
+${p}• ${prefix}audio26
+${p}• ${prefix}audio27
+${p}• ${prefix}audio28
+${p}• ${prefix}audio29
+${p}• ${prefix}audio30
+${p}• ${prefix}audio31
+${p}• ${prefix}audio32
+${p}• ${prefix}audio33
+${p}• ${prefix}audio34
+${p}• ${prefix}audio35
+
+*𝗦𝗢𝗨𝗡𝗗*
+${p}• ${prefix}sound1
+${p}• ${prefix}sound2
+${p}• ${prefix}sound3
+${p}• ${prefix}sound4
+${p}• ${prefix}sound5
+${p}• ${prefix}sound6
+${p}• ${prefix}sound7
+${p}• ${prefix}sound8
+${p}• ${prefix}sound9
+${p}• ${prefix}sound10
+${p}• ${prefix}sound11
+${p}• ${prefix}sound12
+${p}• ${prefix}sound13
+${p}• ${prefix}sound14
+${p}• ${prefix}sound15
+${p}• ${prefix}sound16
+${p}• ${prefix}sound17
+${p}• ${prefix}sound18
+${p}• ${prefix}sound19
+${p}• ${prefix}sound20
+${p}• ${prefix}sound21
+${p}• ${prefix}sound22
+${p}• ${prefix}sound23
+${p}• ${prefix}sound24
+${p}• ${prefix}sound25
+${p}• ${prefix}sound26
+${p}• ${prefix}sound27
+${p}• ${prefix}sound28
+${p}• ${prefix}sound29
+${p}• ${prefix}sound30
+${p}• ${prefix}sound31
+${p}• ${prefix}sound32
+${p}• ${prefix}sound33
+${p}• ${prefix}sound34
+${p}• ${prefix}sound35
+${p}• ${prefix}sound36
 
 *𝗖𝗛𝗘𝗖𝗞𝗘𝗥*
 ${p}• ${prefix}cantikcek <name>${p}
@@ -794,6 +904,16 @@ ${p}• ${prefix}pakboy ${p}
 ${p}• ${prefix}pakgirl ${p}
 ${p}• ${prefix}pacaran ${p}
 
+*𝗙𝗨𝗡*
+${p}• ${prefix}meme  
+${p}• ${prefix}darkjoke  
+
+*𝗚𝗔𝗠𝗘*
+${p}• ${prefix}suit${p}
+${p}• ${prefix}slot${p}
+${p}• ${prefix}herolist ${p}
+${p}• ${prefix}herodetail <name>${p}
+${p}• ${prefix}tebakgambar
 
 *𝗥𝗔𝗡𝗗𝗢𝗠*
 ${p}• ${prefix}say <text>${p}
@@ -841,11 +961,12 @@ const simple2 =`
 
 *𝗬𝗢𝗨𝗧𝗨𝗕𝗘*
 • ${prefix}ytmp3 <link>
-• ${prefix}ytmp4 <link>
+• ${prefix}ytmp4-(quality) <link> 
 • ${prefix}ytsearch <query>
 
 *𝗦𝗧𝗜𝗖𝗞𝗘𝗥*
 • ${prefix}attp <text>
+• ${prefix}textstic <text>
 • ${prefix}sticker <reply>
 • ${prefix}stickergif <reply>
 • ${prefix}dogestick
@@ -855,22 +976,107 @@ const simple2 =`
 • ${prefix}toimg <replysticker>
 
 *𝗦𝗘𝗔𝗥𝗖𝗛*
-• ${prefix}lirik  <query>
+• ${prefix}pantun
+• ${prefix}lirik <query>
 • ${prefix}wiki <query>
+• ${prefix}cerpen <query>
 • ${prefix}pinterest <query>
 ️• ${prefix}imgsearch <query>
+• ${prefix}samehadaku <query>
+
+*𝗠𝗔𝗞𝗘𝗥*
+• ${prefix}phlogo
+• ${prefix}wolflogo
+• ${prefix}pubglogo
+• ${prefix}logoaveng
+• ${prefix}marvellogo
+• ${prefix}watercolour
+• ${prefix}qrencode
+• ${prefix}barcode
+• ${prefix}bneon
+• ${prefix}matrix
+• ${prefix}breakwall
+• ${prefix}gneon
+• ${prefix}dropwater
+• ${prefix}tfire
+• ${prefix}sandw
+• ${prefix}gplaybutton
+• ${prefix}splaybutton
+• ${prefix}text3dbox
+• ${prefix}logobp
+• ${prefix}leavest
+• ${prefix}thundertext
+• ${prefix}tlight
+• ${prefix}naruto
+• ${prefix}crosslogo
+• ${prefix}cslogo
+• ${prefix}crismes
+• ${prefix}flametext
+• ${prefix}glowtext
+• ${prefix}smoketext
+• ${prefix}flowertext
+• ${prefix}lithgtext
+• ${prefix}galaxy  
+• ${prefix}text3d  
+• ${prefix}neon1  
+• ${prefix}colors  
+
+*𝗔𝗨𝗗𝗜𝗢*
+• ${prefix}audio (1-35
+
+*𝗦𝗢𝗨𝗡𝗗*
+• ${prefix}sound (1-36)
+
+*𝗖𝗛𝗘𝗖𝗞𝗘𝗥*
+• ${prefix}cantikcek <name>
+• ${prefix}gantengcek <name>
+• ${prefix}jelekcek <name>
+• ${prefix}begocek <name>
+• ${prefix}nolepcek <name>
+• ${prefix}jagocek <name>
+• ${prefix}jahatcek <name>
+• ${prefix}pintarcek <name>
+• ${prefix}bebancek <name>
+• ${prefix}haramcek <name>
+• ${prefix}pakboycek <name>
+• ${prefix}pakgirlcek <name>
+
+*𝗧𝗔𝗚*
+• ${prefix}gay 
+• ${prefix}lesby 
+• ${prefix}cantik 
+• ${prefix}ganteng 
+• ${prefix}jelek 
+• ${prefix}bego 
+• ${prefix}nolep 
+• ${prefix}jago 
+• ${prefix}jahat 
+• ${prefix}pintar 
+• ${prefix}beban 
+• ${prefix}baik 
+• ${prefix}haram 
+• ${prefix}pakboy 
+• ${prefix}pakgirl 
+• ${prefix}pacaran 
+
+*𝗙𝗨𝗡*
+• ${prefix}meme  
+• ${prefix}darkjoke  
 
 *𝗚𝗔𝗠𝗘*
 • ${prefix}suit
 • ${prefix}slot
+• ${prefix}herolist 
+• ${prefix}herodetail <name>
+• ${prefix}tebakgambar
 
-*𝗚𝗔𝗕𝗨𝗧*
+*𝗥𝗔𝗡𝗗𝗢𝗠*
 • ${prefix}say <text>
+• ${prefix}sayy <text>
 • ${prefix}rate <???>
 • ${prefix}apakah <text>
 • ${prefix}kapankah <text>
-• ${prefix}cantikcek <name>
-• ${prefix}gantengcek <name>
+• ${prefix}wangy <name> 
 
 𝗢𝗧𝗛𝗘𝗥
 • ${prefix}tourl <reply>
@@ -2379,38 +2585,63 @@ case 'meme':
 					pebz.sendMessage(from, bufferkkk, image, { caption: '_Jelaskan Apa Maksud Gambar Ini_', quoted: mek }) // ur cods
 					}, 0) // 1000 = 1s,
 					
-					break  
+					break
+
+//=====================================//
                        /*TEXT MAKER*/
-                case 'qrencode':
-                case 'barcode':
                 case 'bneon':
-                case 'matrix':
-                case 'breakwall':
                 case 'gneon':
-                case 'dropwater':
-                case 'tfire':
-                case 'sandw':
-                case 'gplaybutton':
-                case 'splaybutton':
-                case 'text3dbox':
-                case 'logobp':
-                case 'leavest':
-                case 'thundertext':
-                case 'tlight':
-                case 'naruto':
-                case 'crosslogo':
-                case 'cslogo':
-                case 'crismes':
-                case 'flametext':
-                case 'glowtext':
-                case 'smoketext':
-                case 'flowertext':
-                case 'lithgtext':
-                   
-                   if (isLimit(sender)) return
+                case 'tfire' :
+                case 'sandw' :
+                case 'gtext':
+                 if (isLimit(sender)) return
 			        await limitAdd(sender)
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
-                   F = body.slice(8)		    
+                   F = body.slice(7)		    
+                   anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+                   break
+case 'breakwall':
+case 'dropwater':
+case 'text3dbox':
+case 'crosslogo':
+case 'flametext':
+case 'smoketext':
+case 'lithgtext':
+if (isLimit(sender)) return
+			        await limitAdd(sender)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
+                   F = body.slice(11)		    
+                   anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+                   break
+case 'barcode':
+case 'leavest':
+case 'crismes':
+if (isLimit(sender)) return
+			        await limitAdd(sender)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
+                   F = body.slice(9)		    
+                   anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+                   break
+case 'gplaybutton':
+case 'splaybutton':
+case 'thundertext':
+if (isLimit(sender)) return
+			        await limitAdd(sender)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
+                   F = body.slice(13)		    
+                   anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+                   break
+jadinya gini..
+
+case 'flowertext':
+if (isLimit(sender)) return
+			        await limitAdd(sender)
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
+                   F = body.slice(12)		    
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
@@ -2422,18 +2653,43 @@ case 'meme':
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
-break
+
                 case 'wolflogo':
-                case 'logoaveng':
-                case 'marvellogo':
-                case 'gtext':
                 case 'pubglogo':
-                case 'snowwrite':
+                if (isLimit(sender)) return
+			       await limitAdd(sender)	
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
+                   var F = body.slice(10)
+				   var F1 = F.split("&")[0];
+				   var F2 = F.split("&")[1]; 
+                   anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+					break
+                case 'logoaveng':
+                if (isLimit(sender)) return
+			       await limitAdd(sender)	
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
+                   var F = body.slice(11)
+				   var F1 = F.split("&")[0];
+				   var F2 = F.split("&")[1]; 
+                   anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+					break
+                case 'marvellogo':
+                if (isLimit(sender)) return
+			       await limitAdd(sender)	
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
+                   var F = body.slice(12)
+				   var F1 = F.split("&")[0];
+				   var F2 = F.split("&")[1]; 
+                   anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+					break
                 case 'watercolour':
                     if (isLimit(sender)) return
 			       await limitAdd(sender)	
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
-                   var F = body.slice(8)
+                   var F = body.slice(13)
 				   var F1 = F.split("&")[0];
 				   var F2 = F.split("&")[1]; 
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
@@ -2449,6 +2705,9 @@ break
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					break
+
+//=====================================//
+
 case 'artinama':  
 			        if (isLimit(sender)) return
 			        await limitAdd(sender)
@@ -2479,219 +2738,363 @@ case 'kbbi':
                    break
 //=====================================/
 
-case 'audio1':
+            case 'audio1':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio1)
             break   
             case 'audio2':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio2)
             break       
             case 'audio3':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio3)
             break       
             case 'audio4':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio4)
             break       
             case 'audio5':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio5)
             break       
             case 'audio6':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio6)
             break       
             case 'audio7':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio7)
             break       
             case 'audio8':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio8)
             break       
             case 'audio9':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio9)
             break       
             case 'audio10':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio10)
             break       
             case 'audio11':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio11)
             break       
             case 'audio12':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio12)
             break       
             case 'audio13':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio13)
             break       
             case 'audio14':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio14)
             break       
             case 'audio15':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio15)
             break       
             case 'audio16':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio16)
             break       
             case 'audio17':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio17)
             break       
             case 'audio18':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio18)
             break       
             case 'audio19':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio19)
             break  
             case 'audio20':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio20)
             break 
             case 'audio21':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio21)
             break   
             case 'audio22':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio22)
             break   
             case 'audio23':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio23)
             break   
             case 'audio24':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio24)
             break   
             case 'audio25':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio25)
             break   
             case 'audio26':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio26)
             break   
             case 'audio27':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio27)
             break   
             case 'audio28':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio28)
             break   
             case 'audio29':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio29)
             break   
             case 'audio30':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio30)
             break   
             case 'audio31':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio31)
             break   
             case 'audio32':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio32)
             break   
             case 'audio33':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio33)
             break   
             case 'audio34':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio34)
             break   
             case 'audio35':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(audio35)
             break
+
+
              case 'sound1':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound1)
             break   
             case 'sound2':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound2)
             break       
             case 'sound3':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound3)
             break       
             case 'sound4':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound4)
             break       
             case 'sound5':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound5)
             break       
             case 'sound6':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound6)
             break       
             case 'sound7':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound7)
             break       
             case 'sound8':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound8)
             break       
             case 'sound9':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound9)
             break       
             case 'sound10':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound10)
             break       
             case 'sound11':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound11)
             break       
             case 'sound12':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound12)
             break       
             case 'sound13':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound13)
             break       
             case 'sound14':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound14)
             break       
             case 'sound15':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound15)
             break       
             case 'sound16':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound16)
             break       
             case 'sound17':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound17)
             break       
             case 'sound18':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound18)
             break       
             case 'sound19':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound19)
             break  
             case 'sound20':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound20)
             break 
             case 'sound21':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound21)
             break   
             case 'sound22':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound22)
             break   
             case 'sound23':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound23)
             break   
             case 'sound24':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound24)
             break   
             case 'sound25':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound25)
-            break                	  	
+            break   
             case 'sound26':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound26)
             break   
             case 'sound27':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound27)
-            break       
+            break   
             case 'sound28':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound28)
-            break       
+            break   
             case 'sound29':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound29)
-            break       
+            break   
             case 'sound30':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound30)
-            break       
-            case 'sound32':
+            break   
+            case 'sound31':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound31)
-            break       
+            break   
             case 'sound32':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound32)
-            break       
+            break   
             case 'sound33':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound33)
-            break       
+            break   
             case 'sound34':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound34)
-            break       
+            break   
             case 'sound35':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound35)
-            break       
+            break
             case 'sound36':
+            if (isLimit(sender)) return
+			       await limitAdd(sender)	
             sendVn(sound36)
-            break 
+            break
 
 //=====================================//
 
@@ -2714,7 +3117,9 @@ case 'smeme': case 'stickmeme': case 'sm': {
            }
            break      
       case 'textstic':
-            if (args.length == 0) return reply(`Example: ${prefix + command} pebz`)
+      if (isLimit(sender)) return
+			       await limitAdd(sender)	
+            if (args.length == 0) return reply(`Example: ${prefix + command} Han`)
             buffer = await getBuffer(`https://hardianto.xyz/api/ttpcustom?text=${q}&color=black&apikey=${HardiApi}`)
             pebz.sendMessage(from, buffer, sticker, { quoted: mek })
             break
