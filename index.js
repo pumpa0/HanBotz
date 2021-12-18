@@ -2725,13 +2725,13 @@ case 'potomeme': case 'pmeme':
            try {
            if (!isQuotedImage && !isQuotedSticker) return reply(`REPLY GAMBAR ATAU STICKER!!`)
            reply(mess.wait)
-           var teks1 = q.split('|')[0] ? q.split('|')[0] : ''
-           var teks2 = q.split('|')[1] ? q.split('|')[1] : ''
+           var F1 = q.split('|')[0] ? q.split('|')[0] : ''
+           var F2 = q.split('|')[1] ? q.split('|')[1] : ''
            var imgbb = require('imgbb-uploader')
            var enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
            var media = await pebz.downloadAndSaveMediaMessage(enmedia)
            var njay = await imgbb('520bd6f6209077d1777c2a4f20c509c2', media)
-           var resu = await getBuffer(`https://api.memegen.link/images/custom/${teks1}/${teks2}.png?background=${njay.display_url}`)
+           var resu = await getBuffer(`https://api.memegen.link/images/custom/${F1}/${F2}.png?background=${njay.display_url}`)
            pebz.sendMessage(from, resu, image, {quoted: troli})
            fs.unlinkSync(media)
            } catch (e) {
