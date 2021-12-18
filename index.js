@@ -369,6 +369,8 @@ console.log(e)
 			const sendMess = (hehe, teks) => {
 				pebz.sendMessage(hehe, teks, text)
 			}
+			const sendVn = (teks) => {pebz.sendMessage(from, teks, audio, {mimetype:"audio/mp4", ptt:true, quoted:mek})}
+
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? pebz.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : pebz.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
@@ -2535,7 +2537,7 @@ case 'audio1':
             sendVn(audio19)
             break  
             case 'audio20':
-            sendAudio(audio20)
+            sendVn(audio20)
             break 
             case 'audio21':
             sendVn(audio21)
@@ -2690,9 +2692,6 @@ case 'audio1':
             case 'sound36':
             sendVn(sound36)
             break 
-            case 'audiomenu':
-		    pebz.sendMessage(from, audios(prefix), text, {quoted: troli, contextInfo: { forwardingScore: 508, isForwarded: true}})
-            break
 
 //=====================================//
 
@@ -2717,7 +2716,7 @@ case 'smeme': case 'stickmeme': case 'sm': {
       case 'textstic':
             if (args.length == 0) return reply(`Example: ${prefix + command} pebz`)
             buffer = await getBuffer(`https://hardianto.xyz/api/ttpcustom?text=${q}&color=black&apikey=${HardiApi}`)
-            pebz.sendMessage(from, buffer, sticker, { quoted: troli })
+            pebz.sendMessage(from, buffer, sticker, { quoted: mek })
             break
 case 'potomeme': case 'pmeme':
            if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
