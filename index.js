@@ -2635,8 +2635,6 @@ if (isLimit(sender)) return
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    break
-jadinya gini..
-
 case 'flowertext':
 if (isLimit(sender)) return
 			        await limitAdd(sender)
