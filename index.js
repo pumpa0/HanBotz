@@ -23,7 +23,7 @@ const { y2mateA, y2mateV } = require('./lib/y2mate.js')
 const { yta, ytv, ytv144, ytv240, ytv480, ytv720, ytv1080, igdl, upload, formatDate } = require('./lib/ytdl')
 const { wikiSearch } = require('./lib/wiki.js')
 const { wait, simih,  getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./lib/function')
-
+const { ind } = require('./bahasa')
 const fetch = require('node-fetch')
 const get = require('got')
 const speednye = require('performance-now')
@@ -459,23 +459,24 @@ console.log(e)
             fs.writeFileSync('./lib/limit.json', JSON.stringify(_limit))
             }
             }
-            const checkLimit = (sender) => {
+                //function check limit
+          const checkLimit = (sender) => {
           	let found = false
-            for (let lmt of _limit) {
-            if (lmt.id === sender) {
-            let limitCounts = limitawal - lmt.limit
-            if (limitCounts <= 0) return pebz.sendMessage(from,`BATAS PENGGUNAN ANDA (LIMIT) TELAH HABIS`, text,{ quoted: mek})
-            pebz.sendMessage(from, `SISA LIMIT ANDA : *${limitCounts}*`, text, { quoted : mek})
-            found = true
-            }
-            }
-            if (found === false) {
-            let obj = { id: sender, limit: 0 }
-            _limit.push(obj)
-            fs.writeFileSync('./lib/limit.json', JSON.stringify(_limit))
-            pebz.sendMessage(from, `SISA LIMIT ANDA : *${limitCounts}*`, text, { quoted : mek})
-            }
-         	}         	          
+                    for (let lmt of _limit) {
+                        if (lmt.id === sender) {
+                            let limitCounts = limitawal - lmt.limit
+                            if (limitCounts <= 0) return pebz.sendMessage(from,`Limit anda sudah habis`, text,{ quoted: mek})
+                            pebz.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
+                            found = true
+                        }
+                    }
+                    if (found === false) {
+                        let obj = { id: sender, limit: 0 }
+                        _limit.push(obj)
+                        fs.writeFileSync('.lib/limit.json', JSON.stringify(_limit))
+                        pebz.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
+                    }
+				}
             const isLimit = (sender) =>{ 
 	        let position = false
             for (let i of _limit) {
@@ -3216,7 +3217,7 @@ case 'potomeme': case 'pmeme':
            
           case 'setlimit':
 					if (args.length < 1) return reply('berapa?')
-				if (!isAdmin) return sticOwner(from)
+				if (!isOwner) return sticOwner(from)
 					limitawal = args[0]
 					reply(`*Limit berhasil di ubah menjadi* : ${limitawal}`)
 					break 
