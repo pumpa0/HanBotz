@@ -23,7 +23,7 @@ const { y2mateA, y2mateV } = require('./lib/y2mate.js')
 const { yta, ytv, ytv144, ytv240, ytv480, ytv720, ytv1080, igdl, upload, formatDate } = require('./lib/ytdl')
 const { wikiSearch } = require('./lib/wiki.js')
 const { wait, simih,  getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./lib/function')
-const { ind } = require('./bahasa')
+const { ind } = require('./bahasa/ind.js')
 const fetch = require('node-fetch')
 const get = require('got')
 const speednye = require('performance-now')
@@ -3223,10 +3223,6 @@ case 'potomeme': case 'pmeme':
 					break 
 
 case 'limit':
-mit = `*Limit*: ${limitawal - _limit[i].limit}`
-reply(mit)
-break
-case 'limitt':
 				checkLimit(sender)
 				break
 //=====================================//
