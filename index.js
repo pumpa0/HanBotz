@@ -2603,7 +2603,7 @@ case 'meme':
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    await limitAdd(sender)	
 break
-breakwall':
+case 'breakwall':
 case 'dropwater':
 case 'text3dbox':
 case 'crosslogo':
