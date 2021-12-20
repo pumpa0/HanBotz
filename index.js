@@ -466,7 +466,7 @@ console.log(e)
                         if (lmt.id === sender) {
                             let limitCounts = limitawal - lmt.limit
                             if (limitCounts <= 0) return pebz.sendMessage(from,`Limit anda sudah habis`, text,{ quoted: mek})
-                            pebz.sendMessage(from, sisa limit anda : ${limitCounts}, text, { quoted : mek})
+                            pebz.sendMessage(from, `sisa limit anda : ${limitCounts}`, text, { quoted : mek})
                             found = true
                         }
                     }
@@ -474,7 +474,7 @@ console.log(e)
                         let obj = { id: sender, limit: 0 }
                         _limit.push(obj)
                         fs.writeFileSync('./lib/limit.json', JSON.stringify(_limit))
-                        pebz.sendMessage(from, sisa limit anda : ${limitCounts}, text, { quoted : mek})
+                        pebz.sendMessage(from, `sisa limit anda : ${limitCounts}`, text, { quoted : mek})
                     }
 				}
             const isLimit = (sender) =>{ 
