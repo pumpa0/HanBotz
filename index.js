@@ -64,7 +64,7 @@ let wlcm = "" || fs.readFileSync('./media/gambar/welcome.png')
 let gdby = "" || fs.readFileSync('./media/gambar/goodbye.png')
 self = false
 blocked = []
-limitawal = 15
+limitawal = 10
 zeks = "https://api.zeks.me"
 apibotz = "HanBotzWa"
 HardiApi = 'hardianto'
@@ -466,7 +466,7 @@ console.log(e)
                         if (lmt.id === sender) {
                             let limitCounts = limitawal - lmt.limit
                             if (limitCounts <= 0) return pebz.sendMessage(from,`Limit anda sudah habis`, text,{ quoted: mek})
-                            pebz.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
+                            pebz.sendMessage(from, *「 LIMIT COUNT 」*\nsisa limit anda : ${limitCounts}, text, { quoted : mek})
                             found = true
                         }
                     }
@@ -474,7 +474,7 @@ console.log(e)
                         let obj = { id: sender, limit: 0 }
                         _limit.push(obj)
                         fs.writeFileSync('./lib/limit.json', JSON.stringify(_limit))
-                        pebz.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
+                        pebz.sendMessage(from, *「 LIMIT COUNT 」*\nsisa limit anda : ${limitCounts}, text, { quoted : mek})
                     }
 				}
             const isLimit = (sender) =>{ 
@@ -484,7 +484,7 @@ console.log(e)
           	let limits = i.limit
             if (limits >= limitawal ) {
          	position = true
-            pebz.sendMessage(from, `MAAF *${pushname}* BATAS PENGGUNAAN (LIMIT) HARI INI TELAH HABIS.`, text, {quoted: mek})
+            pebz.sendMessage(from, `Maaf *${pushname}* Batas Penggunaan (LIMIT) Hari Ini Telah Habis\n\n _Note : Limit Reset Jam 00:00_`, text, {quoted: mek})
             return true
             } else {
           	_limit
