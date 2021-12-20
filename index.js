@@ -763,12 +763,14 @@ ${p}️• ${prefix}imgsearch <query>${p}
 ${p}• ${prefix}samehadaku <query>${p}
 
 *𝗠𝗔𝗞𝗘𝗥*
+_example : text1&text2_
 ${p}• ${prefix}phlogo${p}
 ${p}• ${prefix}wolflogo${p}
 ${p}• ${prefix}pubglogo${p}
 ${p}• ${prefix}logoaveng${p}
 ${p}• ${prefix}marvellogo${p}
 ${p}• ${prefix}watercolour${p}
+_example : text_
 ${p}• ${prefix}qrencode${p}
 ${p}• ${prefix}barcode${p}
 ${p}• ${prefix}bneon${p}
@@ -888,24 +890,6 @@ ${p}• ${prefix}haramcek <name>${p}
 ${p}• ${prefix}pakboycek <name>${p}
 ${p}• ${prefix}pakgirlcek <name>${p}
 
-*𝗧𝗔𝗚*
-${p}• ${prefix}gay ${p}
-${p}• ${prefix}lesby ${p}
-${p}• ${prefix}cantik ${p}
-${p}• ${prefix}ganteng ${p}
-${p}• ${prefix}jelek ${p}
-${p}• ${prefix}bego ${p}
-${p}• ${prefix}nolep ${p}
-${p}• ${prefix}jago ${p}
-${p}• ${prefix}jahat ${p}
-${p}• ${prefix}pintar ${p}
-${p}• ${prefix}beban ${p}
-${p}• ${prefix}baik ${p}
-${p}• ${prefix}haram ${p}
-${p}• ${prefix}pakboy ${p}
-${p}• ${prefix}pakgirl ${p}
-${p}• ${prefix}pacaran ${p}
-
 *𝗙𝗨𝗡*
 ${p}• ${prefix}meme${p}
 ${p}• ${prefix}darkjoke${p}
@@ -926,6 +910,7 @@ ${p}• ${prefix}kapankah <text>${p}
 ${p}• ${prefix}wangy <name> ${p}
 
 *𝗢𝗧𝗛𝗘𝗥*
+${p}• ${prefix}smenu${p}
 ${p}• ${prefix}tourl <reply>${p}
 ${p}• ${prefix}owner${p}
 ${p}• ${prefix}donate${p}
@@ -933,9 +918,9 @@ ${p}• ${prefix}report <text>${p}
 
 
 *Website*
-• ${webs}
+• bit.ly/HanBotz
 *Official Group*
-• ${offgrup}`
+• bit.ly/OfficialGroupHanBotz`
 
            but = [
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
@@ -1042,24 +1027,6 @@ const simple2 =`
 • ${prefix}haramcek <name>
 • ${prefix}pakboycek <name>
 • ${prefix}pakgirlcek <name>
-
-*𝗧𝗔𝗚*
-• ${prefix}gay 
-• ${prefix}lesby 
-• ${prefix}cantik 
-• ${prefix}ganteng 
-• ${prefix}jelek 
-• ${prefix}bego 
-• ${prefix}nolep 
-• ${prefix}jago 
-• ${prefix}jahat 
-• ${prefix}pintar 
-• ${prefix}beban 
-• ${prefix}baik 
-• ${prefix}haram 
-• ${prefix}pakboy 
-• ${prefix}pakgirl 
-• ${prefix}pacaran 
 
 *𝗙𝗨𝗡*
 • ${prefix}meme  
@@ -1908,6 +1875,7 @@ case 'leave':
 //------------------< Sticker/Tools >-------------------
 
       case 'dogestick':
+      if (isLimit(sender)) return
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
              .then(res => res.text())
              .then(body => {
@@ -1916,9 +1884,10 @@ case 'leave':
               sendWebp(from, pjr)
 }
 )
-await limitAdd(sender) 
+       await limitAdd(sender && !isOwner)	
               break
        case 'patrickstick':
+       if (isLimit(sender)) return
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
              .then(res => res.text())
              .then(body => {
@@ -1927,10 +1896,11 @@ await limitAdd(sender)
               sendWebp(from, pjr)
 }
 )
-await limitAdd(sender) 
+       await limitAdd(sender && !isOwner)	
               break
        case 'gurastick':
        case 'gawrgura':
+       if (isLimit(sender)) return
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
              .then(res => res.text())
              .then(body => {
@@ -1939,10 +1909,11 @@ await limitAdd(sender)
               sendWebp(from, pjr)
 }
 )
-await limitAdd(sender) 
+       await limitAdd(sender && !isOwner)	
               break
        case 'animestick':
        case 'stickeranime':
+       if (isLimit(sender)) return
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestick')
              .then(res => res.text())
              .then(body => {
@@ -1951,7 +1922,7 @@ await limitAdd(sender)
               sendWebp(from, pjrr)
 }
 )
-await limitAdd(sender) 
+       await limitAdd(sender && !isOwner)	
               break
        case 'slot':
               const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍌 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
@@ -2415,43 +2386,43 @@ case 'tes':
 reply(`Oke Sudah Online`)
 break
 //FunMenu
-case 'bego':
-      case 'tolol':
-      case 'pinter':
-      case 'pintar':
-      case 'asu':
-      case 'bodoh':
-      case 'gay':
-      case 'lesby':
-      case 'bajingan':
-      case 'jancok':
-      case 'anjing':
-      case 'ngentod':
-      case 'ngentot':
-      case 'monyet':
-      case 'mastah':
-      case 'newbie':
-      case 'bangsat':
-      case 'bangke':
-      case 'sange':
-      case 'sangean':
-      case 'dakjal':
-      case 'horny':
-      case 'wibu':
-      case 'puki':
-      case 'pantek':
-      case 'pakboy':
-      case 'pakgirl':
-      case 'beban':
-      case 'jago':
-      case 'ganteng':
-      case 'cantik':
-      case 'nolep':
-      case 'haram':
-      case 'jahat':
-      case 'baik':
-      case 'jelek':
-      case 'baper':
+// case 'bego': //
+// case 'tolol': //
+// case 'pinter': //
+// case 'pintar': //
+// case 'asu': //
+// case 'bodoh': //
+// case 'gay': //
+// case 'lesby': //
+// case 'bajingan': //
+// case 'jancok': //
+// case 'anjing': //
+// case 'ngentod': //
+// case 'ngentot': //
+// case 'monyet': //
+// case 'mastah': //
+// case 'newbie': //
+// case 'bangsat': //
+// case 'bangke': //
+// case 'sange': //
+// case 'sangean': //
+// case 'dakjal': //
+// case 'horny': //
+// case 'wibu': //
+// case 'puki': //
+// case 'pantek': //
+// case 'pakboy': //
+// case 'pakgirl': //
+// case 'beban': //
+// case 'jago': //
+// case 'ganteng': //
+// case 'cantik': //
+// case 'nolep': //
+// case 'haram': //
+// case 'jahat': //
+// case 'baik': //
+// case 'jelek': //
+// case 'baper': //
       if (!isGroup) return reply(mess.only.group)
         membr = []
         const pff = groupMembers
@@ -2502,7 +2473,7 @@ case 'cerpen':
                    F = body.slice(7)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/neon_light?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender) 
+                          await limitAdd(sender && !isOwner)	
                    break  
        case 'text3d':  
                    if (isLimit(sender)) return
@@ -2512,7 +2483,7 @@ case 'cerpen':
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender) 
+                          await limitAdd(sender && !isOwner)	
                    break                   
        case 'galaxy':  
                    if (isLimit(sender)) return
@@ -2522,7 +2493,7 @@ case 'cerpen':
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/galaxywp?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender) 
+                          await limitAdd(sender && !isOwner)	
                    break
       case 'gaming':  
                    if (isLimit(sender)) return
@@ -2531,7 +2502,7 @@ case 'cerpen':
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/gaming?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender) 
+                          await limitAdd(sender && !isOwner)	
                    break
       case 'colors':  
                    if (isLimit(sender)) return
@@ -2541,7 +2512,7 @@ case 'cerpen':
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/watercolor?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender) 
+                          await limitAdd(sender && !isOwner)	
                    break
 case 'darkjoke':  
                    if (isLimit(sender)) return
@@ -2549,7 +2520,7 @@ case 'darkjoke':
                    anu = await fetchJson(`${zeks}/api/darkjokes?apikey=${apibotz}`)
                    anu1 = await getBuffer(anu.result)
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender) 
+                          await limitAdd(sender && !isOwner)	
                    break
 case 'meme':  
                    if (isLimit(sender)) return
@@ -2557,7 +2528,7 @@ case 'meme':
                    anu = await fetchJson(`${zeks}/api/memeindo?apikey=${apibotz}`)
                    anu1 = await getBuffer(anu.result)
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender && !isOwner) 
+                   await limitAdd(sender) 
                    break
        case 'pantun':  
                    
@@ -2585,7 +2556,7 @@ case 'meme':
 					setTimeout( () => {
 					pebz.sendMessage(from, bufferkkk, image, { caption: '_Jelaskan Apa Maksud Gambar Ini_', quoted: mek }) // ur cods
 					}, 0) // 1000 = 1s,
-					await limitAdd(sender) 
+					       await limitAdd(sender && !isOwner)	
 					break
 
 //=====================================//
@@ -2601,7 +2572,7 @@ case 'meme':
                    F = body.slice(7)		    
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender)	
+                   await limitAdd(sender && !isOwner)	
 break
 case 'breakwall':
 case 'dropwater':
@@ -2616,7 +2587,7 @@ if (isLimit(sender)) return
                    F = body.slice(11)		    
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender)	
+                   await limitAdd(sender && !isOwner)	
 break
 case 'barcode':
 case 'leavest':
@@ -2627,7 +2598,7 @@ if (isLimit(sender)) return
                    F = body.slice(9)		    
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender)	
+                   await limitAdd(sender && !isOwner)	
 break
 case 'gplaybutton':
 case 'splaybutton':
@@ -2638,7 +2609,7 @@ if (isLimit(sender)) return
                    F = body.slice(13)		    
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender)	
+                   await limitAdd(sender && !isOwner)	
 break
 case 'flowertext':
 if (isLimit(sender)) return
@@ -2647,7 +2618,7 @@ if (isLimit(sender)) return
                    F = body.slice(12)		    
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender)	
+                   await limitAdd(sender && !isOwner)	
 break
                    case 'epep':
                    if (isLimit(sender)) return
@@ -2656,7 +2627,7 @@ break
                    F = body.slice(6)				    
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-                   await limitAdd(sender)	
+                   await limitAdd(sender && !isOwner)	
 break
 
                 case 'wolflogo':
@@ -2669,7 +2640,7 @@ break
 				   var F2 = F.split("&")[1]; 
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-					await limitAdd(sender)	
+					       await limitAdd(sender && !isOwner)	
 break
                 case 'logoaveng':
                 if (isLimit(sender)) return
@@ -2680,7 +2651,7 @@ break
 				   var F2 = F.split("&")[1]; 
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-					await limitAdd(sender)	
+					       await limitAdd(sender && !isOwner)	
 break
                 case 'marvellogo':
                 if (isLimit(sender)) return
@@ -2691,7 +2662,7 @@ break
 				   var F2 = F.split("&")[1]; 
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-					await limitAdd(sender)	
+					       await limitAdd(sender && !isOwner)	
 break
                 case 'watercolour':
                     if (isLimit(sender)) return
@@ -2702,7 +2673,7 @@ break
 				   var F2 = F.split("&")[1]; 
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-					await limitAdd(sender)	
+					       await limitAdd(sender && !isOwner)	
 break
                     case 'phlogo':
                     
@@ -2714,7 +2685,7 @@ break
 				   var F2 = F.split("&")[1]; 
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-					await limitAdd(sender)	
+					       await limitAdd(sender && !isOwner)	
 break
 
 case 'memegen':
@@ -2748,7 +2719,7 @@ case 'artinama':
                     anu1 = `➻ *ARTI* : ${anu.result}\n`
                     
                     reply(anu1)
-                    await limitAdd(sender)	
+                    await limitAdd(sender && !isOwner)	
 break
        case 'artimimpi':  
 			        if (isLimit(sender)) return
@@ -2758,7 +2729,7 @@ break
                     anu = await fetchJson(`${zeks}/api/artimimpi?apikey=${apibotz}&q=${F}`)
                     anu1 = `➻ *ARTI* : ${anu.result.string}\n`
                     reply(anu1)
-                    await limitAdd(sender)	
+                    await limitAdd(sender && !isOwner)	
 break
 case 'kbbi':
                    if (args.length < 1) return reply('Kata Apa?')
@@ -2774,6 +2745,7 @@ case 'translate':
 				   var F2 = F.split("&")[1]; 
 				   var F3 = F.split("&")[2]; 
                     anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/translate?text=${F3}&from=${F1}&to=${F2}`)
+                    
                     anu1 = `➻ *Translate* : ${anu.translated_text}\n`
                     reply(anu1)
 break
@@ -2838,359 +2810,359 @@ kode = `*Kode Bahasa untuk /translate*
 
             case 'audio1':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio1)
             break   
             case 'audio2':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio2)
             break       
             case 'audio3':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio3)
             break       
             case 'audio4':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio4)
             break       
             case 'audio5':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio5)
             break       
             case 'audio6':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio6)
             break       
             case 'audio7':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio7)
             break       
             case 'audio8':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio8)
             break       
             case 'audio9':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio9)
             break       
             case 'audio10':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio10)
             break       
             case 'audio11':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio11)
             break       
             case 'audio12':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio12)
             break       
             case 'audio13':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio13)
             break       
             case 'audio14':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio14)
             break       
             case 'audio15':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio15)
             break       
             case 'audio16':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio16)
             break       
             case 'audio17':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio17)
             break       
             case 'audio18':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio18)
             break       
             case 'audio19':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio19)
             break  
             case 'audio20':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio20)
             break 
             case 'audio21':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio21)
             break   
             case 'audio22':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio22)
             break   
             case 'audio23':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio23)
             break   
             case 'audio24':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio24)
             break   
             case 'audio25':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio25)
             break   
             case 'audio26':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio26)
             break   
             case 'audio27':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio27)
             break   
             case 'audio28':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio28)
             break   
             case 'audio29':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio29)
             break   
             case 'audio30':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio30)
             break   
             case 'audio31':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio31)
             break   
             case 'audio32':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio32)
             break   
             case 'audio33':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio33)
             break   
             case 'audio34':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio34)
             break   
             case 'audio35':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(audio35)
             break
 
 
              case 'sound1':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound1)
             break   
             case 'sound2':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound2)
             break       
             case 'sound3':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound3)
             break       
             case 'sound4':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound4)
             break       
             case 'sound5':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound5)
             break       
             case 'sound6':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound6)
             break       
             case 'sound7':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound7)
             break       
             case 'sound8':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound8)
             break       
             case 'sound9':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound9)
             break       
             case 'sound10':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound10)
             break       
             case 'sound11':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound11)
             break       
             case 'sound12':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound12)
             break       
             case 'sound13':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound13)
             break       
             case 'sound14':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound14)
             break       
             case 'sound15':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound15)
             break       
             case 'sound16':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound16)
             break       
             case 'sound17':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound17)
             break       
             case 'sound18':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound18)
             break       
             case 'sound19':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound19)
             break  
             case 'sound20':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound20)
             break 
             case 'sound21':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound21)
             break   
             case 'sound22':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound22)
             break   
             case 'sound23':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound23)
             break   
             case 'sound24':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound24)
             break   
             case 'sound25':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound25)
             break   
             case 'sound26':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound26)
             break   
             case 'sound27':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound27)
             break   
             case 'sound28':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound28)
             break   
             case 'sound29':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound29)
             break   
             case 'sound30':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound30)
             break   
             case 'sound31':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound31)
             break   
             case 'sound32':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound32)
             break   
             case 'sound33':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound33)
             break   
             case 'sound34':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound34)
             break   
             case 'sound35':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound35)
             break
             case 'sound36':
             if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             sendVn(sound36)
             break
 
@@ -3216,7 +3188,7 @@ case 'smeme': case 'stickmeme': case 'sm': {
            break      
       case 'textstic':
       if (isLimit(sender)) return
-			       await limitAdd(sender)	
+			       await limitAdd(sender && !isOwner)	
             if (args.length == 0) return reply(`Example: ${prefix + command} Han`)
             buffer = await getBuffer(`https://hardianto.xyz/api/ttpcustom?text=${q}&color=black&apikey=${HardiApi}`)
             pebz.sendMessage(from, buffer, sticker, { quoted: mek })
@@ -3241,7 +3213,17 @@ case 'potomeme': case 'pmeme':
            console.log(e)
            }
            break   
+           
+          case 'setlimit':
+					if (args.length < 1) return reply('berapa?')
+				if (!isAdmin) return sticOwner(from)
+					limitawal = args[0]
+					reply(`*Limit berhasil di ubah menjadi* : ${limitawal}`)
+					break 
 
+case 'limit':
+checkLimit(sender)
+break
 //=====================================//
 
 
@@ -3250,11 +3232,11 @@ case 'potomeme': case 'pmeme':
                    
           default: 
 
-          if (budy.includes(`@6285731855426`)) {
+       if (budy.includes(`@6285731855426`)) {
 const baby = fs.readFileSync('./media/sticker/Taggg.webp');
 pebz.sendMessage(from, baby, MessageType.sticker, {quoted: mek})
                   }
-       if (budy.includes(`@Hanafi`)) {
+    if (budy.includes(`@Hanafi`)) {
 const rell = fs.readFileSync('./media/sticker/Taggg.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   }
@@ -3265,149 +3247,8 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   if (budy.includes(`@6285807149213`)) {
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-                  }
+                  } 
                   
-                    
-                    if (budy.includes(`anjing`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`Anjing`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`ajg`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`Ajg`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`Asu`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`anjg`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`Anjg`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`tolol`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`Tolol`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`antek`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`elaso`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`Babi`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`babi`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`ontol`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`kntl`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`kintil`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`emek`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`entod`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`Goblok`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`goblok`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`gblk`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`Gblk`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`gentod`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`gentot`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`acot`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`Cok`)){  
-                    const F3 = fs.readFileSync('./media/sticker/toxic.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`makasi`)){  
-                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`Makasi`)){  
-                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`hanks`)){  
-                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`Tq`)){  
-                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`tq`)){  
-                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`hank you`)){  
-                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`thx`)){  
-                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`Thx`)){  
-                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
-                    if (budy.includes(`erima kasih`)){  
-                    const F3 = fs.readFileSync('./media/sticker/ok.webp')
-                    pebz.sendMessage(from, F3, sticker, {quoted: mek})
-                    }
                     
                     
                     
