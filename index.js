@@ -3223,8 +3223,12 @@ case 'potomeme': case 'pmeme':
 					break 
 
 case 'limit':
-checkLimit(sender)
+mit = `*Limit*: ${limitawal - _limit[i].limit}`
+reply(mit)
 break
+case 'limitt':
+				checkLimit(sender)
+				break
 //=====================================//
 
 
