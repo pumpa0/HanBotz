@@ -131,15 +131,13 @@ exports.levelup = (pushname, sender, getLevelingXp,  getLevel, getLevelingLevel,
 `}
  
 exports.limitend = (pushname) => {
-	return`*Maaf ${pushname} limit hari ini habis*\n*Hubungi kami* : wa.me/6283146208804\n\n*Note : Kami akan berikan random dari 1-10*`
+	return`*Maaf ${pushname} limit hari ini habis*`
 }
 
 exports.limitcount = (limitCounts) => {
 	return`
 *「 LIMIT COUNT 」*
 sisa limit anda : ${limitCounts}
-
-NOTE : Untuk mendapatkan limit. Bisa lewat naik level melalui group atau buylimit.
 `}
 
 exports.satukos = () => {
