@@ -473,7 +473,7 @@ console.log(e)
                     if (found === false) {
                         let obj = { id: sender, limit: 0 }
                         _limit.push(obj)
-                        fs.writeFileSync('.lib/limit.json', JSON.stringify(_limit))
+                        fs.writeFileSync('./lib/limit.json', JSON.stringify(_limit))
                         pebz.sendMessage(from, ind.limitcount(limitCounts), text, { quoted : mek})
                     }
 				}
