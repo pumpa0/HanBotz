@@ -891,7 +891,7 @@ ${p}• ${prefix}tourl <reply>${p}
 ${p}• ${prefix}owner${p}
 ${p}• ${prefix}donate${p}
 ${p}• ${prefix}report <text>${p}`
-tod3 =`
+dot3 =`
 *Website*
 • bit.ly/HanBotz
 *Official Group*
@@ -901,7 +901,7 @@ tod3 =`
            but = [
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                   ]
-        sendButLocation(from, tod, tod2, tod3, gambar, but)
+        sendButLocation(from, tod, tod2, dot3, gambar, but)
            break
 
 case 'simplemenu':
