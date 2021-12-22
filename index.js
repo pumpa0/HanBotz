@@ -64,7 +64,7 @@ let wlcm = "" || fs.readFileSync('./media/gambar/welcome.png')
 let gdby = "" || fs.readFileSync('./media/gambar/goodbye.png')
 self = false
 blocked = []
-limitawal = 9999999
+limitawal = 10
 zeks = "https://api.zeks.me"
 apibotz = "HanBotzWa"
 HardiApi = 'hardianto'
@@ -231,45 +231,7 @@ pebz.on('credentials-updated', () => {
 		})
 		
 
-pebz.on('group-participants-update', async (chat) => {
-		try {
-			const mdata = await pebz.groupMetadata(chat.jid)
-			console.log(chat)
-			if (chat.action == 'add') {
-				num = chat.participants[0]
-				try {
-					ppimg = await pebz.getProfilePicture(`${chat.participants[0].split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i.ibb.co/Rj1k2zV/welcome.png'
-				}
-				teks = `𝙃𝘼𝙇𝙇𝙊 *@${num.split('@')[0]}*
-𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙂𝙍𝙐𝙋 *${mdata.subject}*
 
-𝙅𝘼𝙉𝙂𝘼𝙉 𝙇𝙐𝙋𝘼 𝙄𝙉𝙏𝙍𝙊 :
-
-• *ɴᴀᴍᴀ :*
-• *ᴜᴍᴜʀ :*
-• *ɢᴇɴᴅᴇʀ :*
-• *ᴀꜱᴀʟ ᴋᴏᴛᴀ :*
-
-𝙎𝙀𝙈𝙊𝙂𝘼 𝘽𝙀𝙏𝘼𝙃 𝙔𝘼 𝘿𝙄 𝙂𝙍𝙐𝙋 𝙄𝙉𝙄`
-				let buff = await getBuffer(ppimg)
-				pebz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-				} else if (chat.action == 'remove') {
-				num = chat.participants[0]
-				try {
-					ppimg = await pebz.getProfilePicture(`${num.split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i.ibb.co/ZYLJz2T/goodbye.png'
-				}
-				teks = `𝙎𝘼𝙔𝙊𝙉𝘼𝙍𝘼 *@${num.split('@')[0]}*`
-				let buff = await getBuffer(ppimg)
-				pebz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-			}
-		} catch (e) {
-			console.log('Error : %s', color(e, 'red'))
-		}
-	})
 		  
 		    
 		
@@ -498,6 +460,18 @@ console.log(e)
             _limit.push(obj)
             fs.writeFileSync('./lib/limit.json',JSON.stringify(_limit))
             return false
+            }
+            }
+            const limitReset = (sender) => {
+            let position = false
+            Object.keys(_limit).forEach((i) => {
+            if (_limit[i].id == sender) {
+            position = i
+            }
+            })
+            if (position !== false) {
+            _limit[position].limit -= 10
+            fs.writeFileSync('./lib/limit.json', JSON.stringify(_limit))
             }
             }
 
@@ -771,6 +745,7 @@ ${p}• ${prefix}pubglogo${p}
 ${p}• ${prefix}logoaveng${p}
 ${p}• ${prefix}marvellogo${p}
 ${p}• ${prefix}watercolour${p}
+
 _example : text_
 ${p}• ${prefix}qrencode${p}
 ${p}• ${prefix}barcode${p}
@@ -921,7 +896,7 @@ ${p}• ${prefix}report <text>${p}
 *Website*
 • bit.ly/HanBotz
 *Official Group*
-• bit.ly/OfficialGroupHanBotz`
+• bit.ly/GHanBotz`
 
            but = [
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
