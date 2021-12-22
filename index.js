@@ -893,9 +893,9 @@ ${p}• ${prefix}donate${p}
 ${p}• ${prefix}report <text>${p}`
 tod3 =`
 *Website*
-• http://bit.ly/HanBotz
+• bit.ly/HanBotz
 *Official Group*
-• http://bit.ly/OfficialGroupHanBotz
+• bit.ly/OfficialGroupHanBotz
 `
 
            but = [
