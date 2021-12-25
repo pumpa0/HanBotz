@@ -1,7 +1,7 @@
 {
-  "name": "SELFBOT",
+  "name": "HanBotz",
   "version": "1.0.0",
-  "description": "TOD",
+  "description": "Bot WhatsApp",
   "main": "main.js",
   "directories": {
     "lib": "lib"
@@ -66,7 +66,7 @@
   "keywords": [
     "Wasu"
   ],
-  "author": "WKWK",
+  "author": "085731855426",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Hexagonz"
