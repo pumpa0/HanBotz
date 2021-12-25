@@ -1,2 +1,2 @@
-# selfbot
-selfbot whastapp
+# HanBotz
+Bot WhatsApp
