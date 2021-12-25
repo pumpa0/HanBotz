@@ -2726,8 +2726,7 @@ break
                    await limitAdd(sender && !isOwner)	
 
 break
-case '
-breakwall':
+case 'breakwall':
 case 'dropwater':
 case 'text3dbox':
 case 'crosslogo':
