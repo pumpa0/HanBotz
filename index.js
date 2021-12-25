@@ -207,11 +207,13 @@ console.log(color(`[ BOT ] SCAN QR DI ATAS BRO`,'white'))
 
 pebz.on('credentials-updated', () => {
 	const authinfo = pebz.base64EncodedAuthInfo()
-	console.log('session has bim save')
+	console.log('session has bin save')
 	fs.writeFileSync('./pebz.json', JSON.stringify(authinfo, null, '\t'))
 })
    fs.existsSync('./pebz.json') && pebz.loadAuthInfo('./pebz.json')
    pebz.connect();
+   
+   //===================================//
  
    pebz.on('CB:Blocklist', json => {
             if (blocked.length > 2) return
@@ -892,7 +894,6 @@ ${p}• ${prefix}owner${p}
 ${p}• ${prefix}donate${p}
 ${p}• ${prefix}report <text>${p}
 
-
 *Website*
 • bit.ly/HanBotz
 *Official Group*
@@ -904,6 +905,9 @@ ${p}• ${prefix}report <text>${p}
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
            break
+case 'sapa':
+reply(hai)
+break
 
 case 'simplemenu':
 case 'simpelmenu':
