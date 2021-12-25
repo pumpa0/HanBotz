@@ -39,6 +39,8 @@ const pebz = new WAConnection()
 const _antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 const _antivirtex = JSON.parse(fs.readFileSync('./database/antivirtex.json'))
 const nsfww = JSON.parse(fs.readFileSync('./database/nsfww.json'))
+const afk = require("./lib/afk");
+let _afk = JSON.parse(fs.readFileSync('./database/afk.json'));
 const level = require("./lib/level")
 let _leveling = JSON.parse(fs.readFileSync('./database/leveling.json'))
 let _level = JSON.parse(fs.readFileSync('./database/level.json'))
@@ -285,6 +287,7 @@ pebz.on('credentials-updated', () => {
         const isAnti = isGroup ? _antilink.includes(from) : false
         const totalchat = await pebz.chats.all()
         const isSimi = isGroup ? samih.includes(from) : false
+         const isAfkOn = afk.checkAfkUser(sender, _afk)
 
 const sendFile = async (medya, namefile, capti, tag, vn) => {
   baper = await getBuffer(medya)
@@ -581,6 +584,31 @@ console.log(e)
 			ano = fs.readFileSync('./media/sticker/kaget.webp')
 			pebz.sendMessage(hehe, ano, MessageType.sticker, { quoted: mek})
 		}
+		
+		// AFK
+	if (isGroup) {
+		if (!mek.key.fromMe && mek.key.fromMe) return
+		for (let x of mentionUser) {
+		    if (afk.checkAfkUser(x, _afk)) {
+			const getId = afk.getAfkId(x, _afk)
+			const getReason = afk.getAfkReason(getId, _afk)
+			const getTime = afk.getAfkTime(getId, _afk)
+			const cptl = `*「 AFK MODE 」*\n
+*Orangnya lagi AFK, jangan diganggu!*
+➸ *Alasan*  : ${getReason}
+➸ *Sejak* : ${getTime}`
+      mentions(cptl, x, true)
+    }}
+		if (afk.checkAfkUser(sender, _afk) && !isCmd) {
+		    const getTime = afk.getAfkTime(sender, _afk)
+		    const getReason = afk.getAfkReason(sender, _afk)
+		    const ittung = ms(await Date.now() - getTime)
+		    const pep = `*${pushname}* telah kembali dari AFK! Selamat datang kembali~`
+		    reply(pep)
+		    _afk.splice(afk.getAfkPosition(sender, _afk), 1)
+		    fs.writeFileSync('./database/afk.json', JSON.stringify(_afk))
+		}
+	    }
 		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 const oxo1 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']
@@ -906,7 +934,7 @@ ${p}• ${prefix}report <text>${p}
         sendButLocation(from, tod, tod2, gambar, but)
            break
 case 'sapa':
-reply(hai)
+reply("hai")
 break
 
 case 'simplemenu':
@@ -3202,9 +3230,14 @@ case 'potomeme': case 'pmeme':
 					reply(`*Limit berhasil di ubah menjadi* : ${limitawal}`)
 					break 
 
-case 'limit':
-				checkLimit(sender)
-				break
+case 'afk': 
+              if (!isGroup) return reply(mess.only.group)
+              if (isAfkOn) return
+              const reason = q ? q : 'Nothing.'
+              afk.addAfkUser(sender, time, reason, _afk)
+              const aluty = ````AFK Mode```\n\n➸ *Username*: ${pushname}\n➸ *Alasan*: ${reason}`
+              reply(aluty)
+              break
 //=====================================//
 
 
