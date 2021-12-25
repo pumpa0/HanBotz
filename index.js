@@ -3185,8 +3185,9 @@ kode = `*Kode Bahasa untuk /translate*
 //=====================================//
 
 case 'smeme': case 'stickmeme': case 'sm': {
-           var top = q.split('|')[0] ? q.split('|')[0] : ''
-           var bottom = q.split('|')[1] ? q.split('|')[1] : ''
+	if (!isOwner) return sticOwner(from)
+           var top = q.split('&')[0] ? q.split('&')[0] : ''
+           var bottom = q.split('&')[1] ? q.split('&')[1] : ''
            var imgbb = require('imgbb-uploader')
            if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
            ger = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -3210,13 +3211,14 @@ case 'smeme': case 'stickmeme': case 'sm': {
             pebz.sendMessage(from, buffer, sticker, { quoted: mek })
             break
 case 'potomeme': case 'pmeme':
+if (!isOwner) return sticOwner(from)
            if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
-           if (!q.includes('|')) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
+           if (!q.includes('&')) return reply(`Kirim perintah *${prefix + command}* teks atas&teks bawah`)
            try {
            if (!isQuotedImage && !isQuotedSticker) return reply(`REPLY GAMBAR ATAU STICKER!!`)
            reply(mess.wait)
-           var F1 = q.split('|')[0] ? q.split('|')[0] : ''
-           var F2 = q.split('|')[1] ? q.split('|')[1] : ''
+           var F1 = q.split('&')[0] ? q.split('&')[0] : ''
+           var F2 = q.split('&')[1] ? q.split('&')[1] : ''
            var imgbb = require('imgbb-uploader')
            var enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
            var media = await pebz.downloadAndSaveMediaMessage(enmedia)
@@ -3253,14 +3255,6 @@ case 'afk':
                    
           default: 
 
-       if (budy.includes(`@6285731855426`)) {
-const baby = fs.readFileSync('./media/sticker/Taggg.webp');
-pebz.sendMessage(from, baby, MessageType.sticker, {quoted: mek})
-                  }
-    if (budy.includes(`@Hanafi`)) {
-const rell = fs.readFileSync('./media/sticker/Taggg.webp');
-pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-                  }
                   if (budy.includes(`@HanBotz`)) {
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
