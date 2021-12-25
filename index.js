@@ -17,6 +17,7 @@ const hx = require('hxz-api')
 const ffmpeg = require('fluent-ffmpeg')
 const axios = require('axios')
 const { exec } = require('child_process')
+const ms = require('parse-ms')
 const { fetchJson, color, bgcolor } = require('./lib/fetcher')
 const { y2mate } = require('./lib/y2mate');
 const { y2mateA, y2mateV } = require('./lib/y2mate.js')
