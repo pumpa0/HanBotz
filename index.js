@@ -37,6 +37,7 @@ const welkom = JSON.parse(fs.readFileSync('./lib/group/welcome.json'))
 const yts = require('yt-search')
 const request = require('request')
 const pebz = new WAConnection()
+const { webp2gifFile, igDownloader, TiktokDownloader } = require("./lib/gif.js")
 const _antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 const _antivirtex = JSON.parse(fs.readFileSync('./database/antivirtex.json'))
 const nsfww = JSON.parse(fs.readFileSync('./database/nsfww.json'))
@@ -1390,12 +1391,38 @@ break
 			ran = getRandom('.png')
 			exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 			fs.unlinkSync(media)
-			if (err) return reply('Yah gagal, coba ulangi ^_^\n_Note: untuk sticker to video, belum ada :)_')
+			if (err) return reply('Yah gagal, coba ulangi!')
 			buffer = fs.readFileSync(ran)
 			fakethumb(buffer,'```HanBotz```')
 			fs.unlinkSync(ran)
 			})
 			break
+case 'togif':
+               if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
+               reply(mess.wait)
+               encmediaaa = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+               mediaaa = await pebz.downloadAndSaveMediaMessage(encmediaaa)
+               a = await webp2gifFile(mediaaa)
+               mp4 = await getBuffer(a.result)
+               pebz.sendMessage(from, mp4, video, {mimetype: 'video/gif', quoted: mek, caption: mess.success})
+               fs.unlinkSync(mediaaa)
+               } else {
+               reply(mess.wrongFormat)
+}
+               break
+        case 'tovideo':
+               if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
+               reply(mess.wait)
+               encmediaaa = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+               mediaaa = await pebz.downloadAndSaveMediaMessage(encmediaaa)
+               a = await webp2gifFile(mediaaa)
+               mp4 = await getBuffer(a.result)
+               pebz.sendMessage(from, mp4, video, {mimetype: 'video/mp4', quoted: mek, caption: mess.success})
+               fs.unlinkSync(mediaaa)
+               } else {
+               reply(mess.wrongFormat)
+}
+               break
          case 'take':      
          case 'colong':
          case 'comot':
@@ -3199,7 +3226,7 @@ case 'smeme': case 'stickmeme': case 'sm': {
            anu1 = `https://docs-jojo.herokuapp.com/api/meme-gen?top=${top}&bottom=${bottom}&img=${tekks}`
            sendStickerFromUrl(from, `${anu1}`)
            } else {
-           reply('Gunakan foto!')
+           reply('reply gambar atau sticker!')
            } 
            }
            break      
@@ -3212,7 +3239,7 @@ case 'smeme': case 'stickmeme': case 'sm': {
             break
 case 'potomeme': case 'pmeme':
 if (!isOwner) return sticOwner(from)
-           if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
+           if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* teks atas&teks bawah`)
            if (!q.includes('&')) return reply(`Kirim perintah *${prefix + command}* teks atas&teks bawah`)
            try {
            if (!isQuotedImage && !isQuotedSticker) return reply(`REPLY GAMBAR ATAU STICKER!!`)
@@ -3247,6 +3274,24 @@ case 'afk':
               const aluty = `*「 AFK MODE 」*\n\n➸ *Username*: ${pushname}\n➸ *Alasan*: ${reason}`
               reply(aluty)
               break
+case 'tiktok': 
+       case 'ttdl':
+             if (!q) return reply('Linknya?')
+             if (!q.includes('tiktok')) return reply(mess.error.Iv)
+             reply(mess.wait)
+             anu = await TiktokDownloader(`${q}`)
+            .then((data) => { sendMediaURL(from, data.result.watermark) })
+            .catch((err) => { reply(String(err)) })
+             break
+      case 'ttnowm': 
+      case 'tiktoknowm':
+             if (!q) return reply('Linknya?')
+             if (!q.includes('tiktok')) return reply(mess.error.Iv)
+             reply(mess.wait)
+             anu = await TiktokDownloader(`${q}`)
+            .then((data) => { sendMediaURL(from, data.result.nowatermark) })
+            .catch((err) => { reply(String(err)) })
+             break
 //=====================================//
 
 
