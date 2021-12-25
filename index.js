@@ -3196,7 +3196,7 @@ case 'smeme': case 'stickmeme': case 'sm': {
            tekks = `${anu.display_url}`
            ranp = getRandom('.gif')
            rano = getRandom('.webp')
-           anu1 = `https://api.memegen.link/images/custom/${top}/${bottom}.png?background=${tekks}`
+           anu1 = `https://docs-jojo.herokuapp.com/api/meme-gen?top=${top}&bottom=${bottom}&img=${tekks}`
            sendStickerFromUrl(from, `${anu1}`)
            } else {
            reply('Gunakan foto!')
@@ -3224,7 +3224,7 @@ if (!isOwner) return sticOwner(from)
            var media = await pebz.downloadAndSaveMediaMessage(enmedia)
            var njay = await imgbb('520bd6f6209077d1777c2a4f20c509c2', media)
            var resu = await getBuffer(`https://api.memegen.link/images/custom/${F1}/${F2}.png?background=${njay.display_url}`)
-           pebz.sendMessage(from, resu, image, {quoted: troli})
+           pebz.sendMessage(from, resu, image, {quoted: mek})
            fs.unlinkSync(media)
            } catch (e) {
            return reply(`${e}`)
