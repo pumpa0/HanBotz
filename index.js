@@ -331,10 +331,6 @@ console.log(e)
 })
 }
 
-const sendMediaURL = async(to, url, text="", mids=[]) =>{
-           if(mids.length > 0){
-           text = normalizeMention(to, text, mids)
-}
 			const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
 			}
