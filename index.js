@@ -793,8 +793,7 @@ ${p}• ${prefix}qrencode${p}
 ${p}• ${prefix}barcode${p}
 ${p}• ${prefix}bneon${p}
 ${p}• ${prefix}matrix${p}
-${p}• ${prefix}
-breakwall${p}
+${p}• ${prefix}breakwall${p}
 ${p}• ${prefix}gneon${p}
 ${p}• ${prefix}dropwater${p}
 ${p}• ${prefix}tfire${p}
@@ -945,11 +944,9 @@ ${p}• ${prefix}report <text>${p}
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                   ]
         sendButLocation(from, tod, tod2, gambar, but)
-           
-break
+           break
 case 'sapa':
 reply("hai")
-
 break
 
 case 'simplemenu':
@@ -1006,8 +1003,7 @@ const simple2 =`
 • ${prefix}barcode
 • ${prefix}bneon
 • ${prefix}matrix
-• ${prefix}
-breakwall
+• ${prefix}breakwall
 • ${prefix}gneon
 • ${prefix}dropwater
 • ${prefix}tfire
@@ -1085,7 +1081,6 @@ breakwall
 • bit.ly/OfficialGroupHanBotz`
 
 reply(simple2)
-
 break
           
            case 'donate':
@@ -1113,28 +1108,24 @@ const pebz2 = {
            }
            } 
            pebz.sendMessage(from, txt, MessageType.text, pebz2)
-           
-break 
+           break 
            case 'imgsearch':
             if(!q) return reply(`gambar apa?`)
             let im = await hx.chara(q)
             let acak = im[Math.floor(Math.random() * im.length)]
             let li = await getBuffer(acak)
             await pebz.sendMessage(from,li,image,{quoted: mek})
-            
-break
+            break
             case 'pinterest':
             if(!q) return reply('gambar apa?')
             let pin = await hx.pinterest(q)
             let ac = pin[Math.floor(Math.random() * pin.length)]
             let di = await getBuffer(ac)
             await pebz.sendMessage(from,di,image,{quoted: mek})
-            
-break
+            break
     case 'runtime':
             reply(`${runt(process.uptime())}`)
-            
-break  
+            break  
     case 'tourl':
             if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedVideo ) && args.length == 0) {
             boij = isQuotedImage || isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -1144,8 +1135,7 @@ break
             } else {
             reply('kirim/reply gambar/video')
             }
-            
-break
+            break
                     case 'trut':
         case 'truth':
         if (!isGroup) return reply('KhususGrup')
@@ -1156,8 +1146,7 @@ break
           { buttonId: `${prefix}donate2`, buttonText: { displayText: 'DONATE' }, type: 1 }
         ]
         sendButLocation(from, ttrth, 'GK JALANIN WAJIB DONATE',truteh, but, {quoted: mek})
-	        	
-break
+	        	break
 		case 'dare':
 		if (!isGroup) return reply('KhususGrup')
 		const dare =['Kirim pesan ke mantan kamu dan bilang "aku masih suka sama kamu','telfon crush/pacar sekarang dan ss ke pemain','pap ke salah satu anggota grup','Bilang "${teng} CANTIK BANGET NGGAK BOHONG" ke cowo','ss recent call whatsapp','drop emot "😎??" setiap ngetik di gc/pc selama 1 hari','kirim voice note bilang can i call u baby?','drop kutipan lagu/quote, terus tag member yang cocok buat kutipan itu','pake foto sule sampe 3 hari','ketik pake bahasa daerah 24 jam','ganti nama menjadi "gue anak lucinta luna" selama 5 jam','chat ke kontak wa urutan sesuai %batre kamu, terus bilang ke dia "i lucky to hv you','prank chat mantan dan bilang " i love u, pgn balikan','record voice baca surah al-kautsar','bilang "i hv crush on you, mau jadi pacarku gak?" ke lawan jenis yang terakhir bgt kamu chat (serah di wa/tele), tunggu dia bales, kalo udah ss drop ke sini','sebutkan tipe pacar mu!','snap/post foto pacar/crush','teriak gajelas lalu kirim pake vn kesini','pap mukamu lalu kirim ke salah satu temanmu','kirim fotomu dengan caption, aku anak pungut','teriak pake kata kasar sambil vn trus kirim kesini','teriak " anjimm gabutt anjimmm " di depan rumah mu','ganti nama jadi " BOWO " selama 24 jam','Pura pura kerasukan, contoh : kerasukan maung, kerasukan belalang, kerasukan kulkas, dll']
@@ -1167,21 +1156,18 @@ break
           { buttonId: `${prefix}donate2`, buttonText: { displayText: 'DONATE' }, type: 1 }
         ]
         sendButLocation(from, der, 'GK JALANIN WAJIB DONATE',todz, but, {quoted: mek})
-       	   
-break
+       	   break
            case 'quotesimg':
            case 'quotesharian':
            todzi = await getBuffer(`https://api.lolhuman.xyz/api/random/quotesimage?apikey=${lolkey}`)
            pebz.sendMessage(from, todzi, image, {quoted : mek })
-           
-break
+           break
 case 'simi':
            if (args.length == 0) return reply(`Hallo Kak ${pushname}`)
            get = await fetchJson(`https://api-sv2.simsimi.net/v2/?text=hello&lc=en&cf=false`)
            getresult = get.result
              reply(getresult)         
-             
-break           
+             break           
              case 'wiki':
             if (args.length < 1) return reply(' Yang Mau Di Cari Apa? ')
             teks = args.join(' ')
@@ -1195,8 +1181,7 @@ result = `❒「  *Wiki*  」
            return reply('_[ ! ] Error Hasil Tidak Ditemukan_') 
            reply(result)
            })
-        
-break
+        break
    	case 'playyy':
         if (args.length < 1) return reply(`Kirim perintah *${prefix}play query`)
         let yut = await yts(q)
@@ -1223,16 +1208,14 @@ break
         headerType: 4
 }
         await pebz.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
-        
-break                
+        break                
         case 'ytmp3':
         if(!q) return reply('linknya?')             
         reply('mengirim file...')
         res = await yta(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Audio```')})
         sendMedia(from, `${res.dl_link}`,{quoted:mek})
-        
-break         
+        break         
         case 'ytmp4':
         case 'ytmp4-360':
         if(!q) return reply('linknya?')            
@@ -1240,48 +1223,42 @@ break
         res = await ytv(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
-        
-break                      
+        break                      
         case 'ytmp4-144':
         if(!q) return reply('linknya?')            
         reply('mengirim file...')
         res = await ytv144(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
-        
-break                      
+        break                      
         case 'ytmp4-240':
         if(!q) return reply('linknya?')            
         reply('mengirim file...')
         res = await ytv240(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
-        
-break                      
+        break                      
         case 'ytmp4-480':
         if(!q) return reply('linknya?')            
         reply('mengirim file...')
         res = await ytv480(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
-        
-break                      
+        break                      
         case 'ytmp4-720':
         if(!q) return reply('linknya?')            
         reply('mengirim file...')
         res = await ytv720(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
-        
-break                      
+        break                      
         case 'ytmp4-1080':
         if(!q) return reply('linknya?')            
         reply('mengirim file...')
         res = await ytv1080(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
-        
-break                      
+        break                      
         	case 'ytsearch':
 			if (args.length < 1) return reply('Tolong masukan query!')
 			sticWait(from)
@@ -1304,8 +1281,7 @@ break
     		});
     		ytresult += '*© HanBotz*'
     		await fakethumb(tbuff,ytresult)
-					
-break
+					break
            case 'self':
            if (!isOwner) return sticOwner(from)
            if (self === true) return 
@@ -1327,8 +1303,7 @@ break
            self = true 
            let lat =`_SUCESSS_`
            pebz.sendMessage(from, lat, MessageType.text, pebzk)
-           
-break  
+           break  
            case 'status': 
            if (!isOwner) return sticOwner(from)
            uptime = process.uptime()
@@ -1363,8 +1338,7 @@ break
            }
            }
            pebz.sendMessage(from, akutext, text, faker) 
-           
-break
+           break
            case 'public':
            if (!isOwner) return sticOwner(from)
            if (self === false) return 
@@ -1387,8 +1361,7 @@ break
            self = false
            let breh =`_SUCESSS_`
            pebz.sendMessage(from, breh, MessageType.text, pebzganskun)
-           
-break
+           break
            case 'nulis':
            try {
            if (args.length < 1) return reply('text nya?')
@@ -1399,8 +1372,7 @@ break
            } catch(e) { 
               reply(`${e}`)
            }
-           
-break 
+           break 
 		  case 'sticker2':
 		  case 's2':
 		  var imgbb = require('imgbb-uploader')
@@ -1414,7 +1386,6 @@ sendStickerFromUrl(from, `${anu1}`, mess.success)
 } else {
 reply('Gunakan foto!')
 }
-
 break  
           case 'toimg':
 			if (!isQuotedSticker) return reply('reply sticker !')
@@ -1429,8 +1400,7 @@ break
 			fakethumb(buffer,'```HanBotz```')
 			fs.unlinkSync(ran)
 			})
-			
-break
+			break
 case 'togif':
                if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
                reply(mess.wait)
@@ -1443,8 +1413,7 @@ case 'togif':
                } else {
                reply(mess.wrongFormat)
 }
-               
-break
+               break
         case 'tovideo':
                if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
                reply(mess.wait)
@@ -1457,8 +1426,7 @@ break
                } else {
                reply(mess.wrongFormat)
 }
-               
-break
+               break
          case 'take':      
          case 'colong':
          case 'comot':
@@ -1470,8 +1438,7 @@ break
             dua = typeof anu[1] !== 'undefined' ? anu[1] : `085731855426`
             require('./lib/fetcherr.js').createExif(satu, dua)
 			require('./lib/fetcherr.js').modStick(media, pebz, mek, from)
-			
-break
+			break
              case "sticker":
       case "stiker":
       case "stickergif":
@@ -1559,8 +1526,7 @@ break
             `Kirim gambar dengan caption ${prefix}sticker\nDurasi Sticker Video 1-9 Detik`
           );
         }
-        
-break;
+        break;
            case 'owner':
          members_ids = []
          for (let mem of groupMembers) {
@@ -1575,8 +1541,7 @@ break;
          pebz.sendMessage(from, {displayName: `Creator Bot`, vcard: vcard2}, contact, 
          { quoted: fkontak, 
          })
-         
-break
+         break
           case 'bc':
          if (!isOwner) return sticOwner(from)
          if (args.length < 1) return reply('apa woy')
@@ -1594,8 +1559,7 @@ break
          }
          reply('Suksess broadcast')
          }
-		
-break
+		break
 case 'tagall':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !isOwner) return sticAdmin(from)
@@ -1607,7 +1571,6 @@ teks += `• @${mem.jid.split('@')[0]}\n`
 members_id.push(mem.jid)
 }
 mentions(teks, members_id, true)
-
 break
 		case 'hidetag':
 		if (!isOwner && !isGroupAdmins) return sticAdmin(from)
@@ -1625,11 +1588,8 @@ break
 		quoted: mek
 		}
 	    pebz.sendMessage(from, optionshidetag, text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "393470602054-1351628616@g.us" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption":'༺ HanBotz ༻',"fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": gambar} }  } })
-					
-break
-break
-         
-break
+					breakbreak
+         break
      case 'open':
      case 'grup1':
          if (!isGroup) return reply(mess.only.group)
@@ -1637,8 +1597,7 @@ break
          if (!isBotGroupAdmins) return sticNotAdmin(from)
          sticOk(from)
          pebz.groupSettingChange(from, GroupSettingChange.messageSend, false)
-         
-break
+         break
      case 'close':
      case 'grup0':
          if (!isGroup) return reply(mess.only.group)
@@ -1646,8 +1605,7 @@ break
          if (!isBotGroupAdmins) return sticNotAdmin(from)
          sticOk(from)
          pebz.groupSettingChange(from, GroupSettingChange.messageSend, true)
-         
-break
+         break
      case 'linkgroup':
      case 'linkgrup':
          if (!isGroup) return reply(mess.only.group)
@@ -1656,8 +1614,7 @@ break
          linkgc = await pebz.groupInviteCode(from)
          yeh = `https://chat.whatsapp.com/${linkgc}\n\nlink Group *${groupName}*`
          pebz.sendMessage(from, yeh, text, { quoted: mek })
-         
-break
+         break
      case 'promote' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins && !isOwner) return sticAdmin(from)
@@ -1675,8 +1632,7 @@ break
          mentions(`Perintah di terima, @${mentioned[0].split('@')[0]} Kamu Menjadi Admin Di Group *${groupMetadata.subject}*`, mentioned, true)
          pebz.groupMakeAdmin(from, mentioned)
          }
-         
-break
+         break
      case 'demote' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins && !isOwner) return sticAdmin(from)
@@ -1694,8 +1650,7 @@ break
          mentions(`Perintah di terima, Menurunkan : @${mentioned[0].split('@')[0]} Menjadi Member`, mentioned, true)
          pebz.groupDemoteAdmin(from, mentioned)
          }
-         
-break
+         break
      case 'add' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins && !isOwner) return sticAdmin(from)
@@ -1709,8 +1664,7 @@ break
          console.log('Error :', e)
          reply('Gagal menambahkan target, mungkin karena di private')
          }
-         
-break
+         break
               case 'kick' :
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins && !isOwner) return sticAdmin(from)
@@ -1728,24 +1682,21 @@ break
          mentions(`Perintah di terima, mengeluarkan : @${mentioned[0].split('@')[0]}`, mentioned, true)
          pebz.groupRemove(from, mentioned)
          }
-         
-break
+         break
      case 'setname':
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins && !isOwner) return sticAdmin(from)
          if (!isBotGroupAdmins) return reply(mess.only.Badmin)
          pebz.groupUpdateSubject(from, `${body.slice(9)}`)
          pebz.sendMessage(from, `\`\`\`Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
-         
-break
+         break
      case 'setdesc':
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins && !isOwner) return sticAdmin(from)
          if (!isBotGroupAdmins) return reply(mess.only.Badmin)
          pebz.groupUpdateDescription(from, `${body.slice(9)}`)
          pebz.sendMessage(from, `\`\`\`Sukses Mengganti Deskripsi Group\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, { quoted: ftrol })
-         
-break
+         break
      case 'report':
          const pesan = body.slice(8)
          if (args.length == 0) return reply(`gunakan hanya untuk melaporkan bug/error\n main main akan di block!!`)
@@ -1758,20 +1709,17 @@ break
          }
          pebz.sendMessage(`6285731855426@s.whatsapp.net`, options, text, { quoted: mek })
          reply('Masalah Telah Di Laporkan Ke Owner BOT, Mohon Tunggu Untuk Proses Perbaikan')
-         
-break
+         break
       case 'attp':
          if (args.length == 0) return reply(`Example: ${prefix + command} HanBotz`)
          buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
          pebz.sendMessage(from, buffer, sticker, { quoted: mek })
-         
-break
+         break
          case 'attp2':
          if (args.length == 0) return reply(`Example: ${prefix + command} HanBotz`)
          atetepe = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURIComponent(c)}`)
 					pebz.sendMessage(from, atetepe, sticker, { quoted: mek })
-					
-break
+					break
 //menu gabut gc
 //-- ganteng cek
 case 'gantengcek':
@@ -1782,7 +1730,6 @@ case 'kegantengan':
   cek = `Ke *ganteng* an : *${gan}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 
 //--- cantik cek
@@ -1794,7 +1741,6 @@ case 'kecantikan':
   cek = `Ke *cantik* an : *${can}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 
 //--- apakah
@@ -1807,7 +1753,6 @@ random = naon[Math.floor(Math.random() * (naon.length))]
 apakah = `Apakah *${apa}*
 Jawaban : ${random}`
 reply(apakah)
-
 break
 
 //--- rate
@@ -1818,7 +1763,6 @@ random = `${Math.floor(Math.random() * 100)}`
 rating = `Rate ${rate}
 Persentase : ${random}%`
 reply(rating)
-
 break
 
 //--- bisakah
@@ -1830,7 +1774,6 @@ random = naon[Math.floor(Math.random() * (naon.length))]
 bisakah = `Bisakah ${bisa}
 Jawaban : ${random}`
 reply(bisakah)
-
 break
 
 //--- kapankah
@@ -1844,7 +1787,6 @@ random = naon[Math.floor(Math.random() * (naon.length))]
 kapan = `Kapankah ${kapan}
 Jawaban : ${no} ${random}`
 reply(kapan)
-
 break
 case 'nolepcek':
   if (args.length < 1) return reply(`Contoh : ${prefix}nolepcek hanbotz`)
@@ -1853,7 +1795,6 @@ case 'nolepcek':
   cek = `Ke *nolep* an : *${lep}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 case 'jelekcek':
   if (args.length < 1) return reply(`Contoh : ${prefix}jelekcek hanbotz`)
@@ -1862,7 +1803,6 @@ case 'jelekcek':
   cek = `Ke *jelek* an : *${elek}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 case 'begocek':
   if (args.length < 1) return reply(`Contoh : ${prefix}begocek hanbotz`)
@@ -1871,7 +1811,6 @@ case 'begocek':
   cek = `Ke *bego* an : *${beg}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 case 'pintercek':
 case 'pintarcek':
@@ -1881,7 +1820,6 @@ case 'pintarcek':
   cek = `Ke *pintar* an : *${pntr}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 case 'jagocek':
   if (args.length < 1) return reply(`Contoh : ${prefix}jagocek hanbotz`)
@@ -1890,7 +1828,6 @@ case 'jagocek':
   cek = `Ke *jago* an : *${goan}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 case 'bebancek':
   if (args.length < 1) return reply(`Contoh : ${prefix}bebancek hanbotz`)
@@ -1899,7 +1836,6 @@ case 'bebancek':
   cek = `Ke *beban* an : *${bban}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 case 'baikcek':
   if (args.length < 1) return reply(`Contoh : ${prefix}baikcek hanbotz`)
@@ -1908,7 +1844,6 @@ case 'baikcek':
   cek = `Ke *baik* an : *${god}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 case 'jahatcek':
   if (args.length < 1) return reply(`Contoh : ${prefix}jahatcek hanbotz`)
@@ -1917,7 +1852,6 @@ case 'jahatcek':
   cek = `Ke *jahat* an : *${evil}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 case 'haramcek':
   if (args.length < 1) return reply(`Contoh : ${prefix}begocek hanbotz`)
@@ -1926,7 +1860,6 @@ case 'haramcek':
   cek = `Ke *haram* an : *${harm}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 case 'pakboycek':
 case 'fakboycek':
@@ -1936,7 +1869,6 @@ case 'fakboycek':
   cek = `Ke *fakboy* an : *${fakb}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 case 'pakgirlcek':
 case 'fakgirlcek':
@@ -1946,7 +1878,6 @@ case 'fakgirlcek':
   cek = `Ke *fakgirl* an : *${fakg}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 case 'bapercek':
   if (args.length < 1) return reply(`Contoh : ${prefix}bapercek hanbotz`)
@@ -1955,7 +1886,6 @@ case 'bapercek':
   cek = `Ke *baper* an : *${lov}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 case 'sangecek':
 case 'sagnecek':
@@ -1965,14 +1895,12 @@ case 'sagnecek':
   cek = `Ke *sange* an : *${horn}*
 Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
-
 break
 
 case 'delete':
 if (!isGroup) return reply(mess.only.group)
 if (!isOwner && !isGroupAdmins) return sticAdmin(from)
 pebz.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
-
 break
 case 'leave':
 					if (!isGroup) return reply(mess.only.group)
@@ -1984,15 +1912,13 @@ case 'leave':
 					pebz.updatePresence(from, Presence.composing) 
 					pebz.sendMessage(from, 'Bye 🗿', text) // ur cods
 					}, 0)
-              
-break
+              break
        case 'wangy':
               if (!q) return
               qq = q.toUpperCase()
               awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, aaaah baunya rambut ${qq} wangyy aku mau nyiumin aroma wangynya ${qq} AAAAAAAAH ~ Rambutnya.... aaah rambutnya juga pengen aku elus-elus ~~ AAAAAH ${qq} keluar pertama kali di anime juga manis ❤️ ❤️ ❤️ banget AAAAAAAAH ${qq} AAAAA LUCCUUUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️apa ? ${qq} itu gak nyata ? Cuma HALU katamu ? nggak, ngak ngak ngak ngak NGAAAAAAAAK GUA GAK PERCAYA ITU DIA NYATA NGAAAAAAAAAAAAAAAAAK PEDULI BANGSAAAAAT !! GUA GAK PEDULI SAMA KENYATAAN POKOKNYA GAK PEDULI. ❤️ ❤️ ❤️ ${qq} gw ... ${qq} di laptop ngeliatin gw, ${qq} .. kamu percaya sama aku ? aaaaaaaaaaah syukur ${q} aku gak mau merelakan ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH GUA MASIH PUNYA ${qq} SENDIRI PUN NGGAK SAMA AAAAAAAAAAAAAAH`
               reply(awikwok)
-              
-break
+              break
 //------------------< Sticker/Tools >-------------------
 
       case 'dogestick':
@@ -2006,8 +1932,7 @@ break
 }
 )
        await limitAdd(sender && !isOwner)	
-              
-break
+              break
        case 'patrickstick':
        if (isLimit(sender)) return
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
@@ -2019,8 +1944,7 @@ break
 }
 )
        await limitAdd(sender && !isOwner)	
-              
-break
+              break
        case 'gurastick':
        case 'gawrgura':
        if (isLimit(sender)) return
@@ -2033,8 +1957,7 @@ break
 }
 )
        await limitAdd(sender && !isOwner)	
-              
-break
+              break
        case 'animestick':
        case 'stickeranime':
        if (isLimit(sender)) return
@@ -2047,8 +1970,7 @@ break
 }
 )
        await limitAdd(sender && !isOwner)	
-              
-break
+              break
        case 'slot':
               const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍌 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
               somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
@@ -2067,8 +1989,7 @@ break
               } else {
               reply(`[  🎰 | *SLOT* ]\n---------------------\n${somtoy}\n${somtoyy} <======\n${somtoyyy}\n---------------------\n[  *YOU LOSE*  ]`)
 }
-              
-break
+              break
 
        case 'suit': //nyolong dari zenz
               if (!q) return reply(`Kirim perintah ${prefix}suit gunting / batu / kertas`)
@@ -2103,8 +2024,7 @@ break
               reply(`Kamu memilih Kertas dan bot memilih Gunting\nKamu kalah`)
 }
 }
-              
-break
+              break
 case 'antilink':
 				if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins && !isOwner) return sticAdmin(from)
@@ -2122,24 +2042,21 @@ case 'antilink':
 					} else {
 						reply('On untuk mengaktifkan & off untuk menonaktifkan')
 					}
-					
-break
+					break
 case 'say':
                                         teks = body.slice(5)
 					
                                         if (args.length < 1) return reply('teksnya mana kak?')
                                         saying = teks
                                         reply(saying)
-                                        
-break
+                                        break
 case 'sayy':
                                         teks = body.slice(5)
 					
                                         if (args.length < 1) return reply('teksnya mana kak?')
                                         saying = teks
                                         pebz.sendMessage(from, saying, text)
-                                        
-break
+                                        break
 
               case 'readall':
               if (!isOwner) return sticOwner(from)
@@ -2147,8 +2064,7 @@ break
               await pebz.chatRead(jid)})
               reply(`Berhasil membaca ${unread.length} Chat !`)
               console.log(totalchat.length)
-              
-break	
+              break	
 case 'lirik':
 if (args.length < 1) return reply('Judulnya?')
 teks = body.slice(7)
@@ -2156,7 +2072,6 @@ lirikLagu(teks).then((res) => {
 let lirik = `${res[0].result}`
 reply(lirik)
 })
-
 break
 case 'herolistbeta':
 if (args.length < 1) return reply('Heronya?')
@@ -2167,7 +2082,6 @@ listt += '-  ' + ress.hero[i] + '\n'
 }
 reply(listt)
 })
-
 break
 case 'herolist':
 hero = `*List hero untuk feature /herodetail*
@@ -2453,7 +2367,6 @@ hero = `*List hero untuk feature /herodetail*
 -  Tigreal`
 
 reply(hero)
-
 break
 
 case 'herodetail':
@@ -2485,7 +2398,6 @@ her = `*Hero Details ${body.slice(12)}*
 
 *Story* : ${res.background_story}`
 reply(her)
-
 break
 case 'tutuptime':
 case 'closetime':
@@ -2501,7 +2413,6 @@ setTimeout( () => {
 var nomor = mek.participant
 pebz.groupSettingChange (from, GroupSettingChange.messageSend, true);
 }, timer)
-
 break
 case 'bukatime':
 case 'opentime':
@@ -2517,11 +2428,9 @@ setTimeout( () => {
 var nomor = mek.participant
 pebz.groupSettingChange (from, GroupSettingChange.messageSend, false);
 }, timer)
-
 break
 case 'tes':
 reply(`Oke Sudah Online`)
-
 break
 //FunMenu
 // case 'bego': //
@@ -2570,8 +2479,7 @@ break
         teks = `*Siapa Yang ${command}?*\nYaitu @${goo.jid.split('@')[0]}`
         membr.push(goo.jid)
         mentions(teks, membr, true)
-        
-break
+        break
 case 'pacaran':
       if (!isGroup) return reply(mess.only.group)
         membr = []
@@ -2583,8 +2491,7 @@ case 'pacaran':
         membr.push(foo.jid)
         membr.push(io.jid)
         mentions(teks, membr, true)
-        
-break
+        break
 
 case 'cerpen':  
                    
@@ -2594,8 +2501,7 @@ case 'cerpen':
                    anu1 += `➻ *KATEGORI* : ${anu.result.kategori}\n`
                    anu1 += `➻ *CERPEN* : ${anu.result.cerpen}\n`
                    reply(anu1)
-                   
-break                  
+                   break                  
                    
                    case 'samehadaku':             
                    F = body.slice(12)
@@ -2605,8 +2511,7 @@ break
                    anu1 += `➻ *LINK* : ${anu.link}\n`
                    anu1 += `➻ *DESK* : ${anu.desc}\n`
                    pebz.sendMessage(from, anu2, image, {caption: anu1, quoted: mek })
-                   
-break
+                   break
       case 'neon1':  
                    if (isLimit(sender)) return
 			        
@@ -2616,8 +2521,7 @@ break
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/neon_light?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                           await limitAdd(sender && !isOwner)	
-                   
-break  
+                   break  
        case 'text3d':  
                    if (isLimit(sender)) return
 			        
@@ -2627,8 +2531,7 @@ break
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                           await limitAdd(sender && !isOwner)	
-                   
-break                   
+                   break                   
        case 'galaxy':  
                    if (isLimit(sender)) return
 			        
@@ -2638,8 +2541,7 @@ break
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/galaxywp?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                           await limitAdd(sender && !isOwner)	
-                   
-break
+                   break
       case 'gaming':  
                    if (isLimit(sender)) return
 			        
@@ -2648,8 +2550,7 @@ break
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/gaming?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                           await limitAdd(sender && !isOwner)	
-                   
-break
+                   break
       case 'colors':  
                    if (isLimit(sender)) return
 			        
@@ -2659,8 +2560,7 @@ break
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/watercolor?text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                           await limitAdd(sender && !isOwner)	
-                   
-break
+                   break
 case 'darkjoke':  
                    if (isLimit(sender)) return
 			        
@@ -2668,8 +2568,7 @@ case 'darkjoke':
                    anu1 = await getBuffer(anu.result)
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
                           await limitAdd(sender && !isOwner)	
-                   
-break
+                   break
 case 'meme':  
                    if (isLimit(sender)) return
 			        
@@ -2677,15 +2576,13 @@ case 'meme':
                    anu1 = await getBuffer(anu.result)
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
                    await limitAdd(sender) 
-                   
-break
+                   break
        case 'pantun':  
                    
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/random_pantun`)
                    anu1 = `➻ *PANTUN* : ${anu.result}\n` 
                    reply(anu1)
-                   
-break 
+                   break 
                    case 'tebakgambar':
 					if (isLimit(sender)) return
                     
@@ -2707,8 +2604,7 @@ break
 					pebz.sendMessage(from, bufferkkk, image, { caption: '_Jelaskan Apa Maksud Gambar Ini_', quoted: mek }) // ur cods
 					}, 0) // 1000 = 1s,
 					       await limitAdd(sender && !isOwner)	
-					
-break
+					break
 
 //=====================================//
                        /*TEXT MAKER*/
@@ -2724,7 +2620,6 @@ break
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    await limitAdd(sender && !isOwner)	
-
 break
 case 'breakwall':
 case 'dropwater':
@@ -2740,7 +2635,6 @@ if (isLimit(sender)) return
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    await limitAdd(sender && !isOwner)	
-
 break
 case 'barcode':
 case 'leavest':
@@ -2752,7 +2646,6 @@ if (isLimit(sender)) return
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    await limitAdd(sender && !isOwner)	
-
 break
 case 'gplaybutton':
 case 'splaybutton':
@@ -2764,7 +2657,6 @@ if (isLimit(sender)) return
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    await limitAdd(sender && !isOwner)	
-
 break
 case 'flowertext':
 if (isLimit(sender)) return
@@ -2774,7 +2666,6 @@ if (isLimit(sender)) return
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    await limitAdd(sender && !isOwner)	
-
 break
                    case 'epep':
                    if (isLimit(sender)) return
@@ -2784,7 +2675,6 @@ break
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    await limitAdd(sender && !isOwner)	
-
 break
 
                 case 'wolflogo':
@@ -2798,7 +2688,6 @@ break
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					       await limitAdd(sender && !isOwner)	
-
 break
                 case 'logoaveng':
                 if (isLimit(sender)) return
@@ -2810,7 +2699,6 @@ break
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					       await limitAdd(sender && !isOwner)	
-
 break
                 case 'marvellogo':
                 if (isLimit(sender)) return
@@ -2822,7 +2710,6 @@ break
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					       await limitAdd(sender && !isOwner)	
-
 break
                 case 'watercolour':
                     if (isLimit(sender)) return
@@ -2834,7 +2721,6 @@ break
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					       await limitAdd(sender && !isOwner)	
-
 break
                     case 'phlogo':
                     
@@ -2847,7 +2733,6 @@ break
                    anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text1=${F1}&text2=${F2}`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 					       await limitAdd(sender && !isOwner)	
-
 break
 
 case 'memegen':
@@ -2859,7 +2744,6 @@ case 'memegen':
 				   var F3 = F.split("&")[2]; 
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/meme-gen?top=${F1}&bottom=${F2}&img=${F3}/revision/latest/top-crop/width/360/height/450?cb=20190205113053`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-
 break
 case 'gendoge':
 			       if (!isOwner) return sticOwner(from)
@@ -2869,7 +2753,6 @@ case 'gendoge':
 				   var F2 = F.split("&")[1]; 
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/meme-gen?top=${F1}&bottom=${F2}&img=https://static.wikia.nocookie.net/dogelore/images/9/97/Doge.jpg/revision/latest/top-crop/width/360/height/450?cb=20190205113053`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
-
 break
 
 //=====================================//
@@ -2884,7 +2767,6 @@ case 'artinama':
                     
                     reply(anu1)
                     await limitAdd(sender && !isOwner)	
-
 break
        case 'artimimpi':  
 			        if (isLimit(sender)) return
@@ -2895,7 +2777,6 @@ break
                     anu1 = `➻ *ARTI* : ${anu.result.string}\n`
                     reply(anu1)
                     await limitAdd(sender && !isOwner)	
-
 break
 case 'kbbi':
                    if (args.length < 1) return reply('Kata Apa?')
@@ -2903,8 +2784,7 @@ case 'kbbi':
                    anu2 = await fetchJson(`${zeks}/api/kbbi?apikey=${apibotz}&q=${F}`)                      
                    anu1 = `➻ *HASIL* : ${anu2.result}\n`                   
                    reply(anu1)
-                   
-break
+                   break
 case 'translate':  
                     if (args.length < 1) return reply('[❗] Example :\n*${prefix}${command} from&to&text')
                     var F = body.slice(11)
@@ -2915,7 +2795,6 @@ case 'translate':
                     
                     anu1 = `➻ *Translate* : ${anu.translated_text}\n`
                     reply(anu1)
-
 break
 case 'bahasa':
 kode = `*Kode Bahasa untuk /translate*
@@ -2973,438 +2852,366 @@ kode = `*Kode Bahasa untuk /translate*
   cy: Welsh`
   
   reply(kode)
-  
-break
+  break
 //=====================================/
 
             case 'audio1':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio1)
-            
-break   
+            break   
             case 'audio2':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio2)
-            
-break       
+            break       
             case 'audio3':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio3)
-            
-break       
+            break       
             case 'audio4':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio4)
-            
-break       
+            break       
             case 'audio5':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio5)
-            
-break       
+            break       
             case 'audio6':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio6)
-            
-break       
+            break       
             case 'audio7':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio7)
-            
-break       
+            break       
             case 'audio8':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio8)
-            
-break       
+            break       
             case 'audio9':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio9)
-            
-break       
+            break       
             case 'audio10':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio10)
-            
-break       
+            break       
             case 'audio11':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio11)
-            
-break       
+            break       
             case 'audio12':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio12)
-            
-break       
+            break       
             case 'audio13':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio13)
-            
-break       
+            break       
             case 'audio14':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio14)
-            
-break       
+            break       
             case 'audio15':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio15)
-            
-break       
+            break       
             case 'audio16':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio16)
-            
-break       
+            break       
             case 'audio17':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio17)
-            
-break       
+            break       
             case 'audio18':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio18)
-            
-break       
+            break       
             case 'audio19':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio19)
-            
-break  
+            break  
             case 'audio20':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio20)
-            
-break 
+            break 
             case 'audio21':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio21)
-            
-break   
+            break   
             case 'audio22':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio22)
-            
-break   
+            break   
             case 'audio23':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio23)
-            
-break   
+            break   
             case 'audio24':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio24)
-            
-break   
+            break   
             case 'audio25':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio25)
-            
-break   
+            break   
             case 'audio26':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio26)
-            
-break   
+            break   
             case 'audio27':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio27)
-            
-break   
+            break   
             case 'audio28':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio28)
-            
-break   
+            break   
             case 'audio29':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio29)
-            
-break   
+            break   
             case 'audio30':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio30)
-            
-break   
+            break   
             case 'audio31':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio31)
-            
-break   
+            break   
             case 'audio32':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio32)
-            
-break   
+            break   
             case 'audio33':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio33)
-            
-break   
+            break   
             case 'audio34':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio34)
-            
-break   
+            break   
             case 'audio35':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(audio35)
-            
-break
+            break
 
 
              case 'sound1':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound1)
-            
-break   
+            break   
             case 'sound2':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound2)
-            
-break       
+            break       
             case 'sound3':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound3)
-            
-break       
+            break       
             case 'sound4':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound4)
-            
-break       
+            break       
             case 'sound5':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound5)
-            
-break       
+            break       
             case 'sound6':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound6)
-            
-break       
+            break       
             case 'sound7':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound7)
-            
-break       
+            break       
             case 'sound8':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound8)
-            
-break       
+            break       
             case 'sound9':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound9)
-            
-break       
+            break       
             case 'sound10':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound10)
-            
-break       
+            break       
             case 'sound11':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound11)
-            
-break       
+            break       
             case 'sound12':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound12)
-            
-break       
+            break       
             case 'sound13':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound13)
-            
-break       
+            break       
             case 'sound14':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound14)
-            
-break       
+            break       
             case 'sound15':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound15)
-            
-break       
+            break       
             case 'sound16':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound16)
-            
-break       
+            break       
             case 'sound17':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound17)
-            
-break       
+            break       
             case 'sound18':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound18)
-            
-break       
+            break       
             case 'sound19':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound19)
-            
-break  
+            break  
             case 'sound20':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound20)
-            
-break 
+            break 
             case 'sound21':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound21)
-            
-break   
+            break   
             case 'sound22':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound22)
-            
-break   
+            break   
             case 'sound23':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound23)
-            
-break   
+            break   
             case 'sound24':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound24)
-            
-break   
+            break   
             case 'sound25':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound25)
-            
-break   
+            break   
             case 'sound26':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound26)
-            
-break   
+            break   
             case 'sound27':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound27)
-            
-break   
+            break   
             case 'sound28':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound28)
-            
-break   
+            break   
             case 'sound29':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound29)
-            
-break   
+            break   
             case 'sound30':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound30)
-            
-break   
+            break   
             case 'sound31':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound31)
-            
-break   
+            break   
             case 'sound32':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound32)
-            
-break   
+            break   
             case 'sound33':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound33)
-            
-break   
+            break   
             case 'sound34':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound34)
-            
-break   
+            break   
             case 'sound35':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound35)
-            
-break
+            break
             case 'sound36':
             if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             sendVn(sound36)
-            
-break
+            break
 
 //=====================================//
 
@@ -3426,16 +3233,14 @@ case 'smeme': case 'stickmeme': case 'sm': {
            reply('reply gambar atau sticker!')
            } 
            }
-           
-break      
+           break      
       case 'textstic':
       if (isLimit(sender)) return
 			       await limitAdd(sender && !isOwner)	
             if (args.length == 0) return reply(`Example: ${prefix + command} Han`)
             buffer = await getBuffer(`https://hardianto.xyz/api/ttpcustom?text=${q}&color=black&apikey=${HardiApi}`)
             pebz.sendMessage(from, buffer, sticker, { quoted: mek })
-            
-break
+            break
 case 'potomeme': case 'pmeme':
 if (!isOwner) return sticOwner(from)
            if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* teks atas&teks bawah`)
@@ -3456,15 +3261,14 @@ if (!isOwner) return sticOwner(from)
            return reply(`${e}`)
            console.log(e)
            }
-break   
+           break   
            
           case 'setlimit':
 					if (args.length < 1) return reply('berapa?')
 				if (!isOwner) return sticOwner(from)
 					limitawal = args[0]
 					reply(`*Limit berhasil di ubah menjadi* : ${limitawal}`)
-					
-break 
+					break 
 
 case 'afk': 
               if (!isGroup) return reply(mess.only.group)
@@ -3473,8 +3277,7 @@ case 'afk':
               afk.addAfkUser(sender, time, reason, _afk)
               const aluty = `*「 AFK MODE 」*\n\n➸ *Username*: ${pushname}\n➸ *Alasan*: ${reason}`
               reply(aluty)
-              
-break
+              break
 case 'tiktok': 
        case 'ttdl':
              if (!q) return reply('Linknya?')
@@ -3482,8 +3285,8 @@ case 'tiktok':
              reply(mess.wait)
              anu = await TiktokDownloader(`${q}`)
             .then((data) => { sendMediaURL(from, data.result.watermark) })
-            
-break
+            .catch((err) => { reply(String(err)) })
+             break
       case 'ttnowm': 
       case 'tiktoknowm':
              if (!q) return reply('Linknya?')
@@ -3491,8 +3294,8 @@ break
              reply(mess.wait)
              anu = await TiktokDownloader(`${q}`)
             .then((data) => { sendMediaURL(from, data.result.nowatermark) })
-            
-break
+            .catch((err) => { reply(String(err)) })
+             break
 //=====================================//
 
 
