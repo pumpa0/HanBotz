@@ -498,6 +498,7 @@ console.log(e)
 				tunggu: 'loading...',
 				yutub: 'khusus personal chat',
 				spamm: '*jika spam* command akan di block!',
+				wrongFormat: '_format salah_',
 				error: {
 					stick: 'gagal saat konvensi gambar ke sticker',
 					Iv: 'link nya mokad :v'
@@ -770,8 +771,8 @@ ${p}• ${prefix}animestick${p}
 
 *𝗖𝗢𝗡𝗩𝗘𝗥𝗧*
 ${p}• ${prefix}togif <replysticker>${p}
+${p}• ${prefix}tovid <replysticker>${p}
 ${p}• ${prefix}toimg <replysticker>${p}
-${p}• ${prefix}tovideo <replysticker>${p}
 
 *𝗦𝗘𝗔𝗥𝗖𝗛*
 ${p}• ${prefix}pantun${p}
@@ -1415,7 +1416,7 @@ case 'togif':
                pebz.sendMessage(from, mp4, video, {mimetype: 'video/gif', quoted: mek, caption: 'HanBotz'})
                fs.unlinkSync(mediaaa)
                } else {
-               reply(mess.wrongFormat)
+               reply('reply sticker animasi')
 }
                break
         case 'tovideo':
@@ -1429,7 +1430,7 @@ case 'togif':
                pebz.sendMessage(from, mp4, video, {mimetype: 'video/mp4', quoted: mek, caption: 'HanBotz'})
                fs.unlinkSync(mediaaa)
                } else {
-               reply(mess.wrongFormat)
+               reply('reply sticker animasi')
 }
                break
          case 'take':      
@@ -1593,8 +1594,17 @@ break
 		quoted: mek
 		}
 	    pebz.sendMessage(from, optionshidetag, text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "393470602054-1351628616@g.us" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption":'༺ HanBotz ༻',"fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": gambar} }  } })
-					breakbreak
+		
          break
+case 'join': 
+             if (!q) return reply('Linknya?')
+             if (!isOwner) return sticOwner(from)
+             if (!isUrl(args[0]) && !args[0].includes('https://chat.whatsapp.com/')) return reply('Linknya Invalid')
+             link = args[0].replace('https://chat.whatsapp.com/','')
+             fak = dha.query({ json: ['action', 'invite', link],
+             expect200: true })
+             reply('Berhasil Masuk Grup')
+             break
      case 'open':
      case 'grup1':
          if (!isGroup) return reply(mess.only.group)
