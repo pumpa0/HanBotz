@@ -334,10 +334,6 @@ console.log(e)
 			const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
 			}
-			const sendMediaURL = async(to, url, text="", mids=[]) =>{
-           if(mids.length > 0){
-           text = normalizeMention(to, text, mids)
-}
 			const reply = (teks) => {
 				pebz.sendMessage(from, teks, text, {quoted:mek})
 			}
@@ -496,7 +492,7 @@ console.log(e)
         
 	        mess = {
 				wait: 'tunggu sebentar...',
-				success: 'sukses ✓“',
+				success: 'sukses ✓',
 				notxt: 'textnya mana ?',
 				sabar: 'mengirim file...',
 				tunggu: 'loading...',
@@ -768,7 +764,11 @@ ${p}• ${prefix}dogestick${p}
 ${p}• ${prefix}gurastick${p}
 ${p}• ${prefix}patrickstick${p}
 ${p}• ${prefix}animestick${p}
+
+*𝗖𝗢𝗡𝗩𝗘𝗥𝗧*
+${p}• ${prefix}togif <replysticker>${p}
 ${p}• ${prefix}toimg <replysticker>${p}
+${p}• ${prefix}tovideo <replysticker>${p}
 
 *𝗦𝗘𝗔𝗥𝗖𝗛*
 ${p}• ${prefix}pantun${p}
@@ -981,7 +981,11 @@ const simple2 =`
 • ${prefix}gurastick
 • ${prefix}patrickstick
 • ${prefix}animestick
+
+*𝗖𝗢𝗡𝗩𝗘𝗥𝗧*
+• ${prefix}togif <replysticker>
 • ${prefix}toimg <replysticker>
+• ${prefix}tovideo <replysticker>
 
 *𝗦𝗘𝗔𝗥𝗖𝗛*
 • ${prefix}pantun
@@ -1408,20 +1412,21 @@ case 'togif':
                mediaaa = await pebz.downloadAndSaveMediaMessage(encmediaaa)
                a = await webp2gifFile(mediaaa)
                mp4 = await getBuffer(a.result)
-               pebz.sendMessage(from, mp4, video, {mimetype: 'video/gif', quoted: mek, caption: mess.success})
+               pebz.sendMessage(from, mp4, video, {mimetype: 'video/gif', quoted: mek, caption: 'HanBotz'})
                fs.unlinkSync(mediaaa)
                } else {
                reply(mess.wrongFormat)
 }
                break
         case 'tovideo':
+        case 'tovid':
                if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
                reply(mess.wait)
                encmediaaa = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
                mediaaa = await pebz.downloadAndSaveMediaMessage(encmediaaa)
                a = await webp2gifFile(mediaaa)
                mp4 = await getBuffer(a.result)
-               pebz.sendMessage(from, mp4, video, {mimetype: 'video/mp4', quoted: mek, caption: mess.success})
+               pebz.sendMessage(from, mp4, video, {mimetype: 'video/mp4', quoted: mek, caption: 'HanBotz'})
                fs.unlinkSync(mediaaa)
                } else {
                reply(mess.wrongFormat)
@@ -2621,6 +2626,16 @@ case 'meme':
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                    await limitAdd(sender && !isOwner)	
 break
+case 'matrix':
+case 'logobp':
+                 if (isLimit(sender)) return
+			        
+                   if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
+                   F = body.slice(7)		    
+                   anu = await getBuffer(`${zeks}/api/${command}?apikey=${apibotz}&text=${F}`)
+                   pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
+                   await limitAdd(sender && !isOwner)	
+break
 case 'breakwall':
 case 'dropwater':
 case 'text3dbox':
@@ -2754,7 +2769,12 @@ case 'gendoge':
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/meme-gen?top=${F1}&bottom=${F2}&img=https://static.wikia.nocookie.net/dogelore/images/9/97/Doge.jpg/revision/latest/top-crop/width/360/height/450?cb=20190205113053`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 break
-
+case 'ttp':
+if (args.length < 1) return reply(`teksnya mana?\ncontoh ${prefix} HanBotz`)
+woy = args.join(" ")
+anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
+sendStickerFromUrl(from, anjay)
+break
 //=====================================//
 
 case 'artinama':  
@@ -3284,7 +3304,7 @@ case 'tiktok':
              if (!q.includes('tiktok')) return reply(mess.error.Iv)
              reply(mess.wait)
              anu = await TiktokDownloader(`${q}`)
-            .then((data) => { sendMediaURL(from, data.result.watermark) })
+            .then((data) => { sendMediaFromURL(from, data.result.watermark) })
             .catch((err) => { reply(String(err)) })
              break
       case 'ttnowm': 
@@ -3293,7 +3313,7 @@ case 'tiktok':
              if (!q.includes('tiktok')) return reply(mess.error.Iv)
              reply(mess.wait)
              anu = await TiktokDownloader(`${q}`)
-            .then((data) => { sendMediaURL(from, data.result.nowatermark) })
+            .then((data) => { sendMediaFromURL(from, data.result.nowatermark) })
             .catch((err) => { reply(String(err)) })
              break
 //=====================================//
