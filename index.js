@@ -3235,7 +3235,7 @@ case 'afk':
               if (isAfkOn) return
               const reason = q ? q : 'Nothing.'
               afk.addAfkUser(sender, time, reason, _afk)
-              const aluty = ````AFK Mode```\n\n➸ *Username*: ${pushname}\n➸ *Alasan*: ${reason}`
+              const aluty = `*「 AFK MODE 」*\n\n➸ *Username*: ${pushname}\n➸ *Alasan*: ${reason}`
               reply(aluty)
               break
 //=====================================//
