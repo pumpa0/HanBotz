@@ -24,6 +24,9 @@ const { y2mateA, y2mateV } = require('./lib/y2mate.js')
 const { yta, ytv, ytv144, ytv240, ytv480, ytv720, ytv1080, igdl, upload, formatDate } = require('./lib/ytdl')
 const { wikiSearch } = require('./lib/wiki.js')
 const { wait, simih,  getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./lib/function')
+const Math_js = require('mathjs')
+const { EmojiAPI } = require("emoji-api")
+const emoji = new EmojiAPI()
 const { ind } = require('./bahasa/ind.js')
 const fetch = require('node-fetch')
 const get = require('got')
@@ -1601,7 +1604,7 @@ case 'join':
              if (!isOwner) return sticOwner(from)
              if (!isUrl(args[0]) && !args[0].includes('https://chat.whatsapp.com/')) return reply('Linknya Invalid')
              link = args[0].replace('https://chat.whatsapp.com/','')
-             fak = dha.query({ json: ['action', 'invite', link],
+             fak = pebz.query({ json: ['action', 'invite', link],
              expect200: true })
              reply('Berhasil Masuk Grup')
              break
@@ -1725,6 +1728,15 @@ case 'join':
          pebz.sendMessage(`6285731855426@s.whatsapp.net`, options, text, { quoted: mek })
          reply('Masalah Telah Di Laporkan Ke Owner BOT, Mohon Tunggu Untuk Proses Perbaikan')
          break
+case 'semoji':
+              if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
+			if (args === 0) return reply('emojinya?')   
+		   aku4 = args.join(' ')
+           emoji.get(`${aku4}`).then(emoji => {
+           link = `${emoji.images[10].url}`
+		   sendWebp(from, `${link}`).catch(() => reply('gagal'))
+           })
+    	   break
       case 'attp':
          if (args.length == 0) return reply(`Example: ${prefix + command} HanBotz`)
          buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
