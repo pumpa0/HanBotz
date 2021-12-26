@@ -942,9 +942,13 @@ ${p}• ${prefix}report <text>${p}
 `
 
            but = [
-          { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
+          { urlButton: {
+               displayText: 'Official Group',
+               url: 'https://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ'
+             }
                   ]
-        pebz.sendMessage(from, tod, tod2, gambar)
+           
+        sendUrlBut(from, tod, tod2, gambar, but)
            break
 case 'sapa':
 reply("hai")
