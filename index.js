@@ -26,6 +26,7 @@ const { wikiSearch } = require('./lib/wiki.js')
 const { wait, simih,  getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./lib/function')
 const { EmojiAPI } = require("emoji-api")
 const emoji = new EmojiAPI()
+const ggs = require('google-it')
 const { ind } = require('./bahasa/ind.js')
 const fetch = require('node-fetch')
 const get = require('got')
@@ -39,6 +40,7 @@ const welkom = JSON.parse(fs.readFileSync('./lib/group/welcome.json'))
 const yts = require('yt-search')
 const request = require('request')
 const pebz = new WAConnection()
+const { mediafireDl } = require('./lib/mediafire.js')
 const { webp2gifFile, igDownloader, TiktokDownloader } = require("./lib/gif.js")
 const _antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 const _antivirtex = JSON.parse(fs.readFileSync('./database/antivirtex.json'))
@@ -3432,7 +3434,46 @@ case 'totag':
           reply(`reply gambar/dokumen/gif/sticker/audio/video dengan caption ${prefix}totag`)
         }
         break
+case 'google':
+case 'googlesearch':
+case 'ggs':
+if (args.length < 1) return reply('Yang mau di cari apaan?')
+teks = args.join(' ')
+sticWait(from)
+res = await ggs({'query' : `${teks}`})
+kant = ``
+for (let i of res) {
+kant += `*Judul* : ${i.title}
+*Link* : ${i.link}
+*Keterangan* : ${i.snippet}`
+}
+var akhir = kant.trim()
+reply(akhir)
+break
+case 'mediafire':
+if (args.length < 1) return reply('Link Nya Mana? ')
+if(!isUrl(args[0]) && !args[0].includes('mediafire')) return reply('_error_')
+if (Number(filesize) >= 30000) return reply(`*「 MEDIAFIRE DOWNLOAD 」*
 
+*◈ Nama :* ${res[0].nama}
+*◈ Ukuran :* ${res[0].size}
+*◈ Link :* ${res[0].link}
+
+_Maaf size melebihi batas maksimal, Silahkan klik link diatas_`)
+sticWait(from)
+teks = args.join(' ')
+res = await mediafireDl(teks)
+result = `*「 MEDIAFIRE DOWNLOAD 」*
+
+*Data Berhasil Didapatkan!*
+\`\`\`◈ Nama : ${res[0].nama}\`\`\`
+\`\`\`◈ Ukuran : ${res[0].size}\`\`\`
+\`\`\`◈ Link : ${res[0].link}\`\`\`
+
+_File sedang dikirim, Silahkan tunggu beberapa menit_`
+reply(result)
+sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
+break
 //=====================================//
 
 
