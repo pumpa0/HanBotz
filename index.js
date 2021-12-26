@@ -687,18 +687,18 @@ const linkwa = 'https://chat.whatsapp.com/'
             const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
             const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
            const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
-			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mHANBOTZ\x1b[1;37m]', color(pushname), 'Menggunakan Fitur', color(command), 'args :', color(args.length))
-        	if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mHANBOTZ\x1b[1;37m]', color(pushname), 'Memakai Fitur', color(command), 'DI Group', color(groupName), 'args :', color(args.length))      
+			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mHANBOTZ\x1b[1;37m]', color(pushname), '-', color(command), 'args :', color(args.length))
+        	if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mHANBOTZ\x1b[1;37m]', color(pushname), '-', color(command), 'DI Group', color(groupName), 'args :', color(args.length))      
         const runt = function (seconds) {
   seconds = Number(seconds);
   var d = Math.floor(seconds / (3600 * 24));
   var h = Math.floor((seconds % (3600 * 24)) / 3600);
   var m = Math.floor((seconds % 3600) / 60);
   var s = Math.floor(seconds % 60);
-  var dDisplay = d > 0 ? d + (d == 1 ? " d, " : " D, ") : "";
-  var hDisplay = h > 0 ? h + (h == 1 ? " h, " : " H, ") : "";
-  var mDisplay = m > 0 ? m + (m == 1 ? " m, " : " M, ") : "";
-  var sDisplay = s > 0 ? s + (s == 1 ? " s" : " S") : "";
+  var dDisplay = d > 0 ? d + (d == 1 ? " d, " : " d, ") : "";
+  var hDisplay = h > 0 ? h + (h == 1 ? " h, " : " h, ") : "";
+  var mDisplay = m > 0 ? m + (m == 1 ? " m, " : " m, ") : "";
+  var sDisplay = s > 0 ? s + (s == 1 ? " s" : " s") : "";
   return dDisplay + hDisplay + mDisplay + sDisplay;
 };
 
@@ -3326,6 +3326,10 @@ case 'tiktok':
             .then((data) => { sendMediaFromURL(from, data.result.nowatermark) })
             .catch((err) => { reply(String(err)) })
              break
+case 'resetlimit'
+if (!isOwner) return sticOwner(from)
+limitReset
+break
 //=====================================//
 
 
@@ -3360,6 +3364,6 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                            
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
-			reply(error)
+			reply(String(err))
 		}
 	})
