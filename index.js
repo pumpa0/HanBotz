@@ -3364,6 +3364,6 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                            
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
-			reply(String(err))
+			reply('_error_')
 		}
 	})
