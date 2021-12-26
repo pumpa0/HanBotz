@@ -736,207 +736,207 @@ ${p}${ucapanWaktu} ${pushname}${p}
 • bit.ly/OfficialGroupHanBotz`
 tod2 =`͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
 *𝗚𝗥𝗢𝗨𝗣*
-• ${prefix}delete <reply>
-• ${prefix}linkgroup
-• ${prefix}antilink <on/off>
-• ${prefix}add <nomer[62]>
-• ${prefix}kick <tag>
-• ${prefix}demote <tag>
-• ${prefix}promote <tag>
-• ${prefix}setname <text>
-• ${prefix}setdesc <text>
-• ${prefix}hidetag <text>
-• ${prefix}tagall <text>
-• ${prefix}open|close
+${p}• ${prefix}delete <reply>${p}
+${p}• ${prefix}linkgroup${p}
+${p}• ${prefix}antilink <on/off>${p}
+${p}• ${prefix}add <nomer[62]>${p}
+${p}• ${prefix}kick <tag>${p}
+${p}• ${prefix}demote <tag>${p}
+${p}• ${prefix}promote <tag>${p}
+${p}• ${prefix}setname <text>${p}
+${p}• ${prefix}setdesc <text>${p}
+${p}• ${prefix}hidetag <text>${p}
+${p}• ${prefix}tagall <text>${p}
+${p}• ${prefix}open|close${p}
 
 *𝗬𝗢𝗨𝗧𝗨𝗕𝗘*
-• ${prefix}ytmp3 <link>
-• ${prefix}ytmp4-144 <link>
-• ${prefix}ytmp4-240 <link>
-• ${prefix}ytmp4-360 <link>
-• ${prefix}ytmp4-480 <link>
-• ${prefix}ytmp4-720 <link>
-• ${prefix}ytmp4-1080 <link>
-• ${prefix}ytsearch <query>
+${p}• ${prefix}ytmp3 <link>${p}
+${p}• ${prefix}ytmp4-144 <link>${p}
+${p}• ${prefix}ytmp4-240 <link>${p}
+${p}• ${prefix}ytmp4-360 <link>${p}
+${p}• ${prefix}ytmp4-480 <link>${p}
+${p}• ${prefix}ytmp4-720 <link>${p}
+${p}• ${prefix}ytmp4-1080 <link>${p}
+${p}• ${prefix}ytsearch <query>${p}
 
 *𝗦𝗧𝗜𝗖𝗞𝗘𝗥*
-• ${prefix}attp <text>
-• ${prefix}textstic <text>
-• ${prefix}sticker <reply>
-• ${prefix}stickergif <reply>
-• ${prefix}dogestick
-• ${prefix}gurastick
-• ${prefix}patrickstick
-• ${prefix}animestick
+${p}• ${prefix}attp <text>${p}
+${p}• ${prefix}textstic <text>${p}
+${p}• ${prefix}sticker <reply>${p}
+${p}• ${prefix}stickergif <reply>${p}
+${p}• ${prefix}dogestick${p}
+${p}• ${prefix}gurastick${p}
+${p}• ${prefix}patrickstick${p}
+${p}• ${prefix}animestick${p}
 
 *𝗖𝗢𝗡𝗩𝗘𝗥𝗧*
-• ${prefix}togif <replysticker>
-• ${prefix}tovid <replysticker>
-• ${prefix}toimg <replysticker>
+${p}• ${prefix}togif <replysticker>${p}
+${p}• ${prefix}tovid <replysticker>${p}
+${p}• ${prefix}toimg <replysticker>${p}
 
 *𝗦𝗘𝗔𝗥𝗖𝗛*
-• ${prefix}pantun
-• ${prefix}lirik <query>
-• ${prefix}wiki <query>
-• ${prefix}cerpen <query>
-• ${prefix}pinterest <query>
-️• ${prefix}imgsearch <query>
-• ${prefix}samehadaku <query>
+${p}• ${prefix}pantun${p}
+${p}• ${prefix}lirik <query>${p}
+${p}• ${prefix}wiki <query>${p}
+${p}• ${prefix}cerpen <query>${p}
+${p}• ${prefix}pinterest <query>${p}
+${p}️• ${prefix}imgsearch <query>${p}
+${p}• ${prefix}samehadaku <query>${p}
 
 *𝗠𝗔𝗞𝗘𝗥*
 _example : text1&text2_
-• ${prefix}phlogo
-• ${prefix}wolflogo
-• ${prefix}pubglogo
-• ${prefix}logoaveng
-• ${prefix}marvellogo
-• ${prefix}watercolour
+${p}• ${prefix}phlogo${p}
+${p}• ${prefix}wolflogo${p}
+${p}• ${prefix}pubglogo${p}
+${p}• ${prefix}logoaveng${p}
+${p}• ${prefix}marvellogo${p}
+${p}• ${prefix}watercolour${p}
 
 _example : text_
-• ${prefix}qrencode
-• ${prefix}barcode
-• ${prefix}bneon
-• ${prefix}matrix
-• ${prefix}breakwall
-• ${prefix}gneon
-• ${prefix}dropwater
-• ${prefix}tfire
-• ${prefix}sandw
-• ${prefix}gplaybutton
-• ${prefix}splaybutton
-• ${prefix}text3dbox
-• ${prefix}logobp
-• ${prefix}leavest
-• ${prefix}thundertext
-• ${prefix}tlight
-• ${prefix}naruto
-• ${prefix}crosslogo
-• ${prefix}cslogo
-• ${prefix}crismes
-• ${prefix}flametext
-• ${prefix}glowtext
-• ${prefix}smoketext
-• ${prefix}flowertext
-• ${prefix}lithgtext
-• ${prefix}galaxy
-• ${prefix}text3d
-• ${prefix}neon1
-• ${prefix}colors  
+${p}• ${prefix}qrencode${p}
+${p}• ${prefix}barcode${p}
+${p}• ${prefix}bneon${p}
+${p}• ${prefix}matrix${p}
+${p}• ${prefix}breakwall${p}
+${p}• ${prefix}gneon${p}
+${p}• ${prefix}dropwater${p}
+${p}• ${prefix}tfire${p}
+${p}• ${prefix}sandw${p}
+${p}• ${prefix}gplaybutton${p}
+${p}• ${prefix}splaybutton${p}
+${p}• ${prefix}text3dbox${p}
+${p}• ${prefix}logobp${p}
+${p}• ${prefix}leavest${p}
+${p}• ${prefix}thundertext${p}
+${p}• ${prefix}tlight${p}
+${p}• ${prefix}naruto${p}
+${p}• ${prefix}crosslogo${p}
+${p}• ${prefix}cslogo${p}
+${p}• ${prefix}crismes${p}
+${p}• ${prefix}flametext${p}
+${p}• ${prefix}glowtext${p}
+${p}• ${prefix}smoketext${p}
+${p}• ${prefix}flowertext${p}
+${p}• ${prefix}lithgtext${p}
+${p}• ${prefix}galaxy${p}
+${p}• ${prefix}text3d${p}
+${p}• ${prefix}neon1${p}
+${p}• ${prefix}colors  ${p}
 
 *𝗔𝗨𝗗𝗜𝗢*
-• ${prefix}audio1
-    • ${prefix}audio2
-• ${prefix}audio3
-    • ${prefix}audio4
-• ${prefix}audio5
-    • ${prefix}audio6
-• ${prefix}audio7
-    • ${prefix}audio8
-• ${prefix}audio9
-    • ${prefix}audio10
-• ${prefix}audio11
-    • ${prefix}audio12
-• ${prefix}audio13
-    • ${prefix}audio14
-• ${prefix}audio15
-    • ${prefix}audio16
-• ${prefix}audio17
-    • ${prefix}audio18
-• ${prefix}audio19
-    • ${prefix}audio20
-• ${prefix}audio21
-    • ${prefix}audio22
-• ${prefix}audio23
-    • ${prefix}audio24
-• ${prefix}audio25
-    • ${prefix}audio26
-• ${prefix}audio27
-    • ${prefix}audio28
-• ${prefix}audio29
-    • ${prefix}audio30
-• ${prefix}audio31
-    • ${prefix}audio32
-• ${prefix}audio33
-    • ${prefix}audio34
-• ${prefix}audio35
+${p}• ${prefix}audio1${p}
+    ${p}• ${prefix}audio2${p}
+${p}• ${prefix}audio3${p}
+    ${p}• ${prefix}audio4${p}
+${p}• ${prefix}audio5${p}
+    ${p}• ${prefix}audio6${p}
+${p}• ${prefix}audio7${p}
+    ${p}• ${prefix}audio8${p}
+${p}• ${prefix}audio9${p}
+    ${p}• ${prefix}audio10${p}
+${p}• ${prefix}audio11${p}
+    ${p}• ${prefix}audio12${p}
+${p}• ${prefix}audio13${p}
+    ${p}• ${prefix}audio14${p}
+${p}• ${prefix}audio15${p}
+    ${p}• ${prefix}audio16${p}
+${p}• ${prefix}audio17${p}
+    ${p}• ${prefix}audio18${p}
+${p}• ${prefix}audio19${p}
+    ${p}• ${prefix}audio20${p}
+${p}• ${prefix}audio21${p}
+    ${p}• ${prefix}audio22${p}
+${p}• ${prefix}audio23${p}
+    ${p}• ${prefix}audio24${p}
+${p}• ${prefix}audio25${p}
+    ${p}• ${prefix}audio26${p}
+${p}• ${prefix}audio27${p}
+    ${p}• ${prefix}audio28${p}
+${p}• ${prefix}audio29${p}
+    ${p}• ${prefix}audio30${p}
+${p}• ${prefix}audio31${p}
+    ${p}• ${prefix}audio32${p}
+${p}• ${prefix}audio33${p}
+    ${p}• ${prefix}audio34${p}
+${p}• ${prefix}audio35${p}
 
 *𝗦𝗢𝗨𝗡𝗗*
-• ${prefix}sound1
-    • ${prefix}sound2
-• ${prefix}sound3
-    • ${prefix}sound4
-• ${prefix}sound5
-    • ${prefix}sound6
-• ${prefix}sound7
-    • ${prefix}sound8
-• ${prefix}sound9
-    • ${prefix}sound10
-• ${prefix}sound11
-    • ${prefix}sound12
-• ${prefix}sound13
-    • ${prefix}sound14
-• ${prefix}sound15
-    • ${prefix}sound16
-• ${prefix}sound17
-    • ${prefix}sound18
-• ${prefix}sound19
-    • ${prefix}sound20
-• ${prefix}sound21
-    • ${prefix}sound22
-• ${prefix}sound23
-    • ${prefix}sound24
-• ${prefix}sound25
-    • ${prefix}sound26
-• ${prefix}sound27
-    • ${prefix}sound28
-• ${prefix}sound29
-    • ${prefix}sound30
-• ${prefix}sound31
-    • ${prefix}sound32
-• ${prefix}sound33
-    • ${prefix}sound34
-• ${prefix}sound35
-    • ${prefix}sound36
+${p}• ${prefix}sound1${p}
+    ${p}• ${prefix}sound2${p}
+${p}• ${prefix}sound3${p}
+    ${p}• ${prefix}sound4${p}
+${p}• ${prefix}sound5${p}
+    ${p}• ${prefix}sound6${p}
+${p}• ${prefix}sound7${p}
+    ${p}• ${prefix}sound8${p}
+${p}• ${prefix}sound9${p}
+    ${p}• ${prefix}sound10${p}
+${p}• ${prefix}sound11${p}
+    ${p}• ${prefix}sound12${p}
+${p}• ${prefix}sound13${p}
+    ${p}• ${prefix}sound14${p}
+${p}• ${prefix}sound15${p}
+    ${p}• ${prefix}sound16${p}
+${p}• ${prefix}sound17${p}
+    ${p}• ${prefix}sound18${p}
+${p}• ${prefix}sound19${p}
+    ${p}• ${prefix}sound20${p}
+${p}• ${prefix}sound21${p}
+    ${p}• ${prefix}sound22${p}
+${p}• ${prefix}sound23${p}
+    ${p}• ${prefix}sound24${p}
+${p}• ${prefix}sound25${p}
+    ${p}• ${prefix}sound26${p}
+${p}• ${prefix}sound27${p}
+    ${p}• ${prefix}sound28${p}
+${p}• ${prefix}sound29${p}
+    ${p}• ${prefix}sound30${p}
+${p}• ${prefix}sound31${p}
+    ${p}• ${prefix}sound32${p}
+${p}• ${prefix}sound33${p}
+    ${p}• ${prefix}sound34${p}
+${p}• ${prefix}sound35${p}
+    ${p}• ${prefix}sound36${p}
 
 *𝗖𝗛𝗘𝗖𝗞𝗘𝗥*
-• ${prefix}cantikcek <name>
-• ${prefix}gantengcek <name>
-• ${prefix}jelekcek <name>
-• ${prefix}begocek <name>
-• ${prefix}nolepcek <name>
-• ${prefix}jagocek <name>
-• ${prefix}jahatcek <name>
-• ${prefix}pintarcek <name>
-• ${prefix}bebancek <name>
-• ${prefix}haramcek <name>
-• ${prefix}pakboycek <name>
-• ${prefix}pakgirlcek <name>
+${p}• ${prefix}cantikcek <name>${p}
+${p}• ${prefix}gantengcek <name>${p}
+${p}• ${prefix}jelekcek <name>${p}
+${p}• ${prefix}begocek <name>${p}
+${p}• ${prefix}nolepcek <name>${p}
+${p}• ${prefix}jagocek <name>${p}
+${p}• ${prefix}jahatcek <name>${p}
+${p}• ${prefix}pintarcek <name>${p}
+${p}• ${prefix}bebancek <name>${p}
+${p}• ${prefix}haramcek <name>${p}
+${p}• ${prefix}pakboycek <name>${p}
+${p}• ${prefix}pakgirlcek <name>${p}
 
 *𝗙𝗨𝗡*
-• ${prefix}meme
-• ${prefix}darkjoke
+${p}• ${prefix}meme${p}
+${p}• ${prefix}darkjoke${p}
 
 *𝗚𝗔𝗠𝗘*
-• ${prefix}suit
-• ${prefix}slot
-• ${prefix}herolist 
-• ${prefix}herodetail <name>
-• ${prefix}tebakgambar
+${p}• ${prefix}suit${p}
+${p}• ${prefix}slot${p}
+${p}• ${prefix}herolist ${p}
+${p}• ${prefix}herodetail <name>${p}
+${p}• ${prefix}tebakgambar${p}
 
 *𝗥𝗔𝗡𝗗𝗢𝗠*
-• ${prefix}say <text>
-• ${prefix}sayy <text>
-• ${prefix}rate <???>
-• ${prefix}apakah <text>
-• ${prefix}kapankah <text>
-• ${prefix}wangy <name> 
+${p}• ${prefix}say <text>${p}
+${p}• ${prefix}sayy <text>${p}
+${p}• ${prefix}rate <???>${p}
+${p}• ${prefix}apakah <text>${p}
+${p}• ${prefix}kapankah <text>${p}
+${p}• ${prefix}wangy <name> ${p}
 
 *𝗢𝗧𝗛𝗘𝗥*
-• ${prefix}smenu
-• ${prefix}tourl <reply>
-• ${prefix}owner
-• ${prefix}donate
-• ${prefix}report <text>
+${p}• ${prefix}smenu${p}
+${p}• ${prefix}tourl <reply>${p}
+${p}• ${prefix}owner${p}
+${p}• ${prefix}donate${p}
+${p}• ${prefix}report <text>${p}
 
 © Hanz
 `
@@ -944,7 +944,7 @@ _example : text_
            but = [
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                   ]
-        sendButLocation(from, tod, tod2, gambar, but)
+        pebz.sendMessage(from, tod, tod2, gambar)
            break
 case 'sapa':
 reply("hai")
