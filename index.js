@@ -948,7 +948,7 @@ ${p}• ${prefix}report <text>${p}
              }}
                  ]
            
-        sendUrlBut(from, tod, tod2, gambar, but)
+        sendButLocation(from, tod, tod2, gambar, but)
            break
 case 'sapa':
 reply("hai")
