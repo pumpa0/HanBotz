@@ -3503,6 +3503,17 @@ case 'tts':
 	reply('_error_')
 }
 break 
+case 'brainly':
+					if (args.length < 1) return reply('Pertanyaan nya?')
+		          	brien = args.join(' ')
+					brainly(`${brien}`).then(res => {
+					teks = '❉───────────────────────❉\n'
+					for (let Y of res.data) {
+					teks += `\n*「 _BRAINLY_ 」*\n\n*➸ Pertanyaan:* ${Y.pertanyaan}\n\n*➸ Jawaban:* ${Y.jawaban[0].text}\n❉──────────────────❉\n`
+					}
+					pebz.sendMessage(from, teks, text,{quoted:mek,detectLinks: false})                        
+		            })              
+					break
 //=====================================//
 
 
