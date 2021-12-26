@@ -3326,7 +3326,7 @@ case 'tiktok':
             .then((data) => { sendMediaFromURL(from, data.result.nowatermark) })
             .catch((err) => { reply(String(err)) })
              break
-case 'resetlimit'
+case 'resetlimit':
 if (!isOwner) return sticOwner(from)
 limitReset
 break
