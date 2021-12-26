@@ -3443,7 +3443,7 @@ sticWait(from)
 res = await ggs({'query' : `${teks}`})
 kant = ``
 for (let i of res) {
-kant += `*Judul* : ${i.title}
+kant += `\n*Judul* : ${i.title}
 *Link* : ${i.link}
 *Keterangan* : ${i.snippet}`
 }
@@ -3453,7 +3453,7 @@ break
 case 'mediafire':
 if (args.length < 1) return reply('Link Nya Mana? ')
 if(!isUrl(args[0]) && !args[0].includes('mediafire')) return reply('_error_')
-if (Number(filesize) >= 30000) return reply(`*「 MEDIAFIRE DOWNLOAD 」*
+if (Number(size) >= 30000) return reply(`*「 MEDIAFIRE DOWNLOAD 」*
 
 *◈ Nama :* ${res[0].nama}
 *◈ Ukuran :* ${res[0].size}
