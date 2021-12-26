@@ -945,8 +945,8 @@ ${p}• ${prefix}report <text>${p}
           { urlButton: {
                displayText: 'Official Group',
                url: 'https://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ'
-             }
-                  ]
+             }}
+                 ]
            
         sendUrlBut(from, tod, tod2, gambar, but)
            break
