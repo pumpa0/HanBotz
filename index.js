@@ -3348,26 +3348,16 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   } 
                   
                     
-                    const presix = "."
-                    const prewix = "#"
-                    const prehix = "!"
                     
 		             if (body.startsWith(`${prefix}${command}`)) {                    
                     anu1 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
                     pebz.sendMessage(from, anu1, text, {quoted: mek})
                     }
-                    if (body.startsWith(`${presix}${command}`)) {                    
-                    anu1 = `*prefix HanBotz 『 ${prefix} 』*`
+                    if (body.startsWith(`${!prefix}${command}`)) {                    
+                    anu1 = `prefix HanBotz 『 ${prefix} 』`
                     pebz.sendMessage(from, anu1, text, {quoted: mek})
                     }
-                    if (body.startsWith(`${prewix}${command}`)) {                    
-                    anu1 = `*prefix HanBotz 『 ${prefix} 』*`
-                    pebz.sendMessage(from, anu1, text, {quoted: mek})
-                    }
-                    if (body.startsWith(`${prehix}${command}`)) {                    
-                    anu1 = `*prefix HanBotz 『 ${prefix} 』*`
-                    pebz.sendMessage(from, anu1, text, {quoted: mek})
-                    }
+                    
                     
                     
                     
