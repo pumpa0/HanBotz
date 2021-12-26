@@ -68,6 +68,7 @@ const {
 
 fake = '༺ HanBotz ༻\nStatus : Online'
 let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
+gambarrr = fs.readFileSync('./media/gambar/biasa.png')
 
 self = false
 blocked = []
@@ -152,7 +153,21 @@ sound35 = fs.readFileSync('./media/sound2/sound10.mp3')
 sound36 = fs.readFileSync('./media/sound2/sound11.mp3')
 
 //=====================================/
-
+// TEXT WITH THUMBNAIL
+const ftex = {
+	 key: { 
+          fromMe: false,
+	      participant: `0@s.whatsapp.net`, ...(from ? 
+	 { remoteJid: "6285731855426-1613049930@g.us" } : {}) 
+                },
+	 message: { 
+		"extendedTextMessage": {
+                 "text": `*HanBotz TERVERIFIED*`,
+                 "title": `༺ HanBotz ༻`,
+                 'jpegThumbnail': gambarrr
+                        }
+	                  } 
+                     }
 
 //[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
 
@@ -1999,7 +2014,7 @@ case 'leave':
        await limitAdd(sender && !isOwner)	
               break
        case 'slot':
-              const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍌 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
+              const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍌 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : ?? : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
               somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
@@ -3443,37 +3458,51 @@ sticWait(from)
 res = await ggs({'query' : `${teks}`})
 kant = ``
 for (let i of res) {
-kant += `\n*Judul* : ${i.title}
+kant += `\n\n*Judul* : ${i.title}
 *Link* : ${i.link}
 *Keterangan* : ${i.snippet}`
 }
 var akhir = kant.trim()
 reply(akhir)
 break
-case 'mediafire':
-if (args.length < 1) return reply('Link Nya Mana? ')
-if(!isUrl(args[0]) && !args[0].includes('mediafire')) return reply('_error_')
-if (Number(size) >= 30000) return reply(`*「 MEDIAFIRE DOWNLOAD 」*
-
-*◈ Nama :* ${res[0].nama}
-*◈ Ukuran :* ${res[0].size}
-*◈ Link :* ${res[0].link}
-
-_Maaf size melebihi batas maksimal, Silahkan klik link diatas_`)
-sticWait(from)
-teks = args.join(' ')
-res = await mediafireDl(teks)
-result = `*「 MEDIAFIRE DOWNLOAD 」*
-
-*Data Berhasil Didapatkan!*
-\`\`\`◈ Nama : ${res[0].nama}\`\`\`
-\`\`\`◈ Ukuran : ${res[0].size}\`\`\`
-\`\`\`◈ Link : ${res[0].link}\`\`\`
-
-_File sedang dikirim, Silahkan tunggu beberapa menit_`
-reply(result)
-sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
-break
+case 'tts':
+					  try{
+        if (args.length > 1) {
+        const gtts = require('./lib/gtts')(args[0])
+        if (args.length < 2) return pebz.sendMessage(from, 'Textnya mana ?', text, {quoted: ftex})
+        ngab = budy.slice(7)
+        ranm = getRandom('.mp3')
+        rano = getRandom('.ogg')
+        ngab.length > 600
+        ? reply('Textnya kebanyakan')
+        : gtts.save(ranm, ngab, function() {
+            exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
+                fs.unlinkSync(ranm)
+                buff = fs.readFileSync(rano)
+                if (err) return reply('Gagal')
+                pebz.sendMessage(from, buff, audio, {quoted:mek,ptt:true})
+                fs.unlinkSync(rano)
+            })
+        })
+	} else if ( args.length === 1 ){
+		ngab = mek.message.extendedTextMessage.contextInfo.quotedMessage.conversation
+		const gtts = require('./lib/gtts')(args[0])
+        ranm = getRandom('.mp3')
+        rano = getRandom('.ogg')
+        gtts.save(ranm, ngab, function() {
+            exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
+                fs.unlinkSync(ranm)
+                buff = fs.readFileSync(rano)
+                if (err) return reply('_error_')
+                pebz.sendMessage(from, buff, audio, {quoted:mek,ptt:true})
+                fs.unlinkSync(rano)
+            })
+        })
+	}
+} catch (e){
+	reply('_error_')
+}
+break 
 //=====================================//
 
 
