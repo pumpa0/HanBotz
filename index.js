@@ -153,21 +153,6 @@ sound35 = fs.readFileSync('./media/sound2/sound10.mp3')
 sound36 = fs.readFileSync('./media/sound2/sound11.mp3')
 
 //=====================================/
-// TEXT WITH THUMBNAIL
-const ftex = {
-	 key: { 
-          fromMe: false,
-	      participant: `0@s.whatsapp.net`, ...(from ? 
-	 { remoteJid: "6285731855426-1613049930@g.us" } : {}) 
-                },
-	 message: { 
-		"extendedTextMessage": {
-                 "text": `*HanBotz TERVERIFIED*`,
-                 "title": `༺ HanBotz ༻`,
-                 'jpegThumbnail': gambarrr
-                        }
-	                  } 
-                     }
 
 //[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
 
@@ -582,6 +567,21 @@ console.log(e)
         const buttonMessages = { locationMessage: { jpegThumbnail: gam1 }, contentText: text1, footerText: desc1, buttons: but, headerType: 6 }
         return pebz.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
         }
+        // TEXT WITH THUMBNAIL
+const ftex = {
+	 key: { 
+          fromMe: false,
+	      participant: `0@s.whatsapp.net`, ...(from ? 
+	 { remoteJid: "6285731855426-1613049930@g.us" } : {}) 
+                },
+	 message: { 
+		"extendedTextMessage": {
+                 "text": `*HanBotz TERVERIFIED*`,
+                 "title": `༺ HanBotz ༻`,
+                 'jpegThumbnail': gambarrr
+                        }
+	                  } 
+                     }
         //>>>>>>>>>>>>>[ STICKER ]<<<<<<<<<<<<<\\
 		const sticOwner = (hehe) => {
 			ano = fs.readFileSync('./media/sticker/owner.webp')
@@ -2014,7 +2014,7 @@ case 'leave':
        await limitAdd(sender && !isOwner)	
               break
        case 'slot':
-              const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍌 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : ?? : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
+              const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍌 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
               somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
