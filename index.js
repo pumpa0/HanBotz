@@ -1728,7 +1728,6 @@ case 'join':
          reply('Masalah Telah Di Laporkan Ke Owner BOT, Mohon Tunggu Untuk Proses Perbaikan')
          break
 case 'semoji':
-              if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
 			if (args === 0) return reply('emojinya?')   
 		   aku4 = args.join(' ')
            emoji.get(`${aku4}`).then(emoji => {
@@ -2272,7 +2271,7 @@ hero = `*List hero untuk feature /herodetail*
 -  Tigreal
 -  Uranus
 -  Aldous
--  Alpha
+-  pebz
 -  Alucard
 -  Argus
 -  Aulus
@@ -3319,28 +3318,121 @@ case 'afk':
               const aluty = `*「 AFK MODE 」*\n\n➸ *Username*: ${pushname}\n➸ *Alasan*: ${reason}`
               reply(aluty)
               break
-case 'tiktok': 
-       case 'ttdl':
-             if (!q) return reply('Linknya?')
-             if (!q.includes('tiktok')) return reply(mess.error.Iv)
-             reply(mess.wait)
-             anu = await TiktokDownloader(`${q}`)
-            .then((data) => { sendMediaFromURL(from, data.result.watermark) })
-            .catch((err) => { reply(String(err)) })
-             break
-      case 'ttnowm': 
-      case 'tiktoknowm':
-             if (!q) return reply('Linknya?')
-             if (!q.includes('tiktok')) return reply(mess.error.Iv)
-             reply(mess.wait)
-             anu = await TiktokDownloader(`${q}`)
-            .then((data) => { sendMediaFromURL(from, data.result.nowatermark) })
-            .catch((err) => { reply(String(err)) })
-             break
-case 'resetlimit':
-if (!isOwner) return sticOwner(from)
-limitReset
-break
+case 'totag':
+			if (!isGroup) return reply(mess.only.group)
+			if (!isGroupAdmins && !isOwner) return sticAdmin(from)
+            if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
+            encmediau = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+            file = await pebz.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
+            value = args.join(" ")
+            var group = await pebz.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+                contextInfo: { mentionedJid: mem },
+                quoted: mek
+            }
+            ini_buffer = fs.readFileSync(file)
+            pebz.sendMessage(from, ini_buffer, sticker, options)
+            fs.unlinkSync(file)
+            } else if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+            encmediau = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+            file = await pebz.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
+            value = args.join(" ")
+            var group = await pebz.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+                contextInfo: { mentionedJid: mem },
+                quoted: mek
+            }
+            ini_buffer = fs.readFileSync(file)
+            pebz.sendMessage(from, ini_buffer, image, options)
+            fs.unlinkSync(file)
+        } else if ((isMedia && !mek.message.videoMessage || isQuotedAudio) && args.length == 0) {
+            encmediau = isQuotedAudio ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+            file = await pebz.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
+            value = args.join(" ")
+            var group = await pebz.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+                mimetype : 'audio/mp4', duration: 359996400,
+                ptt : true,
+                contextInfo: { mentionedJid: mem },
+                quoted: mek
+            }
+            ini_buffer = fs.readFileSync(file)
+            pebz.sendMessage(from, ini_buffer, audio, options)
+            fs.unlinkSync(file)
+         } else if ((isMedia && !mek.message.videoMessage || isQuotedVideo) && args.length == 0) {
+            encmediau = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+            file = await pebz.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
+            value = args.join(" ")
+            var group = await pebz.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+                mimetype : 'video/gif',
+                contextInfo: { mentionedJid: mem },
+                quoted: mek
+            }
+            ini_buffer = fs.readFileSync(file)
+            pebz.sendMessage(from, ini_buffer, video, options)
+            fs.unlinkSync(file)
+        } else if ((isMedia && !mek.message.videoMessage || isQuotedDocument) && args.length == 0) {
+            encmediau = isQuotedDocument ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+            file = await pebz.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
+            value = args.join(" ")
+            var group = await pebz.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+                mimetype : 'text/plain',
+                contextInfo: { mentionedJid: mem },
+                quoted: mek
+            }
+            ini_buffer = fs.readFileSync(file)
+            pebz.sendMessage(from, ini_buffer, document, options)
+            fs.unlinkSync(file)
+        }  else if ((isMedia && !mek.message.videoMessage || isQuotedVideo) && args.length == 0) {
+            encmediau = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+            file = await pebz.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
+            value = args.join(" ")
+            var group = await pebz.groupMetadata(from)
+            var member = group['participants']
+            var mem = []
+            member.map(async adm => {
+            mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            var options = {
+                mimetype : 'video/mp4', duration: 359996400,
+                contextInfo: { mentionedJid: mem },
+                quoted: mek
+            }
+            ini_buffer = fs.readFileSync(file)
+            pebz.sendMessage(from, ini_buffer, video, options)
+            fs.unlinkSync(file)
+        } else{
+          reply(`reply gambar/dokumen/gif/sticker/audio/video dengan caption ${prefix}totag`)
+        }
+        break
+
 //=====================================//
 
 
