@@ -463,7 +463,7 @@ console.log(e)
           	let limits = i.limit
             if (limits >= limitawal ) {
          	position = true
-            pebz.sendMessage(from, `Maaf *${pushname}* Batas Penggunaan (LIMIT) Hari Ini Telah Habis\n\n _Note : Limit Reset Jam 00:00_`, text, {quoted: mek})
+            pebz.sendMessage(from, `Maaf *${pushname}* Batas Penggunaan (LIMIT) Hari Ini Telah Habis`, text, {quoted: mek})
             return true
             } else {
           	_limit
@@ -2844,7 +2844,7 @@ case 'kbbi':
                    reply(anu1)
                    break
 case 'translate':  
-                    if (args.length < 1) return reply('[❗] Example :\n*${prefix}${command} from&to&text')
+                    if (args.length < 1) return reply('[❗] Example :\n*${prefix}${command} from(id)&to(en)&text\n\n_note: untuk kode bahasa */bahasa*_')
                     var F = body.slice(11)
 				   var F1 = F.split("&")[0];
 				   var F2 = F.split("&")[1]; 
@@ -3529,10 +3529,52 @@ case 'mediafire':
 \`\`\`• Ukuran : ${res[0].size}\`\`\`
 \`\`\`• Link : ${res[0].link}\`\`\`
 
-_*Tunggu Proses Upload Media......*_`
+`
              reply(result)
              sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
              break
+case 'balik':
+case 'reverse':
+	encmediau = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+	mediau = await pebz.downloadAndSaveMediaMessage(encmediau)
+	ran = getRandom('.mp3')
+	exec(`ffmpeg -i ${mediau} -filter_complex "areverse" ${ran}`, (err, stderr, stdout) => {
+fs.unlinkSync(mediau)
+if (err) return reply('Error!')
+hah = fs.readFileSync(ran)
+pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 359996400, quoted:mek})
+fs.unlinkSync(ran)
+	})
+break
+case 'bass':                 
+              
+					encmediao = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					mediao = await pebz.downloadAndSaveMediaMessage(encmediao)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${mediao} -af equalizer=f=94:width_type=o:width=2:g=30 ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(mediao)
+						if (err) return reply('Error!')
+						hah = fs.readFileSync(ran)
+						pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 359996400, quoted:mek})
+						fs.unlinkSync(ran)
+					})
+				break
+case 'tomp3':
+              
+					pebz.updatePresence(from, Presence.composing)
+					if (!isQuotedVideo) return reply('Reply Video Nya Kak')
+					sticWait(from)
+					encmediad = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+					mediad = await pebz.downloadAndSaveMediaMessage(encmediad)
+					ran = getRandom('.mp4')
+					exec(`ffmpeg -i ${mediad} ${ran}`, (err) => {
+						fs.unlinkSync(mediad)
+						if (err) return reply(mess.error.api)
+						mhee = fs.readFileSync(ran)
+						pebz.sendMessage(from, mhee, audio, { mimetype: 'audio/mp4', duration: 359996400, quoted: mek })
+						fs.unlinkSync(ran)
+					})
+					break
 //=====================================//
 
 
