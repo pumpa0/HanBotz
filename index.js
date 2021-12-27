@@ -320,6 +320,7 @@ const sendFile = async (medya, namefile, capti, tag, vn) => {
   if (budy.startsWith('/')) {
 			pebz.updatePresence(from, Presence.composing)
    }
+
 const sendFileFromUrl = async(link, type, options) => {
 hasil = await getBuffer(link)
 pebz.sendMessage(from, hasil, type, options).catch(e => {
@@ -3514,23 +3515,23 @@ case 'brainly':
 					pebz.sendMessage(from, teks, text,{quoted:mek,detectLinks: false})                        
 		            })              
 					break
-case 'tiktok': 
-       case 'ttdl':
-             if (!q) return reply('Linknya?')
-             if (!q.includes('tiktok')) return reply(mess.error.Iv)
-             reply(mess.wait)
-             anu = await TiktokDownloader(`${q}`)
-            .then((data) => { sendFileFromUrl(from, data.result.watermark) })
-            .catch((err) => { reply(String(err)) })
-             break
-      case 'ttnowm': 
-      case 'tiktoknowm':
-             if (!q) return reply('Linknya?')
-             if (!q.includes('tiktok')) return reply(mess.error.Iv)
-             reply(mess.wait)
-             anu = await TiktokDownloader(`${q}`)
-            .then((data) => { sendFileFromUrl(from, data.result.nowatermark) })
-            .catch((err) => { reply(String(err)) })
+case 'mediafire':
+               if (args.length < 1) return reply('Link Nya Mana? ')
+               if(!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
+               teks = args.join(' ')
+               res = await mediafireDl(teks)
+               result = `┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
+┆ *MEDIAFIRE DOWNLOAD*
+└┈┈┈┈┈┈┈┈┈┈┈⌣ ┈̥-̶̯͡..̷̴✽̶⌣ ✽̶
+
+*Data Berhasil Didapatkan!*
+\`\`\`• Nama : ${res[0].nama}\`\`\`
+\`\`\`• Ukuran : ${res[0].size}\`\`\`
+\`\`\`• Link : ${res[0].link}\`\`\`
+
+_*Tunggu Proses Upload Media......*_`
+             reply(result)
+             sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
              break
 //=====================================//
 
