@@ -3675,8 +3675,8 @@ case 'komiku':
 		
             if(!c) return reply(`gambar apa?\n${prefix}chara nino`)
             let rep = await hx.chara(`${c}`)
-            let acak = rep[Math.floor(Math.random() * rep.length)]
-            let li = await getBuffer(acak)
+            let awor = rep[Math.floor(Math.random() * rep.length)]
+            let li = await getBuffer(awor)
             await pebz.sendMessage(from,li,image,{quoted: ftex})
             break
 //=====================================//
