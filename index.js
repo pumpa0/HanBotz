@@ -3676,16 +3676,16 @@ case 'komiku':
             if(!c) return reply(`gambar apa?\n${prefix}chara nino`)
             let rep = await hx.chara(`${c}`)
             let awor = rep[Math.floor(Math.random() * rep.length)]
-            let li = await getBuffer(awor)
-            await pebz.sendMessage(from,li,image,{quoted: ftex})
+            let hara = await getBuffer(awor)
+            await pebz.sendMessage(from,hara,image,{quoted: ftex})
             break
 //=====================================//
 case 'playstore':
     
             if(!c) return reply('lu nyari apa?')
-            let play = await hx.playstore(`${c}`)
+            let pstor = await hx.playstore(`${c}`)
             let store = '❉─────────────────────❉\n'
-            for (let i of play){
+            for (let i of pstor){
             store += `\n*「 *PLAY STORE* 」*\n
 - *Nama* : ${i.name}
 - *Link* : ${i.link}\n
