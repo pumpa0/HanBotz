@@ -751,6 +751,10 @@ ${p}${ucapanWaktu} ${pushname}${p}
 • *Group Chat : ${groups.length}*
 • *Runtime : ${runt(process.uptime())}*
 
+*Website*
+• bit.ly/HanBotz
+*Donate*
+• saweria.co/HanBotz
 *Official Group*
 • bit.ly/OfficialGroupHanBotz`
 tod2 =`͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
@@ -766,6 +770,7 @@ ${p}• ${prefix}setname <text>${p}
 ${p}• ${prefix}setdesc <text>${p}
 ${p}• ${prefix}hidetag <text>${p}
 ${p}• ${prefix}tagall <text>${p}
+${p}• ${prefix}totag <reply>${p}
 ${p}• ${prefix}open|close${p}
 
 *𝗬𝗢𝗨𝗧𝗨𝗕𝗘*
@@ -779,6 +784,7 @@ ${p}• ${prefix}ytmp4-1080 <link>${p}
 ${p}• ${prefix}ytsearch <query>${p}
 
 *𝗦𝗧𝗜𝗖𝗞𝗘𝗥*
+${p}• ${prefix}ttp <text>${p}
 ${p}• ${prefix}attp <text>${p}
 ${p}• ${prefix}textstic <text>${p}
 ${p}• ${prefix}sticker <reply>${p}
@@ -789,17 +795,33 @@ ${p}• ${prefix}patrickstick${p}
 ${p}• ${prefix}animestick${p}
 
 *𝗖𝗢𝗡𝗩𝗘𝗥𝗧*
+_sticker_
 ${p}• ${prefix}togif <replysticker>${p}
 ${p}• ${prefix}tovid <replysticker>${p}
 ${p}• ${prefix}toimg <replysticker>${p}
 
+_audio_
+${p}• ${prefix}bass ${p}
+${p}• ${prefix}robot ${p}
+${p}• ${prefix}balik ${p}
+${p}• ${prefix}gemuk ${p}
+
+*𝗜𝗠𝗔𝗚𝗘*
+${p}• ${prefix}tourl <reply>${p}
+${p}️• ${prefix}image <query>${p}
+${p}• ${prefix}pinterest <query>${p}
+
 *𝗦𝗘𝗔𝗥𝗖𝗛*
 ${p}• ${prefix}pantun${p}
 ${p}• ${prefix}lirik <query>${p}
-${p}• ${prefix}wiki <query>${p}
 ${p}• ${prefix}cerpen <query>${p}
-${p}• ${prefix}pinterest <query>${p}
-${p}️• ${prefix}imgsearch <query>${p}
+${p}• ${prefix}playstore <query>${p}
+${p}• ${prefix}googlesearch <query>${p}
+
+*𝗔𝗡𝗜𝗠𝗘*
+${p}• ${prefix}chara <query>${p}
+${p}• ${prefix}komiku <query>${p}
+${p}• ${prefix}otakudesu <query>${p}
 ${p}• ${prefix}samehadaku <query>${p}
 
 *𝗠𝗔𝗞𝗘𝗥*
@@ -931,6 +953,19 @@ ${p}• ${prefix}haramcek <name>${p}
 ${p}• ${prefix}pakboycek <name>${p}
 ${p}• ${prefix}pakgirlcek <name>${p}
 
+*𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡*
+${p}• ${prefix}wiki <query>${p}
+${p}• ${prefix}brainly<query>${p}
+${p}• ${prefix}herolist (ML)${p}
+${p}• ${prefix}herodetail <name hero>${p}
+
+*𝗣𝗥𝗜𝗠𝗕𝗢𝗡*
+${p}• ${prefix}artinama <name>${p}
+${p}• ${prefix}artimimpi <query>${p}
+
+*𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗*
+${p}• ${prefix}mediafire <link>${p}
+
 *𝗙𝗨𝗡*
 ${p}• ${prefix}meme${p}
 ${p}• ${prefix}darkjoke${p}
@@ -938,23 +973,21 @@ ${p}• ${prefix}darkjoke${p}
 *𝗚𝗔𝗠𝗘*
 ${p}• ${prefix}suit${p}
 ${p}• ${prefix}slot${p}
-${p}• ${prefix}herolist ${p}
-${p}• ${prefix}herodetail <name>${p}
 ${p}• ${prefix}tebakgambar${p}
+
+*𝗞𝗘𝗥𝗔𝗡𝗚*
+${p}• ${prefix}rate <???>${p}
+${p}• ${prefix}apakah <text>${p}
+${p}• ${prefix}kapankah <text>${p}
 
 *𝗥𝗔𝗡𝗗𝗢𝗠*
 ${p}• ${prefix}say <text>${p}
 ${p}• ${prefix}sayy <text>${p}
-${p}• ${prefix}rate <???>${p}
-${p}• ${prefix}apakah <text>${p}
-${p}• ${prefix}kapankah <text>${p}
 ${p}• ${prefix}wangy <name> ${p}
 
 *𝗢𝗧𝗛𝗘𝗥*
 ${p}• ${prefix}smenu${p}
-${p}• ${prefix}tourl <reply>${p}
 ${p}• ${prefix}owner${p}
-${p}• ${prefix}donate${p}
 ${p}• ${prefix}report <text>${p}
 
 © Hanz
@@ -1134,7 +1167,7 @@ const pebz2 = {
            } 
            pebz.sendMessage(from, txt, MessageType.text, pebz2)
            break 
-           case 'imgsearch':
+           case 'image':
             if(!q) return reply(`gambar apa?`)
             let im = await hx.chara(q)
             let acak = im[Math.floor(Math.random() * im.length)]
@@ -3535,6 +3568,7 @@ case 'mediafire':
              break
 case 'balik':
 case 'reverse':
+if (isLimit(sender)) return
 	encmediau = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 	mediau = await pebz.downloadAndSaveMediaMessage(encmediau)
 	ran = getRandom('.mp3')
@@ -3545,9 +3579,10 @@ hah = fs.readFileSync(ran)
 pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 359996400, quoted:mek})
 fs.unlinkSync(ran)
 	})
+	await limitAdd(sender && !isOwner)	
 break
 case 'bass':                 
-              
+              if (isLimit(sender)) return
 					encmediao = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					mediao = await pebz.downloadAndSaveMediaMessage(encmediao)
 					ran = getRandom('.mp3')
@@ -3559,6 +3594,7 @@ case 'bass':
 						fs.unlinkSync(ran)
 					})
 				break
+await limitAdd(sender && !isOwner)	
 case 'tomp3':
               
 					pebz.updatePresence(from, Presence.composing)
@@ -3575,9 +3611,89 @@ case 'tomp3':
 						fs.unlinkSync(ran)
 					})
 					break
+case 'robot':
+              
+encmedial = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+medial = await pebz.downloadAndSaveMediaMessage(encmedial)
+ran = getRandom('.mp3')
+exec(`ffmpeg -i ${medial} -filter_complex "afftfilt=real='hypot(re,im)*sin(0)':imag='hypot(re,im)*cos(0)':win_size=512:overlap=0.75" ${ran}`, (err, stderr, stdout) => {
+fs.unlinkSync(medial)
+if (err) return reply(mess.error.api)
+hah = fs.readFileSync(ran)
+pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: 359996400, ptt:true, quoted: mek})
+fs.unlinkSync(ran)
+})
+break
+case 'gemuk':
+              
+					encmediaz = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					mediaz = await pebz.downloadAndSaveMediaMessage(encmediaz)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${mediaz} -filter:a "atempo=1.6,asetrate=22100" ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(mediaz)
+						if (err) return ephe('Error!')
+						hah = fs.readFileSync(ran)
+					pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, duration: 359996400, quoted:mek})
+						fs.unlinkSync(ran)
+					})
+					break
 //=====================================//
-
-
+//anime
+case 'otaku':
+case 'otakudesu':
+    
+            if(!c) return reply('judul animenya?')
+            let anime = await hx.otakudesu(`${c}`)
+            rem = `*Judul* : ${anime.judul}
+*Jepang* : ${anime.jepang}
+*Rating* : ${anime.rate}
+*Produser* : ${anime.produser}
+*Status* : ${anime.status}
+*Episode* : ${anime.episode}
+*Durasi* : ${anime.durasi}
+*Rilis* : ${anime.rilis}
+*Studio* : ${anime.studio}
+*Genre* : ${anime.genre}\n
+*Sinopsis* :
+${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.batchSD}\n*Link Download HD* : ${anime.batchHD}`
+            ram = await getBuffer(anime.img)
+            pebz.sendMessage(from,ram,image,{quoted:mek,caption:rem})
+            break
+case 'komiku':
+    
+            if(!c) return reply(`judulnya?\n${prefix}komiku mao gakuin`)
+            let komik = await hx.komiku(`${c}`)
+            result = `*Title* : ${komik.title}\n
+*Title Indo* : ${komik.indo}\n
+*Update* : ${komik.update}\n
+*Desc* : ${komik.desc}\n
+*Chapter Awal* : ${komik.chapter_awal}
+*Chapter Akhir* : ${komik.chapter_akhir}`
+            sendMedia(from, komik.image,result)
+            break  
+            case 'chara':
+		
+            if(!c) return reply(`gambar apa?\n${prefix}chara nino`)
+            let im = await hx.chara(`${c}`)
+            let acak = im[Math.floor(Math.random() * im.length)]
+            let li = await getBuffer(acak)
+            await pebz.sendMessage(from,li,image,{quoted: ftex})
+            break
+//=====================================//
+case 'playstore':
+    
+            if(!c) return reply('lu nyari apa?')
+            let play = await hx.playstore(`${c}`)
+            let store = '❉─────────────────────❉\n'
+            for (let i of play){
+            store += `\n*「 *PLAY STORE* 」*\n
+- *Nama* : ${i.name}
+- *Link* : ${i.link}\n
+- *Dev* : ${i.developer}
+- *Link Dev* : ${i.link_dev}\n❉─────────────────────❉`
+            }
+            reply(store)
+            break
 
 
                    
