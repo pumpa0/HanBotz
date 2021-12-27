@@ -3514,6 +3514,24 @@ case 'brainly':
 					pebz.sendMessage(from, teks, text,{quoted:mek,detectLinks: false})                        
 		            })              
 					break
+case 'tiktok': 
+       case 'ttdl':
+             if (!q) return reply('Linknya?')
+             if (!q.includes('tiktok')) return reply(mess.error.Iv)
+             reply(mess.wait)
+             anu = await TiktokDownloader(`${q}`)
+            .then((data) => { sendFileFromUrl(from, data.result.watermark) })
+            .catch((err) => { reply(String(err)) })
+             break
+      case 'ttnowm': 
+      case 'tiktoknowm':
+             if (!q) return reply('Linknya?')
+             if (!q.includes('tiktok')) return reply(mess.error.Iv)
+             reply(mess.wait)
+             anu = await TiktokDownloader(`${q}`)
+            .then((data) => { sendFileFromUrl(from, data.result.nowatermark) })
+            .catch((err) => { reply(String(err)) })
+             break
 //=====================================//
 
 
