@@ -805,6 +805,11 @@ ${p}• ${prefix}bass ${p}
 ${p}• ${prefix}balik ${p}
 ${p}• ${prefix}gemuk ${p}
 
+_video_
+${p}• ${prefix}fast ${p}
+${p}• ${prefix}slow ${p}
+${p}• ${prefix}reverse ${p}
+
 *𝗜𝗠𝗔𝗚𝗘*
 ${p}• ${prefix}tourl <reply>${p}
 ${p}️• ${prefix}image <query>${p}
@@ -3561,7 +3566,6 @@ case 'mediafire':
              sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
              break
 case 'balik':
-case 'reverse':
 if (isLimit(sender)) return
 	encmediau = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 	mediau = await pebz.downloadAndSaveMediaMessage(encmediau)
@@ -3644,7 +3648,7 @@ case "slow":
           `ffmpeg -i ${mediam} -filter_complex "[0:v]setpts=2*PTS[v];[0:a]atempo=0.5[a]" -map "[v]" -map "[a]" ${ran}`,
           (err) => {
             fs.unlinkSync(mediam);
-            if (err) return fakegroup(`Err: ${err}`);
+            if (err) return reply(`Err: ${err}`);
             buffer453 = fs.readFileSync(ran);
             pebz.sendMessage(from, buffer453, video, {
               mimetype: "video/mp4",
@@ -3665,7 +3669,7 @@ case "slow":
         ran = getRandom(".mp4");
         exec(`ffmpeg -i ${mediaw} -vf reverse -af areverse ${ran}`, (err) => {
           fs.unlinkSync(mediaw);
-          if (err) return fakegroup(`Err: ${err}`);
+          if (err) return reply(`Err: ${err}`);
           buffer453 = fs.readFileSync(ran);
           pebz.sendMessage(from, buffer453, video, {
             mimetype: "video/mp4",
@@ -3678,7 +3682,7 @@ case "slow":
         case "fast":
          if (isLimit(sender)) return
         if (!isQuotedVideo) return fakegroup("Reply the video!");
-        fakegroup(mess.wait);
+        sticWait(from)
         encmedia3 = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
         mediay = await pebz.downloadAndSaveMediaMessage(encmedia3);
@@ -3687,7 +3691,7 @@ case "slow":
           `ffmpeg -i ${mediay} -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2[a]" -map "[v]" -map "[a]" ${ran}`,
           (err) => {
             fs.unlinkSync(mediay);
-            if (err) return fakegroup(`Err: ${err}`);
+            if (err) return reply(`Err: ${err}`);
             buffer453 = fs.readFileSync(ran);
             pebz.sendMessage(from, buffer453, video, {
               mimetype: "video/mp4",
@@ -3759,13 +3763,13 @@ case 'playstore':
 case 'loli': 
  if (isLimit(sender)) return
 lolii = await getBuffer(`http://hadi-api.herokuapp.com/api/loli`)
-pebz.sendMessage(from, lolii, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.png'), caption: 'HanBotz'})
+pebz.sendMessage(from, lolii, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.png')})
 await limitAdd(sender && !isOwner)	
 break
 case 'megumin': 
  if (isLimit(sender)) return
 lolee= await getBuffer(`http://hadi-api.herokuapp.com/api/randomImage/img/megumin`)
-pebz.sendMessage(from, lolee, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.png'), caption: 'HanBotz'})
+pebz.sendMessage(from, lolee, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.png')})
 await limitAdd(sender && !isOwner)	
 break
 
