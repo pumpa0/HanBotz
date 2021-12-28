@@ -751,12 +751,8 @@ const linkwa = 'https://chat.whatsapp.com/'
 		    const tod =`
 ${p}${ucapanWaktu}${p}
 
-• *Hari* : ${week} 
-• *Tanggal* : ${calender} ${weton}
-
-*_ＩＮＦＯ  ＵＳＥＲ_*
-• *Name* : ${pushname}
-• *Number* : wa.me/${sender.split("@")[0]}
+• *Hari* : ${week} - ${weton}
+• *Tanggal* : ${calender} 
 
 *_ＩＮＦＯ  ＢＯＴ_*
 • *Name : ${pebz.user.name}*
