@@ -739,7 +739,7 @@ const linkwa = 'https://chat.whatsapp.com/'
              reply(mess.tunggu)
 		     var p = '```'
 		    const tod =`
-${p}${ucapanWaktu} @${nomqm.split('@s.whatsapp.net')[0]}${p}		    
+${ucapanWaktu} @${nomqm.split('@s.whatsapp.net')[0]}  
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 • *Name : ${pebz.user.name}*
