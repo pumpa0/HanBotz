@@ -204,7 +204,7 @@ sound36 = fs.readFileSync('./media/sound2/sound11.mp3')
 pebz.ReconnectMode = 2
 pebz.logger.level = 'warn'
 pebz.version = [2, 2143, 8]
-pebz.browserDescription = ['Nasa', 'Safari', '4.5']
+pebz.browserDescription = ['Nasa', 'Safari', '1.1.2']
 console.log(start)
 console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','Hanz')
 pebz.on('qr', qr => {
@@ -648,22 +648,22 @@ const oxo1 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 const time2 = moment().tz("Asia/Jakarta").format("HH:mm:ss");
     if (time2 < "24:59:00") {
-      var ucapanWaktu = "GoodNight🌃";
+      var ucapanWaktu = "GoodNight";
     }
     if (time2 < "19:00:00") {
-      var ucapanWaktu = "GoodEvening🌞";
+      var ucapanWaktu = "GoodEvening";
     }
     if (time2 < "18:00:00") {
-      var ucapanWaktu = "GoodEvening🌄";
+      var ucapanWaktu = "GoodEvening";
     }
     if (time2 < "15:00:00") {
-      var ucapanWaktu = "GoodAfternoon☀️";
+      var ucapanWaktu = "GoodAfternoon";
     }
     if (time2 < "11:00:00") {
-      var ucapanWaktu = "GoodMoorning🌅";
+      var ucapanWaktu = "GoodMoorning";
     }
     if (time2 < "05:00:00") {
-      var ucapanWaktu = "GoodNight🌠";
+      var ucapanWaktu = "GoodNight";
     }
     function kyun(seconds){
   function pad(s){
@@ -720,6 +720,17 @@ const linkwa = 'https://chat.whatsapp.com/'
   var sDisplay = s > 0 ? s + (s == 1 ? " s" : " s") : "";
   return dDisplay + hDisplay + mDisplay + sDisplay;
 };
+           const jmn = moment.tz('Asia/Jakarta').format('HH.mm')
+				let d = new Date
+				let locale = 'id'
+				let gmt = new Date(0).getTime() - new Date('1 Januari 2021').getTime()
+				const weton = ['Pahing', 'Pon','Wage','Kliwon','Legi'][Math.floor(((d * 1) + gmt) / 84600000) % 5]
+				const week = d.toLocaleDateString(locale, { weekday: 'long' })
+				const calender = d.toLocaleDateString(locale, {
+				day: 'numeric',
+				month: 'long',
+				year: 'numeric'
+		       })
 
                 var groups = pebz.chats.array.filter(v => v.jid.endsWith('g.us'))
 				var privat = pebz.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
@@ -734,14 +745,20 @@ const linkwa = 'https://chat.whatsapp.com/'
              switch(command) {
              case 'menu':
              case 'help':
-             var nomqm = mek.participant
              uptime = process.uptime()            
              reply(mess.tunggu)
 		     var p = '```'
 		    const tod =`
-${ucapanWaktu} @${sender.split('@')[0]}
+${p}${ucapanWaktu}${p}
 
-*_ɪɴғᴏ ʙᴏᴛ_*
+• *Hari* : ${week} 
+• *Tanggal* : ${calender} ${weton}
+
+*_ＩＮＦＯ  ＵＳＥＲ_*
+• *Name* : ${pushname}
+• *Number* : wa.me/${sender.split("@")[0]}
+
+*_ＩＮＦＯ  ＢＯＴ_*
 • *Name : ${pebz.user.name}*
 • *Prefix :*『 ${prefix} 』
 • *Version : ${pebz.browserDescription[2]}*
