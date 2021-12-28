@@ -734,12 +734,12 @@ const linkwa = 'https://chat.whatsapp.com/'
              switch(command) {
              case 'menu':
              case 'help':
-             num = chat.participants[0]
+             
              uptime = process.uptime()            
              reply(mess.tunggu)
 		     var p = '```'
 		    const tod =`
-${p}${ucapanWaktu} @${num.split('@')[0]}${p}		    
+${p}${ucapanWaktu} ${pushname}${p}		    
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 • *Name : ${pebz.user.name}*
