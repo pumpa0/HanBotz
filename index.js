@@ -738,14 +738,14 @@ const linkwa = 'https://chat.whatsapp.com/'
              reply(mess.tunggu)
 		     var p = '```'
 		    const tod =`
-${p}${ucapanWaktu} ${pushname}${p}		    
+${p}${ucapanWaktu} @${num.split('@')[0]}${p}		    
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 • *Name : ${pebz.user.name}*
 • *Prefix :*『 ${prefix} 』
 • *Version : ${pebz.browserDescription[2]}*
 • *Hosting : ${pebz.browserDescription[0]}*
-• *Browser : ${pebz.browserDescription[1]}*
+• *Platform : Linux*
 • *WhatsApp : ${pebz.user.phone.wa_version}*
 • *Private Chat : ${privat.length}*
 • *Group Chat : ${groups.length}*
@@ -759,8 +759,8 @@ ${p}${ucapanWaktu} ${pushname}${p}
 • bit.ly/OfficialGroupHanBotz`
 tod2 =`͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
 *𝗚𝗥𝗢𝗨𝗣*
-${p}• ${prefix}delete <reply>${p}
 ${p}• ${prefix}linkgroup${p}
+${p}• ${prefix}delete <reply>${p}
 ${p}• ${prefix}antilink <on/off>${p}
 ${p}• ${prefix}add <nomer[62]>${p}
 ${p}• ${prefix}kick <tag>${p}
@@ -802,7 +802,6 @@ ${p}• ${prefix}toimg <replysticker>${p}
 
 _audio_
 ${p}• ${prefix}bass ${p}
-${p}• ${prefix}robot ${p}
 ${p}• ${prefix}balik ${p}
 ${p}• ${prefix}gemuk ${p}
 
@@ -812,17 +811,14 @@ ${p}️• ${prefix}image <query>${p}
 ${p}• ${prefix}pinterest <query>${p}
 
 *𝗦𝗘𝗔𝗥𝗖𝗛*
-${p}• ${prefix}pantun${p}
 ${p}• ${prefix}lirik <query>${p}
-${p}• ${prefix}cerpen <query>${p}
 ${p}• ${prefix}playstore <query>${p}
 ${p}• ${prefix}googlesearch <query>${p}
 
 *𝗔𝗡𝗜𝗠𝗘*
+${p}• ${prefix}loli <query>${p}
+${p}• ${prefix}megumin <query>${p}
 ${p}• ${prefix}chara <query>${p}
-${p}• ${prefix}komiku <query>${p}
-${p}• ${prefix}otakudesu <query>${p}
-${p}• ${prefix}samehadaku <query>${p}
 
 *𝗠𝗔𝗞𝗘𝗥*
 _example : text1&text2_
@@ -859,10 +855,6 @@ ${p}• ${prefix}glowtext${p}
 ${p}• ${prefix}smoketext${p}
 ${p}• ${prefix}flowertext${p}
 ${p}• ${prefix}lithgtext${p}
-${p}• ${prefix}galaxy${p}
-${p}• ${prefix}text3d${p}
-${p}• ${prefix}neon1${p}
-${p}• ${prefix}colors  ${p}
 
 *𝗔𝗨𝗗𝗜𝗢*
 ${p}• ${prefix}audio1${p}
@@ -955,7 +947,8 @@ ${p}• ${prefix}pakgirlcek <name>${p}
 
 *𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡*
 ${p}• ${prefix}wiki <query>${p}
-${p}• ${prefix}brainly<query>${p}
+${p}• ${prefix}brainly <query>${p}
+${p}• ${prefix}translate <query>${p}
 ${p}• ${prefix}herolist (ML)${p}
 ${p}• ${prefix}herodetail <name hero>${p}
 
@@ -2569,7 +2562,7 @@ case 'pacaran':
         mentions(teks, membr, true)
         break
 
-case 'cerpen':  
+//case 'cerpen':  //
                    
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/cerpen`)                   
                    anu1 = `➻ *JUDUL* : ${anu.result.title}\n`
@@ -2579,7 +2572,7 @@ case 'cerpen':
                    reply(anu1)
                    break                  
                    
-                   case 'samehadaku':             
+               //    case 'samehadaku':             //
                    F = body.slice(12)
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/samehadaku?q=${F}`)
                    anu2 = await getBuffer(anu.thumb)
@@ -2588,7 +2581,7 @@ case 'cerpen':
                    anu1 += `➻ *DESK* : ${anu.desc}\n`
                    pebz.sendMessage(from, anu2, image, {caption: anu1, quoted: mek })
                    break
-      case 'neon1':  
+//      case 'neon1':  //
                    if (isLimit(sender)) return
 			        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
@@ -2598,7 +2591,7 @@ case 'cerpen':
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                           await limitAdd(sender && !isOwner)	
                    break  
-       case 'text3d':  
+ //      case 'text3d':  //
                    if (isLimit(sender)) return
 			        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
@@ -2608,7 +2601,7 @@ case 'cerpen':
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                           await limitAdd(sender && !isOwner)	
                    break                   
-       case 'galaxy':  
+    //   case 'galaxy':  //
                    if (isLimit(sender)) return
 			        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
@@ -2618,7 +2611,7 @@ case 'cerpen':
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                           await limitAdd(sender && !isOwner)	
                    break
-      case 'gaming':  
+ //     case 'gaming':  //
                    if (isLimit(sender)) return
 			        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
@@ -2627,7 +2620,7 @@ case 'cerpen':
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
                           await limitAdd(sender && !isOwner)	
                    break
-      case 'colors':  
+  //    case 'colors':  //
                    if (isLimit(sender)) return
 			        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
@@ -2653,7 +2646,8 @@ case 'meme':
                    pebz.sendMessage(from, anu1, image, {caption: `HanBotz`, quoted: mek})
                    await limitAdd(sender) 
                    break
-       case 'pantun':  
+
+ //      case 'pantun':  //
                    
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/random_pantun`)
                    anu1 = `➻ *PANTUN* : ${anu.result}\n` 
@@ -3596,20 +3590,20 @@ case 'bass':
 				break
 await limitAdd(sender && !isOwner)	
 case 'tomp3':
-              
+               if (isLimit(sender)) return
 					pebz.updatePresence(from, Presence.composing)
 					if (!isQuotedVideo) return reply('Reply Video Nya Kak')
-					sticWait(from)
 					encmediad = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 					mediad = await pebz.downloadAndSaveMediaMessage(encmediad)
 					ran = getRandom('.mp4')
 					exec(`ffmpeg -i ${mediad} ${ran}`, (err) => {
 						fs.unlinkSync(mediad)
-						if (err) return reply(mess.error.api)
+						if (err) return reply('error')
 						mhee = fs.readFileSync(ran)
 						pebz.sendMessage(from, mhee, audio, { mimetype: 'audio/mp4', duration: 359996400, quoted: mek })
 						fs.unlinkSync(ran)
 					})
+					await limitAdd(sender && !isOwner)	
 					break
 case 'robot':
               
@@ -3618,14 +3612,14 @@ medial = await pebz.downloadAndSaveMediaMessage(encmedial)
 ran = getRandom('.mp3')
 exec(`ffmpeg -i ${medial} -filter_complex "afftfilt=real='hypot(re,im)*sin(0)':imag='hypot(re,im)*cos(0)':win_size=512:overlap=0.75" ${ran}`, (err, stderr, stdout) => {
 fs.unlinkSync(medial)
-if (err) return reply(mess.error.api)
+if (err) return reply('error')
 hah = fs.readFileSync(ran)
 pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: 359996400, ptt:true, quoted: mek})
 fs.unlinkSync(ran)
 })
 break
 case 'gemuk':
-              
+               if (isLimit(sender)) return
 					encmediaz = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					mediaz = await pebz.downloadAndSaveMediaMessage(encmediaz)
 					ran = getRandom('.mp3')
@@ -3636,7 +3630,74 @@ case 'gemuk':
 					pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, duration: 359996400, quoted:mek})
 						fs.unlinkSync(ran)
 					})
+					await limitAdd(sender && !isOwner)	
 					break
+case "slow":
+ if (isLimit(sender)) return
+        if (!isQuotedVideo) return fakegroup("Reply the video!");
+        sticWait(from)
+        encmedia1 = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
+          .message.extendedTextMessage.contextInfo;
+        mediam = await pebz.downloadAndSaveMediaMessage(encmedia1);
+        ran = getRandom(".mp4");
+        exec(
+          `ffmpeg -i ${mediam} -filter_complex "[0:v]setpts=2*PTS[v];[0:a]atempo=0.5[a]" -map "[v]" -map "[a]" ${ran}`,
+          (err) => {
+            fs.unlinkSync(mediam);
+            if (err) return fakegroup(`Err: ${err}`);
+            buffer453 = fs.readFileSync(ran);
+            pebz.sendMessage(from, buffer453, video, {
+              mimetype: "video/mp4",
+              quoted: mek,
+            });
+            fs.unlinkSync(ran);
+          }
+        );
+        await limitAdd(sender && !isOwner)	
+        break;
+      case "reverse":
+       if (isLimit(sender)) return
+        if (!isQuotedVideo) return fakegroup("Reply the video!");
+        sticWait(from)
+        encmedia2 = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
+          .message.extendedTextMessage.contextInfo;
+        mediaw = await pebz.downloadAndSaveMediaMessage(encmedia2);
+        ran = getRandom(".mp4");
+        exec(`ffmpeg -i ${mediaw} -vf reverse -af areverse ${ran}`, (err) => {
+          fs.unlinkSync(mediaw);
+          if (err) return fakegroup(`Err: ${err}`);
+          buffer453 = fs.readFileSync(ran);
+          pebz.sendMessage(from, buffer453, video, {
+            mimetype: "video/mp4",
+            quoted: mek,
+          });
+          fs.unlinkSync(ran);
+        });
+        await limitAdd(sender && !isOwner)	
+        break;
+        case "fast":
+         if (isLimit(sender)) return
+        if (!isQuotedVideo) return fakegroup("Reply the video!");
+        fakegroup(mess.wait);
+        encmedia3 = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
+          .message.extendedTextMessage.contextInfo;
+        mediay = await pebz.downloadAndSaveMediaMessage(encmedia3);
+        ran = getRandom(".mp4");
+        exec(
+          `ffmpeg -i ${mediay} -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2[a]" -map "[v]" -map "[a]" ${ran}`,
+          (err) => {
+            fs.unlinkSync(mediay);
+            if (err) return fakegroup(`Err: ${err}`);
+            buffer453 = fs.readFileSync(ran);
+            pebz.sendMessage(from, buffer453, video, {
+              mimetype: "video/mp4",
+              quoted: mek,
+            });
+            fs.unlinkSync(ran);
+          }
+        );
+        await limitAdd(sender && !isOwner)	
+        break;
 //=====================================//
 //anime
 case 'otaku':
@@ -3657,7 +3718,7 @@ case 'otakudesu':
 *Sinopsis* :
 ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.batchSD}\n*Link Download HD* : ${anime.batchHD}`
             ram = await getBuffer(anime.img)
-            pebz.sendMessage(from,ram,image,{quoted:mek,caption:rem})
+            pebz.sendMessage(from, ram, image, {quoted:mek, caption: rem})
             break
 case 'komiku':
     
@@ -3672,12 +3733,13 @@ case 'komiku':
             sendMedia(from, komik.image,result)
             break  
             case 'chara':
-		
-            if(!c) return reply(`gambar apa?\n${prefix}chara nino`)
+		 if (isLimit(sender)) return
+            if(!c) return reply(`gambar apa?\n${prefix}chara miku`)
             let rep = await hx.chara(`${c}`)
             let awor = rep[Math.floor(Math.random() * rep.length)]
             let hara = await getBuffer(awor)
-            await pebz.sendMessage(from,hara,image,{quoted: ftex})
+            await pebz.sendMessage(from,hara,image,{quoted: mek})
+            await limitAdd(sender && !isOwner)	
             break
 //=====================================//
 case 'playstore':
@@ -3694,7 +3756,18 @@ case 'playstore':
             }
             reply(store)
             break
-
+case 'loli': 
+ if (isLimit(sender)) return
+lolii = await getBuffer(`http://hadi-api.herokuapp.com/api/loli`)
+pebz.sendMessage(from, lolii, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.png'), caption: 'HanBotz'})
+await limitAdd(sender && !isOwner)	
+break
+case 'megumin': 
+ if (isLimit(sender)) return
+lolee= await getBuffer(`http://hadi-api.herokuapp.com/api/randomImage/img/megumin`)
+pebz.sendMessage(from, lolee, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.png'), caption: 'HanBotz'})
+await limitAdd(sender && !isOwner)	
+break
 
                    
           default: 
@@ -3732,6 +3805,5 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                            
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
-			reply('_error_')
 		}
 	})
