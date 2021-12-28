@@ -734,12 +734,12 @@ const linkwa = 'https://chat.whatsapp.com/'
              switch(command) {
              case 'menu':
              case 'help':
-             
+             var nomqm = mek.participant
              uptime = process.uptime()            
              reply(mess.tunggu)
 		     var p = '```'
 		    const tod =`
-${p}${ucapanWaktu} ${pushname}${p}		    
+${p}${ucapanWaktu} @${nomqm.split('@s.whatsapp.net')[0]}${p}		    
 
 *_ɪɴғᴏ ʙᴏᴛ_*
 • *Name : ${pebz.user.name}*
