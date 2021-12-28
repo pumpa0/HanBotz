@@ -734,6 +734,7 @@ const linkwa = 'https://chat.whatsapp.com/'
              switch(command) {
              case 'menu':
              case 'help':
+             num = chat.participants[0]
              uptime = process.uptime()            
              reply(mess.tunggu)
 		     var p = '```'
