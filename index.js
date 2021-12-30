@@ -207,7 +207,7 @@ pebz.logger.level = 'warn'
 pebz.version = [2, 2143, 8]
 pebz.browserDescription = ['Nasa', 'Safari', '1.1.2']
 console.log(start)
-console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','Hanz')
+console.log('>', '[',color('Berhasil Tersambung Ke Perangkat','lime'),']','HanBotz')
 pebz.on('qr', qr => {
 qrcode.generate(qr, { small : true })
 console.log(color(`[ BOT ] SCAN QR DI ATAS BRO`,'white'))
@@ -562,7 +562,7 @@ console.log(e)
         headerType: 4
         }
         pebz.sendMessage(from, buttonMessagesI, buttonsMessage, {
-        quoted: fkontak,
+        quoted: mek, //fkontak//
         })
         }
         async function sendButLocation(id, text1, desc1, gam1, but = [], options = {}) {
@@ -1010,7 +1010,7 @@ ${p}• ${prefix}report <text>${p}
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                  ]
            
-        sendButLocation(from, tod, tod2, gambar, but)
+        sendButImage(from, tod, tod2, gambar, but)
            break
 case 'sapa':
 reply("hai")
@@ -3631,7 +3631,7 @@ medial = await pebz.downloadAndSaveMediaMessage(encmedial)
 ran = getRandom('.mp3')
 exec(`ffmpeg -i ${medial} -filter_complex "afftfilt=real='hypot(re,im)*sin(0)':imag='hypot(re,im)*cos(0)':win_size=512:overlap=0.75" ${ran}`, (err, stderr, stdout) => {
 fs.unlinkSync(medial)
-if (err) return reply('error')
+if (err) return reply('_error_')
 hah = fs.readFileSync(ran)
 pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: 359996400, ptt:true, quoted: mek})
 fs.unlinkSync(ran)
@@ -3644,7 +3644,7 @@ case 'gemuk':
 					ran = getRandom('.mp3')
 					exec(`ffmpeg -i ${mediaz} -filter:a "atempo=1.6,asetrate=22100" ${ran}`, (err, stderr, stdout) => {
 						fs.unlinkSync(mediaz)
-						if (err) return ephe('Error!')
+						if (err) return reply('_error_')
 						hah = fs.readFileSync(ran)
 					pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, duration: 359996400, quoted:mek})
 						fs.unlinkSync(ran)
@@ -3663,7 +3663,7 @@ case "slow":
           `ffmpeg -i ${mediam} -filter_complex "[0:v]setpts=2*PTS[v];[0:a]atempo=0.5[a]" -map "[v]" -map "[a]" ${ran}`,
           (err) => {
             fs.unlinkSync(mediam);
-            if (err) return reply(`Err: ${err}`);
+            if (err) return reply(`_error_`);
             buffer453 = fs.readFileSync(ran);
             pebz.sendMessage(from, buffer453, video, {
               mimetype: "video/mp4",
@@ -3677,14 +3677,13 @@ case "slow":
       case "reverse":
        if (isLimit(sender)) return
         if (!isQuotedVideo) return reply("Reply the video!");
-        sticWait(from)
         encmedia2 = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
         mediaw = await pebz.downloadAndSaveMediaMessage(encmedia2);
         ran = getRandom(".mp4");
         exec(`ffmpeg -i ${mediaw} -vf reverse -af areverse ${ran}`, (err) => {
           fs.unlinkSync(mediaw);
-          if (err) return reply(`error`);
+          if (err) return reply(`_error_`);
           buffer453 = fs.readFileSync(ran);
           pebz.sendMessage(from, buffer453, video, {
             mimetype: "video/mp4",
@@ -3697,7 +3696,6 @@ case "slow":
         case "fast":
          if (isLimit(sender)) return
         if (!isQuotedVideo) return reply("Reply the video!");
-        sticWait(from)
         encmedia3 = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
         mediay = await pebz.downloadAndSaveMediaMessage(encmedia3);
@@ -3706,7 +3704,7 @@ case "slow":
           `ffmpeg -i ${mediay} -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2[a]" -map "[v]" -map "[a]" ${ran}`,
           (err) => {
             fs.unlinkSync(mediay);
-            if (err) return reply(`Err: ${err}`);
+            if (err) return reply(`_error_`);
             buffer453 = fs.readFileSync(ran);
             pebz.sendMessage(from, buffer453, video, {
               mimetype: "video/mp4",
@@ -3717,6 +3715,24 @@ case "slow":
         );
         await limitAdd(sender && !isOwner)	
         break;
+        case 'vnsecond':
+        case 'detikvn':
+encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					mediam = await pebz.downloadAndSaveMediaMessage(encmediam)
+					cokmatane = Number(args[0])
+					hah = fs.readFileSync(mediam)
+						pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: cokmatane, ptt: true, quoted:mek})
+						fs.unlinkSync(mediam)
+				break
+				case 'videosecond':
+				case 'detikvid':
+				encmedian = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					median = await pebz.downloadAndSaveMediaMessage(encmedian)
+					cokmatane = Number(args[0])
+					hah = fs.readFileSync(median)
+						pebz.sendMessage(from, hah, video, {mimetype: 'video/mp4', duration: cokmatane, quoted: mek})
+						fs.unlinkSync(median)
+				break
 //=====================================//
 //anime
 case 'otaku':
