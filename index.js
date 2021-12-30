@@ -1010,7 +1010,7 @@ ${p}• ${prefix}report <text>${p}
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                  ]
            
-        sendButImage(from, tod, tod2, gambar, but)
+        sendButLocation(from, tod, tod2, gambar, but)
            break
 case 'sapa':
 reply("hai")
