@@ -68,7 +68,8 @@ const {
 
 fake = '༺ HanBotz ༻\nStatus : Online'
 let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
-gambarrr = fs.readFileSync('./media/gambar/biasa.png')
+let gambarrr = "" || fs.readFileSync('./media/gambar/biasa.png')
+let gambargif = "" || fs.readFileSync('./media/gambar/gambargif.gif')
 
 self = false
 blocked = []
@@ -631,7 +632,7 @@ const ftex = {
 		    const getTime = afk.getAfkTime(sender, _afk)
 		    const getReason = afk.getAfkReason(sender, _afk)
 		    const ittung = ms(await Date.now() - getTime)
-		    const pep = `*${pushname}* telah kembali dari AFK! Selamat datang kembali~`
+		    const pep = `*${pushname}* telah kembali dari AFK!`
 		    reply(pep)
 		    _afk.splice(afk.getAfkPosition(sender, _afk), 1)
 		    fs.writeFileSync('./database/afk.json', JSON.stringify(_afk))
@@ -3331,7 +3332,7 @@ case 'smeme': case 'stickmeme': case 'sm': {
            tekks = `${anu.display_url}`
            ranp = getRandom('.gif')
            rano = getRandom('.webp')
-           anu1 = `https://docs-jojo.herokuapp.com/api/meme-gen?top=${top}&bottom=${bottom}&img=${tekks}`
+           anu1 = `https://api.memegen.link/images/custom/${top}/${bottom}.png?background=${tekks}`
            sendStickerFromUrl(from, `${anu1}`)
            } else {
            reply('reply gambar atau sticker!')
@@ -3652,7 +3653,7 @@ case 'gemuk':
 					break
 case "slow":
  if (isLimit(sender)) return
-        if (!isQuotedVideo) return fakegroup("Reply the video!");
+        if (!isQuotedVideo) return reply("Reply the video!");
         sticWait(from)
         encmedia1 = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
@@ -3675,7 +3676,7 @@ case "slow":
         break;
       case "reverse":
        if (isLimit(sender)) return
-        if (!isQuotedVideo) return fakegroup("Reply the video!");
+        if (!isQuotedVideo) return reply("Reply the video!");
         sticWait(from)
         encmedia2 = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
@@ -3683,7 +3684,7 @@ case "slow":
         ran = getRandom(".mp4");
         exec(`ffmpeg -i ${mediaw} -vf reverse -af areverse ${ran}`, (err) => {
           fs.unlinkSync(mediaw);
-          if (err) return reply(`Err: ${err}`);
+          if (err) return reply(`error`);
           buffer453 = fs.readFileSync(ran);
           pebz.sendMessage(from, buffer453, video, {
             mimetype: "video/mp4",
@@ -3695,7 +3696,7 @@ case "slow":
         break;
         case "fast":
          if (isLimit(sender)) return
-        if (!isQuotedVideo) return fakegroup("Reply the video!");
+        if (!isQuotedVideo) return reply("Reply the video!");
         sticWait(from)
         encmedia3 = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
