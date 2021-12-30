@@ -725,6 +725,11 @@ const linkwa = 'https://chat.whatsapp.com/'
 				let d = new Date
 				let locale = 'id'
 				let gmt = new Date(0).getTime() - new Date('1 Januari 2021').getTime()
+				let date = d.toLocaleDateString(locale, {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
 				const weton = ['Pahing', 'Pon','Wage','Kliwon','Legi'][Math.floor(((d * 1) + gmt) / 84600000) % 5]
 				const week = d.toLocaleDateString(locale, { weekday: 'long' })
 				const calender = d.toLocaleDateString(locale, {
