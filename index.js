@@ -639,11 +639,11 @@ const ftex = {
 		}
 	    }
 	//=================================\\
-	const anim = ['anim1','anim2','anim3','anim4','anim5','anim6','anim7','anim8','anim9','anim10','anim11','anim12','anim13','anim14','anim15','anim16','anim17','anim18','anim19','anim20','anim21']
+	const anim = ['./media/gambar/anim1.jpg','./media/gambar/anim2.jpg','./media/gambar/anim3.jpg','./media/gambar/anim4.jpg','./media/gambar/anim5.jpg','./media/gambar/anim6.jpg','./media/gambar/anim7.jpg','./media/gambar/anim8.jpg','./media/gambar/anim9.jpg','./media/gambar/anim10.jpg','./media/gambar/anim11.jpg','./media/gambar/anim12.jpg','./media/gambar/anim13.jpg','./media/gambar/anim14.jpg','./media/gambar/anim15.jpg','./media/gambar/anim16.jpg','./media/gambar/anim17.jpg','./media/gambar/anim18.jpg','./media/gambar/anim19.jpg','./media/gambar/anim20.jpg','./media/gambar/anim21']
 	
 	const anam = anim[Math.floor(Math.random() * (anim.length))]
 	
-	let gambarandom = "" || fs.readFileSync('./media/gambar/${anam}.jpg')
+	
 		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 const oxo1 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']
@@ -1022,7 +1022,7 @@ ${p}• ${prefix}report <text>${p}
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                  ]
            
-        sendButLocation(from, tod, tod2, gambarandom, but)
+        sendButLocation(from, tod, tod2, ${anam}, but)
            break
 case 'sapa':
 reply("hai")
