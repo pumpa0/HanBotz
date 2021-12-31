@@ -666,7 +666,7 @@ const anem = ['anim1','anim2','anim3','anim4','anim5','anim6','anim7','anim8','a
 
 const anam = anem[Math.floor(Math.random() * (anem.length))]
 	
-	let hanam = ${anam}
+	hanam = ${anam}
 		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 const oxo1 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']
