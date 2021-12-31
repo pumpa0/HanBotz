@@ -153,7 +153,29 @@ sound34 = fs.readFileSync('./media/sound2/sound9.mp3')
 sound35 = fs.readFileSync('./media/sound2/sound10.mp3')
 sound36 = fs.readFileSync('./media/sound2/sound11.mp3')
 
-//=====================================/
+anim1 = fs.readFileSync('./media/gambar/anim1.jpg')
+anim2 = fs.readFileSync('./media/gambar/anim2.jpg')
+anim3 = fs.readFileSync('./media/gambar/anim3.jpg')
+anim4 = fs.readFileSync('./media/gambar/anim4.jpg')
+anim5 = fs.readFileSync('./media/gambar/anim5.jpg')
+anim6 = fs.readFileSync('./media/gambar/anim6.jpg')
+anim7 = fs.readFileSync('./media/gambar/anim7.jpg')
+anim8 = fs.readFileSync('./media/gambar/anim8.jpg')
+anim9 = fs.readFileSync('./media/gambar/anim9.jpg')
+anim10 = fs.readFileSync('./media/gambar/anim10.jpg')
+anim11 = fs.readFileSync('./media/gambar/anim11.jpg')
+anim12 = fs.readFileSync('./media/gambar/anim12.jpg')
+anim13 = fs.readFileSync('./media/gambar/anim13.jpg')
+anim14 = fs.readFileSync('./media/gambar/anim14.jpg')
+anim15 = fs.readFileSync('./media/gambar/anim15.jpg')
+anim16 = fs.readFileSync('./media/gambar/anim16.jpg')
+anim17 = fs.readFileSync('./media/gambar/anim17.jpg')
+anim18 = fs.readFileSync('./media/gambar/anim18.jpg')
+anim19 = fs.readFileSync('./media/gambar/anim19.jpg')
+anim20 = fs.readFileSync('./media/gambar/anim20.jpg')
+anim21 = fs.readFileSync('./media/gambar/anim21.jpg')
+
+
 
 //[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
 
@@ -639,10 +661,10 @@ const ftex = {
 		}
 	    }
 	//=================================\\
-	const anim = ['./media/gambar/anim1.jpg','./media/gambar/anim2.jpg','./media/gambar/anim3.jpg','./media/gambar/anim4.jpg','./media/gambar/anim5.jpg','./media/gambar/anim6.jpg','./media/gambar/anim7.jpg','./media/gambar/anim8.jpg','./media/gambar/anim9.jpg','./media/gambar/anim10.jpg','./media/gambar/anim11.jpg','./media/gambar/anim12.jpg','./media/gambar/anim13.jpg','./media/gambar/anim14.jpg','./media/gambar/anim15.jpg','./media/gambar/anim16.jpg','./media/gambar/anim17.jpg','./media/gambar/anim18.jpg','./media/gambar/anim19.jpg','./media/gambar/anim20.jpg','./media/gambar/anim21']
-	
-	const anam = anim[Math.floor(Math.random() * (anim.length))]
-	
+	//=====================================/
+const anem = ['anim1','anim2','anim3','anim4','anim5','anim6','anim7','anim8','anim9','anim10','anim11','anim12','anim13','anim14','anim15','anim16','anim17','anim18','anim19','anim20','anim21']
+
+const anam = anem[Math.floor(Math.random() * (anem.length))]
 	
 		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
