@@ -638,6 +638,12 @@ const ftex = {
 		    fs.writeFileSync('./database/afk.json', JSON.stringify(_afk))
 		}
 	    }
+	//=================================\\
+	const anim = ['anim1','anim2','anim3','anim4','anim5','anim6','anim7','anim8','anim9','anim10','anim11','anim12','anim13','anim14','anim15','anim16','anim17','anim18','anim19','anim20','anim21']
+	
+	const anam = anim[Math.floor(Math.random() * (anim.length))]
+	
+	let gambarandom = "" || fs.readFileSync('./media/gambar/${anam}.jpg')
 		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 const oxo1 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']
@@ -760,16 +766,16 @@ ${p}${ucapanWaktu}${p}
 • *Hari* : ${week} - ${weton}
 • *Tanggal* : ${calender} 
 
-*_ＩＮＦＯ  ＢＯＴ_*
-• *Name : ${pebz.user.name}*
-• *Prefix :*『 ${prefix} 』
-• *Version : ${pebz.browserDescription[2]}*
-• *Hosting : ${pebz.browserDescription[0]}*
-• *Platform : Linux*
-• *WhatsApp : ${pebz.user.phone.wa_version}*
-• *Private Chat : ${privat.length}*
-• *Group Chat : ${groups.length}*
-• *Runtime : ${runt(process.uptime())}*
+*ᴵⁿᶠᵒᴮᵒᵗ*
+• *Name* : ${pebz.user.name}
+• *Prefix* :『 ${prefix} 』
+• *Version* : ${pebz.browserDescription[2]}
+• *Hosting* : ${pebz.browserDescription[0]}
+• *Platform* : Linux
+• *WhatsApp* : ${pebz.user.phone.wa_version}
+• *Private Chat* : ${privat.length}
+• *Group Chat* : ${groups.length}
+• *Runtime* : ${runt(process.uptime())}
 
 *Website*
 • bit.ly/HanBotz
@@ -1008,14 +1014,15 @@ ${p}• ${prefix}smenu${p}
 ${p}• ${prefix}owner${p}
 ${p}• ${prefix}report <text>${p}
 
-© Hanz
+
+2022 © HanBotz
 `
 
            but = [
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                  ]
            
-        sendButLocation(from, tod, tod2, gambar, but)
+        sendButLocation(from, tod, tod2, gambarandom, but)
            break
 case 'sapa':
 reply("hai")
@@ -1259,7 +1266,7 @@ result = `❒「  *Wiki*  」
            })
         break
    	case 'playyy':
-        if (args.length < 1) return reply(`Kirim perintah *${prefix}play query`)
+        if (args.length < 1) return reply(`Kirim perintah *${prefix}play query*`)
         let yut = await yts(q)
         yta(yut.videos[0].url)             
         .then(async(res) => {
@@ -1737,7 +1744,7 @@ case 'join':
          pebz.groupDemoteAdmin(from, mentioned)
          }
          break
-     case 'add' :
+   //  case 'add' : //
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins && !isOwner) return sticAdmin(from)
          if (!isBotGroupAdmins) return sticNotAdmin(from)
@@ -1751,7 +1758,11 @@ case 'join':
          reply('Gagal menambahkan target, mungkin karena di private')
          }
          break
-              case 'kick' :
+case 'kick':
+case 'add':
+reply('_lagi error, ${command} sendiri 😔_')
+break
+           //   case 'kick' : //
          if (!isGroup) return reply(mess.only.group)
          if (!isGroupAdmins && !isOwner) return sticAdmin(from)
          if (!isBotGroupAdmins) return sticNotAdmin(from)
@@ -3842,12 +3853,12 @@ const ageD = new Date(d - date)
 const age = ageD.getFullYear() - new Date(1970, 0, 1).getFullYear()
 
 const birthday = [tahun + (birth[1] < bulan), ...birth.slice(1)]
-const cekusia = bulan === birth[1] && tanggal === birth[2] ? `Happy -${age}th Birthday ðŸ¥³ðŸŽ‰` : age
+const cekusia = bulan === birth[1] && tanggal === birth[2] ? `Happy -${age}th Birthday` : age
 
 const teksh = `
 *Birthday :* ${birth.join('-')}
 *Upcoming HBD :* ${birthday.join('-')}
-*Umur :* : ${cekusia}
+*Umur :* ${cekusia}
 *Status Zodiac :* ${zodiac}
 `.trim()
 reply(teksh)
