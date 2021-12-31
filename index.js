@@ -662,11 +662,10 @@ const ftex = {
 	    }
 	//=================================\\
 	//=====================================/
-const anem = ['anim1','anim2','anim3','anim4','anim5','anim6','anim7','anim8','anim9','anim10','anim11','anim12','anim13','anim14','anim15','anim16','anim17','anim18','anim19','anim20','anim21']
+const anem = [anim1, anim2, anim3, anim4, anim5, anim6, anim7, anim8, anim9, anim10, anim11, anim12, anim13, anim14, anim15, anim16, anim17, anim18, anim19, anim20, anim21]
 
 const anam = anem[Math.floor(Math.random() * (anem.length))]
 	
-	hanam = ${anam}
 		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 const oxo1 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']
@@ -1045,7 +1044,7 @@ ${p}• ${prefix}report <text>${p}
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                  ]
            
-        sendButLocation(from, tod, tod2, hanam, but)
+        sendButLocation(from, tod, tod2, anam, but)
            break
 case 'sapa':
 reply("hai")
