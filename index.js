@@ -1037,8 +1037,7 @@ ${p}• ${prefix}owner${p}
 ${p}• ${prefix}report <text>${p}
 
 
-2022 © HanBotz
-`
+2022 © HanBotz`
 
            but = [
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
