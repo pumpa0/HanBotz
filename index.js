@@ -2778,7 +2778,7 @@ pebz.sendMessage(from, teli, text, {quoted: mek})
 }, 0) // 1000 = 1s,
 break
 case 'tebakkimia':
-anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkimia?apikey=3QNUoxMb
+anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkimia?apikey=3QNUoxMb`, {method: 'get'})
 teki = await getBuffer(anu.result.nama)
 setTimeout( () => {
 reply('*Jawaban:*'+anu.result.lambang) 
