@@ -3584,7 +3584,7 @@ case 'totag':
             mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
             })
             var options = {
-                mimetype : 'audio/mp4', duration: 359996400,
+                mimetype : 'audio/mp4',
                 ptt : true,
                 contextInfo: { mentionedJid: mem },
                 quoted: mek
@@ -3639,7 +3639,7 @@ case 'totag':
             mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
             })
             var options = {
-                mimetype : 'video/mp4', duration: 359996400,
+                mimetype : 'video/mp4',
                 contextInfo: { mentionedJid: mem },
                 quoted: mek
             }
@@ -3742,7 +3742,7 @@ if (isLimit(sender)) return
 fs.unlinkSync(mediau)
 if (err) return reply('Error!')
 hah = fs.readFileSync(ran)
-pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 359996400, quoted:mek})
+pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, quoted:mek})
 fs.unlinkSync(ran)
 	})
 	await limitAdd(sender && !isOwner)	
@@ -3756,7 +3756,7 @@ case 'bass':
 						fs.unlinkSync(mediao)
 						if (err) return reply('Error!')
 						hah = fs.readFileSync(ran)
-						pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 359996400, quoted:mek})
+						pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, quoted:mek})
 						fs.unlinkSync(ran)
 					})
 				break
@@ -3772,7 +3772,7 @@ case 'tomp3':
 						fs.unlinkSync(mediad)
 						if (err) return reply('error')
 						mhee = fs.readFileSync(ran)
-						pebz.sendMessage(from, mhee, audio, { mimetype: 'audio/mp4', duration: 359996400, quoted: mek })
+						pebz.sendMessage(from, mhee, audio, { mimetype: 'audio/mp4', quoted: mek })
 						fs.unlinkSync(ran)
 					})
 					await limitAdd(sender && !isOwner)	
@@ -3786,7 +3786,7 @@ exec(`ffmpeg -i ${medial} -filter_complex "afftfilt=real='hypot(re,im)*sin(0)':i
 fs.unlinkSync(medial)
 if (err) return reply('_error_')
 hah = fs.readFileSync(ran)
-pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: 359996400, ptt:true, quoted: mek})
+pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
 fs.unlinkSync(ran)
 })
 break
@@ -3799,7 +3799,7 @@ case 'gemuk':
 						fs.unlinkSync(mediaz)
 						if (err) return reply('_error_')
 						hah = fs.readFileSync(ran)
-					pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, duration: 359996400, quoted:mek})
+					pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted:mek})
 						fs.unlinkSync(ran)
 					})
 					await limitAdd(sender && !isOwner)	
@@ -4016,7 +4016,7 @@ reply(mess.sabar)
 ini_url = `http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`
 get_result = await fetchJson(ini_url)
 tikau = await getBuffer(get_result.result.audio)
-await pebz.sendMessage(from, tikau, audio, { mimetype: 'audio/mp4', quoted: mek })
+await pebz.sendMessage(from, tikau, audio, { mimetype: 'audio/mp4', ptt:true, quoted: mek })
 break
 
    //==================================//               
