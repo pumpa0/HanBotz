@@ -4013,10 +4013,9 @@ case 'tiktokmp3':
 if (args.length == 0) return reply(`Link Nya Mana`)
 tt = args[0]
 reply(mess.sabar)
-ini_url = `http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`
-get_result = await fetchJson(ini_url)
-tikau = await getBuffer(get_result.result.audio)
-await pebz.sendMessage(from, tikau, audio, { mimetype: 'audio/mp4', ptt:true, quoted: mek })
+tt = args[0]
+tikau = await getBuffer(`https://velgrynd.herokuapp.com/api/tiktokaudio?url=${tt}&apikey=3QNUoxMb`)
+await pebz.sendMessage(from, tikau, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
 break
 
    //==================================//               
