@@ -2760,7 +2760,7 @@ case 'meme':
 					break
 case 'tebaklirik':
 anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebaklirik?apikey=3QNUoxMb`, {method: 'get'})
-get = `*${anu.result.question}*`
+teli = await getBuffer(anu.result.question)
 setTimeout( () => {
 reply('*Jawaban:*'+anu.result.answer) 
 }, 60000) // 1000 = 1s,
@@ -2774,12 +2774,12 @@ reply('*Jawaban:*'+anu.result.answer)
 					reply( '_50 Detik lagi_') // ur cods
 					}, 10000) // 1000 = 1s,
 					setTimeout( () => {
-pebz.sendMessage(from, get, text, {quoted: mek})
+pebz.sendMessage(from, teli, text, {quoted: mek})
 }, 0) // 1000 = 1s,
 break
 case 'tebakkimia':
 anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkimia?apikey=3QNUoxMb
-get = `*${anu.result.nama}*`
+teki = await getBuffer(anu.result.nama)
 setTimeout( () => {
 reply('*Jawaban:*'+anu.result.lambang) 
 }, 60000) // 1000 = 1s,
@@ -2793,12 +2793,12 @@ reply('*Jawaban:*'+anu.result.lambang)
 					reply( '_50 Detik lagi_') // ur cods
 					}, 10000) // 1000 = 1s,
 					setTimeout( () => {
-pebz.sendMessage(from, get, text, {quoted: mek}) 
+pebz.sendMessage(from, teki, text, {quoted: mek}) 
 }, 0) // 1000 = 1s,
 break
 case 'tebakjenaka':
 anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakjenaka?apikey=3QNUoxMb`, {method: 'get'})
-tebakjenaka = `*${anu.result.pertanyaan}*`
+teje = await getBuffer(anu.result.pertanyaan)
 setTimeout( () => {
 reply('*Jawaban:* '+anu.result.jawaban) 
 }, 60000) // 1000 = 1s,
@@ -2812,12 +2812,12 @@ reply('*Jawaban:* '+anu.result.jawaban)
 					reply( '_50 Detik lagi_') // ur cods
 					}, 10000) // 1000 = 1s,
 					setTimeout( () => {
-pebz.sendMessage(from, tebakjenaka, text, {quoted: mek}) 
+pebz.sendMessage(from, teje, text, {quoted: mek}) 
 }, 0) // 1000 = 1s,
 break
 case 'tebakkalimat':
 anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkalimat?apikey=3QNUoxMb`, {method: 'get'})
-get = `*${anu.result.soal}*`
+teka = await getBuffer(anu.result.soal)
 setTimeout( () => {
 reply('*Jawaban:* '+anu.result.jawaban) 
 }, 60000) // 1000 = 1s,
@@ -2831,12 +2831,12 @@ reply('*Jawaban:* '+anu.result.jawaban)
 					reply( '_50 Detik lagi_') // ur cods
 					}, 10000) // 1000 = 1s,
 					setTimeout( () => {
-pebz.sendMessage(from, get, text, {quoted: mek})
+pebz.sendMessage(from, teka, text, {quoted: mek})
 }, 0) // 1000 = 1s,
 break
 case 'tebaktebakan':
 anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebaktebakan?apikey=3QNUoxMb`, {method: 'get'})
-get = `*${anu.result.soal}*`
+tetek = await getBuffer(anu.result.soal)
 setTimeout( () => {
 reply('*Jawaban:* '+anu.result.jawaban) 
 }, 60000) // 1000 = 1s,
@@ -2850,7 +2850,7 @@ reply('*Jawaban:* '+anu.result.jawaban)
 					reply( '_50 Detik lagi_') // ur cods
 					}, 10000) // 1000 = 1s,
 					setTimeout( () => {
-pebz.sendMessage(from, get, text, {quoted: mek})
+pebz.sendMessage(from, tetek, text, {quoted: mek})
 }, 0) // 1000 = 1s,
 break
 
