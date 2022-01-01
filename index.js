@@ -4016,7 +4016,7 @@ reply(mess.sabar)
 ini_url = `http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`
 get_result = await fetchJson(ini_url)
 tikau = await getBuffer(get_result.result.audio)
-await pebz.sendMessage(from, tikau, audio, { mimetype: 'video/mp4', quoted: mek })
+await pebz.sendMessage(from, tikau, audio, { mimetype: 'audio/mp4', quoted: mek })
 break
 
    //==================================//               
