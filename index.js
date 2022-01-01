@@ -79,6 +79,7 @@ apibotz = "HanBotzWa"
 HardiApi = 'hardianto'
 webs = "bit.ly/HanBotz"
 offgrup = "bit.ly/OfficialGroupHanBotz"
+zekais = "zekais"
 
 //=====================================//
 
@@ -153,26 +154,46 @@ sound34 = fs.readFileSync('./media/sound2/sound9.mp3')
 sound35 = fs.readFileSync('./media/sound2/sound10.mp3')
 sound36 = fs.readFileSync('./media/sound2/sound11.mp3')
 
-anim1 = fs.readFileSync('./media/gambar/anim1.jpg')
-anim2 = fs.readFileSync('./media/gambar/anim2.jpg')
-anim3 = fs.readFileSync('./media/gambar/anim3.jpg')
-anim4 = fs.readFileSync('./media/gambar/anim4.jpg')
-anim5 = fs.readFileSync('./media/gambar/anim5.jpg')
-anim6 = fs.readFileSync('./media/gambar/anim6.jpg')
-anim7 = fs.readFileSync('./media/gambar/anim7.jpg')
-anim8 = fs.readFileSync('./media/gambar/anim8.jpg')
-anim9 = fs.readFileSync('./media/gambar/anim9.jpg')
-anim10 = fs.readFileSync('./media/gambar/anim10.jpg')
-anim11 = fs.readFileSync('./media/gambar/anim11.jpg')
-anim12 = fs.readFileSync('./media/gambar/anim12.jpg')
-anim13 = fs.readFileSync('./media/gambar/anim13.jpg')
-anim14 = fs.readFileSync('./media/gambar/anim14.jpg')
-anim15 = fs.readFileSync('./media/gambar/anim15.jpg')
-anim16 = fs.readFileSync('./media/gambar/anim16.jpg')
-anim17 = fs.readFileSync('./media/gambar/anim17.jpg')
-anim18 = fs.readFileSync('./media/gambar/anim18.jpg')
-anim19 = fs.readFileSync('./media/gambar/anim19.jpg')
-anim20 = fs.readFileSync('./media/gambar/anim20.jpg')
+anim1 = fs.readFileSync('./media/gambar/anim1.jpg')
+
+anim2 = fs.readFileSync('./media/gambar/anim2.jpg')
+
+anim3 = fs.readFileSync('./media/gambar/anim3.jpg')
+
+anim4 = fs.readFileSync('./media/gambar/anim4.jpg')
+
+anim5 = fs.readFileSync('./media/gambar/anim5.jpg')
+
+anim6 = fs.readFileSync('./media/gambar/anim6.jpg')
+
+anim7 = fs.readFileSync('./media/gambar/anim7.jpg')
+
+anim8 = fs.readFileSync('./media/gambar/anim8.jpg')
+
+anim9 = fs.readFileSync('./media/gambar/anim9.jpg')
+
+anim10 = fs.readFileSync('./media/gambar/anim10.jpg')
+
+anim11 = fs.readFileSync('./media/gambar/anim11.jpg')
+
+anim12 = fs.readFileSync('./media/gambar/anim12.jpg')
+
+anim13 = fs.readFileSync('./media/gambar/anim13.jpg')
+
+anim14 = fs.readFileSync('./media/gambar/anim14.jpg')
+
+anim15 = fs.readFileSync('./media/gambar/anim15.jpg')
+
+anim16 = fs.readFileSync('./media/gambar/anim16.jpg')
+
+anim17 = fs.readFileSync('./media/gambar/anim17.jpg')
+
+anim18 = fs.readFileSync('./media/gambar/anim18.jpg')
+
+anim19 = fs.readFileSync('./media/gambar/anim19.jpg')
+
+anim20 = fs.readFileSync('./media/gambar/anim20.jpg')
+
 anim21 = fs.readFileSync('./media/gambar/anim21.jpg')
 
 
@@ -1019,7 +1040,12 @@ ${p}• ${prefix}darkjoke${p}
 *𝗚𝗔𝗠𝗘*
 ${p}• ${prefix}suit${p}
 ${p}• ${prefix}slot${p}
+${p}• ${prefix}tebaklirik${p}
+${p}• ${prefix}tebakkimia${p}
+${p}• ${prefix}tebakjenaka${p}
+${p}• ${prefix}tebakkalimat${p}
 ${p}• ${prefix}tebakgambar${p}
+${p}• ${prefix}tebaktebakan${p}
 
 *𝗞𝗘𝗥𝗔𝗡𝗚*
 ${p}• ${prefix}rate <???>${p}
@@ -1043,7 +1069,7 @@ ${p}• ${prefix}report <text>${p}
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                  ]
            
-        sendButLocation(from, tod, tod2, anam, but)
+        sendButLocation(from, tod, tod2, gambar, but)
            break
 case 'sapa':
 reply("hai")
@@ -2732,6 +2758,101 @@ case 'meme':
 					}, 0) // 1000 = 1s,
 					       await limitAdd(sender && !isOwner)	
 					break
+case 'tebaklirik':
+anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/lirik`, {method: 'get'})
+get = `*${anu.result.question}*`
+setTimeout( () => {
+reply('*Jawaban:*'+anu.result.answer) 
+}, 60000) // 1000 = 1s,
+					setTimeout( () => {
+					reply('_10 Detik lagi_') // ur cods
+					}, 50000) // 1000 = 1s,
+					setTimeout( () => {
+					reply('_30 Detik lagi_') // ur cods
+					}, 30000) // 1000 = 1s,
+					setTimeout( () => {
+					reply( '_50 Detik lagi_') // ur cods
+					}, 10000) // 1000 = 1s,
+					setTimeout( () => {
+pebz.sendMessage(from, get, text, {quoted: mek})
+}, 0) // 1000 = 1s,
+break
+case 'tebakkimia':
+anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/kimia`, {method: 'get'})
+get = `*${anu.result.nama}*`
+setTimeout( () => {
+reply('*Jawaban:*'+anu.result.lambang) 
+}, 60000) // 1000 = 1s,
+					setTimeout( () => {
+					reply('_10 Detik lagi_') // ur cods
+					}, 50000) // 1000 = 1s,
+					setTimeout( () => {
+					reply('_30 Detik lagi_') // ur cods
+					}, 30000) // 1000 = 1s,
+					setTimeout( () => {
+					reply( '_50 Detik lagi_') // ur cods
+					}, 10000) // 1000 = 1s,
+					setTimeout( () => {
+pebz.sendMessage(from, get, text, {quoted: mek}) 
+}, 0) // 1000 = 1s,
+break
+case 'tebakjenaka':
+anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/jenaka`, {method: 'get'})
+tebakjenaka = `*${anu.result.pertanyaan}*`
+setTimeout( () => {
+reply('*Jawaban:* '+anu.result.jawaban) 
+}, 60000) // 1000 = 1s,
+					setTimeout( () => {
+					reply('_10 Detik lagi_') // ur cods
+					}, 50000) // 1000 = 1s,
+					setTimeout( () => {
+					reply('_30 Detik lagi_') // ur cods
+					}, 30000) // 1000 = 1s,
+					setTimeout( () => {
+					reply( '_50 Detik lagi_') // ur cods
+					}, 10000) // 1000 = 1s,
+					setTimeout( () => {
+pebz.sendMessage(from, tebakjenaka, text, {quoted: mek}) 
+}, 0) // 1000 = 1s,
+break
+case 'tebakkalimat':
+anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/kalimat`, {method: 'get'})
+get = `*${anu.result.soal}*`
+setTimeout( () => {
+reply('*Jawaban:* '+anu.result.jawaban) 
+}, 60000) // 1000 = 1s,
+					setTimeout( () => {
+					reply('_10 Detik lagi_') // ur cods
+					}, 50000) // 1000 = 1s,
+					setTimeout( () => {
+					reply('_30 Detik lagi_') // ur cods
+					}, 30000) // 1000 = 1s,
+					setTimeout( () => {
+					reply( '_50 Detik lagi_') // ur cods
+					}, 10000) // 1000 = 1s,
+					setTimeout( () => {
+pebz.sendMessage(from, get, text, {quoted: mek})
+}, 0) // 1000 = 1s,
+break
+case 'tebaktebakan':
+anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/tebakan`, {method: 'get'})
+get = `*${anu.result.soal}*`
+setTimeout( () => {
+reply('*Jawaban:* '+anu.result.jawaban) 
+}, 60000) // 1000 = 1s,
+					setTimeout( () => {
+					reply('_10 Detik lagi_') // ur cods
+					}, 50000) // 1000 = 1s,
+					setTimeout( () => {
+					reply('_30 Detik lagi_') // ur cods
+					}, 30000) // 1000 = 1s,
+					setTimeout( () => {
+					reply( '_50 Detik lagi_') // ur cods
+					}, 10000) // 1000 = 1s,
+					setTimeout( () => {
+pebz.sendMessage(from, get, text, {quoted: mek})
+}, 0) // 1000 = 1s,
+break
 
 //=====================================//
                        /*TEXT MAKER*/
@@ -3884,6 +4005,18 @@ const teksh = `
 `.trim()
 reply(teksh)
 break
+case 'tiktok':
+tt = args.join(" ")
+reply(mess.sabar)
+get = await fetchJson(`http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`)
+ini = await getBuffer(get.result.no_wm)
+pebz.sendMessage(from, ini, MessageType.video,{mimetype:'video/mp4',quoted: mek, caption: 'HanBotz'})
+case 'tiktokmp3':
+tt = args.join(" ")
+reply(mess.sabar)
+get = await fetchJson(`http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`)
+ini = await getBuffer(get.result.audio)
+pebz.sendMessage(from, ini, MessageType.audio,{mimetype:'audio/mp4',quoted: mek})
 
    //==================================//                
           default: 
