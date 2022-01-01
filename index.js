@@ -1040,12 +1040,7 @@ ${p}• ${prefix}darkjoke${p}
 *𝗚𝗔𝗠𝗘*
 ${p}• ${prefix}suit${p}
 ${p}• ${prefix}slot${p}
-${p}• ${prefix}tebaklirik${p}
-${p}• ${prefix}tebakkimia${p}
-${p}• ${prefix}tebakjenaka${p}
-${p}• ${prefix}tebakkalimat${p}
 ${p}• ${prefix}tebakgambar${p}
-${p}• ${prefix}tebaktebakan${p}
 
 *𝗞𝗘𝗥𝗔𝗡𝗚*
 ${p}• ${prefix}rate <???>${p}
@@ -4010,16 +4005,16 @@ if (args.length == 0) return reply(`Link Nya Mana`)
 tt = args[0]
 ini_url = `http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`
 get_result = await fetchJson(ini_url)
-ini_buffer = await getBuffer(get_result.result.no_wm)
-await simple.sendMessage(from, ini_buffer, video, { quoted: mek })
+tikvid = await getBuffer(get_result.result.no_wm)
+await pebz.sendMessage(from, tikvid, video, { quoted: mek })
 break
 case 'tiktokmp3':
 if (args.length == 0) return reply(`Link Nya Mana`)
 tt = args[0]
 ini_url = `http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`
 get_result = await fetchJson(ini_url)
-ini_buffer = await getBuffer(get_result.result.audio)
-await pebz.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
+tikau = await getBuffer(get_result.result.audio)
+await pebz.sendMessage(from, tikau, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
 break
 
    //==================================//               
