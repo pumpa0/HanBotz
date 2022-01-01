@@ -4003,6 +4003,7 @@ break
 case 'tiktok':
 if (args.length == 0) return reply(`Link Nya Mana`)
 tt = args[0]
+reply(mess.sabar)
 ini_url = `http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`
 get_result = await fetchJson(ini_url)
 tikvid = await getBuffer(get_result.result.no_wm)
@@ -4011,10 +4012,11 @@ break
 case 'tiktokmp3':
 if (args.length == 0) return reply(`Link Nya Mana`)
 tt = args[0]
+reply(mess.sabar)
 ini_url = `http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`
 get_result = await fetchJson(ini_url)
 tikau = await getBuffer(get_result.result.audio)
-await pebz.sendMessage(from, tikau, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
+await pebz.sendMessage(from, tikau, audio, { mimetype: 'video/mp4', quoted: mek })
 break
 
    //==================================//               
