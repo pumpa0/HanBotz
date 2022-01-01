@@ -2759,7 +2759,7 @@ case 'meme':
 					       await limitAdd(sender && !isOwner)	
 					break
 case 'tebaklirik':
-anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/lirik`, {method: 'get'})
+anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebaklirik?apikey=3QNUoxMb`, {method: 'get'})
 get = `*${anu.result.question}*`
 setTimeout( () => {
 reply('*Jawaban:*'+anu.result.answer) 
@@ -2778,7 +2778,7 @@ pebz.sendMessage(from, get, text, {quoted: mek})
 }, 0) // 1000 = 1s,
 break
 case 'tebakkimia':
-anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/kimia`, {method: 'get'})
+anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkimia?apikey=3QNUoxMb
 get = `*${anu.result.nama}*`
 setTimeout( () => {
 reply('*Jawaban:*'+anu.result.lambang) 
@@ -2797,7 +2797,7 @@ pebz.sendMessage(from, get, text, {quoted: mek})
 }, 0) // 1000 = 1s,
 break
 case 'tebakjenaka':
-anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/jenaka`, {method: 'get'})
+anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakjenaka?apikey=3QNUoxMb`, {method: 'get'})
 tebakjenaka = `*${anu.result.pertanyaan}*`
 setTimeout( () => {
 reply('*Jawaban:* '+anu.result.jawaban) 
@@ -2816,7 +2816,7 @@ pebz.sendMessage(from, tebakjenaka, text, {quoted: mek})
 }, 0) // 1000 = 1s,
 break
 case 'tebakkalimat':
-anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/kalimat`, {method: 'get'})
+anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkalimat?apikey=3QNUoxMb`, {method: 'get'})
 get = `*${anu.result.soal}*`
 setTimeout( () => {
 reply('*Jawaban:* '+anu.result.jawaban) 
@@ -2835,7 +2835,7 @@ pebz.sendMessage(from, get, text, {quoted: mek})
 }, 0) // 1000 = 1s,
 break
 case 'tebaktebakan':
-anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/tebakan`, {method: 'get'})
+anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebaktebakan?apikey=3QNUoxMb`, {method: 'get'})
 get = `*${anu.result.soal}*`
 setTimeout( () => {
 reply('*Jawaban:* '+anu.result.jawaban) 
@@ -4006,19 +4006,23 @@ const teksh = `
 reply(teksh)
 break
 case 'tiktok':
-tt = args.join(" ")
-reply(mess.sabar)
-get = await fetchJson(`http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`)
-ini = await getBuffer(get.result.no_wm)
-pebz.sendMessage(from, ini, MessageType.video,{mimetype:'video/mp4',quoted: mek, caption: 'HanBotz'})
+if (args.length == 0) return reply(`Link Nya Mana`)
+tt = args[0]
+ini_url = `http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`
+get_result = await fetchJson(ini_url)
+ini_buffer = await getBuffer(get_result.result.no_wm)
+await simple.sendMessage(from, ini_buffer, video, { quoted: mek })
+break
 case 'tiktokmp3':
-tt = args.join(" ")
-reply(mess.sabar)
-get = await fetchJson(`http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`)
-ini = await getBuffer(get.result.audio)
-pebz.sendMessage(from, ini, MessageType.audio,{mimetype:'audio/mp4',quoted: mek})
+if (args.length == 0) return reply(`Link Nya Mana`)
+tt = args[0]
+ini_url = `http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`
+get_result = await fetchJson(ini_url)
+ini_buffer = await getBuffer(get_result.result.audio)
+await pebz.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
+break
 
-   //==================================//                
+   //==================================//               
           default: 
 
                   if (budy.includes(`@HanBotz`)) {
