@@ -3935,7 +3935,7 @@ case 'komiku':
             break
 case 'kusonime':
                    if (args.length < 1) return reply('judul anime?')
-                   kuso = args[0]
+                   kuso = body.slice(10)
                    soni = await fetchJson(`https://velgrynd.herokuapp.com/api/kusonime?query=${kuso}&apikey=3QNUoxMb`)                      
                    nime = `• *Judul* : ${soni.title}
 • *Genre* : ${soni.genre}
