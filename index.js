@@ -282,7 +282,51 @@ pebz.on('credentials-updated', () => {
 			.then(() => pebz.blockUser(call, "add"))
 			}, 1);
 		})
-		
+]==============================================================*/                  	    
+            pebz.on('group-participants-update', async(chat) => {
+        try {
+            mem = chat.participants[0]
+            try {
+                var pp_user = await pebz.getProfilePicture(mem)
+            } catch (e) {
+                var pp_user = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+            }
+            try {
+                var pp_group = await pebz.getProfilePicture(chat.jid)
+            } catch (e) {
+                var pp_group = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+            }
+            if (chat.action == 'add') {
+            	ini_user = pebz.contacts[mem]
+                group_info = await pebz.groupMetadata(chat.jid)
+                let buff = await getBuffer(pp_user)
+                ini_img = await getBuffer(`https://velgrynd.herokuapp.com/api/welcome?name=${ini_user.notify}&picurl=${pp_user}&bgurl=https://telegra.ph/file/1dfe7720d51f20e4c5f0c.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
+                welkam = `*Hi @${mem.split('@')[0]}*\n`
+				welkam += `*◪ Welcome in group:*\n`
+				welkam += `*├─ ${group_info.subject}*\n`
+				welkam += `*├─ Intro Dulu Kak*\n`
+				welkam += `*├─ ❏ Nama :*\n`			
+				welkam += `*├─ ❏ Umur :* \n`
+				welkam += `*├─ ❏ Hobi :*\n`
+				welkam += `*├─ ❏ Jenis Kelamin :*\n`
+				welkam += `*└─ ❏ Nomor :* ${mem.replace('@s.whatsapp.net', '')}\n`
+				welkam += `*We hope you enjoy~~*\n\n${group_info.desc}`
+                await pebz.sendMessage(chat.jid, buff, MessageType.image, { caption: welkam , contextInfo: {"mentionedJid": [mem],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+            }
+            if (chat.action == 'remove') {
+            	mem = chat.participants[0]
+            	ini_user = pebz.contacts[mem]
+                let buff = await getBuffer(pp_user)
+                group_info = await pebz.groupMetadata(chat.jid)
+                ini_img = await getBuffer(`https://velgrynd.herokuapp.com/api/goodbye?name=${ini_user.notify}&picurl=${pp_user}&bgurl=https://telegra.ph/file/1dfe7720d51f20e4c5f0c.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
+                ini_out = `Bye bye @${mem.split('@')[0]}`
+                await pebz.sendMessage(chat.jid, buff, MessageType.image, { caption: ini_out, contextInfo: {"mentionedJid": [mem],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
+            }
+        } catch (e) {
+            console.log('Error :', e)
+        }
+    })
+/* ===================================================[ 
 
 
 		  
@@ -897,6 +941,8 @@ ${p}• ${prefix}googlesearch <query>${p}
 ${p}• ${prefix}loli <query>${p}
 ${p}• ${prefix}megumin <query>${p}
 ${p}• ${prefix}chara <query>${p}
+${p}• ${prefix}kusonime <query>${p}
+${p}• ${prefix}samehadaku <query>${p}
 
 *𝗠𝗔𝗞𝗘𝗥*
 _example : text1&text2_
@@ -2654,13 +2700,13 @@ case 'pacaran':
                    reply(anu1)
                    break                  
                    
-               //    case 'samehadaku':             //
+                   case 'samehadaku':             
                    F = body.slice(12)
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/samehadaku?q=${F}`)
                    anu2 = await getBuffer(anu.thumb)
-                   anu1 = `➻ *JUDUL* : ${anu.title}\n`
-                   anu1 += `➻ *LINK* : ${anu.link}\n`
-                   anu1 += `➻ *DESK* : ${anu.desc}\n`
+                   anu1 = `• *JUDUL* : ${anu.title}\n`
+                   anu1 += `• *LINK* : ${anu.link}\n`
+                   anu1 += `• *DESK* : ${anu.desc}\n`
                    pebz.sendMessage(from, anu2, image, {caption: anu1, quoted: mek })
                    break
 //      case 'neon1':  //
@@ -3892,38 +3938,6 @@ encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exten
 				break
 //=====================================//
 //anime
-case 'otaku':
-case 'otakudesu':
-    
-            if(!c) return reply('judul animenya?')
-            let anime = await hx.otakudesu(`${c}`)
-            rem = `*Judul* : ${anime.judul}
-*Jepang* : ${anime.jepang}
-*Rating* : ${anime.rate}
-*Produser* : ${anime.produser}
-*Status* : ${anime.status}
-*Episode* : ${anime.episode}
-*Durasi* : ${anime.durasi}
-*Rilis* : ${anime.rilis}
-*Studio* : ${anime.studio}
-*Genre* : ${anime.genre}\n
-*Sinopsis* :
-${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.batchSD}\n*Link Download HD* : ${anime.batchHD}`
-            ram = await getBuffer(anime.img)
-            pebz.sendMessage(from, ram, image, {quoted:mek, caption: rem})
-            break
-case 'komiku':
-    
-            if(!c) return reply(`judulnya?\n${prefix}komiku mao gakuin`)
-            let komik = await hx.komiku(`${c}`)
-            result = `*Title* : ${komik.title}\n
-*Title Indo* : ${komik.indo}\n
-*Update* : ${komik.update}\n
-*Desc* : ${komik.desc}\n
-*Chapter Awal* : ${komik.chapter_awal}
-*Chapter Akhir* : ${komik.chapter_akhir}`
-            sendMedia(from, komik.image,result)
-            break  
             case 'chara':
 		 if (isLimit(sender)) return
             if(!c) return reply(`gambar apa?\n${prefix}chara miku`)
@@ -4035,6 +4049,25 @@ tiko = await getBuffer(`https://velgrynd.herokuapp.com/api/tiktoknowm?url=${tt}&
 reply(mess.sabar)
 await pebz.sendMessage(from, tiko, video, { quoted: mek })
 break
+case 'ramalanjodoh':
+                   if (args.length < 1) return reply('namanya?\ncontoh: han&miku')
+                   var F = body.slice(14)
+				   var F1 = F.split("&")[0];
+				   var F2 = F.split("&")[1]; 
+                   soni = await fetchJson(`https://velgrynd.herokuapp.com/api/ramaljodoh?name=${F1}&pasangan=${F2}&apikey=3QNUoxMb`)                      
+                   nime = `• *Judul* : ${soni.result.title}
+• *Genre* : ${soni.result.genre}
+• *Rating* : ${soni.result.rating}
+• *Produser* : ${soni.result.producers}
+• *Status* : ${soni.result.status}
+• *Durasi* : ${soni.result.duration}
+• *Rilis* : ${soni.result.release}
+• *Sinopsis* : 
+${soni.result.desc}
+• *Link* : ${soni.result.url}`                   
+                   kume = await getBuffer(soni.result.thumb)
+            pebz.sendMessage(from, kume, image, {quoted:mek, caption: nime})
+            break
 
    //==================================//               
           default: 
