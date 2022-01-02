@@ -301,26 +301,28 @@ pebz.on('credentials-updated', () => {
                 group_info = await pebz.groupMetadata(chat.jid)
                 let buff = await getBuffer(pp_user)
                 ini_img = await getBuffer(`https://velgrynd.herokuapp.com/api/welcome?name=${ini_user.notify}&picurl=${pp_user}&bgurl=https://telegra.ph/file/1dfe7720d51f20e4c5f0c.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
-                welkam = `*Hi @${mem.split('@')[0]}*\n`
-				welkam += `*◪ Welcome in group:*\n`
-				welkam += `*├─ ${group_info.subject}*\n`
-				welkam += `*├─ Intro Dulu Kak*\n`
-				welkam += `*├─ ❏ Nama :*\n`			
-				welkam += `*├─ ❏ Umur :* \n`
-				welkam += `*├─ ❏ Hobi :*\n`
-				welkam += `*├─ ❏ Jenis Kelamin :*\n`
-				welkam += `*└─ ❏ Nomor :* ${mem.replace('@s.whatsapp.net', '')}\n`
-				welkam += `*We hope you enjoy~~*\n\n${group_info.desc}`
-                await pebz.sendMessage(chat.jid, buff, MessageType.image, { caption: welkam , contextInfo: {"mentionedJid": [mem],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
+                welkam = `𝙃𝘼𝙇𝙇𝙊 *@${num.split('@')[0]}*
+𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙂𝙍𝙐𝙋 
+*${mdata.subject}*
+
+𝙅𝘼𝙉𝙂𝘼𝙉 𝙇𝙐𝙋𝘼 𝙄𝙉𝙏𝙍𝙊 :
+
+• *ɴᴀᴍᴀ :*
+• *ᴜᴍᴜʀ :*
+• *ɢᴇɴᴅᴇʀ :*
+• *ᴀꜱᴀʟ ᴋᴏᴛᴀ :*
+
+𝙎𝙀𝙈𝙊𝙂𝘼 𝘽𝙀𝙏𝘼𝙃 𝙔𝘼 𝘿𝙄 𝙂𝙍𝙐𝙋 𝙄𝙉𝙄`//${group_info.desc}//
+                await pebz.sendMessage(chat.jid, ini_img, MessageType.image, { caption: welkam , contextInfo: {"mentionedJid": [mem]},sendEphemeral: true})
             }
             if (chat.action == 'remove') {
             	mem = chat.participants[0]
             	ini_user = pebz.contacts[mem]
                 let buff = await getBuffer(pp_user)
                 group_info = await pebz.groupMetadata(chat.jid)
-                ini_img = await getBuffer(`https://velgrynd.herokuapp.com/api/goodbye?name=${ini_user.notify}&picurl=${pp_user}&bgurl=https://telegra.ph/file/1dfe7720d51f20e4c5f0c.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
-                ini_out = `Bye bye @${mem.split('@')[0]}`
-                await pebz.sendMessage(chat.jid, buff, MessageType.image, { caption: ini_out, contextInfo: {"mentionedJid": [mem],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
+                ini_img2 = await getBuffer(`https://velgrynd.herokuapp.com/api/goodbye?name=${ini_user.notify}&picurl=${pp_user}&bgurl=https://telegra.ph/file/1dfe7720d51f20e4c5f0c.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
+                ini_out = `𝙎𝘼𝙔𝙊𝙉𝘼𝙍𝘼 @${mem.split('@')[0]}`
+                await pebz.sendMessage(chat.jid, ini_img2, MessageType.image, { caption: ini_out, contextInfo: {"mentionedJid": [mem]},sendEphemeral: true })
             }
         } catch (e) {
             console.log('Error :', e)
