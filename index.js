@@ -3937,17 +3937,17 @@ case 'kusonime':
                    if (args.length < 1) return reply('judul anime?')
                    kuso = body.slice(10)
                    soni = await fetchJson(`https://velgrynd.herokuapp.com/api/kusonime?query=${kuso}&apikey=3QNUoxMb`)                      
-                   nime = `• *Judul* : ${soni.title}
-• *Genre* : ${soni.genre}
-• *Rating* : ${soni.rating}
-• *Produser* : ${soni.producers}
-• *Status* : ${soni.status}
-• *Durasi* : ${soni.duration}
-• *Rilis* : ${soni.release}
+                   nime = `• *Judul* : ${soni.result.title}
+• *Genre* : ${soni.result.genre}
+• *Rating* : ${soni.result.rating}
+• *Produser* : ${soni.result.producers}
+• *Status* : ${soni.result.status}
+• *Durasi* : ${soni.result.duration}
+• *Rilis* : ${soni.result.release}
 • *Sinopsis* : 
-${soni.desc}
-• *Link* : ${soni.url}`                   
-                   kume = await getBuffer(nime.thumb)
+${soni.result.desc}
+• *Link* : ${soni.result.url}`                   
+                   kume = await getBuffer(soni.result.thumb)
             pebz.sendMessage(from, kume, image, {quoted:mek, caption: nime})
             break
 //=====================================//
