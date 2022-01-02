@@ -289,7 +289,7 @@ pebz.on('credentials-updated', () => {
             try {
                 var pp_user = await pebz.getProfilePicture(mem)
             } catch (e) {
-                var pp_user = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+                var pp_user2 = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
             }
             try {
                 var pp_group = await pebz.getProfilePicture(chat.jid)
@@ -300,7 +300,7 @@ pebz.on('credentials-updated', () => {
             	ini_user = pebz.contacts[mem]
                 group_info = await pebz.groupMetadata(chat.jid)
                 let buff = await getBuffer(pp_user)
-                ini_img = await getBuffer(`https://velgrynd.herokuapp.com/api/welcome?name=${ini_user.notify}&picurl=${pp_user}&bgurl=https://telegra.ph/file/1dfe7720d51f20e4c5f0c.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
+                ini_img = await getBuffer(`https://velgrynd.herokuapp.com/api/welcome?name=${ini_user.notify}&picurl=${pp_user2}&bgurl=https://telegra.ph/file/012330e87e50a6982f725.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
                 welkam = `𝙃𝘼𝙇𝙇𝙊 *@${num.split('@')[0]}*
 𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙂𝙍𝙐𝙋 
 *${mdata.subject}*
@@ -320,7 +320,7 @@ pebz.on('credentials-updated', () => {
             	ini_user = pebz.contacts[mem]
                 let buff = await getBuffer(pp_user)
                 group_info = await pebz.groupMetadata(chat.jid)
-                ini_img2 = await getBuffer(`https://velgrynd.herokuapp.com/api/goodbye?name=${ini_user.notify}&picurl=${pp_user}&bgurl=https://telegra.ph/file/1dfe7720d51f20e4c5f0c.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
+                ini_img2 = await getBuffer(`https://velgrynd.herokuapp.com/api/goodbye?name=${ini_user.notify}&picurl=${pp_user2}&bgurl=https://telegra.ph/file/012330e87e50a6982f725.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
                 ini_out = `𝙎𝘼𝙔𝙊𝙉𝘼𝙍𝘼 @${mem.split('@')[0]}`
                 await pebz.sendMessage(chat.jid, ini_img2, MessageType.image, { caption: ini_out, contextInfo: {"mentionedJid": [mem]},sendEphemeral: true })
             }
