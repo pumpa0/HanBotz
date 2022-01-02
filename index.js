@@ -852,6 +852,10 @@ ${p}• ${prefix}ytmp4-720 <link>${p}
 ${p}• ${prefix}ytmp4-1080 <link>${p}
 ${p}• ${prefix}ytsearch <query>${p}
 
+*𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗*
+${p}• ${prefix}tiktok <link>${p}
+${p}• ${prefix}tiktokmp3 <link>${p}
+
 *𝗦𝗧𝗜𝗖𝗞𝗘𝗥*
 ${p}• ${prefix}ttp <text>${p}
 ${p}• ${prefix}attp <text>${p}
@@ -4000,11 +4004,11 @@ const teksh = `
 `.trim()
 reply(teksh)
 break
-case 'tiktok':
+//case 'tiktok'://
 if (args.length == 0) return reply(`Link Nya Mana`)
 tt = args[0]
-reply(mess.sabar)
 ini_url = `http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`
+reply(mess.sabar)
 get_result = await fetchJson(ini_url)
 tikvid = await getBuffer(get_result.result.no_wm)
 await pebz.sendMessage(from, tikvid, video, { quoted: mek })
@@ -4012,10 +4016,16 @@ break
 case 'tiktokmp3':
 if (args.length == 0) return reply(`Link Nya Mana`)
 tt = args[0]
-reply(mess.sabar)
-tt = args[0]
 tikau = await getBuffer(`https://velgrynd.herokuapp.com/api/tiktokaudio?url=${tt}&apikey=3QNUoxMb`)
+reply(mess.sabar)
 await pebz.sendMessage(from, tikau, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
+break
+case 'tiktok':
+if (args.length == 0) return reply(`Link Nya Mana`)
+tt = args[0]
+tiko = await getBuffer(`https://velgrynd.herokuapp.com/api/tiktoknowm?url=${tt}&apikey=3QNUoxMb`)
+reply(mess.sabar)
+await pebz.sendMessage(from, tiko, video, { quoted: mek })
 break
 
    //==================================//               
