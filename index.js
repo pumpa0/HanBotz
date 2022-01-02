@@ -1104,6 +1104,10 @@ ${p}• ${prefix}kapankah <text>${p}
 ${p}• ${prefix}say <text>${p}
 ${p}• ${prefix}sayy <text>${p}
 ${p}• ${prefix}wangy <name> ${p}
+${p}• ${prefix}wangyy <name> ${p}
+${p}• ${prefix}simp <name> ${p}
+${p}• ${prefix}nenen <name> ${p}
+${p}• ${prefix}shrek <name> ${p}
 
 *𝗢𝗧𝗛𝗘𝗥*
 ${p}• ${prefix}smenu${p}
@@ -1117,7 +1121,7 @@ ${p}• ${prefix}report <text>${p}
           { buttonId: `${prefix}sapa`, buttonText: { displayText: '༺ HanBotz ༻' }, type: 1 }
                  ]
            
-        sendButLocation(from, tod, tod2, gambar, but)
+        sendButImage(from, tod, tod2, ,fakethumb, gambar, but)
            break
 case 'sapa':
 reply("hai")
@@ -2118,6 +2122,30 @@ case 'leave':
               qq = q.toUpperCase()
               awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, aaaah baunya rambut ${qq} wangyy aku mau nyiumin aroma wangynya ${qq} AAAAAAAAH ~ Rambutnya.... aaah rambutnya juga pengen aku elus-elus ~~ AAAAAH ${qq} keluar pertama kali di anime juga manis ❤️ ❤️ ❤️ banget AAAAAAAAH ${qq} AAAAA LUCCUUUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️apa ? ${qq} itu gak nyata ? Cuma HALU katamu ? nggak, ngak ngak ngak ngak NGAAAAAAAAK GUA GAK PERCAYA ITU DIA NYATA NGAAAAAAAAAAAAAAAAAK PEDULI BANGSAAAAAT !! GUA GAK PEDULI SAMA KENYATAAN POKOKNYA GAK PEDULI. ❤️ ❤️ ❤️ ${qq} gw ... ${qq} di laptop ngeliatin gw, ${qq} .. kamu percaya sama aku ? aaaaaaaaaaah syukur ${q} aku gak mau merelakan ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH GUA MASIH PUNYA ${qq} SENDIRI PUN NGGAK SAMA AAAAAAAAAAAAAAH`
               reply(awikwok)
+              break
+case 'wangyy':
+              if (!q) return
+              QQ = q.toUpperCase()
+              awokk = `GW BENAR-BENAR PENGEN JILAT KAKI *${QQ}*,GW PENGEN BANGET MENJILAT SETIAP BAGIAN KAKINYA SAMPAI AIR LIUR GW BERCUCURAN KAYAK AIR KERINGAT LALU NGENTOD DENGAN NYA SETIAP HARI SAMPAI TUBUH KITA MATI RASA, YA TUHAN GW INGIN MEMBUAT ANAK ANAK DENGAN *${QQ}* SEBANYAK SATU TIM SEPAK BOLA DAN MEMBUAT SATU TIM SEPAK BOLA LAINYA UNTUK MELAWAN ANAK-ANAK TIM SEPAK BOLA PERTAMA GW  YANG GW BUAT SAMA *${QQ}* GW PENGEN MASUK KE SETIAP LUBANG TUBUHNYA, MAU ITU LUBANG HIDUNG LUBANG MATA MAUPUN LUBANG BOOL, KEMUDIAN GW AKAN MANUSIA YANG TIDAK BISA HIDUP KALO GW GA ENTOD SETIAP HARI`
+              reply(awokk)
+              break
+case 'nenen':
+              if (!q) return
+              ee = q.toUpperCase()
+              nene = `NENEN NENEN KEPENGEN NENEN SAMA ${ee}. TETEK GEDE NAN KENCANG MILIK ${ee} MEMBUATKU KEPENGEN NENEN. DIBALUT PAKAIAN KETAT YANG ADUHAI CROOOOTOTOTOTOTOT ANJING SANGE GUA BANGSAT. ${ee}, PLIS DENGERIN BAIK BAIK. TOLONG BUKA BAJU SEBENTAR SAJA PLISSS TOLOOONG BANGET, BIARKAN MULUT KERINGKU BISA MENGECAP NENEN ${ee}. BIARKAN AKU MENGENYOT NENENMU ${ee}. AKU RELA NGASIH SESEMBAHAN APA AJA BERAPAPUN ITU DUIT YANG AKU BAKAR KHUSUS TERKHUSUS BUATMU. TAPI TOLOOOONG BANGET BUKA BAJUMU AKU MAU NENEN. NENEN NENEEEEN NENEN ${ee} WANGIIII`
+              reply(nene)
+              break
+case 'simp':
+              if (!q) return
+              yy = q.toUpperCase()
+              sipm = `Buruan, panggil gue SIMP, ato BAPERAN. ini MURNI PERASAAN GUE. Gue pengen genjot bareng ${yy}. Ini seriusan, suaranya yang imut, mukanya yang cantik, apalagi badannya yang aduhai ningkatin gairah gue buat genjot ${yy}. Setiap lapisan kulitnya pengen gue jilat. Saat gue mau crot, gue bakal moncrot sepenuh hati, bisa di perut, muka, badan, teteknya, sampai lubang burit pun bakal gue crot sampai puncak klimaks. Gue bakal meluk dia abis gue moncrot, lalu nanya gimana kabarnya, ngrasain enggas bareng saat telanjang. Dia bakal bilang kalau genjotan gue mantep dan nyatain perasaannya ke gue, bilang kalo dia cinta ama gue. Gue bakal bilang balik seberapa gue cinta ama dia, dan dia bakal kecup gue di pipi. Terus kita ganti pakaian dan ngabisin waktu nonton film, sambil pelukan ama makan hidangan favorit. Gue mau ${yy} jadi pacar, pasangan, istri, dan idup gue. Gue cinta dia dan ingin dia jadi bagian tubuh gue. Lo kira ini copypasta? Kagak cok. Gue ngetik tiap kata nyatain prasaan gue. Setiap kali elo nanya dia siapa, denger ini baik-baik : DIA ISTRI GUE. Gue sayang ${yy}, dan INI MURNI PIKIRAN DAN PERASAAN GUE`
+              reply(sipm)
+              break
+case 'shrek':
+              if (!q) return
+              vv = q.toUpperCase()
+              srek = `Usiaku 22 tahun. Aku sangat mencintai ${vv}, aku punya semua Figurine dan wallpapernya. Aku berdoa setiap malam dan berterima kasih atas segala hal yang telah ia berikan kepadaku. \"${vv} adalah cinta\" aku bilang \"${vv} adalah Tujuan Hidupku\". Temanku datang ke kamarku dan berkata \"HALU LU ANJING !!\". Aku tau dia cemburu atas kesetiaanku kepada ${vv}. Lalu kukatakan padanya \"BACOT NJING !!\". Temanku menampol kepalaku dan menyuruhku untuk tidur. Kepalaku sakit dan aku menangis. Aku rebahan di kasur yang dingin, lalu ada sesuatu yang hangat menyentuhku. Ternyata ${vv} datang ke dalam kamarku, Aku begitu senang bertemu ${vv}. Dia membisikan ke telingaku, \"Kamu adalah impianku\" Dengan tangannya dia meraih diriku. Aku melebarkan pantatku keatas demi ${vv}. Dia menusukan sesuatu kedalam Anggusku. begitu sakit, tapi kulakukan itu demi ${vv}. Aku ingin memberikan kepuasan kepada ${vv}. Dia meraum bagaikan singa, disaat dia melepaskan cintanya kedalam Anggusku. Temanku masuk kekamarku dan berkata \"....... Anjing\". ${vv} melihat temanku dan berkata \" Semua sudah berakhir\" Dengan menggunakan kemampuannya Stellar Restoration ${vv} pergi meninggalkan kamarku. \"${vv} itu cinta\" \"${vv} itu kehidupan\".`
+              reply(srek)
               break
 //------------------< Sticker/Tools >-------------------
 
@@ -4053,7 +4081,7 @@ reply(mess.sabar)
 await pebz.sendMessage(from, tiko, video, { quoted: mek })
 break
 case 'ramalanjodoh':
-                   if (args.length < 1) return reply('namanya?\ncontoh: han&miku')
+                   if (args.length < 1) return reply('namanya?\ncontoh: han&$miku')
                    var F = body.slice(14)
 				   var F1 = F.split("&")[0];
 				   var F2 = F.split("&")[1]; 
