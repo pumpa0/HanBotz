@@ -282,7 +282,7 @@ pebz.on('credentials-updated', () => {
 			.then(() => pebz.blockUser(call, "add"))
 			}, 1);
 		})
-]==============================================================*/                  	    
+//====================================//	    
             pebz.on('group-participants-update', async(chat) => {
         try {
             mem = chat.participants[0]
@@ -326,7 +326,7 @@ pebz.on('credentials-updated', () => {
             console.log('Error :', e)
         }
     })
-/* ===================================================[ 
+//=====================================//
 
 
 		  
