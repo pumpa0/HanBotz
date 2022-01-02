@@ -3933,6 +3933,23 @@ case 'komiku':
             await pebz.sendMessage(from,hara,image,{quoted: mek})
             await limitAdd(sender && !isOwner)	
             break
+case 'kusonime':
+                   if (args.length < 1) return reply('judul anime?')
+                   kuso = args[0]
+                   soni = await fetchJson(`https://velgrynd.herokuapp.com/api/kusonime?query=${kuso}&apikey=3QNUoxMb`)                      
+                   nime = `• *Judul* : ${soni.title}
+• *Genre* : ${soni.genre}
+• *Rating* : ${soni.rating}
+• *Produser* : ${soni.producers}
+• *Status* : ${soni.status}
+• *Durasi* : ${soni.duration}
+• *Rilis* : ${soni.release}
+• *Sinopsis* : 
+${soni.desc}
+• *Link* : ${soni.url}`                   
+                   kume = await getBuffer(nime.thumb)
+            pebz.sendMessage(from, kume, image, {quoted:mek, caption: nime})
+            break
 //=====================================//
 case 'playstore':
     
@@ -4003,15 +4020,6 @@ const teksh = `
 *Status Zodiac :* ${zodiac}
 `.trim()
 reply(teksh)
-break
-//case 'tiktok'://
-if (args.length == 0) return reply(`Link Nya Mana`)
-tt = args[0]
-ini_url = `http://zekais-api.herokuapp.com/tiktok2?url=${tt}&apikey=${zekais}`
-reply(mess.sabar)
-get_result = await fetchJson(ini_url)
-tikvid = await getBuffer(get_result.result.no_wm)
-await pebz.sendMessage(from, tikvid, video, { quoted: mek })
 break
 case 'tiktokmp3':
 if (args.length == 0) return reply(`Link Nya Mana`)
