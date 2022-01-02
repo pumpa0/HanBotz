@@ -901,6 +901,9 @@ ${p}• ${prefix}ytsearch <query>${p}
 *𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗*
 ${p}• ${prefix}tiktok <link>${p}
 ${p}• ${prefix}tiktokmp3 <link>${p}
+${p}• ${prefix}twitter <link>${p}
+${p}• ${prefix}twittermp3 <link>${p}
+${p}• ${prefix}mediafire <link>${p}
 
 *𝗦𝗧𝗜𝗖𝗞𝗘𝗥*
 ${p}• ${prefix}ttp <text>${p}
@@ -1081,9 +1084,6 @@ ${p}• ${prefix}herodetail <name hero>${p}
 *𝗣𝗥𝗜𝗠𝗕𝗢𝗡*
 ${p}• ${prefix}artinama <name>${p}
 ${p}• ${prefix}artimimpi <query>${p}
-
-*𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗*
-${p}• ${prefix}mediafire <link>${p}
 
 *𝗙𝗨𝗡*
 ${p}• ${prefix}meme${p}
@@ -4091,7 +4091,18 @@ reply(mess.sabar)
 pebz.sendMessage(from, khs, audio, {mimetype:'audio/mp4', filename:'audio.mp3', quoted:mek})
 })
 break
-
+case 'ig':
+case 'igdl':
+case 'instagram':
+if (!c) return reply('Linknya?')
+var { igDownloader } = require('./lib/igdown')
+   res = await igDownloader(`${c}`).catch(e => {
+reply('_error_')
+})
+console.log(res)
+reply(mess.sabar)
+sendMedia(from,`${res.result.link}`,`${res.result.desc}`)
+                    break
    //==================================//               
           default: 
 
