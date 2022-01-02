@@ -68,6 +68,7 @@ const {
 
 fake = '༺ HanBotz ༻\nStatus : Online'
 let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
+let gambarku = "" || fs.readFileSync('./media/gambar/gambarku.png')
 let gambarrr = "" || fs.readFileSync('./media/gambar/biasa.png')
 let gambargif = "" || fs.readFileSync('./media/gambar/gambargif.gif')
 
@@ -847,7 +848,7 @@ const linkwa = 'https://chat.whatsapp.com/'
              case 'menu':
              case 'help':
              uptime = process.uptime()            
-             reply(mess.tunggu)
+           //  reply(mess.tunggu) //
 		     var p = '```'
 		    const tod =`
 ${p}${ucapanWaktu}${p}
@@ -866,12 +867,8 @@ ${p}${ucapanWaktu}${p}
 • *Group Chat* : ${groups.length}
 • *Runtime* : ${runt(process.uptime())}
 
-*Website*
-• bit.ly/HanBotz
 *Donate*
-• saweria.co/HanBotz
-*Official Group*
-• bit.ly/OfficialGroupHanBotz`
+• saweria.co/HanBotz`
 tod2 =`͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
 *𝗚𝗥𝗢𝗨𝗣*
 ${p}• ${prefix}linkgroup${p}
@@ -1116,7 +1113,7 @@ ${p}• ${prefix}report <text>${p}
           { buttonId: `${prefix}gruppp`, buttonText: { displayText: '༺ Official Group ༻' }, type: 1 }
                  ]
            
-        sendButImage(from, tod, tod2, gambar, but)
+        sendButImage(from, tod, tod2, gambarku, but)
            break
 case 'donate':
 reply(`saweria.co/HanBotz`)
@@ -1125,18 +1122,9 @@ case 'rules':
 rulls = `p`
 break
 case 'gruppp':
-grupku = `- *BOT WHATSAPP* -
+grupku = `
+https://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ
 
-• _/help or /menu for Commands_
-
-- *RULES* -
-
-• _No Spam Commands or Spam Chats_
-• _Mengirim Hal Lain Dengan Sewajarnya_
-
-- *LINK* - 
-
-• _Group_: https://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ
 `
 reply(grupku)
 break
@@ -4156,7 +4144,15 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     anu1 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
                     pebz.sendMessage(from, anu1, text, {quoted: mek})
                     }
-                    if (body.startsWith(`${!prefix}${command}`)) {                    
+                    if (body.startsWith(`.${command}`)) {
+                    anu1 = `prefix HanBotz 『 ${prefix} 』`
+                    pebz.sendMessage(from, anu1, text, {quoted: mek})
+                    }
+                    if (body.startsWith(`!${command}`)) {
+                    anu1 = `prefix HanBotz 『 ${prefix} 』`
+                    pebz.sendMessage(from, anu1, text, {quoted: mek})
+                    }
+                    if (body.startsWith(`#${command}`)) {
                     anu1 = `prefix HanBotz 『 ${prefix} 』`
                     pebz.sendMessage(from, anu1, text, {quoted: mek})
                     }
