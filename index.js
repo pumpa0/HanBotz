@@ -903,6 +903,7 @@ ${p}• ${prefix}tiktok <link>${p}
 ${p}• ${prefix}tiktokmp3 <link>${p}
 ${p}• ${prefix}twitter <link>${p}
 ${p}• ${prefix}twittermp3 <link>${p}
+${p}• ${prefix}instagram <link>${p}
 ${p}• ${prefix}mediafire <link>${p}
 
 *𝗦𝗧𝗜𝗖𝗞𝗘𝗥*
@@ -2706,9 +2707,9 @@ case 'pacaran':
                    F = body.slice(12)
                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/samehadaku?q=${F}`)
                    anu2 = await getBuffer(anu.thumb)
-                   anu1 = `• *JUDUL* : ${anu.title}\n`
-                   anu1 += `• *LINK* : ${anu.link}\n`
-                   anu1 += `• *DESK* : ${anu.desc}\n`
+                   anu1 = `• *Judul* : ${anu.title}
+• *Link* : ${anu.link}
+• ${anu.desc}\n`
                    pebz.sendMessage(from, anu2, image, {caption: anu1, quoted: mek })
                    break
 //      case 'neon1':  //
@@ -4101,7 +4102,7 @@ reply('_error_')
 })
 console.log(res)
 reply(mess.sabar)
-sendMedia(from,`${res.result.link}`,`${res.result.desc}`)
+sendMedia(from,`${res.result.link}`)
                     break
    //==================================//               
           default: 
