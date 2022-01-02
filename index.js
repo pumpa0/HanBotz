@@ -21,7 +21,7 @@ const ms = require('parse-ms')
 const { fetchJson, color, bgcolor } = require('./lib/fetcher')
 const { y2mate } = require('./lib/y2mate');
 const { y2mateA, y2mateV } = require('./lib/y2mate.js')
-const { yta, ytv, ytv144, ytv240, ytv480, ytv720, ytv1080, igdl, upload, formatDate } = require('./lib/ytdl')
+const { yta, ytv, ytv144, ytv240, ytv480, ytv720, ytv1080, igdl, twitter, upload, formatDate } = require('./lib/ytdl')
 const { wikiSearch } = require('./lib/wiki.js')
 const { wait, simih,  getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, success, close } = require('./lib/function')
 const { EmojiAPI } = require("emoji-api")
@@ -301,7 +301,7 @@ pebz.on('credentials-updated', () => {
                 group_info = await pebz.groupMetadata(chat.jid)
                 let buff = await getBuffer(pp_user)
                 ini_img = await getBuffer(`https://velgrynd.herokuapp.com/api/welcome?name=${ini_user.notify}&picurl=${pp_user2}&bgurl=https://telegra.ph/file/012330e87e50a6982f725.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
-                welkam = `𝙃𝘼𝙇𝙇𝙊 *@${num.split('@')[0]}*
+                welkam = `𝙃𝘼𝙇𝙇𝙊 *@${mem.split('@')[0]}*
 𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙂𝙍𝙐𝙋 
 *${mdata.subject}*
 
@@ -3556,7 +3556,7 @@ if (!isOwner) return sticOwner(from)
            if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* teks atas&teks bawah`)
            if (!q.includes('&')) return reply(`Kirim perintah *${prefix + command}* teks atas&teks bawah`)
            try {
-           if (!isQuotedImage && !isQuotedSticker) return reply(`REPLY GAMBAR ATAU STICKER!!`)
+           if (!isQuotedImage && !isQuotedSticker) return reply('reply gambar atau sticker!')
            reply(mess.wait)
            var F1 = q.split('&')[0] ? q.split('&')[0] : ''
            var F2 = q.split('&')[1] ? q.split('&')[1] : ''
@@ -4070,6 +4070,27 @@ ${soni.result.desc}
                    kume = await getBuffer(soni.result.thumb)
             pebz.sendMessage(from, kume, image, {quoted:mek, caption: nime})
             break
+case 'twmp4': case 'twitter':
+if (args.length < 1) return reply('Link?')
+lin = args[0]
+twitter(lin).then(res => {
+console.log('[ TWITTER ] downloader')
+Anu = res.SD
+reply(mess.sabar)
+sendMedia(from, Anu)
+})
+break
+case 'twmp3': case 'twittermp3':
+if (args.length < 1) return reply('Link?')
+lin = args[0]
+twitter(lin).then(async (res) => {
+console.log('[ TWITTER ] downloader')
+Anu = res.SD
+khs = await getBuffer(Anu)
+reply(mess.sabar)
+pebz.sendMessage(from, khs, audio, {mimetype:'audio/mp4', filename:'audio.mp3', quoted:mek})
+})
+break
 
    //==================================//               
           default: 
