@@ -1142,7 +1142,7 @@ Sanksi: *PERMANENT BLOCK*
 ⚠️ *Segala kebijakan dan ketentuan HanBotz di pegang oleh owner dan segala perubahan kebijakan, sewaktu waktu owner berhak mencabut, memblokir user.*
 `
 const replyfakelink = (teks) => {
-LexxyOFC.sendMessage(from, teks, text,{contextInfo :{text: 'hi',
+pebz.sendMessage(from, teks, text,{contextInfo :{text: 'hi',
 "forwardingScore": 1000000000,
 isForwarded: false,
 sendEphemeral: false,
