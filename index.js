@@ -69,7 +69,7 @@ fake = '༺ HanBotz ༻\nStatus : Online'
 let gambar = "" || fs.readFileSync('./media/gambar/biasa.png')
 let gambarku = "" || fs.readFileSync('./media/gambar/gambarku.png')
 let gambarrr = "" || fs.readFileSync('./media/gambar/biasa.png')
-let gambargif = "" || fs.readFileSync('./media/gambar/gambargif.gif')
+let linkfake = "" || fs.readFileSync('./media/gambar/linkfake.png')
 
 self = false
 blocked = []
@@ -402,6 +402,20 @@ console.log(e)
 			       const fakethumb = (teks, yes) => {
             pebz.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./media/gambar/fake.png'),quoted:mek,caption:yes})
             } 
+            const replyfakelink = (teks) => {
+pebz.sendMessage(from, teks, text,{contextInfo :{text: 'hi',
+"forwardingScore": 1000000000,
+isForwarded: false,
+sendEphemeral: false,
+"externalAdReply": {
+                "title": `HanBotz`,
+                "body": "halo ${pushname}",
+                "previewType": "PHOTO",
+                "thumbnailUrl": "https://telegra.ph/file/d6fb337a76e7325a6eff6.jpg",
+                "thumbnail": linkfake,
+                "sourceUrl": `http://bit.ly/OfficialGroupHanBotz`
+},mentionedJid:[sender]}, quoted : mek})
+}
 			const sendWebp = async(from, url) => {
                 var names = Date.now() / 10000;
                 var download = function (uri, filename, callback) {
@@ -867,9 +881,7 @@ ${p}${ucapanWaktu}${p}
 • *Private Chat* : ${privat.length}
 • *Group Chat* : ${groups.length}
 • *Runtime* : ${runt(process.uptime())}
-
-*Donate*
-• saweria.co/HanBotz`
+`
 tod2 =`͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
 *𝗚𝗥𝗢𝗨𝗣*
 ${p}• ${prefix}linkgroup${p}
@@ -1103,7 +1115,6 @@ ${p}• ${prefix}nenen [name] ${p}
 ${p}• ${prefix}shrek [name] ${p}
 
 *𝗢𝗧𝗛𝗘𝗥*
-${p}• ${prefix}smenu${p}
 ${p}• ${prefix}owner${p}
 ${p}• ${prefix}report [text]${p}
 
@@ -1111,13 +1122,24 @@ ${p}• ${prefix}report [text]${p}
 2022 © HanBotz`
 
            but = [
-          { buttonId: `${prefix}gruppp`, buttonText: { displayText: '༺ Official Group ༻' }, type: 1 }
+           { buttonId: `${prefix}rules`, buttonText: { displayText: 'RULES' }, type: 1 }
+          { buttonId: `${prefix}donate`, buttonText: { displayText: 'DONATE' }, type: 1 }
                  ]
            
         sendButImage(from, tod, tod2, gambarku, but)
            break
 case 'donate':
-reply(`saweria.co/HanBotz`)
+sawer = `*── 「 DONATE 」 ──*
+
+kalian bisa mendukung saya agar bot ini tetap up to date dengan cara donasi
+
+berapapun donasi kalian akan sangat berarti
+
+saweria.co/HanBotz
+
+thanks!
+`
+replyfakelink(sawer)
 break
 case 'rules':
 rulls = `*── 「 RULES AND FAQ 」 ──*
@@ -1136,25 +1158,8 @@ Sanksi: *PERMANENT BLOCK*
 - *Prefixnya apa ya?*
 + _Bot ini menggunakan multi prefix._
 
-- *Kak, kok syaa chat owner tidak direspon?*
-+ _Owner hanya merespon pertanyaan seputar bot Dan kendala eror, tidak untuk kenalan ataupun mengemis script._
-
 ⚠️ *Segala kebijakan dan ketentuan HanBotz di pegang oleh owner dan segala perubahan kebijakan, sewaktu waktu owner berhak mencabut, memblokir user.*
 `
-const replyfakelink = (teks) => {
-pebz.sendMessage(from, teks, text,{contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-                "title": `HanBotz`,
-                "body": "halo ${pushname}",
-                "previewType": "PHOTO",
-                "thumbnailUrl": "https://telegra.ph/file/d6fb337a76e7325a6eff6.jpg",
-                "thumbnail": gambar,
-                "sourceUrl": `https://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ`
-},mentionedJid:[sender]}, quoted : mek})
-}
 
 replyfakelink(rulls)
 break
