@@ -858,13 +858,14 @@ const linkwa = 'https://chat.whatsapp.com/'
 	        	
             if (self === true && !isOwner && isCmd) return
           
-           
+           var p = '```'
+           uptime = process.uptime()
              switch(command) {
              case 'menu':
              case 'help':
-             uptime = process.uptime()            
+                         
            //  reply(mess.tunggu) //
-		     var p = '```'
+		
 		    const tod =`
 ${p}${ucapanWaktu}${p}
 
@@ -4166,7 +4167,7 @@ reply(mess.sabar)
 sendMedia(from,`${res.result.link}`)
                     break
 case 'menutest':
-coba = `*𝗚𝗥𝗢𝗨𝗣*
+const coba = `*𝗚𝗥𝗢𝗨𝗣*
 ${p}• ${prefix}linkgroup${p}
 ${p}• ${prefix}delete [reply bot]${p}
 ${p}• ${prefix}setname [text]${p}
@@ -4412,7 +4413,7 @@ ${p}• ${prefix}report [text]${p}
         sendButLocation(from, coba, gambar, but)
            break
 case 'bottest':
-apani = `${p}${ucapanWaktu}${p}
+const apani = `${p}${ucapanWaktu}${p}
 
 • *Hari* : ${week} - ${weton}
 • *Tanggal* : ${calender} 
