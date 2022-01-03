@@ -62,7 +62,6 @@ const { herolist } = require('./lib/herolist.js')
 const { herodetails } = require('./lib/herodetail.js')
 const {
 	OwnerNumber,
-	prefix,
 	lol
 } = require('./lib/config.json')
 
@@ -353,7 +352,8 @@ pebz.on('credentials-updated', () => {
 			const time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
 			const wita = moment.tz("Asia/Makassar").format("HH:mm:ss")	    
             
-
+            const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
+            const prefix = /^[ç°ž?ï¼¡Â€ç¹©?ç¹ž?ïˆ©?ï¼´î¾Ÿçž¼ç°§??=|~!#$%^&.?/\\ç©¢^z+@,;]/.test(cmd) ? cmd.match(/^[ç°ž?ï¼¡Â€ç¹©?ç¹ž?ïˆ©?ï¼´î¾Ÿçž¼ç°§??=|~!#$%^&.?/\\ç©¢^z+*,;]/gi) : '/'
 			body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'videoMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'extendedTextMessage') && mek.message[type].text.startsWith(prefix) ? mek.message[type].text : (type == 'listResponseMessage') && mek.message[type].singleSelectReply.selectedRowId ? mek.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : ''
 			budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
 			const command = body.slice(1).trim().split(/ +/).shift().toLowerCase()
@@ -872,38 +872,38 @@ ${p}${ucapanWaktu}${p}
 tod2 =`͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
 *𝗚𝗥𝗢𝗨𝗣*
 ${p}• ${prefix}linkgroup${p}
-${p}• ${prefix}delete <reply bot>${p}
-${p}• ${prefix}setname <text>${p}
-${p}• ${prefix}setdesc <text>${p}
-${p}• ${prefix}hidetag <text>${p}
-${p}• ${prefix}tagall <text>${p}
-${p}• ${prefix}totag <reply>${p}
+${p}• ${prefix}delete [reply bot]${p}
+${p}• ${prefix}setname [text]${p}
+${p}• ${prefix}setdesc [text]${p}
+${p}• ${prefix}hidetag [text]${p}
+${p}• ${prefix}tagall [text]${p}
+${p}• ${prefix}totag [reply]${p}
 ${p}• ${prefix}open|close${p}
 
 *𝗬𝗢𝗨𝗧𝗨𝗕𝗘*
-${p}• ${prefix}ytmp3 <link>${p}
-${p}• ${prefix}ytmp4-144 <link>${p}
-${p}• ${prefix}ytmp4-240 <link>${p}
-${p}• ${prefix}ytmp4-360 <link>${p}
-${p}• ${prefix}ytmp4-480 <link>${p}
-${p}• ${prefix}ytmp4-720 <link>${p}
-${p}• ${prefix}ytmp4-1080 <link>${p}
-${p}• ${prefix}ytsearch <query>${p}
+${p}• ${prefix}ytmp3 [link]${p}
+${p}• ${prefix}ytmp4-144 [link]${p}
+${p}• ${prefix}ytmp4-240 [link]${p}
+${p}• ${prefix}ytmp4-360 [link]${p}
+${p}• ${prefix}ytmp4-480 [link]${p}
+${p}• ${prefix}ytmp4-720 [link]${p}
+${p}• ${prefix}ytmp4-1080 [link]${p}
+${p}• ${prefix}ytsearch [query]${p}
 
 *𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗*
-${p}• ${prefix}tiktok <link>${p}
-${p}• ${prefix}tiktokmp3 <link>${p}
-${p}• ${prefix}twitter <link>${p}
-${p}• ${prefix}twittermp3 <link>${p}
-${p}• ${prefix}instagram <link>${p}
-${p}• ${prefix}mediafire <link>${p}
+${p}• ${prefix}tiktok [link]${p}
+${p}• ${prefix}tiktokmp3 [link]${p}
+${p}• ${prefix}twitter [link]${p}
+${p}• ${prefix}twittermp3 [link]${p}
+${p}• ${prefix}instagram [link]${p}
+${p}• ${prefix}mediafire [link]${p}
 
 *𝗦𝗧𝗜𝗖𝗞𝗘𝗥*
-${p}• ${prefix}ttp <text>${p}
-${p}• ${prefix}attp <text>${p}
-${p}• ${prefix}textstic <text>${p}
-${p}• ${prefix}sticker <reply>${p}
-${p}• ${prefix}stickergif <reply>${p}
+${p}• ${prefix}ttp [text]${p}
+${p}• ${prefix}attp [text]${p}
+${p}• ${prefix}textstic [text]${p}
+${p}• ${prefix}sticker [reply]${p}
+${p}• ${prefix}stickergif [reply]${p}
 ${p}• ${prefix}dogestick${p}
 ${p}• ${prefix}gurastick${p}
 ${p}• ${prefix}patrickstick${p}
@@ -911,9 +911,9 @@ ${p}• ${prefix}animestick${p}
 
 *𝗖𝗢𝗡𝗩𝗘𝗥𝗧*
 _sticker_
-${p}• ${prefix}togif <replysticker>${p}
-${p}• ${prefix}tovid <replysticker>${p}
-${p}• ${prefix}toimg <replysticker>${p}
+${p}• ${prefix}togif [replysticker]${p}
+${p}• ${prefix}tovid [replysticker]${p}
+${p}• ${prefix}toimg [replysticker]${p}
 
 _audio_
 ${p}• ${prefix}bass ${p}
@@ -926,21 +926,21 @@ ${p}• ${prefix}slow ${p}
 ${p}• ${prefix}reverse ${p}
 
 *𝗜𝗠𝗔𝗚𝗘*
-${p}• ${prefix}tourl <reply>${p}
-${p}️• ${prefix}image <query>${p}
-${p}• ${prefix}pinterest <query>${p}
+${p}• ${prefix}tourl [reply]${p}
+${p}️• ${prefix}image [query]${p}
+${p}• ${prefix}pinterest [query]${p}
 
 *𝗦𝗘𝗔𝗥𝗖𝗛*
-${p}• ${prefix}lirik <query>${p}
-${p}• ${prefix}playstore <query>${p}
-${p}• ${prefix}googlesearch <query>${p}
+${p}• ${prefix}lirik [query]${p}
+${p}• ${prefix}playstore [query]${p}
+${p}• ${prefix}googlesearch [query]${p}
 
 *𝗔𝗡𝗜𝗠𝗘*
-${p}• ${prefix}loli <query>${p}
-${p}• ${prefix}megumin <query>${p}
-${p}• ${prefix}chara <query>${p}
-${p}• ${prefix}kusonime <query>${p}
-${p}• ${prefix}samehadaku <query>${p}
+${p}• ${prefix}loli [query]${p}
+${p}• ${prefix}megumin [query]${p}
+${p}• ${prefix}chara [query]${p}
+${p}• ${prefix}kusonime [query]${p}
+${p}• ${prefix}samehadaku [query]${p}
 
 *𝗠𝗔𝗞𝗘𝗥*
 _example : text1&text2_
@@ -1054,29 +1054,29 @@ ${p}• ${prefix}sound35${p}
     ${p}• ${prefix}sound36${p}
 
 *𝗖𝗛𝗘𝗖𝗞𝗘𝗥*
-${p}• ${prefix}cantikcek <name>${p}
-${p}• ${prefix}gantengcek <name>${p}
-${p}• ${prefix}jelekcek <name>${p}
-${p}• ${prefix}begocek <name>${p}
-${p}• ${prefix}nolepcek <name>${p}
-${p}• ${prefix}jagocek <name>${p}
-${p}• ${prefix}jahatcek <name>${p}
-${p}• ${prefix}pintarcek <name>${p}
-${p}• ${prefix}bebancek <name>${p}
-${p}• ${prefix}haramcek <name>${p}
-${p}• ${prefix}pakboycek <name>${p}
-${p}• ${prefix}pakgirlcek <name>${p}
+${p}• ${prefix}cantikcek [name]${p}
+${p}• ${prefix}gantengcek [name]${p}
+${p}• ${prefix}jelekcek [name]${p}
+${p}• ${prefix}begocek [name]${p}
+${p}• ${prefix}nolepcek [name]${p}
+${p}• ${prefix}jagocek [name]${p}
+${p}• ${prefix}jahatcek [name]${p}
+${p}• ${prefix}pintarcek [name]${p}
+${p}• ${prefix}bebancek [name]${p}
+${p}• ${prefix}haramcek [name]${p}
+${p}• ${prefix}pakboycek [name]${p}
+${p}• ${prefix}pakgirlcek [name]${p}
 
 *𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡*
-${p}• ${prefix}wiki <query>${p}
-${p}• ${prefix}brainly <query>${p}
-${p}• ${prefix}translate <query>${p}
+${p}• ${prefix}wiki [query]${p}
+${p}• ${prefix}brainly [query]${p}
+${p}• ${prefix}translate [query]${p}
 ${p}• ${prefix}herolist (ML)${p}
-${p}• ${prefix}herodetail <name hero>${p}
+${p}• ${prefix}herodetail [name hero]${p}
 
 *𝗣𝗥𝗜𝗠𝗕𝗢𝗡*
-${p}• ${prefix}artinama <name>${p}
-${p}• ${prefix}artimimpi <query>${p}
+${p}• ${prefix}artinama [name]${p}
+${p}• ${prefix}artimimpi [query]${p}
 
 *𝗙𝗨𝗡*
 ${p}• ${prefix}meme${p}
@@ -1088,23 +1088,23 @@ ${p}• ${prefix}slot${p}
 ${p}• ${prefix}tebakgambar${p}
 
 *𝗞𝗘𝗥𝗔𝗡𝗚*
-${p}• ${prefix}rate <???>${p}
-${p}• ${prefix}apakah <text>${p}
-${p}• ${prefix}kapankah <text>${p}
+${p}• ${prefix}rate [???]${p}
+${p}• ${prefix}apakah [text]${p}
+${p}• ${prefix}kapankah [text]${p}
 
 *𝗥𝗔𝗡𝗗𝗢𝗠*
-${p}• ${prefix}say <text>${p}
-${p}• ${prefix}sayy <text>${p}
-${p}• ${prefix}wangy <name> ${p}
-${p}• ${prefix}wangyy <name> ${p}
-${p}• ${prefix}simp <name> ${p}
-${p}• ${prefix}nenen <name> ${p}
-${p}• ${prefix}shrek <name> ${p}
+${p}• ${prefix}say [text]${p}
+${p}• ${prefix}sayy [text]${p}
+${p}• ${prefix}wangy [name] ${p}
+${p}• ${prefix}wangyy [name] ${p}
+${p}• ${prefix}simp [name] ${p}
+${p}• ${prefix}nenen [name] ${p}
+${p}• ${prefix}shrek [name] ${p}
 
 *𝗢𝗧𝗛𝗘𝗥*
 ${p}• ${prefix}smenu${p}
 ${p}• ${prefix}owner${p}
-${p}• ${prefix}report <text>${p}
+${p}• ${prefix}report [text]${p}
 
 
 2022 © HanBotz`
@@ -1122,10 +1122,7 @@ case 'rules':
 rulls = `p`
 break
 case 'gruppp':
-grupku = `
-https://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ
-
-`
+grupku = `https://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ`
 reply(grupku)
 break
 
@@ -4144,18 +4141,7 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     anu1 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
                     pebz.sendMessage(from, anu1, text, {quoted: mek})
                     }
-                    if (body.startsWith(`.${command}`)) {
-                    anu1 = `prefix HanBotz 『 ${prefix} 』`
-                    pebz.sendMessage(from, anu1, text, {quoted: mek})
-                    }
-                    if (body.startsWith(`!${command}`)) {
-                    anu1 = `prefix HanBotz 『 ${prefix} 』`
-                    pebz.sendMessage(from, anu1, text, {quoted: mek})
-                    }
-                    if (body.startsWith(`#${command}`)) {
-                    anu1 = `prefix HanBotz 『 ${prefix} 』`
-                    pebz.sendMessage(from, anu1, text, {quoted: mek})
-                    }
+                    
                     
                     
                     
