@@ -282,53 +282,6 @@ pebz.on('credentials-updated', () => {
 			.then(() => pebz.blockUser(call, "add"))
 			}, 1);
 		})
-//====================================//	    
-            pebz.on('group-participants-update', async(chat) => {
-        try {
-            mem = chat.participants[0]
-            try {
-                var pp_user = await pebz.getProfilePicture(mem)
-            } catch (e) {
-                var pp_user2 = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
-            }
-            try {
-                var pp_group = await pebz.getProfilePicture(chat.jid)
-            } catch (e) {
-                var pp_group = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
-            }
-            if (chat.action == 'add') {
-            	ini_user = pebz.contacts[mem]
-                group_info = await pebz.groupMetadata(chat.jid)
-                let buff = await getBuffer(pp_user)
-                ini_img = await getBuffer(`https://velgrynd.herokuapp.com/api/welcome?name=${ini_user.notify}&picurl=${pp_user2}&bgurl=https://telegra.ph/file/012330e87e50a6982f725.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
-                welkam = `𝙃𝘼𝙇𝙇𝙊 *@${mem.split('@')[0]}*
-𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙂𝙍𝙐𝙋 
-*${mdata.subject}*
-
-𝙅𝘼𝙉𝙂𝘼𝙉 𝙇𝙐𝙋𝘼 𝙄𝙉𝙏𝙍𝙊 :
-
-• *ɴᴀᴍᴀ :*
-• *ᴜᴍᴜʀ :*
-• *ɢᴇɴᴅᴇʀ :*
-• *ᴀꜱᴀʟ ᴋᴏᴛᴀ :*
-
-𝙎𝙀𝙈𝙊𝙂𝘼 𝘽𝙀𝙏𝘼𝙃 𝙔𝘼 𝘿𝙄 𝙂𝙍𝙐𝙋 𝙄𝙉𝙄`//${group_info.desc}//
-                await pebz.sendMessage(chat.jid, ini_img, MessageType.image, { caption: welkam , contextInfo: {"mentionedJid": [mem]},sendEphemeral: true})
-            }
-            if (chat.action == 'remove') {
-            	mem = chat.participants[0]
-            	ini_user = pebz.contacts[mem]
-                let buff = await getBuffer(pp_user)
-                group_info = await pebz.groupMetadata(chat.jid)
-                ini_img2 = await getBuffer(`https://velgrynd.herokuapp.com/api/goodbye?name=${ini_user.notify}&picurl=${pp_user2}&bgurl=https://telegra.ph/file/012330e87e50a6982f725.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
-                ini_out = `𝙎𝘼𝙔𝙊𝙉𝘼𝙍𝘼 @${mem.split('@')[0]}`
-                await pebz.sendMessage(chat.jid, ini_img2, MessageType.image, { caption: ini_out, contextInfo: {"mentionedJid": [mem]},sendEphemeral: true })
-            }
-        } catch (e) {
-            console.log('Error :', e)
-        }
-    })
-//=====================================//
 
 
 		  
@@ -733,7 +686,61 @@ const ftex = {
 const anem = [anim1, anim2, anim3, anim4, anim5, anim6, anim7, anim8, anim9, anim10, anim11, anim12, anim13, anim14, anim15, anim16, anim17, anim18, anim19, anim20, anim21]
 
 const anam = anem[Math.floor(Math.random() * (anem.length))]
-	
+
+//====================================//	    
+            pebz.on('group-participants-update', async(chat) => {
+        try {
+            mem = chat.participants[0]
+            try {
+                var pp_user = await pebz.getProfilePicture(mem)
+            } catch (e) {
+                var pp_user2 = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+            }
+            try {
+                var pp_group = await pebz.getProfilePicture(chat.jid)
+            } catch (e) {
+                var pp_group = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
+            }
+            if (chat.action == 'add') {
+            	ini_user = pebz.contacts[mem]
+                group_info = await pebz.groupMetadata(chat.jid)
+                let buff = await getBuffer(pp_user)
+                ini_img = await getBuffer(`https://velgrynd.herokuapp.com/api/welcome?name=${ini_user.notify}&picurl=${pp_user2}&bgurl=https://telegra.ph/file/012330e87e50a6982f725.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
+                welkam = `𝙃𝘼𝙇𝙇𝙊 *@${mem.split('@')[0]}*
+𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙂𝙍𝙐𝙋 
+*${mdata.subject}*
+
+𝙅𝘼𝙉𝙂𝘼𝙉 𝙇𝙐𝙋𝘼 𝙄𝙉𝙏𝙍𝙊 :
+
+• *ɴᴀᴍᴀ :*
+• *ᴜᴍᴜʀ :*
+• *ɢᴇɴᴅᴇʀ :*
+• *ᴀꜱᴀʟ ᴋᴏᴛᴀ :*
+
+𝙎𝙀𝙈𝙊𝙂𝘼 𝘽𝙀𝙏𝘼𝙃 𝙔𝘼 𝘿𝙄 𝙂𝙍𝙐𝙋 𝙄𝙉𝙄`//${group_info.desc}//
+
+but = [
+          { buttonId: `.`, buttonText: { displayText: '༺ WELCOME ༻' }, type: 1 }
+                 ]
+           
+        sendButLocation(chat.jid, welkam, gambar, but)
+     
+         //       await pebz.sendMessage(chat.jid, buff, //MessageType.image, { caption: welkam , contextInfo: //{"mentionedJid": [mem]},sendEphemeral: true}) //
+ //           }  //
+            if (chat.action == 'remove') {
+            	mem = chat.participants[0]
+            	ini_user = pebz.contacts[mem]
+                let buff = await getBuffer(pp_user)
+                group_info = await pebz.groupMetadata(chat.jid)
+                ini_img2 = await getBuffer(`https://velgrynd.herokuapp.com/api/goodbye?name=${ini_user.notify}&picurl=${pp_user2}&bgurl=https://telegra.ph/file/012330e87e50a6982f725.jpg&mem=${group_info.participants.length}&gcname=${group_info.subject}&apikey=3QNUoxMb`)
+                ini_out = `𝙎𝘼𝙔𝙊𝙉𝘼𝙍𝘼 @${mem.split('@')[0]}`
+                await pebz.sendMessage(chat.jid, buff, MessageType.image, { caption: ini_out, contextInfo: {"mentionedJid": [mem]},sendEphemeral: true })
+            }
+        } catch (e) {
+            console.log('Error :', e)
+        }
+    })
+//=====================================//
 		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 const oxo1 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']
