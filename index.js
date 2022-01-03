@@ -1153,7 +1153,7 @@ Sanksi: *PERMANENT BLOCK*
 + _Mungkin dipengaruhi oleh jaringan, signal, dan beberapa asalan._
 
 - *Boleh saya menambahkan bot ke grup?*
-+ _Untuk grup 200 member free, dan untuk dibawah 200 member dikenai biaya._
++ _Untuk grup 200 member free, dan untuk dibawah 200 member dikenai biaya._ (hubungi owner)
 
 - *Prefixnya apa ya?*
 + _Bot ini menggunakan multi prefix._
@@ -4165,6 +4165,276 @@ console.log(res)
 reply(mess.sabar)
 sendMedia(from,`${res.result.link}`)
                     break
+case 'menutest':
+coba = `*𝗚𝗥𝗢𝗨𝗣*
+${p}• ${prefix}linkgroup${p}
+${p}• ${prefix}delete [reply bot]${p}
+${p}• ${prefix}setname [text]${p}
+${p}• ${prefix}setdesc [text]${p}
+${p}• ${prefix}hidetag [text]${p}
+${p}• ${prefix}tagall [text]${p}
+${p}• ${prefix}totag [reply]${p}
+${p}• ${prefix}open|close${p}
+
+*𝗬𝗢𝗨𝗧𝗨𝗕𝗘*
+${p}• ${prefix}ytmp3 [link]${p}
+${p}• ${prefix}ytmp4-144 [link]${p}
+${p}• ${prefix}ytmp4-240 [link]${p}
+${p}• ${prefix}ytmp4-360 [link]${p}
+${p}• ${prefix}ytmp4-480 [link]${p}
+${p}• ${prefix}ytmp4-720 [link]${p}
+${p}• ${prefix}ytmp4-1080 [link]${p}
+${p}• ${prefix}ytsearch [query]${p}
+
+*𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗*
+${p}• ${prefix}tiktok [link]${p}
+${p}• ${prefix}tiktokmp3 [link]${p}
+${p}• ${prefix}twitter [link]${p}
+${p}• ${prefix}twittermp3 [link]${p}
+${p}• ${prefix}instagram [link]${p}
+${p}• ${prefix}mediafire [link]${p}
+
+*𝗦𝗧𝗜𝗖𝗞𝗘𝗥*
+${p}• ${prefix}ttp [text]${p}
+${p}• ${prefix}attp [text]${p}
+${p}• ${prefix}textstic [text]${p}
+${p}• ${prefix}sticker [reply]${p}
+${p}• ${prefix}stickergif [reply]${p}
+${p}• ${prefix}dogestick${p}
+${p}• ${prefix}gurastick${p}
+${p}• ${prefix}patrickstick${p}
+${p}• ${prefix}animestick${p}
+
+*𝗖𝗢𝗡𝗩𝗘𝗥𝗧*
+_sticker_
+${p}• ${prefix}togif [replysticker]${p}
+${p}• ${prefix}tovid [replysticker]${p}
+${p}• ${prefix}toimg [replysticker]${p}
+
+_audio_
+${p}• ${prefix}bass ${p}
+${p}• ${prefix}balik ${p}
+${p}• ${prefix}gemuk ${p}
+
+_video_
+${p}• ${prefix}fast ${p}
+${p}• ${prefix}slow ${p}
+${p}• ${prefix}reverse ${p}
+
+*𝗜𝗠??𝗚𝗘*
+${p}• ${prefix}tourl [reply]${p}
+${p}️• ${prefix}image [query]${p}
+${p}• ${prefix}pinterest [query]${p}
+
+*𝗦𝗘𝗔𝗥𝗖𝗛*
+${p}• ${prefix}lirik [query]${p}
+${p}• ${prefix}playstore [query]${p}
+${p}• ${prefix}googlesearch [query]${p}
+
+*𝗔𝗡𝗜𝗠𝗘*
+${p}• ${prefix}loli [query]${p}
+${p}• ${prefix}megumin [query]${p}
+${p}• ${prefix}chara [query]${p}
+${p}• ${prefix}kusonime [query]${p}
+${p}• ${prefix}samehadaku [query]${p}
+
+*𝗠𝗔𝗞𝗘𝗥*
+_example : text1&text2_
+${p}• ${prefix}phlogo${p}
+${p}• ${prefix}wolflogo${p}
+${p}• ${prefix}pubglogo${p}
+${p}• ${prefix}logoaveng${p}
+${p}• ${prefix}marvellogo${p}
+${p}• ${prefix}watercolour${p}
+
+_example : text_
+${p}• ${prefix}qrencode${p}
+${p}• ${prefix}barcode${p}
+${p}• ${prefix}bneon${p}
+${p}• ${prefix}matrix${p}
+${p}• ${prefix}breakwall${p}
+${p}• ${prefix}gneon${p}
+${p}• ${prefix}dropwater${p}
+${p}• ${prefix}tfire${p}
+${p}• ${prefix}sandw${p}
+${p}• ${prefix}gplaybutton${p}
+${p}• ${prefix}splaybutton${p}
+${p}• ${prefix}text3dbox${p}
+${p}• ${prefix}logobp${p}
+${p}• ${prefix}leavest${p}
+${p}• ${prefix}thundertext${p}
+${p}• ${prefix}tlight${p}
+${p}• ${prefix}naruto${p}
+${p}• ${prefix}crosslogo${p}
+${p}• ${prefix}cslogo${p}
+${p}• ${prefix}crismes${p}
+${p}• ${prefix}flametext${p}
+${p}• ${prefix}glowtext${p}
+${p}• ${prefix}smoketext${p}
+${p}• ${prefix}flowertext${p}
+${p}• ${prefix}lithgtext${p}
+
+*𝗔𝗨𝗗𝗜𝗢*
+${p}• ${prefix}audio1${p}
+    ${p}• ${prefix}audio2${p}
+${p}• ${prefix}audio3${p}
+    ${p}• ${prefix}audio4${p}
+${p}• ${prefix}audio5${p}
+    ${p}• ${prefix}audio6${p}
+${p}• ${prefix}audio7${p}
+    ${p}• ${prefix}audio8${p}
+${p}• ${prefix}audio9${p}
+    ${p}• ${prefix}audio10${p}
+${p}• ${prefix}audio11${p}
+    ${p}• ${prefix}audio12${p}
+${p}• ${prefix}audio13${p}
+    ${p}• ${prefix}audio14${p}
+${p}• ${prefix}audio15${p}
+    ${p}• ${prefix}audio16${p}
+${p}• ${prefix}audio17${p}
+    ${p}• ${prefix}audio18${p}
+${p}• ${prefix}audio19${p}
+    ${p}• ${prefix}audio20${p}
+${p}• ${prefix}audio21${p}
+    ${p}• ${prefix}audio22${p}
+${p}• ${prefix}audio23${p}
+    ${p}• ${prefix}audio24${p}
+${p}• ${prefix}audio25${p}
+    ${p}• ${prefix}audio26${p}
+${p}• ${prefix}audio27${p}
+    ${p}• ${prefix}audio28${p}
+${p}• ${prefix}audio29${p}
+    ${p}• ${prefix}audio30${p}
+${p}• ${prefix}audio31${p}
+    ${p}• ${prefix}audio32${p}
+${p}• ${prefix}audio33${p}
+    ${p}• ${prefix}audio34${p}
+${p}• ${prefix}audio35${p}
+
+*𝗦𝗢𝗨𝗡𝗗*
+${p}• ${prefix}sound1${p}
+    ${p}• ${prefix}sound2${p}
+${p}• ${prefix}sound3${p}
+    ${p}• ${prefix}sound4${p}
+${p}• ${prefix}sound5${p}
+    ${p}• ${prefix}sound6${p}
+${p}• ${prefix}sound7${p}
+    ${p}• ${prefix}sound8${p}
+${p}• ${prefix}sound9${p}
+    ${p}• ${prefix}sound10${p}
+${p}• ${prefix}sound11${p}
+    ${p}• ${prefix}sound12${p}
+${p}• ${prefix}sound13${p}
+    ${p}• ${prefix}sound14${p}
+${p}• ${prefix}sound15${p}
+    ${p}• ${prefix}sound16${p}
+${p}• ${prefix}sound17${p}
+    ${p}• ${prefix}sound18${p}
+${p}• ${prefix}sound19${p}
+    ${p}• ${prefix}sound20${p}
+${p}• ${prefix}sound21${p}
+    ${p}• ${prefix}sound22${p}
+${p}• ${prefix}sound23${p}
+    ${p}• ${prefix}sound24${p}
+${p}• ${prefix}sound25${p}
+    ${p}• ${prefix}sound26${p}
+${p}• ${prefix}sound27${p}
+    ${p}• ${prefix}sound28${p}
+${p}• ${prefix}sound29${p}
+    ${p}• ${prefix}sound30${p}
+${p}• ${prefix}sound31${p}
+    ${p}• ${prefix}sound32${p}
+${p}• ${prefix}sound33${p}
+    ${p}• ${prefix}sound34${p}
+${p}• ${prefix}sound35${p}
+    ${p}• ${prefix}sound36${p}
+
+*𝗖𝗛𝗘𝗖𝗞𝗘𝗥*
+${p}• ${prefix}cantikcek [name]${p}
+${p}• ${prefix}gantengcek [name]${p}
+${p}• ${prefix}jelekcek [name]${p}
+${p}• ${prefix}begocek [name]${p}
+${p}• ${prefix}nolepcek [name]${p}
+${p}• ${prefix}jagocek [name]${p}
+${p}• ${prefix}jahatcek [name]${p}
+${p}• ${prefix}pintarcek [name]${p}
+${p}• ${prefix}bebancek [name]${p}
+${p}• ${prefix}haramcek [name]${p}
+${p}• ${prefix}pakboycek [name]${p}
+${p}• ${prefix}pakgirlcek [name]${p}
+
+*𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗧𝗜𝗢𝗡*
+${p}• ${prefix}wiki [query]${p}
+${p}• ${prefix}brainly [query]${p}
+${p}• ${prefix}translate [query]${p}
+${p}• ${prefix}herolist (ML)${p}
+${p}• ${prefix}herodetail [name hero]${p}
+
+*𝗣𝗥𝗜𝗠𝗕𝗢𝗡*
+${p}• ${prefix}artinama [name]${p}
+${p}• ${prefix}artimimpi [query]${p}
+
+*𝗙𝗨𝗡*
+${p}• ${prefix}meme${p}
+${p}• ${prefix}darkjoke${p}
+
+*𝗚𝗔𝗠𝗘*
+${p}• ${prefix}suit${p}
+${p}• ${prefix}slot${p}
+${p}• ${prefix}tebakgambar${p}
+
+*𝗞𝗘𝗥𝗔𝗡𝗚*
+${p}• ${prefix}rate [???]${p}
+${p}• ${prefix}apakah [text]${p}
+${p}• ${prefix}kapankah [text]${p}
+
+*𝗥𝗔𝗡𝗗𝗢𝗠*
+${p}• ${prefix}say [text]${p}
+${p}• ${prefix}sayy [text]${p}
+${p}• ${prefix}wangy [name] ${p}
+${p}• ${prefix}wangyy [name] ${p}
+${p}• ${prefix}simp [name] ${p}
+${p}• ${prefix}nenen [name] ${p}
+${p}• ${prefix}shrek [name] ${p}
+
+*𝗢𝗧𝗛𝗘𝗥*
+${p}• ${prefix}owner${p}
+${p}• ${prefix}report [text]${p}
+
+
+2022 © HanBotz`
+
+           but = [
+           { buttonId: `${prefix}rules`, buttonText: { displayText: 'RULES' }, type: 1 },
+          { buttonId: `${prefix}donate`, buttonText: { displayText: 'DONATE' }, type: 1 }
+                 ]
+           
+        sendButLocation(from, coba, gambar, but)
+           break
+case 'bottest':
+apani = `${p}${ucapanWaktu}${p}
+
+• *Hari* : ${week} - ${weton}
+• *Tanggal* : ${calender} 
+
+*ᴵⁿᶠᵒᴮᵒᵗ*
+• *Name* : ${pebz.user.name}
+• *Prefix* :『 Multi-Prefix 』
+• *Version* : ${pebz.browserDescription[2]}
+• *Hosting* : ${pebz.browserDescription[0]}
+• *Platform* : Linux
+• *WhatsApp* : ${pebz.user.phone.wa_version}
+• *Private Chat* : ${privat.length}
+• *Group Chat* : ${groups.length}
+• *Runtime* : ${runt(process.uptime())}
+`
+but = [
+           { buttonId: `${prefix}rules`, buttonText: { displayText: 'RULES' }, type: 1 },
+          { buttonId: `${prefix}donate`, buttonText: { displayText: 'DONATE' }, type: 1 }
+                 ]
+                 
+sendButLocation(from, apani, gambar, but)
+           break
    //==================================//               
           default: 
 
