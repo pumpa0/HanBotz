@@ -712,7 +712,10 @@ const anam = anem[Math.floor(Math.random() * (anem.length))]
 
 𝙎𝙀𝙈𝙊𝙂𝘼 𝘽𝙀𝙏𝘼𝙃 𝙔𝘼 𝘿𝙄 𝙂𝙍𝙐𝙋 𝙄𝙉𝙄`
 				let buff = await getBuffer(ppimg)
-				sendButLocation(mdata.id, teks, gambar, {contextInfo: {"mentionedJid": [num]}})
+				but = [
+          { buttonId: `.`, buttonText: { displayText: '༺ WELCOME ༻' }, type: 1 }
+                 ]
+				 sendButLocation(mdata.id, teks, gambar, but, {contextInfo: {"mentionedJid": [num]}})
 				} else if (chat.action == 'remove') {
 				num = chat.participants[0]
 				try {
@@ -722,7 +725,10 @@ const anam = anem[Math.floor(Math.random() * (anem.length))]
 				}
 				teks = `𝙎𝘼𝙔𝙊𝙉𝘼𝙍𝘼 *@${num.split('@')[0]}*`
 				let buff = await getBuffer(ppimg)
-				sendButLocation(mdata.id, teks, gambar, {contextInfo: {"mentionedJid": [num]}})
+				but = [
+          { buttonId: `.`, buttonText: { displayText: '༺ WELCOME ༻' }, type: 1 }
+                 ]
+				sendButLocation(mdata.id, teks, gambar, but, {contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
