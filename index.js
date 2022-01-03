@@ -1141,21 +1141,22 @@ Sanksi: *PERMANENT BLOCK*
 
 ⚠️ *Segala kebijakan dan ketentuan HanBotz di pegang oleh owner dan segala perubahan kebijakan, sewaktu waktu owner berhak mencabut, memblokir user.*
 `
-const ftex = {
-	 key: { 
-          fromMe: false,
-	      participant: `0@s.whatsapp.net`, ...(from ? 
-	 { remoteJid: "6285731855426-1613049930@g.us" } : {}) 
-                },
-	 message: { 
-		"extendedTextMessage": {
-                 "text": `*BOT TERVERIFIED*`,
-                 "title": `_HanBotz_`,
-                 'jpegThumbnail': gambarrr
-                        }
-	                  } 
-                     }
-                     pebz.sendMessage(from, rulls, MessageType.text, ftex)
+const replyfakelink = (teks) => {
+LexxyOFC.sendMessage(from, teks, text,{contextInfo :{text: 'hi',
+"forwardingScore": 1000000000,
+isForwarded: false,
+sendEphemeral: false,
+"externalAdReply": {
+                "title": `HanBotz`,
+                "body": "halo ${pushname}",
+                "previewType": "PHOTO",
+                "thumbnailUrl": "https://telegra.ph/file/d6fb337a76e7325a6eff6.jpg",
+                "thumbnail": gambar,
+                "sourceUrl": `https://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ`
+},mentionedJid:[sender]}, quoted : mek})
+}
+
+replyfakelink(rulls)
 break
 case 'gruppp':
 grupku = `https://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ`
