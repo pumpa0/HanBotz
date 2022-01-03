@@ -858,7 +858,7 @@ ${p}${ucapanWaktu}${p}
 
 *ᴵⁿᶠᵒᴮᵒᵗ*
 • *Name* : ${pebz.user.name}
-• *Prefix* :『 ${prefix} 』
+• *Prefix* :『 Multi-Prefix 』
 • *Version* : ${pebz.browserDescription[2]}
 • *Hosting* : ${pebz.browserDescription[0]}
 • *Platform* : Linux
@@ -925,7 +925,7 @@ ${p}• ${prefix}fast ${p}
 ${p}• ${prefix}slow ${p}
 ${p}• ${prefix}reverse ${p}
 
-*𝗜𝗠𝗔𝗚𝗘*
+*𝗜𝗠??𝗚𝗘*
 ${p}• ${prefix}tourl [reply]${p}
 ${p}️• ${prefix}image [query]${p}
 ${p}• ${prefix}pinterest [query]${p}
