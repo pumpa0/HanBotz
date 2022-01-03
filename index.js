@@ -1120,7 +1120,42 @@ case 'donate':
 reply(`saweria.co/HanBotz`)
 break
 case 'rules':
-rulls = `p`
+rulls = `*── 「 RULES AND FAQ 」 ──*
+
+• Jangan spam bot.
+• Jangan telepon bot. 
+• Jangan mengeksploitasi bot.
+Sanksi: *PERMANENT BLOCK*
+
+- *Bot tidak atau lambat merespon ?*
++ _Mungkin dipengaruhi oleh jaringan, signal, dan beberapa asalan._
+
+- *Boleh saya menambahkan bot ke grup?*
++ _Untuk grup 200 member free, dan untuk dibawah 200 member dikenai biaya._
+
+- *Prefixnya apa ya?*
++ _Bot ini menggunakan multi prefix._
+
+- *Kak, kok syaa chat owner tidak direspon?*
++ _Owner hanya merespon pertanyaan seputar bot Dan kendala eror, tidak untuk kenalan ataupun mengemis script._
+
+⚠️ *Segala kebijakan dan ketentuan HanBotz di pegang oleh owner dan segala perubahan kebijakan, sewaktu waktu owner berhak mencabut, memblokir user.*
+`
+const ftex = {
+	 key: { 
+          fromMe: false,
+	      participant: `0@s.whatsapp.net`, ...(from ? 
+	 { remoteJid: "6285731855426-1613049930@g.us" } : {}) 
+                },
+	 message: { 
+		"extendedTextMessage": {
+                 "text": `*BOT TERVERIFIED*`,
+                 "title": `_HanBotz_`,
+                 'jpegThumbnail': gambarrr
+                        }
+	                  } 
+                     }
+                     pebz.sendMessage(from, rulls, MessageType.text, ftex)
 break
 case 'gruppp':
 grupku = `https://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ`
