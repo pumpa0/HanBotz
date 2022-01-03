@@ -1122,7 +1122,7 @@ ${p}• ${prefix}report [text]${p}
 2022 © HanBotz`
 
            but = [
-           { buttonId: `${prefix}rules`, buttonText: { displayText: 'RULES' }, type: 1 }
+           { buttonId: `${prefix}rules`, buttonText: { displayText: 'RULES' }, type: 1 },
           { buttonId: `${prefix}donate`, buttonText: { displayText: 'DONATE' }, type: 1 }
                  ]
            
