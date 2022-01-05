@@ -1166,6 +1166,7 @@ Sanksi: *PERMANENT BLOCK*
 fakereply(rulls)
 break
 case 'grup':
+if (!blocked) return reply(`di ban`)
 grupku = `https://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ`
 reply(grupku)
 break
@@ -3155,7 +3156,7 @@ break
 case 'ttp':
 if (args.length < 1) return reply(`teksnya mana?\ncontoh ${prefix} HanBotz`)
 woy = args.join(" ")
-anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
+anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white&apikey=${zekais}`
 sendStickerFromUrl(from, anjay)
 break
 //=====================================//
