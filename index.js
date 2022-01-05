@@ -867,7 +867,7 @@ const linkwa = 'https://chat.whatsapp.com/'
              switch(command) {
              case 'menu':
              case 'help':
-                         if (blocked) return reply(`_kamu telah di block!_`)
+                         if (blocked && !isOwner) return reply(`_kamu telah di block!_`)
            //  reply(mess.tunggu) //
 		
 		    const tod =`
@@ -3896,7 +3896,7 @@ case 'balik':
 fs.unlinkSync(mediau)
 if (err) return reply('Error!')
 hah = fs.readFileSync(ran)
-pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, quoted:mek})
+pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', quoted:mek})
 fs.unlinkSync(ran)
 	})
 	
@@ -3906,11 +3906,11 @@ case 'bass':
 					encmediao = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					mediao = await pebz.downloadAndSaveMediaMessage(encmediao)
 					ran = getRandom('.mp3')
-					exec(`ffmpeg -i ${mediao} -af equalizer=f=94:width_type=o:width=2:g=16 ${ran}`, (err, stderr, stdout) => {
+					exec(`ffmpeg -i ${mediao} -af equalizer=f=50:width_type=o:width=2:g=16 ${ran}`, (err, stderr, stdout) => {
 						fs.unlinkSync(mediao)
 						if (err) return reply('Error!')
 						hah = fs.readFileSync(ran)
-						pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, quoted:mek})
+						pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', quoted:mek})
 						fs.unlinkSync(ran)
 					})
 				break
@@ -3931,19 +3931,6 @@ case 'tomp3':
 					})
 					
 					break
-case 'robot':
-              
-encmedial = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-medial = await pebz.downloadAndSaveMediaMessage(encmedial)
-ran = getRandom('.mp3')
-exec(`ffmpeg -i ${medial} -filter_complex "afftfilt=real='hypot(re,im)*sin(0)':imag='hypot(re,im)*cos(0)':win_size=512:overlap=0.75" ${ran}`, (err, stderr, stdout) => {
-fs.unlinkSync(medial)
-if (err) return reply('_error_')
-hah = fs.readFileSync(ran)
-pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
-fs.unlinkSync(ran)
-})
-break
 case 'gemuk':
                
 					encmediaz = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -3953,7 +3940,7 @@ case 'gemuk':
 						fs.unlinkSync(mediaz)
 						if (err) return reply('_error_')
 						hah = fs.readFileSync(ran)
-					pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted:mek})
+					pebz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', quoted:mek})
 						fs.unlinkSync(ran)
 					})
 					
