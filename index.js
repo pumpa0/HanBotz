@@ -1152,16 +1152,19 @@ rulls = `*── 「 RULES AND FAQ 」 ──*
 • Jangan mengeksploitasi bot.
 Sanksi: *PERMANENT BLOCK*
 
-- *Bot tidak atau lambat merespon ?*
+- *Bot tidak atau lambat merespon?*
 + _Mungkin dipengaruhi oleh jaringan, signal, dan beberapa alasan._
 
 - *Boleh saya menambahkan bot ke grup?*
 + _Untuk grup 200 member free, dan untuk dibawah 200 member dikenai biaya._ (hubungi owner)
 
-- *Prefixnya apa ya?*
-+ _Bot ini menggunakan multi prefix._
+❗*HanBotz tidak menyimpan semua data baik video,foto atau file Iainnya.*
 
-⚠️ *Segala kebijakan dan ketentuan HanBotz di pegang oleh owner dan segala perubahan kebijakan, sewaktu waktu owner berhak mencabut, memblokir user.*`
+❗*HanBotz tidak bertanggung jawab atas apa pun yang terjadi dengan user dan grub nya.*
+
+⚠️ *Segala kebijakan dan ketentuan HanBotz di pegang oleh owner dan segala perubahan kebijakan, sewaktu waktu owner berhak mencabut atau memblokir user.*
+
+_menggunakan bot berarti setuju dengan rules ini_`
 
 fakereply(rulls)
 break
@@ -1507,7 +1510,7 @@ result = `❒「  *Wiki*  」
             ytresult += '❏ Upload: ' + video.ago + '\n________________________\n\n'
     		});
     		ytresult += '*© HanBotz*'
-    		fakereply(tbuff, image, text, ytresult)
+    		await fakethumb(tbuff, ytresult)
 					break
            case 'self':
            if (!isOwner) return sticOwner(from)
