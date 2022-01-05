@@ -863,7 +863,7 @@ const linkwa = 'https://chat.whatsapp.com/'
              switch(command) {
              case 'menu':
              case 'help':
-                         
+                         if (blocked) return reply(`_kamu telah di block!_`)
            //  reply(mess.tunggu) //
 		
 		    const tod =`
@@ -1173,6 +1173,7 @@ break
 case 'simplemenu':
 case 'simpelmenu':
 case 'smenu':
+if (blocked) return reply(`_kamu telah di block!_`)
 const simple2 =`
 *𝗚𝗥𝗢𝗨𝗣*
 • ${prefix}delete <reply>
@@ -1435,6 +1436,7 @@ result = `❒「  *Wiki*  」
         await pebz.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
         break                
         case 'ytmp3':
+        if (blocked) return reply(`_kamu telah di block!_`)
         if(!q) return reply('linknya?')             
         res = await yta(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Audio```')})
@@ -1505,7 +1507,7 @@ result = `❒「  *Wiki*  」
             ytresult += '❏ Upload: ' + video.ago + '\n________________________\n\n'
     		});
     		ytresult += '*© HanBotz*'
-    		fakereply(tbuff, image, ytresult)
+    		fakereply(tbuff, image, text, ytresult)
 					break
            case 'self':
            if (!isOwner) return sticOwner(from)
@@ -4196,15 +4198,6 @@ console.log(res)
 reply(mess.sabar)
 sendMedia(from,`${res.result.link}`)
                     break
-case 'test1':
-if (!blocklist) return reply(`di ban`)
-break
-case 'test2':
-if (blocklist) return reply(`ban`)
-break
-case 'test3':
-if (blocked) return reply(`ter ban`)
-break
    //==================================//               
           default: 
 
