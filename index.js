@@ -3906,7 +3906,7 @@ case 'bass':
 					encmediao = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					mediao = await pebz.downloadAndSaveMediaMessage(encmediao)
 					ran = getRandom('.mp3')
-					exec(`ffmpeg -i ${mediao} -af equalizer=f=50:width_type=o:width=2:g=16 ${ran}`, (err, stderr, stdout) => {
+					exec(`ffmpeg -i ${mediao} -af equalizer=f=94:width_type=o:width=1:g=16 ${ran}`, (err, stderr, stdout) => {
 						fs.unlinkSync(mediao)
 						if (err) return reply('Error!')
 						hah = fs.readFileSync(ran)
