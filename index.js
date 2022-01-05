@@ -1166,7 +1166,6 @@ Sanksi: *PERMANENT BLOCK*
 fakereply(rulls)
 break
 case 'grup':
-if (!blocked) return reply(`di ban`)
 grupku = `https://chat.whatsapp.com/FDnHRof3iIV1MfoW5vlMKQ`
 reply(grupku)
 break
@@ -4197,7 +4196,15 @@ console.log(res)
 reply(mess.sabar)
 sendMedia(from,`${res.result.link}`)
                     break
-
+case 'test1':
+if (!blocklist) return reply(`di ban`)
+break
+case 'test2':
+if (blocklist) return reply(`ban`)
+break
+case 'test3':
+if (blocked) return reply(`ter ban`)
+break
    //==================================//               
           default: 
 
