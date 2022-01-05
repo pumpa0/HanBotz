@@ -1135,7 +1135,8 @@ ${p}• ${prefix}shrek [name] ${p}
 case 'donate':
 sawer = `*── 「 DONATE 」 ──*
 
-kalian bisa mendukung saya agar bot ini tetap up to date dengan cara donasi
+kalian bisa mendukung saya agar bot ini tetap
+up to date dengan cara donasi
 
 berapapun donasi kalian akan sangat berarti
 
@@ -1158,13 +1159,13 @@ Sanksi: *PERMANENT BLOCK*
 - *Boleh saya menambahkan bot ke grup?*
 + _Untuk grup 200 member free, dan untuk dibawah 200 member dikenai biaya._ (hubungi owner)
 
-❗*HanBotz tidak menyimpan semua data baik video,foto atau file Iainnya.*
+❗ HanBotz tidak menyimpan semua data baik video, foto atau file Iainnya.
 
-❗*HanBotz tidak bertanggung jawab atas apa pun yang terjadi dengan user dan grub nya.*
+❗ HanBotz tidak bertanggung jawab atas apa pun yang terjadi dengan user dan grub nya.
 
 ⚠️ *Segala kebijakan dan ketentuan HanBotz di pegang oleh owner dan segala perubahan kebijakan, sewaktu waktu owner berhak mencabut atau memblokir user.*
 
-_menggunakan bot berarti setuju dengan rules ini_`
+2022 © HanBotz`
 
 fakereply(rulls)
 break
