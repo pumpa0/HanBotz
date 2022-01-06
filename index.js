@@ -71,6 +71,8 @@ let gambarku = "" || fs.readFileSync('./media/gambar/gambarku.png')
 let gambarrr = "" || fs.readFileSync('./media/gambar/biasa.png')
 let linkfake = "" || fs.readFileSync('./media/gambar/linkfake.png')
 
+multi = true
+nopref = false
 self = false
 blocked = []
 limitawal = 10
