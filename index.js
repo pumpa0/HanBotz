@@ -1419,7 +1419,6 @@ result = `❒「  *Wiki*  」
         break                
         case 'ytmp3':
         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
-        if (blocked) return reply(`_kamu telah di block!_`)
         if(!q) return reply('linknya?')             
         res = await yta(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Audio```')})
