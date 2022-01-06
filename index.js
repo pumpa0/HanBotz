@@ -3955,6 +3955,15 @@ sendMedia(from,`${res.result.link}`)
                     break
 case 'test1':
 if (!blocked) return reply(`diblock`)
+reply('p')
+break
+case 'test2':
+if (!blocklist) return reply(`diblock`)
+reply('p2')
+break
+case 'test3':
+if (blocklist) return reply(`diblock`)
+reply('p3')
 break
    //==================================//               
           default: 
@@ -3970,8 +3979,8 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   
                     
                     
-		             if (body.startsWith(`${prefix}${command}`)) {                    
-                    anu1 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
+		             if (body.startsWith(`${command}`)) {                 
+                    anu1 = `Sorry *${command}* Cannot be found in *${prefix}menu*`
                     pebz.sendMessage(from, anu1, text, {quoted: mek})
                     }
                     
