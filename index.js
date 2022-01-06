@@ -316,7 +316,7 @@ pebz.on('credentials-updated', () => {
 		    var prefix = /^[°•π÷×¶∆£¢€¥®™=|~#%^&.?/\\©^z+*,;]/.test(cmd) ? cmd.match(/^[°•π÷×¶∆£¢€¥®™=|~#%^&.?/\\©^z+*,;]/gi) : '#'
         } else {
             if (nopref){
-                prefix = ' '
+                prefix = ''
             } else {
                 prefix = prefa
             }
