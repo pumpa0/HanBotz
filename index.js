@@ -705,55 +705,6 @@ const anem = [anim1, anim2, anim3, anim4, anim5, anim6, anim7, anim8, anim9, ani
 
 const anam = anem[Math.floor(Math.random() * (anem.length))]
 
-//====================================//	    
-            pebz.on('group-participants-update', async (chat) => {
-		try {
-			const mdata = await pebz.groupMetadata(chat.jid)
-			console.log(chat)
-			if (chat.action == 'add') {
-				num = chat.participants[0]
-				try {
-					ppimg = await pebz.getProfilePicture(`${chat.participants[0].split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i.ibb.co/Rj1k2zV/welcome.png'
-				}
-				teks = `𝙃𝘼𝙇𝙇𝙊 *@${num.split('@')[0]}*
-𝙒𝙀𝙇𝘾𝙊𝙈𝙀 𝙏𝙊 𝙂𝙍𝙐𝙋
-*${mdata.subject}*
-
-𝙅𝘼𝙉𝙂𝘼𝙉 𝙇𝙐𝙋𝘼 𝙄𝙉𝙏𝙍𝙊 :
-
-• *ɴᴀᴍᴀ :*
-• *ᴜᴍᴜʀ :*
-• *ɢᴇɴᴅᴇʀ :*
-• *ᴀꜱᴀʟ ᴋᴏᴛᴀ :*
-
-𝙎𝙀𝙈𝙊𝙂𝘼 𝘽𝙀𝙏𝘼𝙃 𝙔𝘼 𝘿𝙄 𝙂𝙍𝙐𝙋 𝙄𝙉𝙄`
-				let buff = await getBuffer(ppimg)
-				but = [
-          { buttonId: `.`, buttonText: { displayText: '༺ WELCOME ༻' }, type: 1 }
-                 ]
-				 sendButLocation(mdata.id, teks, gambar, but, {contextInfo: {"mentionedJid": [num]}})
-				} else if (chat.action == 'remove') {
-				num = chat.participants[0]
-				try {
-					ppimg = await pebz.getProfilePicture(`${num.split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i.ibb.co/ZYLJz2T/goodbye.png'
-				}
-				teks = `𝙎𝘼𝙔𝙊𝙉𝘼𝙍𝘼 *@${num.split('@')[0]}*`
-				let buff = await getBuffer(ppimg)
-				but = [
-          { buttonId: `.`, buttonText: { displayText: '༺ WELCOME ༻' }, type: 1 }
-                 ]
-				sendButLocation(mdata.id, teks, gambar, but, {contextInfo: {"mentionedJid": [num]}})
-			}
-		} catch (e) {
-			console.log('Error : %s', color(e, 'red'))
-		}
-	})
-//=====================================//
-		
 //>>>>>>>>>>>>>[ PEMBATAS ]<<<<<<<<<<<<<\\
 const oxo1 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']
             const oxo2 = ['X : X : O','O : X : O','X : O : O','O : X : X','O : X : O','X : O : O','X : X : O','X : X : X','O : O : O']  
@@ -2763,8 +2714,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                    pebz.sendMessage(from, anu2, image, {caption: anu1, quoted: mek })
                    break
 //      case 'neon1':  //
-                   
-			        
+        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    
                    F = body.slice(7)				    
@@ -2773,8 +2723,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                           
                    break  
  //      case 'text3d':  //
-                   
-			        
+        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    
                    F = body.slice(8)				    
@@ -2783,8 +2732,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                           
                    break                   
     //   case 'galaxy':  //
-                   
-			        
+        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    
                    F = body.slice(8)				    
@@ -2793,8 +2741,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                           
                    break
  //     case 'gaming':  //
-                   
-			        
+        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    F = body.slice(8)				    
                    anu = await getBuffer(`https://docs-jojo.herokuapp.com/api/gaming?text=${F}`)
@@ -2802,8 +2749,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                           
                    break
   //    case 'colors':  //
-                   
-			        
+        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    
                    F = body.slice(8)				    
@@ -3080,8 +3026,7 @@ break
 break
                     case 'phlogo':
                     if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
-                    
-			       
+        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
                    var F = body.slice(8)
 				   var F1 = F.split("&")[0];
@@ -3218,84 +3163,224 @@ kode = `*Kode Bahasa untuk /translate*
   
   reply(kode)
   break
-//=====================================/
-
-            case 'audio1':
-case 'audio2':
-case 'audio3':
-case 'audio4':
-case 'audio5':
-case 'audio6':
-case 'audio7':
-case 'audio8':
-case 'audio9':
-case 'audio10':          
-case 'audio11':
-case 'audio12':
-case 'audio13':            	
-case 'audio14':            			       
-case 'audio15':            
-case 'audio16':           
-case 'audio17':
-case 'audio18':	       
-case 'audio19':
-case 'audio20':
-case 'audio21':
-case 'audio22':
-case 'audio23':
-case 'audio24':
-case 'audio25':
-case 'audio26':
-case 'audio27':
-case 'audio28':    
-case 'audio29':
-case 'audio30':
-case 'audio31':
-case 'audio32':
-case 'audio33':
-case 'audio34':
-case 'audio35':
-
-case 'sound1':
-case 'sound2':
-case 'sound3':
-case 'sound4':
-case 'sound5':
-case 'sound6':
-case 'sound7':
-case 'sound8':
-case 'sound9':
-case 'sound10':          
-case 'sound11':
-case 'sound12':
-case 'sound13':            	
-case 'sound14':            			       
-case 'sound15':            
-case 'sound16':           
-case 'sound17':
-case 'sound18':	       
-case 'sound19':
-case 'sound20':
-case 'sound21':
-case 'sound22':
-case 'sound23':
-case 'sound24':
-case 'sound25':
-case 'sound26':
-case 'sound27':
-case 'sound28':    
-case 'sound29':
-case 'sound30':
-case 'sound31':
-case 'sound32':
-case 'sound33':
-case 'sound34':
-case 'sound35':
-			       
-            sendVn(`$command}`)
+//===//
+			case 'audio1':
+            sendVn(audio1)
             break   
+            case 'audio2':
+            sendVn(audio2)
+            break       
+            case 'audio3':
+            sendVn(audio3)
+            break       
+            case 'audio4':
+            sendVn(audio4)
+            break       
+            case 'audio5':
+            sendVn(audio5)
+            break       
+            case 'audio6':
+            sendVn(audio6)
+            break       
+            case 'audio7':
+            sendVn(audio7)
+            break       
+            case 'audio8':
+            sendVn(audio8)
+            break       
+            case 'audio9':
+            sendVn(audio9)
+            break       
+            case 'audio10':
+            sendVn(audio10)
+            break       
+            case 'audio11':
+            sendVn(audio11)
+            break       
+            case 'audio12':
+            sendVn(audio12)
+            break       
+            case 'audio13':
+            sendVn(audio13)
+            break       
+            case 'audio14':
+            sendVn(audio14)
+            break       
+            case 'audio15':
+            sendVn(audio15)
+            break       
+            case 'audio16':
+            sendVn(audio16)
+            break       
+            case 'audio17':
+            sendVn(audio17)
+            break       
+            case 'audio18':
+            sendVn(audio18)
+            break       
+            case 'audio19':
+            sendVn(audio19)
+            break  
+            case 'audio20':
+            sendVn(audio20)
+            break 
+            case 'audio21':
+            sendVn(audio21)
+            break   
+            case 'audio22':
+            sendVn(audio22)
+            break   
+            case 'audio23':
+            sendVn(audio23)
+            break   
+            case 'audio24':
+            sendVn(audio24)
+            break   
+            case 'audio25':
+            sendVn(audio25)
+            break   
+            case 'audio26':
+            sendVn(audio26)
+            break   
+            case 'audio27':
+            sendVn(audio27)
+            break   
+            case 'audio28':
+            sendVn(audio28)
+            break   
+            case 'audio29':
+            sendVn(audio29)
+            break   
+            case 'audio30':
+            sendVn(audio30)
+            break   
+            case 'audio31':
+            sendVn(audio31)
+            break   
+            case 'audio32':
+            sendVn(audio32)
+            break   
+            case 'audio33':
+            sendVn(audio33)
+            break   
+            case 'audio34':
+            sendVn(audio34)
+            break   
+            case 'audio35':
+            sendVn(audio35)
+            break
+
+             case 'sound1':
+            sendVn(sound1)
+            break   
+            case 'sound2':
+            sendVn(sound2)
+            break       
+            case 'sound3':
+            sendVn(sound3)
+            break       
+            case 'sound4':
+            sendVn(sound4)
+            break       
+            case 'sound5':
+            sendVn(sound5)
+            break       
+            case 'sound6':
+            sendVn(sound6)
+            break       
+            case 'sound7':
+            sendVn(sound7)
+            break       
+            case 'sound8':
+            sendVn(sound8)
+            break       
+            case 'sound9':
+            sendVn(sound9)
+            break       
+            case 'sound10':
+            sendVn(sound10)
+            break       
+            case 'sound11':
+            sendVn(sound11)
+            break       
+            case 'sound12':
+            sendVn(sound12)
+            break       
+            case 'sound13':
+            sendVn(sound13)
+            break       
+            case 'sound14':
+            sendVn(sound14)
+            break       
+            case 'sound15':
+            sendVn(sound15)
+            break       
+            case 'sound16':
+            sendVn(sound16)
+            break       
+            case 'sound17':
+            sendVn(sound17)
+            break       
+            case 'sound18':
+            sendVn(sound18)
+            break       
+            case 'sound19':
+            sendVn(sound19)
+            break  
+            case 'sound20':
+            sendVn(sound20)
+            break 
+            case 'sound21':
+            sendVn(sound21)
+            break   
+            case 'sound22':
+            sendVn(sound22)
+            break   
+            case 'sound23':
+            sendVn(sound23)
+            break   
+            case 'sound24':
+            sendVn(sound24)
+            break   
+            case 'sound25':
+            sendVn(sound25)
+            break   
+            case 'sound26':
+            sendVn(sound26)
+            break   
+            case 'sound27':
+            sendVn(sound27)
+            break   
+            case 'sound28':
+            sendVn(sound28)
+            break   
+            case 'sound29':
+            sendVn(sound29)
+            break   
+            case 'sound30':
+            sendVn(sound30)
+            break   
+            case 'sound31':
+            sendVn(sound31)
+            break   
+            case 'sound32':
+            sendVn(sound32)
+            break   
+            case 'sound33':
+            sendVn(sound33)
+            break   
+            case 'sound34':
+            sendVn(sound34)
+            break   
+            case 'sound35':
+            sendVn(sound35)
+            break
+            case 'sound36':
+            sendVn(sound36)
+            break
 
 //=====================================//
+
 
 case 'smeme': case 'stickmeme': case 'sm': {
 	if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
@@ -3869,7 +3954,7 @@ console.log(res)
 sendMedia(from,`${res.result.link}`)
                     break
 case 'test1':
-if (!blocked) return reply(diblock)
+if (!blocked) return reply(`diblock`)
 break
    //==================================//               
           default: 
