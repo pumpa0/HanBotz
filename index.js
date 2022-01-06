@@ -310,7 +310,14 @@ pebz.on('credentials-updated', () => {
 			const wita = moment.tz("Asia/Makassar").format("HH:mm:ss")	    
             
             const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
-            const prefix = /^[ç°ž?ï¼¡Â€ç¹©?ç¹ž?ïˆ©?ï¼´î¾Ÿçž¼ç°§??=|~!#$%^&.?/\\ç©¢^z+@,;]/.test(cmd) ? cmd.match(/^[ç°ž?ï¼¡Â€ç¹©?ç¹ž?ïˆ©?ï¼´î¾Ÿçž¼ç°§??=|~!#$%^&.?/\\ç©¢^z+*,;]/gi) : '/'
+            var prefix = /^[°zZ#$@*+,.?=''():√%!¢£¥€π¤ΠΦ_&><`™©®Δ^βα¦|/\\©^]/.test(cmd) ? cmd.match(/^[°zZ#$@*+,.?=''():√%¢£¥€π¤ΠΦ_&><!`™©®Δ^βα¦|/\\©^]/gi) : '#'
+        } else {
+            if (nopref){
+                prefix = ''
+            } else {
+                prefix = prefa
+            }
+        }
 			body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'videoMessage') && mek.message[type].caption.startsWith(prefix) ? mek.message[type].caption : (type == 'extendedTextMessage') && mek.message[type].text.startsWith(prefix) ? mek.message[type].text : (type == 'listResponseMessage') && mek.message[type].singleSelectReply.selectedRowId ? mek.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : ''
 			budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
 			const command = body.slice(1).trim().split(/ +/).shift().toLowerCase()
@@ -1290,6 +1297,23 @@ const pebz2 = {
            } 
            pebz.sendMessage(from, txt, MessageType.text, pebz2)
            break 
+           case 'setprefix':
+      if (!isOwner && !mek.key.fromMe) return sticOwner(from)
+      if (args.length < 1) return reply(`Contoh ${prefix + command} multi/nopref`)
+           if (c === 'multi'){
+              multi = true
+                    reply(`Berhasil mengubah prefix ke ${c}`)
+                } else if (c === 'nopref'){
+                    multi = false
+                    nopref = true
+                    reply(`Berhasil mengubah prefix ke ${c}`)
+                } else {
+                    multi = false
+                    nopref = false
+                    prefa = `${c}`
+                    reply(`Berhasil mengubah prefix ke ${c}`)
+					}
+					break
            case 'image':
            if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
             if(!q) return reply(`gambar apa?`)
