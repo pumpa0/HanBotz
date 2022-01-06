@@ -3953,34 +3953,22 @@ reply('_error_')
 console.log(res)
 sendMedia(from,`${res.result.link}`)
                     break
-case 'test1':
-if (!blocked) return reply(`diblock`)
-reply('p')
-break
-case 'test2':
-if (!blocklist) return reply(`diblock`)
-reply('p2')
-break
-case 'test3':
-if (blocklist) return reply(`diblock`)
-reply('p3')
-break
    //==================================//               
           default: 
 
-                  if (budy.includes(`@HanBotz`)) {
+         //         if (budy.includes(`@HanBotz`)) {
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   }
-                  if (budy.includes(`@6285807149213`)) {
+       //           if (budy.includes(`@6285807149213`)) {
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   } 
                   
                     
                     
-		             if (body.startsWith(`${command}`)) {                 
-                    anu1 = `Sorry *${command}* Cannot be found in *${prefix}menu*`
+		             if (body.startsWith(`${prefix}${command}`)) {                 
+                    anu1 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
                     pebz.sendMessage(from, anu1, text, {quoted: mek})
                     }
                     
