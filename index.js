@@ -3956,11 +3956,11 @@ sendMedia(from,`${res.result.link}`)
    //==================================//               
           default: 
 
-         //         if (budy.includes(`@HanBotz`)) {
+                 if (budy.includes(`@HanBotz`)) {
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   }
-       //           if (budy.includes(`@6285807149213`)) {
+                if (budy.includes(`@6285807149213`)) {
 const rell = fs.readFileSync('./media/sticker/TagBot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   } 
