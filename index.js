@@ -3868,6 +3868,9 @@ reply('_error_')
 console.log(res)
 sendMedia(from,`${res.result.link}`)
                     break
+case 'test1':
+if (!blocked) return reply(diblock)
+break
    //==================================//               
           default: 
 
