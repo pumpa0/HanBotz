@@ -3915,7 +3915,6 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
 if (args.length == 0) return reply(`Link Nya Mana`)
 tt = args[0]
 tikau = await getBuffer(`https://velgrynd.herokuapp.com/api/tiktokaudio?url=${tt}&apikey=3QNUoxMb`)
-reply(mess.sabar)
 await pebz.sendMessage(from, tikau, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
 break
 case 'tiktok':
@@ -3923,7 +3922,6 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
 if (args.length == 0) return reply(`Link Nya Mana`)
 tt = args[0]
 tiko = await getBuffer(`https://velgrynd.herokuapp.com/api/tiktoknowm?url=${tt}&apikey=3QNUoxMb`)
-reply(mess.sabar)
 await pebz.sendMessage(from, tiko, video, { quoted: mek })
 break
 case 'ramalanjodoh':
@@ -3983,13 +3981,22 @@ sendMedia(from,`${res.result.link}`)
           default: 
 
                  if (budy.includes(`@HanBotz`)) {
-const rell = fs.readFileSync('./media/sticker/TagBot.webp');
+const rell = fs.readFileSync('./media/sticker/tagbot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   }
                 if (budy.includes(`@6285807149213`)) {
-const rell = fs.readFileSync('./media/sticker/TagBot.webp');
+const rell = fs.readFileSync('./media/sticker/tagbot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   } 
+                  
+                  (body.startsWith(`hai`)) {
+const aumenu  = fs.readFileSync('./media/menu.mp3');
+pebz.sendMessage(from, aumenu, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
+                  }
+                  (body.startsWith(`halo`)) {
+const aumenu  = fs.readFileSync('./media/menu.mp3');
+pebz.sendMessage(from, aumenu, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
+                  }
                   
                     
                     
