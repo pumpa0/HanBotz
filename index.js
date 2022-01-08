@@ -3989,11 +3989,11 @@ const rell = fs.readFileSync('./media/sticker/tagbot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                   } 
                   
-                  (body.startsWith(`hai`)) {
+                if (body.startsWith(`hai`)) {
 const aumenu  = fs.readFileSync('./media/menu.mp3');
 pebz.sendMessage(from, aumenu, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
                   }
-                  (body.startsWith(`halo`)) {
+               if (body.startsWith(`halo`)) {
 const aumenu  = fs.readFileSync('./media/menu.mp3');
 pebz.sendMessage(from, aumenu, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
                   }
