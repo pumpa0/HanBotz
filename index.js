@@ -3928,26 +3928,6 @@ tt = args[0]
 tiko = await getBuffer(`https://velgrynd.herokuapp.com/api/tiktoknowm?url=${tt}&apikey=3QNUoxMb`)
 await pebz.sendMessage(from, tiko, video, { quoted: mek })
 break
-case 'ramalanjodoh':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
-                   if (args.length < 1) return reply('namanya?\ncontoh: han&$miku')
-                   var F = body.slice(14)
-				   var F1 = F.split("&")[0];
-				   var F2 = F.split("&")[1]; 
-                   soni = await fetchJson(`https://velgrynd.herokuapp.com/api/ramaljodoh?name=${F1}&pasangan=${F2}&apikey=3QNUoxMb`)                      
-                   nime = `• *Judul* : ${soni.result.title}
-• *Genre* : ${soni.result.genre}
-• *Rating* : ${soni.result.rating}
-• *Produser* : ${soni.result.producers}
-• *Status* : ${soni.result.status}
-• *Durasi* : ${soni.result.duration}
-• *Rilis* : ${soni.result.release}
-• *Sinopsis* : 
-${soni.result.desc}
-• *Link* : ${soni.result.url}`                   
-                   kume = await getBuffer(soni.result.thumb)
-            pebz.sendMessage(from, kume, image, {quoted:mek, caption: nime})
-            break
 case 'twmp4': case 'twitter':
 if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
 if (args.length < 1) return reply('Link?')
@@ -3991,18 +3971,7 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                 if (budy.includes(`@6285807149213`)) {
 const rell = fs.readFileSync('./media/sticker/tagbot.webp');
 pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-                  } 
-                  
-                if (body.startsWith(`hai`)) {
-const aumenu  = fs.readFileSync('./media/menu.mp3');
-pebz.sendMessage(from, aumenu, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
                   }
-               if (body.startsWith(`halo`)) {
-const aumenu  = fs.readFileSync('./media/menu.mp3');
-pebz.sendMessage(from, aumenu, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
-                  }
-                  
-                    
                     
 		             if (body.startsWith(`${prefix}${command}`)) {                 
                     anu1 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
