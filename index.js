@@ -3994,7 +3994,7 @@ if (isGroup && budy != undefined) {
 	} else {
 	console.log(color('~> [ ! ]', 'red'), 'HanBotz', color(sender.split('@')[0]))
 	}
-		} catch(e) {
+		} catch (e) {
         e = String(e)
             if (!e.includes("this.isZero")) {
             if (!e.includes("Cannot read property 'conversation' of null")) {
@@ -4010,3 +4010,4 @@ if (isGroup && budy != undefined) {
     }
     }
     }
+    
