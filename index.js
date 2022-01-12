@@ -3991,6 +3991,18 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                            }
                            
 		} catch (e) {
-			console.log('Error : %s', color(e, 'red'))
-		}
-	})
+        e = String(e)
+            if (!e.includes("this.isZero")) {
+            if (!e.includes("Cannot read property 'conversation' of null")) {
+            if (!e.includes("Cannot read property 'contextInfo' of undefined")) {
+            if (!e.includes("Cannot set property 'mtype' of undefined")) {
+            if (!e.includes("jid is not defined")) {
+     console.log(color('|ERR|', 'red'), color(e, 'cyan'))
+     pebz.sendMessage(`6285731855426@s.whatsapp.net`, `─────「 *ALERT-ERROR* 」─────\n\n\`\`\`${e}\`\`\`\n\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer HanBotz",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./media/gambar/linkfake.png'),sourceUrl:"https://wa.me/p/6285731855426/6285731855426"}}})
+	}
+    }
+    }
+    }
+    }
+    }
+    }
