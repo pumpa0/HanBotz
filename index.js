@@ -3981,25 +3981,16 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     
                    
 					
-					
+					if (budy.startsWith('x')){
+try {
+return pebz.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: mek})
+} catch(err) {
+e = String(err)
+reply(e)
+}
+}
+	}
 if (isGroup && budy != undefined) {
 	} else {
 	console.log(color('~> [ ! ]', 'red'), 'HanBotz', color(sender.split('@')[0]))
 	}		
-	} catch (e) {
-    e = String(e)
-            if (!e.includes("this.isZero")) {
-            if (!e.includes("Cannot read property 'conversation' of null")) {
-            if (!e.includes("Cannot read property 'contextInfo' of undefined")) {
-            if (!e.includes("Cannot set property 'mtype' of undefined")) {
-            if (!e.includes("jid is not defined")) {
-     console.log(color('|ERR|', 'red'), color(e, 'cyan'))
-     pebz.sendMessage(`6285731855426@s.whatsapp.net`, `─────「 *ALERT-ERROR* 」─────\n\n\`\`\`${e}\`\`\`\n\n────────────────────`, MessageType.text, {contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: "Developer HanBotz",body:"",previewType:"PHOTO",thumbnail:fs.readFileSync('./media/gambar/linkfake.png'),sourceUrl:"https://wa.me/p/6285731855426/6285731855426"}}})
-	}
-    }
-    }
-    }
-    }
-    }
-    }
-    
