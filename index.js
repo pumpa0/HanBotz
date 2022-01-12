@@ -41,7 +41,7 @@ const yts = require('yt-search')
 const request = require('request')
 const pebz = new WAConnection()
 const { mediafireDl } = require('./lib/mediafire.js')
-const { webp2gifFile, igDownloader, TiktokDownloader } = require("./lib/gif.js")
+const { webp2gifFile  } = require("./lib/gif.js")
 const _antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 const _antivirtex = JSON.parse(fs.readFileSync('./database/antivirtex.json'))
 const nsfww = JSON.parse(fs.readFileSync('./database/nsfww.json'))
@@ -449,6 +449,10 @@ sendEphemeral: false,
                     });
                 });
             }
+            const sendMediaURL = async (to, url, text = "", mids = []) => {
+      if (mids.length > 0) {
+        text = normalizeMention(to, text, mids);
+      }
 			const sendMedia = async(from, url, text="", mids=[]) =>{
                 if(mids.length > 0){
                     text = normalizeMention(from, text, mids)
@@ -1419,65 +1423,65 @@ result = `❒「  *Wiki*  」
         break                
         case 'ytmp3':
         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
-        if(!q) return reply('linknya?')             
+        if(!q) return reply('linknya?')
+        reply('mengirim file...')     
         res = await yta(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Audio```')})
-        reply('mengirim file...')
         sendMedia(from, `${res.dl_link}`,{quoted:mek})
         break         
         case 'ytmp4':
         case 'ytmp4-360':
         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
-        if(!q) return reply('linknya?')            
-        reply('mengirim file...')
+        if(!q) return reply('linknya?')   
+reply('mengirim file...')         
         res = await ytv(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-144':
         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
-        if(!q) return reply('linknya?')            
+        if(!q) return reply('linknya?')        
+reply('mengirim file...')    
         res = await ytv144(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
-        reply('mengirim file...')
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-240':
         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
         if(!q) return reply('linknya?')            
+        reply('mengirim file...')
         res = await ytv240(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
-        reply('mengirim file...')
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-480':
         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
-        if(!q) return reply('linknya?')            
+        if(!q) return reply('linknya?')        
+reply('mengirim file...')    
         res = await ytv480(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
-        reply('mengirim file...')
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-720':
         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
-        if(!q) return reply('linknya?')            
+        if(!q) return reply('linknya?')        
+reply('mengirim file...')    
         res = await ytv720(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
-        reply('mengirim file...')
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-1080':
         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
-        if(!q) return reply('linknya?')            
+        if(!q) return reply('linknya?')      
+reply('mengirim file...')      
         res = await ytv1080(`${q}`).catch(e => {
         reply('```[ ! ] Error Saat Mengirim Video, Ulangi Atau Gunakan Kualitas Lain```')})
-        reply('mengirim file...')
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         	case 'ytsearch':
         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
 			if (args.length < 1) return reply('Tolong masukan query!')
-			sticWait(from)
+			reply('searching...')
 			var srch = args.join('');
 			try {
         	var aramas = await yts(srch);
@@ -3420,7 +3424,7 @@ case 'smeme': case 'stickmeme': case 'sm': {
            tekks = `${anu.display_url}`
            ranp = getRandom('.gif')
            rano = getRandom('.webp')
-           anu1 = `https://api.memegen.link/images/custom/${top}/${bottom}.png?background=${tekks}`
+           anu1 = `https://docs-jojo.herokuapp.com/api/meme-gen?top=${top}&bottom=${bottom}&img=${tekks}/revision/latest/top-crop/width/360/height/450?cb=20190205113053`
            sendStickerFromUrl(from, `${anu1}`)
            } else {
            reply('reply gambar atau sticker!')
@@ -3447,7 +3451,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
            var enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
            var media = await pebz.downloadAndSaveMediaMessage(enmedia)
            var njay = await imgbb('520bd6f6209077d1777c2a4f20c509c2', media)
-           var resu = await getBuffer(`https://api.memegen.link/images/custom/${F1}/${F2}.png?background=${njay.display_url}`)
+           var resu = await getBuffer(`https://docs-jojo.herokuapp.com/api/meme-gen?top=${F1}&bottom=${F2}&img=${njay.display_url}`)
            pebz.sendMessage(from, resu, image, {quoted: mek})
            fs.unlinkSync(media)
            } catch (e) {
