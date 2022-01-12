@@ -3993,9 +3993,9 @@ reply(e)
 if (isGroup && budy != undefined) {
 	} else {
 	console.log(color('~> [ ! ]', 'red'), 'HanBotz', color(sender.split('@')[0]))
-	}
-		} catch (e) {
-        e = String(e)
+	}		
+	} catch (e) {
+    e = String(e)
             if (!e.includes("this.isZero")) {
             if (!e.includes("Cannot read property 'conversation' of null")) {
             if (!e.includes("Cannot read property 'contextInfo' of undefined")) {
