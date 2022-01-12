@@ -3824,7 +3824,7 @@ encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exten
             await pebz.sendMessage(from,hara,image,{quoted: mek})
             
             break
-case 'kusonime':
+//case 'kusonime': //
 if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                    if (args.length < 1) return reply('judul anime?')
                    kuso = body.slice(10)
@@ -3994,7 +3994,7 @@ if (isGroup && budy != undefined) {
 	} else {
 	console.log(color('~> [ ! ]', 'red'), 'HanBotz', color(sender.split('@')[0]))
 	}
-		} catch (e) {
+		} catch(e) {
         e = String(e)
             if (!e.includes("this.isZero")) {
             if (!e.includes("Cannot read property 'conversation' of null")) {
