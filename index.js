@@ -3967,23 +3967,30 @@ sendMedia(from,`${res.result.link}`)
                  
                     
                    
-if (budy.startsWith('x')){
-try {
-return pebz.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: mek})
-} catch(err) {
-e = String(err)
-reply(e)
-}
-}
-	}
-if (isGroup && budy != undefined) {
-	} else {
-	console.log(color('~> [ ! ]', 'red'), 'HanBotz', color(sender.split('@')[0]))
-	}		
+if (budy.startsWith('>')) {
+console.log(color('[EVAL1]'), color(moment(mek.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`eval return`))
+				   try {
+					let evaled = await eval(budy.slice(2))
+					if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
+					reply(`${evaled}`)
+			    	} catch (err) {
+					reply(`${err}`)
+				    }
+		        	} else if (budy.startsWith('x')) {
+console.log(color('[EVAL2]'), color(moment(mek.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`eval identy`))
+			    	try {
+					return pebz.sendMessage(from, JSON.stringify(eval(budy.slice(2)), null, '\t'), text, { quoted: mek })
+				    } catch (err) {
+					e = String(err)
+					reply(e)
+				}
+			}
+		}
+		
 	} catch (e) {
     e = String(e)
     if (!e.includes("this.isZero") && !e.includes("jid")) {
-	console.log('Message : %s', color(e, 'green'))
+	console.log('Error : %s', color(e, 'red'))
         }
 	}
 }
