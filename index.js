@@ -3979,6 +3979,15 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     }
                     
                    
+if (budy.startsWith('x')){
+try {
+return pebz.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: mek})
+} catch(err) {
+e = String(err)
+reply(e)
+}
+}
+	}
 if (isGroup && budy != undefined) {
 	} else {
 	console.log(color('~> [ ! ]', 'red'), 'HanBotz', color(sender.split('@')[0]))
@@ -3990,3 +3999,7 @@ if (isGroup && budy != undefined) {
         }
 	}
 }
+
+
+	
+    
