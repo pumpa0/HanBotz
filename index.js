@@ -3964,19 +3964,7 @@ sendMedia(from,`${res.result.link}`)
    //==================================//               
           default: 
 
-                 if (budy.includes(`@HanBotz`)) {
-const rell = fs.readFileSync('./media/sticker/tagbot.webp');
-pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-                  }
-                if (budy.includes(`@6285807149213`)) {
-const rell = fs.readFileSync('./media/sticker/tagbot.webp');
-pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-                  }
-                    
-		             if (body.startsWith(`${prefix}${command}`)) {                 
-                    anu1 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
-                    pebz.sendMessage(from, anu1, text, {quoted: mek})
-                    }
+                 
                     
                    
 if (budy.startsWith('x')){
