@@ -3438,24 +3438,7 @@ case 'smeme': case 'stickmeme': case 'sm': {
             buffer = await getBuffer(`https://hardianto.xyz/api/ttpcustom?text=${q}&color=black&apikey=${HardiApi}`)
             pebz.sendMessage(from, buffer, sticker, { quoted: mek })
             break
-case 'potomeme': case 'pmeme':
 
-           if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* teks atas&teks bawah`)
-           if (!q.includes('&')) return reply(`Kirim perintah *${prefix + command}* teks atas&teks bawah`)
-           try {
-           if (!isQuotedImage && !isQuotedSticker) return reply('reply gambar atau sticker!')
-           reply(mess.wait)
-           var F1 = q.split('&')[0] ? q.split('&')[0] : ''
-           var F2 = q.split('&')[1] ? q.split('&')[1] : ''
-           var imgbb = require('imgbb-uploader')
-           var enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-           var media = await pebz.downloadAndSaveMediaMessage(enmedia)
-           var njay = await imgbb('520bd6f6209077d1777c2a4f20c509c2', media)
-           var resu = await getBuffer(`https://docs-jojo.herokuapp.com/api/meme-gen?top=${F1}&bottom=${F2}&img=${njay.display_url}`)
-           pebz.sendMessage(from, resu, image, {quoted: mek})
-           fs.unlinkSync(media)
-           }
-           break   
            
 
 case 'afk': 
