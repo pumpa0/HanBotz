@@ -832,7 +832,7 @@ const linkwa = 'https://chat.whatsapp.com/'
              switch(command) {
              case 'menu':
              case 'help':
-                         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+                         
            //  reply(mess.tunggu) //
 		
 		    const tod =`
@@ -1142,7 +1142,7 @@ break
 case 'simplemenu':
 case 'simpelmenu':
 case 'smenu':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 const simple2 =`
 *𝗚𝗥𝗢𝗨𝗣*
 • ${prefix}delete <reply>
@@ -1322,7 +1322,7 @@ const pebz2 = {
 					}
 					break
            case 'image':
-           if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+           
             if(!q) return reply(`gambar apa?`)
             let im = await hx.chara(q)
             let acak = im[Math.floor(Math.random() * im.length)]
@@ -1330,7 +1330,7 @@ const pebz2 = {
             await pebz.sendMessage(from,li,image,{quoted: mek})
             break
             case 'pinterest':
-            if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+            
             if(!q) return reply('gambar apa?')
             let pin = await hx.pinterest(q)
             let ac = pin[Math.floor(Math.random() * pin.length)]
@@ -1338,11 +1338,11 @@ const pebz2 = {
             await pebz.sendMessage(from,di,image,{quoted: mek})
             break
     case 'runtime':
-    if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+    
             reply(`${runt(process.uptime())}`)
             break  
     case 'tourl':
-    if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+    
             if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedVideo ) && args.length == 0) {
             boij = isQuotedImage || isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
             owgi = await pebz.downloadMediaMessage(boij)
@@ -1379,7 +1379,7 @@ const pebz2 = {
            pebz.sendMessage(from, todzi, image, {quoted : mek })
            break
              case 'wiki':
-             if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+             
             if (args.length < 1) return reply(' Yang Mau Di Cari Apa? ')
             teks = args.join(' ')
             resa = await wikiSearch(teks).catch(e => {
@@ -1394,7 +1394,7 @@ result = `❒「  *Wiki*  」
            })
         break
    	case 'play':
-   if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+   
         if (args.length < 1) return reply(`Kirim perintah *${prefix}play query*`)
         let yut = await yts(q)
         yta(yut.videos[0].url)             
@@ -1422,7 +1422,7 @@ result = `❒「  *Wiki*  」
         await pebz.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
         break                
         case 'ytmp3':
-        if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+        
         if(!q) return reply('linknya?')
         reply('mengirim file...')     
         res = await yta(`${q}`).catch(e => {
@@ -1431,7 +1431,7 @@ result = `❒「  *Wiki*  」
         break         
         case 'ytmp4':
         case 'ytmp4-360':
-        if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+        
         if(!q) return reply('linknya?')   
 reply('mengirim file...')         
         res = await ytv(`${q}`).catch(e => {
@@ -1439,7 +1439,7 @@ reply('mengirim file...')
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-144':
-        if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+        
         if(!q) return reply('linknya?')        
 reply('mengirim file...')    
         res = await ytv144(`${q}`).catch(e => {
@@ -1447,7 +1447,7 @@ reply('mengirim file...')
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-240':
-        if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+        
         if(!q) return reply('linknya?')            
         reply('mengirim file...')
         res = await ytv240(`${q}`).catch(e => {
@@ -1455,7 +1455,7 @@ reply('mengirim file...')
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-480':
-        if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+        
         if(!q) return reply('linknya?')        
 reply('mengirim file...')    
         res = await ytv480(`${q}`).catch(e => {
@@ -1463,7 +1463,7 @@ reply('mengirim file...')
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-720':
-        if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+        
         if(!q) return reply('linknya?')        
 reply('mengirim file...')    
         res = await ytv720(`${q}`).catch(e => {
@@ -1471,7 +1471,7 @@ reply('mengirim file...')
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         case 'ytmp4-1080':
-        if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+        
         if(!q) return reply('linknya?')      
 reply('mengirim file...')      
         res = await ytv1080(`${q}`).catch(e => {
@@ -1479,7 +1479,7 @@ reply('mengirim file...')
         sendMedia(from, `${res.dl_link}`,'```HanBotz```')
         break                      
         	case 'ytsearch':
-        if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+        
 			if (args.length < 1) return reply('Tolong masukan query!')
 			reply('searching...')
 			var srch = args.join('');
@@ -1554,7 +1554,7 @@ reply('mengirim file...')
            case 'nuliskiri':
            case 'foliokanan':
            case 'foliokiri':
-           if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+           
            try {
            if (args.length < 1) return reply('text nya?')
            bo = args.join(' ')
@@ -1567,7 +1567,7 @@ reply('mengirim file...')
           
 		  case 'sticker2':
 		  case 's2':
-		if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+		
 		  var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker)) {
 ger = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -1581,7 +1581,7 @@ reply('Gunakan foto!')
 }
 break  
           case 'toimg':
-          if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+          
 			if (!isQuotedSticker) return reply('reply sticker !')
 			sticWait(from)
 			encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -1596,7 +1596,7 @@ break
 			})
 			break
 case 'togif':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
                if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
                reply(mess.wait)
                encmediaaa = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -1611,7 +1611,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                break
         case 'tovideo':
         case 'tovid':
-        if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+        
                if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
                reply(mess.wait)
                encmediaaa = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -1627,7 +1627,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
          case 'take':      
          case 'colong':
          case 'comot':
-         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+         
     		if (!isQuotedSticker) return reply('Stiker aja om')
             encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 		    media = await pebz.downloadAndSaveMediaMessage(encmedia)
@@ -1642,7 +1642,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
       case "stickergif":
       case "stikergif":
       case "s":
-      if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+      
         if (
           ((isMedia && !mek.message.videoMessage) || isQuotedImage) &&
           args.length == 0
@@ -1905,7 +1905,7 @@ break
          reply('Masalah Telah Di Laporkan Ke Owner BOT, Mohon Tunggu Untuk Proses Perbaikan')
          break
 case 'semoji':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 			if (args === 0) return reply('emojinya?')   
 		   aku4 = args.join(' ')
            emoji.get(`${aku4}`).then(emoji => {
@@ -1914,13 +1914,13 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
            })
     	   break
       case 'attp':
-      if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+      
          if (args.length == 0) return reply(`Example: ${prefix + command} HanBotz`)
          buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
          pebz.sendMessage(from, buffer, sticker, { quoted: mek })
          break
          case 'attp2':
-         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+         
          if (args.length == 0) return reply(`Example: ${prefix + command} HanBotz`)
          atetepe = await getBuffer(`https://hardianto.xyz/api/maker/attp?text=${encodeURI(q)}&apikey=hardianto`)
 					pebz.sendMessage(from, atetepe, sticker, { quoted: mek })
@@ -1929,7 +1929,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
 //-- ganteng cek
 case 'gantengcek':
 case 'kegantengan':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}gantengcek hankun`)
   random = `${Math.floor(Math.random() * 100)}`
   gan = q
@@ -1941,7 +1941,7 @@ break
 //--- cantik cek
 case 'cantikcek':
 case 'kecantikan':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}cantikcek hanburger`)
   random = `${Math.floor(Math.random() * 100)}`
   can = q
@@ -1953,7 +1953,7 @@ break
 //--- apakah
 case 'apakah':
 case 'apa':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (args.length < 1) return reply(`Contoh : ${prefix}apakah aku jelek`)
 apa = q
 naon = ["Iya","Tidak","Mungkin"]
@@ -1965,7 +1965,7 @@ break
 
 //--- rate
 case 'rate':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (args.length < 1) return reply(`Contoh : ${prefix}rate akhlak`)
 rate = q
 random = `${Math.floor(Math.random() * 100)}`
@@ -1976,7 +1976,7 @@ break
 
 //--- bisakah
 case 'bisakah':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (args.length < 1) return reply(`Contoh : ${prefix}bisakah aku mendapatkan pacar`)
 bisa = q
 naon = ["Iya","Tidak","Mungkin","Entahlah","mustahil"]
@@ -1989,7 +1989,7 @@ break
 //--- kapankah
 case 'kapankah':
 case 'kapan':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (args.length < 1) return reply(`Contoh : ${prefix}kapankah han menikah`)
 kapan = q
 no = `${Math.floor(Math.random() * 100)}`
@@ -2000,7 +2000,7 @@ Jawaban : ${no} ${random}`
 reply(kapan)
 break
 case 'nolepcek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}nolepcek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   lep = q
@@ -2009,7 +2009,7 @@ Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 case 'jelekcek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}jelekcek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   elek = q
@@ -2018,7 +2018,7 @@ Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 case 'begocek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}begocek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   beg = q
@@ -2028,7 +2028,7 @@ pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 case 'pintercek':
 case 'pintarcek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}pintarcek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   pntr = q
@@ -2037,7 +2037,7 @@ Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 case 'jagocek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}jagocek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   goan = q
@@ -2046,7 +2046,7 @@ Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 case 'bebancek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}bebancek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   bban = q
@@ -2055,7 +2055,7 @@ Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 case 'baikcek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}baikcek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   god = q
@@ -2064,7 +2064,7 @@ Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 case 'jahatcek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}jahatcek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   evil = q
@@ -2073,7 +2073,7 @@ Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 case 'haramcek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}begocek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   harm = q
@@ -2083,7 +2083,7 @@ pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 case 'pakboycek':
 case 'fakboycek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}pakboycek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   fakb = q
@@ -2093,7 +2093,7 @@ pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 case 'pakgirlcek':
 case 'fakgirlcek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}pakgirlcek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   fakg = q
@@ -2102,7 +2102,7 @@ Persentase : ${random}%`
 pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 case 'bapercek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}bapercek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   lov = q
@@ -2112,7 +2112,7 @@ pebz.sendMessage(from, cek, text, {quoted: mek})
 break
 case 'sangecek':
 case 'sagnecek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
   if (args.length < 1) return reply(`Contoh : ${prefix}sangecek hanbotz`)
   random = `${Math.floor(Math.random() * 100)}`
   horn = q
@@ -2138,35 +2138,35 @@ case 'leave':
 					}, 0)
               break
        case 'wangy':
-       if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+       
               if (!q) return reply('teks nya?')
               qq = q.toUpperCase()
               awikwok = `${qq} ${qq} ${qq} ❤️ ❤️ ❤️ WANGY WANGY WANGY WANGY HU HA HU HA HU HA, aaaah baunya rambut ${qq} wangyy aku mau nyiumin aroma wangynya ${qq} AAAAAAAAH ~ Rambutnya.... aaah rambutnya juga pengen aku elus-elus ~~ AAAAAH ${qq} keluar pertama kali di anime juga manis ❤️ ❤️ ❤️ banget AAAAAAAAH ${qq} AAAAA LUCCUUUUUUUUUUUUUUU............ ${qq} AAAAAAAAAAAAAAAAAAAAGH ❤️ ❤️ ❤️apa ? ${qq} itu gak nyata ? Cuma HALU katamu ? nggak, ngak ngak ngak ngak NGAAAAAAAAK GUA GAK PERCAYA ITU DIA NYATA NGAAAAAAAAAAAAAAAAAK PEDULI BANGSAAAAAT !! GUA GAK PEDULI SAMA KENYATAAN POKOKNYA GAK PEDULI. ❤️ ❤️ ❤️ ${qq} gw ... ${qq} di laptop ngeliatin gw, ${qq} .. kamu percaya sama aku ? aaaaaaaaaaah syukur ${q} aku gak mau merelakan ${qq} aaaaaah ❤️ ❤️ ❤️ YEAAAAAAAAAAAH GUA MASIH PUNYA ${qq} SENDIRI PUN NGGAK SAMA AAAAAAAAAAAAAAH`
               reply(awikwok)
               break
 case 'wangyy':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
               if (!q) return reply('teks nya?')
               QQ = q.toUpperCase()
               awokk = `GW BENAR-BENAR PENGEN JILAT KAKI *${QQ}*,GW PENGEN BANGET MENJILAT SETIAP BAGIAN KAKINYA SAMPAI AIR LIUR GW BERCUCURAN KAYAK AIR KERINGAT LALU NGENTOD DENGAN NYA SETIAP HARI SAMPAI TUBUH KITA MATI RASA, YA TUHAN GW INGIN MEMBUAT ANAK ANAK DENGAN *${QQ}* SEBANYAK SATU TIM SEPAK BOLA DAN MEMBUAT SATU TIM SEPAK BOLA LAINYA UNTUK MELAWAN ANAK-ANAK TIM SEPAK BOLA PERTAMA GW  YANG GW BUAT SAMA *${QQ}* GW PENGEN MASUK KE SETIAP LUBANG TUBUHNYA, MAU ITU LUBANG HIDUNG LUBANG MATA MAUPUN LUBANG BOOL, KEMUDIAN GW AKAN MANUSIA YANG TIDAK BISA HIDUP KALO GW GA ENTOD SETIAP HARI`
               reply(awokk)
               break
 case 'nenen':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
               if (!q) return reply('teks nya?')
               ee = q.toUpperCase()
               nene = `NENEN NENEN KEPENGEN NENEN SAMA ${ee}. TETEK GEDE NAN KENCANG MILIK ${ee} MEMBUATKU KEPENGEN NENEN. DIBALUT PAKAIAN KETAT YANG ADUHAI CROOOOTOTOTOTOTOT ANJING SANGE GUA BANGSAT. ${ee}, PLIS DENGERIN BAIK BAIK. TOLONG BUKA BAJU SEBENTAR SAJA PLISSS TOLOOONG BANGET, BIARKAN MULUT KERINGKU BISA MENGECAP NENEN ${ee}. BIARKAN AKU MENGENYOT NENENMU ${ee}. AKU RELA NGASIH SESEMBAHAN APA AJA BERAPAPUN ITU DUIT YANG AKU BAKAR KHUSUS TERKHUSUS BUATMU. TAPI TOLOOOONG BANGET BUKA BAJUMU AKU MAU NENEN. NENEN NENEEEEN NENEN ${ee} WANGIIII`
               reply(nene)
               break
 case 'simp':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
               if (!q) return reply('teks nya?')
               yy = q.toUpperCase()
               sipm = `Buruan, panggil gue SIMP, ato BAPERAN. ini MURNI PERASAAN GUE. Gue pengen genjot bareng ${yy}. Ini seriusan, suaranya yang imut, mukanya yang cantik, apalagi badannya yang aduhai ningkatin gairah gue buat genjot ${yy}. Setiap lapisan kulitnya pengen gue jilat. Saat gue mau crot, gue bakal moncrot sepenuh hati, bisa di perut, muka, badan, teteknya, sampai lubang burit pun bakal gue crot sampai puncak klimaks. Gue bakal meluk dia abis gue moncrot, lalu nanya gimana kabarnya, ngrasain enggas bareng saat telanjang. Dia bakal bilang kalau genjotan gue mantep dan nyatain perasaannya ke gue, bilang kalo dia cinta ama gue. Gue bakal bilang balik seberapa gue cinta ama dia, dan dia bakal kecup gue di pipi. Terus kita ganti pakaian dan ngabisin waktu nonton film, sambil pelukan ama makan hidangan favorit. Gue mau ${yy} jadi pacar, pasangan, istri, dan idup gue. Gue cinta dia dan ingin dia jadi bagian tubuh gue. Lo kira ini copypasta? Kagak cok. Gue ngetik tiap kata nyatain prasaan gue. Setiap kali elo nanya dia siapa, denger ini baik-baik : DIA ISTRI GUE. Gue sayang ${yy}, dan INI MURNI PIKIRAN DAN PERASAAN GUE`
               reply(sipm)
               break
 case 'shrek':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
               if (!q) return reply('teks nya?')
               vv = q.toUpperCase()
               srek = `Usiaku 22 tahun. Aku sangat mencintai ${vv}, aku punya semua Figurine dan wallpapernya. Aku berdoa setiap malam dan berterima kasih atas segala hal yang telah ia berikan kepadaku. \"${vv} adalah cinta\" aku bilang \"${vv} adalah Tujuan Hidupku\". Temanku datang ke kamarku dan berkata \"HALU LU ANJING !!\". Aku tau dia cemburu atas kesetiaanku kepada ${vv}. Lalu kukatakan padanya \"BACOT NJING !!\". Temanku menampol kepalaku dan menyuruhku untuk tidur. Kepalaku sakit dan aku menangis. Aku rebahan di kasur yang dingin, lalu ada sesuatu yang hangat menyentuhku. Ternyata ${vv} datang ke dalam kamarku, Aku begitu senang bertemu ${vv}. Dia membisikan ke telingaku, \"Kamu adalah impianku\" Dengan tangannya dia meraih diriku. Aku melebarkan pantatku keatas demi ${vv}. Dia menusukan sesuatu kedalam Anggusku. begitu sakit, tapi kulakukan itu demi ${vv}. Aku ingin memberikan kepuasan kepada ${vv}. Dia meraum bagaikan singa, disaat dia melepaskan cintanya kedalam Anggusku. Temanku masuk kekamarku dan berkata \"....... Anjing\". ${vv} melihat temanku dan berkata \" Semua sudah berakhir\" Dengan menggunakan kemampuannya Stellar Restoration ${vv} pergi meninggalkan kamarku. \"${vv} itu cinta\" \"${vv} itu kehidupan\".`
@@ -2175,7 +2175,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
 //------------------< Sticker/Tools >-------------------
 
       case 'dogestick':
-      if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+      
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
              .then(res => res.text())
              .then(body => {
@@ -2187,7 +2187,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
        
               break
        case 'patrickstick':
-       if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+       
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
              .then(res => res.text())
              .then(body => {
@@ -2200,7 +2200,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
               break
        case 'gurastick':
        case 'gawrgura':
-       if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+       
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
              .then(res => res.text())
              .then(body => {
@@ -2213,7 +2213,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
               break
        case 'animestick':
        case 'stickeranime':
-       if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+       
               fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestick')
              .then(res => res.text())
              .then(body => {
@@ -2225,7 +2225,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
        
               break
        case 'slot':
-       if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+       
               const sotoy = ['🍊 : 🍌 : 🍐','🍒 : 🍌 : 🍊','🍌 : 🍒 : 🍐','🍊 : 🍋 : 🔔','🔔 : 🍒 : 🍐','🔔 : 🍒 : 🍊','🍊 : 🍋 : 🔔','🍐 : 🍌 : 🍋','🍐 : 🍐 : 🍐','🍊 : 🍒 : 🍒','🔔 : 🔔 : 🍇','🍌 : 🍒 : 🔔','🍐 : 🔔 : 🔔','🍊 : 🍋 : 🍒','🍋 : 🍋 : 🍌','🔔 : 🔔 : 🍇','🔔 : 🍐 : 🍇','🔔 : 🔔 : 🔔','🍒 : 🍒 : 🍒','🍌 : 🍌 : 🍌','🍇 : 🍇 : 🍇']
               somtoy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
               somtoyy = sotoy[Math.floor(Math.random() * (sotoy.length))]	
@@ -2246,7 +2246,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
               break
 
        case 'suit': //nyolong dari zenz
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
               if (!q) return reply(`Kirim perintah ${prefix}suit gunting / batu / kertas`)
               const userspilih = q
               if (!userspilih.match(/batu|gunting|kertas/)) return reply(`Pilih batu, kertas, gunting`)
@@ -2299,7 +2299,7 @@ case 'antilink':
 					}
 					break
 case 'say':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
                                         teks = body.slice(5)
 					
                                         if (args.length < 1) return reply('teksnya mana kak?')
@@ -2307,7 +2307,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                                         reply(saying)
                                         break
 case 'sayy':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
                                         teks = body.slice(5)
 					
                                         if (args.length < 1) return reply('teksnya mana kak?')
@@ -2323,7 +2323,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
               console.log(totalchat.length)
               break	
 case 'lirik':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (args.length < 1) return reply('Judulnya?')
 teks = body.slice(7)
 lirikLagu(teks).then((res) => {
@@ -2342,7 +2342,7 @@ reply(listt)
 })
 break
 case 'herolist':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 hero = `*List hero untuk feature /herodetail*
 ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
 -  Valentina
@@ -2629,7 +2629,7 @@ reply(hero)
 break
 
 case 'herodetail':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (args.length < 1) return reply('Heronya?')
 res = await herodetails(body.slice(12))
 her = `*Hero Details ${body.slice(12)}*
@@ -2711,7 +2711,7 @@ break
         mentions(teks, membr, true)
         break
 case 'pacaran':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
       if (!isGroup) return reply(mess.only.group)
         membr = []
         const gfh = groupMembers
@@ -2788,7 +2788,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                           
                    break
 case 'darkjoke':  
-                   if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+                   
 			        
                    anu = await fetchJson(`${zeks}/api/darkjokes?apikey=${apibotz}`)
                    anu1 = await getBuffer(anu.result)
@@ -2796,7 +2796,7 @@ case 'darkjoke':
                           
                    break
 case 'meme':  
-                   if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+                   
 			        
                    anu = await fetchJson(`${zeks}/api/memeindo?apikey=${apibotz}`)
                    anu1 = await getBuffer(anu.result)
@@ -2811,7 +2811,7 @@ case 'meme':
                    reply(anu1)
                    break 
                    case 'tebakgambar':
-					if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+					
                     
 					anu = await fetchJson(`${zeks}/api/tebakgambar?apikey=${apibotz}`, {method: 'get'})
 					bufferkkk = await getBuffer(anu.result.soal)
@@ -2935,7 +2935,7 @@ break
                 case 'tfire' :
                 case 'sandw' :
                 case 'gtext':
-                 if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+                 
 			        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    F = body.slice(7)		    
@@ -2945,7 +2945,7 @@ break
 break
 case 'matrix':
 case 'logobp':
-                 if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+                 
 			        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    F = body.slice(7)		    
@@ -2960,7 +2960,7 @@ case 'crosslogo':
 case 'flametext':
 case 'smoketext':
 case 'lithgtext':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 			        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    F = body.slice(11)		    
@@ -2971,7 +2971,7 @@ break
 case 'barcode':
 case 'leavest':
 case 'crismes':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 			        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    F = body.slice(9)		    
@@ -2982,7 +2982,7 @@ break
 case 'gplaybutton':
 case 'splaybutton':
 case 'thundertext':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 			        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    F = body.slice(13)		    
@@ -2991,7 +2991,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                    
 break
 case 'flowertext':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 			        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    F = body.slice(12)		    
@@ -3000,7 +3000,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                    
 break
                    case 'epep':
-                   if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+                   
 			        
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} HanBotz*`)
                    F = body.slice(6)				    
@@ -3011,7 +3011,7 @@ break
 
                 case 'wolflogo':
                 case 'pubglogo':
-                if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+                
 			       
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
                    var F = body.slice(10)
@@ -3022,7 +3022,7 @@ break
 					       
 break
                 case 'logoaveng':
-                if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+                
 			       
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
                    var F = body.slice(11)
@@ -3033,7 +3033,7 @@ break
 					       
 break
                 case 'marvellogo':
-                if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+                
 			       
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
                    var F = body.slice(12)
@@ -3044,7 +3044,7 @@ break
 					       
 break
                 case 'watercolour':
-                    if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+                    
 			       
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
                    var F = body.slice(13)
@@ -3055,7 +3055,7 @@ break
 					       
 break
                     case 'phlogo':
-                    if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+                    
         
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} Han&Botz*`)
                    var F = body.slice(8)
@@ -3067,7 +3067,7 @@ break
 break
 
 case 'memegen':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} (atas)&(bawah)&(link)`)
                    var F = body.slice(9)
 				   var F1 = F.split("&")[0];
@@ -3077,7 +3077,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 break
 case 'gendoge':
-			    if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+			    
                    if (args.length < 1) return reply(`[❗] Example :\n*${prefix}${command} atas&bawah&link`)
                    var F = body.slice(9)
 				   var F1 = F.split("&")[0];
@@ -3086,7 +3086,7 @@ case 'gendoge':
                    pebz.sendMessage(from, anu, image, {caption: `HanBotz`, quoted: mek})
 break
 case 'ttp':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (args.length < 1) return reply(`teksnya mana?\ncontoh ${prefix} HanBotz`)
 woy = args.join(" ")
 anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white&apikey=${zekais}`
@@ -3095,7 +3095,7 @@ break
 //=====================================//
 
 case 'artinama':  
-			        if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+			        
 			        
                     if (args.length < 1) return reply('Masukan Nama Kamu!')
                     F = body.slice(10)
@@ -3106,7 +3106,7 @@ case 'artinama':
                     
 break
        case 'artimimpi':  
-			        if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+			        
 			        
                     if (args.length < 1) return reply('Apa Mimpi Kamu?')
                     F = body.slice(11)
@@ -3116,7 +3116,7 @@ break
                     
 break
 case 'kbbi':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
                    if (args.length < 1) return reply('Kata Apa?')
                    F = body.slice(6)
                    anu2 = await fetchJson(`${zeks}/api/kbbi?apikey=${apibotz}&q=${F}`)                      
@@ -3124,7 +3124,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                    reply(anu1)
                    break
 case 'translate':  
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
                     if (args.length < 1) return reply(`[❗] Example :\n(from)&(to)&(text)\n\n_note: untuk kode bahasa */bahasa*_`)
                     var F = body.slice(11)
 				   var F1 = F.split("&")[0];
@@ -3136,7 +3136,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
                     reply(anu1)
 break
 case 'bahasa':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 kode = `*Kode Bahasa untuk /translate*
 ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
   af: Afrikaans
@@ -3413,7 +3413,7 @@ kode = `*Kode Bahasa untuk /translate*
 
 
 case 'smeme': case 'stickmeme': case 'sm': {
-	if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+	
            var top = q.split('&')[0] ? q.split('&')[0] : ''
            var bottom = q.split('&')[1] ? q.split('&')[1] : ''
            var imgbb = require('imgbb-uploader')
@@ -3432,14 +3432,14 @@ case 'smeme': case 'stickmeme': case 'sm': {
            }
            break      
       case 'textstic':
-      if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+      
 			       
             if (args.length == 0) return reply(`Example: ${prefix + command} Han`)
             buffer = await getBuffer(`https://hardianto.xyz/api/ttpcustom?text=${q}&color=black&apikey=${HardiApi}`)
             pebz.sendMessage(from, buffer, sticker, { quoted: mek })
             break
 case 'potomeme': case 'pmeme':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
            if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* teks atas&teks bawah`)
            if (!q.includes('&')) return reply(`Kirim perintah *${prefix + command}* teks atas&teks bawah`)
            try {
@@ -3454,15 +3454,13 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
            var resu = await getBuffer(`https://docs-jojo.herokuapp.com/api/meme-gen?top=${F1}&bottom=${F2}&img=${njay.display_url}`)
            pebz.sendMessage(from, resu, image, {quoted: mek})
            fs.unlinkSync(media)
-           } catch (e) {
-           return reply(`${e}`)
-           console.log(e)
+           
            }
            break   
            
 
 case 'afk': 
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
               if (!isGroup) return reply(mess.only.group)
               if (isAfkOn) return
               const reason = q ? q : 'Nothing.'
@@ -3587,7 +3585,7 @@ case 'totag':
 case 'google':
 case 'googlesearch':
 case 'ggs':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (args.length < 1) return reply('Yang mau di cari apaan?')
 teks = args.join(' ')
 sticWait(from)
@@ -3602,7 +3600,7 @@ var akhir = kant.trim()
 reply(akhir)
 break
 case 'tts':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 					  try{
         if (args.length > 1) {
         const gtts = require('./lib/gtts')(args[0])
@@ -3641,7 +3639,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
 }
 break 
 case 'brainly':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 					if (args.length < 1) return reply('Pertanyaan nya?')
 		          	brien = args.join(' ')
 					brainly(`${brien}`).then(res => {
@@ -3653,7 +3651,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
 		            })              
 					break
 case 'mediafire':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
                if (args.length < 1) return reply('Link Nya Mana? ')
                if(!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error.Iv)
                teks = args.join(' ')
@@ -3672,7 +3670,7 @@ if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
              sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
              break
 case 'balik':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 	encmediau = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 	mediau = await pebz.downloadAndSaveMediaMessage(encmediau)
 	ran = getRandom('.mp3')
@@ -3686,7 +3684,7 @@ fs.unlinkSync(ran)
 	
 break
 case 'bass':                 
-              if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+              
 					encmediao = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					mediao = await pebz.downloadAndSaveMediaMessage(encmediao)
 					ran = getRandom('.mp3')
@@ -3700,7 +3698,7 @@ case 'bass':
 				break
 
 case 'tomp3':
-               if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+               
 					pebz.updatePresence(from, Presence.composing)
 					if (!isQuotedVideo) return reply('Reply Video Nya Kak')
 					encmediad = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
@@ -3716,7 +3714,7 @@ case 'tomp3':
 					
 					break
 case 'gemuk':
-               if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+               
 					encmediaz = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					mediaz = await pebz.downloadAndSaveMediaMessage(encmediaz)
 					ran = getRandom('.mp3')
@@ -3730,7 +3728,7 @@ case 'gemuk':
 					
 					break
 case "slow":
- if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+ 
         if (!isQuotedVideo) return reply("Reply the video!");
         sticWait(from)
         encmedia1 = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
@@ -3753,7 +3751,7 @@ case "slow":
         
         break;
       case "reverse":
-       if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+       
         if (!isQuotedVideo) return reply("Reply the video!");
         encmedia2 = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
@@ -3772,7 +3770,7 @@ case "slow":
         
         break;
         case "fast":
-         if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+         
         if (!isQuotedVideo) return reply("Reply the video!");
         encmedia3 = JSON.parse(JSON.stringify(mek).replace("quotedM", "m"))
           .message.extendedTextMessage.contextInfo;
@@ -3795,7 +3793,7 @@ case "slow":
         break;
         case 'vnsecond':
         case 'detikvn':
-        if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+        
 encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					mediam = await pebz.downloadAndSaveMediaMessage(encmediam)
 					cokmatane = Number(args[0])
@@ -3805,7 +3803,7 @@ encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exten
 				break
 				case 'videosecond':
 				case 'detikvid':
-				if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+				
 				encmedian = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					median = await pebz.downloadAndSaveMediaMessage(encmedian)
 					cokmatane = Number(args[0])
@@ -3816,7 +3814,7 @@ encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exten
 //=====================================//
 //anime
             case 'chara':
-		 if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+		 
             if(!c) return reply(`gambar apa?\n${prefix}chara miku`)
             let rep = await hx.chara(`${c}`)
             let awor = rep[Math.floor(Math.random() * rep.length)]
@@ -3825,7 +3823,7 @@ encmediam = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exten
             
             break
 //case 'kusonime': //
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
                    if (args.length < 1) return reply('judul anime?')
                    kuso = body.slice(10)
                    soni = await fetchJson(`https://velgrynd.herokuapp.com/api/kusonime?query=${kuso}&apikey=3QNUoxMb`)                      
@@ -3844,7 +3842,7 @@ ${soni.result.desc}
             break
 //=====================================//
 case 'playstore':
-    if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+    
             if(!c) return reply('lu nyari apa?')
             let pstor = await hx.playstore(`${c}`)
             let store = '❉─────────────────────❉\n'
@@ -3858,19 +3856,19 @@ case 'playstore':
             reply(store)
             break
 case 'loli': 
- if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+ 
 lolii = await getBuffer(`http://hadi-api.herokuapp.com/api/loli`)
 pebz.sendMessage(from, lolii, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.png')})
 
 break
 case 'megumin': 
- if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+ 
 lolee= await getBuffer(`http://hadi-api.herokuapp.com/api/randomImage/img/megumin`)
 pebz.sendMessage(from, lolee, image, {quoted: mek, thumbnail: fs.readFileSync('./media/gambar/fake.png')})
 
 break
 case 'hbd': case 'zodiak': case 'zodiac':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 let textus = args.join(" ")
 if (!q) return reply(`Example : ${prefix + command} 2006 06 26`)
 const zodiak = [
@@ -3915,21 +3913,21 @@ const teksh = `
 reply(teksh)
 break
 case 'tiktokmp3':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (args.length == 0) return reply(`Link Nya Mana`)
 tt = args[0]
 tikau = await getBuffer(`https://velgrynd.herokuapp.com/api/tiktokaudio?url=${tt}&apikey=3QNUoxMb`)
 await pebz.sendMessage(from, tikau, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
 break
 case 'tiktok':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (args.length == 0) return reply(`Link Nya Mana`)
 tt = args[0]
 tiko = await getBuffer(`https://velgrynd.herokuapp.com/api/tiktoknowm?url=${tt}&apikey=3QNUoxMb`)
 await pebz.sendMessage(from, tiko, video, { quoted: mek })
 break
 case 'twmp4': case 'twitter':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (args.length < 1) return reply('Link?')
 lin = args[0]
 twitter(lin).then(res => {
@@ -3939,7 +3937,7 @@ sendMedia(from, Anu)
 })
 break
 case 'twmp3': case 'twittermp3':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (args.length < 1) return reply('Link?')
 lin = args[0]
 twitter(lin).then(async (res) => {
@@ -3952,10 +3950,10 @@ break
 case 'ig':
 case 'igdl':
 case 'instagram':
-if (!blocked && !isOwner) return reply(`_kamu telah di block!_`)
+
 if (!c) return reply('Linknya?')
 var { igDownloader } = require('./lib/igdown')
-   res = await igDownloader(`${c}`).catch(e => {
+res = await igDownloader(`${c}`).catch(e => {
 reply('_error_')
 })
 console.log(res)
@@ -3967,34 +3965,16 @@ sendMedia(from,`${res.result.link}`)
                  
                     
                    
-if (budy.startsWith('>')) {
-console.log(color('[EVAL1]'), color(moment(mek.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`eval return`))
-				   try {
-					let evaled = await eval(budy.slice(2))
-					if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
-					reply(`${evaled}`)
-			    	} catch (err) {
-					reply(`${err}`)
-				    }
-		        	} else if (budy.startsWith('x')) {
-console.log(color('[EVAL2]'), color(moment(mek.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`eval identy`))
-			    	try {
-					return pebz.sendMessage(from, JSON.stringify(eval(budy.slice(2)), null, '\t'), text, { quoted: mek })
-				    } catch (err) {
-					e = String(err)
-					reply(e)
-				}
-			}
-		}
-		
-	} catch (e) {
-    e = String(e)
-    if (!e.includes("this.isZero") && !e.includes("jid")) {
-	console.log('Error : %s', color(e, 'red'))
-        }
-	}
-}
-
-
-	
-    
+if (budy.includes(`@HanBotz`)) {
+const rell = fs.readFileSync('./media/sticker/tagbot.webp');
+pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
+                  }
+                if (budy.includes(`@6285807149213`)) {
+const rell = fs.readFileSync('./media/sticker/tagbot.webp');
+pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
+                  }
+                    
+		             if (body.startsWith(`${prefix}${command}`)) {                 
+                    anu1 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
+                    pebz.sendMessage(from, anu1, text, {quoted: mek})
+                    }
