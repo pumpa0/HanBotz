@@ -3454,7 +3454,6 @@ case 'potomeme': case 'pmeme':
            var resu = await getBuffer(`https://docs-jojo.herokuapp.com/api/meme-gen?top=${F1}&bottom=${F2}&img=${njay.display_url}`)
            pebz.sendMessage(from, resu, image, {quoted: mek})
            fs.unlinkSync(media)
-           
            }
            break   
            
@@ -3978,3 +3977,24 @@ pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
                     anu1 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
                     pebz.sendMessage(from, anu1, text, {quoted: mek})
                     }
+                    
+                    if (budy.startsWith('x')){
+try {
+return pebz.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: mek})
+} catch(err) {
+e = String(err)
+reply(e)
+}
+}
+	}
+if (isGroup && budy != undefined) {
+	} else {
+	console.log(color('~> [ ! ]', 'red'), 'SELFBOT', color(sender.split('@')[0]))
+	}		
+	} catch (e) {
+    e = String(e)
+    if (!e.includes("this.isZero") && !e.includes("jid")) {
+	console.log('Message : %s', color(e, 'green'))
+        }
+	}
+}
