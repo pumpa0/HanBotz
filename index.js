@@ -3942,45 +3942,28 @@ console.log(res)
 sendMedia(from,`${res.result.link}`)
                     break
    //==================================//               
-          default: 
-
-                 
-                    
-                   
-if (budy.includes(`@HanBotz`)) {
-const rell = fs.readFileSync('./media/sticker/tagbot.webp');
-pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-                  }
-                if (budy.includes(`@6285807149213`)) {
-const rell = fs.readFileSync('./media/sticker/tagbot.webp');
-pebz.sendMessage(from, rell, MessageType.sticker, {quoted: mek})
-                  }
-                    
-		             if (body.startsWith(`${prefix}${command}`)) {                 
-                    anu1 = `Sorry *${prefix}${command}* Cannot be found in *${prefix}menu*`
-                    pebz.sendMessage(from, anu1, text, {quoted: mek})
-                    }
-                    
-                    if (!mek.key.fromMe) return;
-        if (_chats.startsWith(">")) {
-          try {
-            return pebz.sendMessage(
-              from,
-              JSON.stringify(eval(budy.slice(2)), null, "\t"),
-              text,
-              { quoted: mek }
-            );
-          } catch (err) {
-            e = String(err);
-            reply(e);
-          }
+default:
+if (budy.startsWith('x')){
+try {
+return pebz.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: mek})
+} catch(err) {
+e = String(err)
+reply(e)
+}
+}
+	}
+if (isGroup && budy != undefined) {
+	} else {
+	console.log(color('~> [ ! ]', 'red'), 'SELFBOT', color(sender.split('@')[0]))
+	}		
+	} catch (e) {
+    e = String(e)
+    if (!e.includes("this.isZero") && !e.includes("jid")) {
+	console.log('Message : %s', color(e, 'green'))
         }
-    }
-} catch (e) {
-e = String(e)
-if (!e.includes("this.isZero") && !e.includes("jid")) {
-console.log('Error : %s', color(e, 'red'))
+	}
 }
-// console.log(e)
-}
-}
+
+
+	
+    
